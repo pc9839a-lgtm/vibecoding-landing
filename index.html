@@ -359,6 +359,317 @@ section{position:relative}
   .price-box{padding:34px 20px}.new{font-size:74px}
 }
 </style>
+
+<style id="trend-course-redesign">
+/* 2026 course-detail redesign */
+:root{
+  --neo-bg:#f3f4ef;
+  --neo-paper:#fbfcf8;
+  --neo-ink:#0a0d0a;
+  --neo-muted:#737b74;
+  --neo-line:#d9dfd8;
+  --neo-lime:#c9ff3d;
+  --neo-dark:#0a0d0a;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--neo-bg)!important;
+  color:var(--neo-ink)!important;
+}
+main{background:var(--neo-bg)!important}
+.wrap{width:min(940px,calc(100% - 36px))!important}
+section{border-radius:0!important}
+.section-title{
+  max-width:760px!important;
+  text-align:center!important;
+  font-size:clamp(42px,6.1vw,72px)!important;
+  line-height:.96!important;
+  letter-spacing:-.072em!important;
+}
+.section-desc{
+  max-width:620px!important;
+  text-align:center!important;
+  font-size:16px!important;
+  line-height:1.72!important;
+}
+
+/* HERO: editorial course cover, not dashboard landing */
+.hero{
+  background:
+    radial-gradient(circle at 50% 14%,rgba(201,255,61,.32),transparent 24%),
+    var(--neo-bg)!important;
+  color:var(--neo-ink)!important;
+  padding:34px 0 108px!important;
+}
+.hero-top{
+  justify-content:center!important;
+  border-bottom:1px solid var(--neo-line)!important;
+  padding-bottom:22px!important;
+}
+.hero-brand{color:var(--neo-ink)!important;font-size:12px!important;letter-spacing:.19em!important}
+.hero-copy{padding-top:76px!important;text-align:center!important}
+.hero-copy .display,
+.hero-title{
+  color:var(--neo-ink)!important;
+  font-size:clamp(58px,9vw,108px)!important;
+  line-height:.86!important;
+  letter-spacing:-.083em!important;
+  max-width:820px!important;
+}
+.hero-copy .display small{
+  color:var(--neo-ink)!important;
+  font-size:.24em!important;
+  letter-spacing:-.035em!important;
+  margin-bottom:28px!important;
+}
+.hero .accent,.hero .lime{color:#264f2f!important}
+.hero .eyebrow{
+  background:var(--neo-ink)!important;
+  color:var(--neo-lime)!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.hero-sub{color:#303731!important;font-size:20px!important}
+.hero-stage,.hero-visual{margin-top:62px!important}
+.hero-console,.screen-main{
+  border-radius:30px!important;
+  border:1px solid #202620!important;
+  box-shadow:0 30px 90px rgba(13,19,14,.17)!important;
+}
+.phone,.hero-phone{
+  box-shadow:0 30px 70px rgba(12,18,13,.22)!important;
+}
+.notice,.hero-notice{
+  box-shadow:0 18px 50px rgba(12,18,13,.16)!important;
+}
+
+/* SUMMARY: oversized magazine strip */
+.summary,.facts{
+  background:var(--neo-ink)!important;
+  color:#fff!important;
+  padding:0!important;
+}
+.summary-grid,.fact-grid{
+  max-width:940px!important;
+  margin:0 auto!important;
+  border:0!important;
+}
+.summary-item,.fact{
+  padding:38px 20px!important;
+  border-color:#222a24!important;
+}
+.summary-item span,.fact small{color:#89938b!important}
+.summary-item strong,.fact strong{
+  color:#fff!important;
+  font-size:21px!important;
+}
+.summary-item:last-child strong,.fact:last-child strong{color:var(--neo-lime)!important}
+
+/* LIGHT COURSE SECTIONS */
+.light,.problem,.audience,.resources,.coaching,.method{
+  background:var(--neo-bg)!important;
+  color:var(--neo-ink)!important;
+}
+.light .section-title .accent,
+.light .lime,
+.problem .accent,
+.audience .accent,
+.resources .accent,
+.coaching .accent,
+.method .accent{color:#275530!important}
+
+/* DARK SECTIONS - reduced to purposeful contrast blocks */
+.dark,.feature,.curriculum-sec,.work,.price,.outcomes,.process,.takeaway{
+  background:var(--neo-dark)!important;
+  color:#fff!important;
+}
+.dark + .dark{border-top:1px solid #181e19!important}
+
+/* FEATURE: bento editorial */
+.feature{padding:112px 0!important}
+.feature-grid{
+  margin-top:58px!important;
+  gap:18px!important;
+}
+.feature-card{
+  border-radius:32px!important;
+  min-height:410px!important;
+  padding:34px!important;
+  border:1px solid #252e27!important;
+  box-shadow:none!important;
+}
+.feature-card.lightcard{
+  background:var(--neo-lime)!important;
+  color:var(--neo-ink)!important;
+  border-color:var(--neo-lime)!important;
+}
+.feature-card.lightcard p{color:#344135!important}
+.feature-card h3{
+  font-size:38px!important;
+  line-height:1.03!important;
+  letter-spacing:-.064em!important;
+}
+
+/* TARGET: premium course cards */
+.audience{padding:118px 0!important}
+.audience-grid{gap:16px!important}
+.audience-card,.aud{
+  border-radius:28px!important;
+  border:1px solid var(--neo-line)!important;
+  background:var(--neo-paper)!important;
+  box-shadow:none!important;
+  min-height:220px!important;
+  padding:28px!important;
+}
+.audience-card:last-child,.aud:last-child{
+  background:var(--neo-ink)!important;
+  color:#fff!important;
+  border-color:var(--neo-ink)!important;
+}
+.audience-card:last-child p,.aud:last-child p{color:#aab3ab!important}
+.audience-card:last-child .iconbox,.aud:last-child .aud-icon{
+  background:var(--neo-lime)!important;
+  color:var(--neo-ink)!important;
+}
+.iconbox,.aud-icon{
+  border-radius:18px!important;
+  background:#eef1eb!important;
+  color:#244c2d!important;
+}
+
+/* CURRICULUM: 2-column editorial modules */
+.curriculum-sec{padding:118px 0 132px!important}
+.curriculum{
+  max-width:940px!important;
+  gap:16px!important;
+  margin-top:62px!important;
+}
+.curr{
+  min-height:190px!important;
+  border-radius:26px!important;
+  padding:28px!important;
+  border:1px solid #262f28!important;
+  background:#101511!important;
+}
+.curr:nth-child(3n+1){background:#111713!important}
+.curr-no{
+  border:0!important;
+  background:var(--neo-lime)!important;
+  color:var(--neo-ink)!important;
+}
+.curr-text,.curr h3{font-size:25px!important}
+.curr-desc,.curr p{color:#929d95!important;line-height:1.66!important}
+
+/* REAL WORK: full-bleed course portfolio cards */
+.work{padding:118px 0 132px!important}
+.work-grid{gap:24px!important}
+.work-card{
+  border-radius:32px!important;
+  border:1px solid #252e27!important;
+  background:#0f140f!important;
+  overflow:hidden!important;
+}
+.work-head,.work-meta{
+  position:relative!important;
+  left:auto!important;right:auto!important;top:auto!important;
+  padding:30px 30px 8px!important;
+}
+.work-title{font-size:32px!important}
+.work-shot{
+  position:relative!important;
+  left:auto!important;right:auto!important;bottom:auto!important;
+  margin:20px!important;
+  height:auto!important;
+  min-height:340px!important;
+  border-radius:22px!important;
+  box-shadow:none!important;
+}
+.fake-browser{min-height:360px!important}
+
+/* MATERIALS: editorial merch shelf */
+.resources{padding:118px 0 126px!important}
+.resource-grid{gap:18px!important}
+.resource-main,.resource-small,.mat-main,.mat-card{
+  border-radius:30px!important;
+  border:1px solid var(--neo-line)!important;
+  background:var(--neo-paper)!important;
+  box-shadow:none!important;
+}
+.resource-main,.mat-main{min-height:480px!important}
+.resource-title,.mat-title{font-size:36px!important}
+
+/* COACHING: not PPT grid */
+.coaching{padding:118px 0 126px!important}
+.coaching-box,.coach-grid{max-width:860px!important;margin-top:62px!important}
+.coach-item{
+  min-height:92px!important;
+  justify-content:flex-start!important;
+  padding:0 8px!important;
+  font-size:25px!important;
+  border-color:#cfd6cf!important;
+}
+.coach-grid{
+  grid-template-columns:1fr!important;
+  gap:0!important;
+  border-top:1px solid var(--neo-line)!important;
+}
+.coach{
+  min-height:auto!important;
+  border:0!important;
+  border-bottom:1px solid var(--neo-line)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  display:grid!important;
+  grid-template-columns:120px 1fr!important;
+  gap:24px!important;
+  padding:24px 4px!important;
+}
+.coach-num{padding-top:6px!important}
+.coach h3{margin:0!important;font-size:26px!important}
+.coach p{margin-top:8px!important}
+
+/* PRICE: premium checkout ending */
+.price{padding:118px 0 140px!important}
+.price-box{
+  max-width:820px!important;
+  border-radius:36px!important;
+  padding:52px 36px!important;
+  border:1px solid #29322b!important;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(201,255,61,.11),transparent 36%),
+    #0f140f!important;
+}
+.new{font-size:clamp(76px,11vw,126px)!important}
+.includes{max-width:620px!important}
+.include:last-child{
+  background:var(--neo-lime)!important;
+  color:var(--neo-ink)!important;
+  border-radius:14px!important;
+}
+
+/* GENERIC CARD ROUNDNESS / SPACING */
+.problem-card,.pain-card,.outcome-card,.compare-card,.build-card,.method-box,.chat-demo,.process-step,.take-card,.reuse-card{
+  border-radius:28px!important;
+}
+.problem,.pain,.difference,.builds,.outcomes,.method,.process,.takeaway,.reuse{
+  padding-top:118px!important;
+  padding-bottom:126px!important;
+}
+
+/* MOBILE */
+@media(max-width:820px){
+  .wrap{width:min(100% - 24px,940px)!important}
+  .hero{padding-bottom:78px!important}
+  .hero-copy{padding-top:54px!important}
+  .hero-copy .display,.hero-title{font-size:62px!important}
+  .section-title{font-size:43px!important}
+  .feature-grid,.audience-grid,.curriculum,.resource-grid{grid-template-columns:1fr!important}
+  .feature-card{min-height:350px!important}
+  .curr{min-height:auto!important}
+  .coach{grid-template-columns:1fr!important;gap:6px!important}
+  .work-shot{margin:12px!important;min-height:260px!important}
+}
+</style>
 </head>
 <body>
 <main>
