@@ -213,19 +213,49 @@ section{position:relative}
 /* CURRICULUM */
 .curriculum-sec{padding:118px 0 126px}
 .curriculum{
-  margin:64px auto 0;max-width:860px;
-  border-top:1px solid #283129
+  margin:64px auto 0;
+  max-width:980px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
 }
 .curr{
-  min-height:102px;display:grid;grid-template-columns:74px 1fr;
-  align-items:center;border-bottom:1px solid #283129
+  min-height:180px;
+  padding:26px 28px;
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:16px;
+  align-items:start;
+  text-align:left;
+  border:1px solid #273129;
+  border-radius:22px;
+  background:linear-gradient(180deg,#0d120f 0%,#0a0e0b 100%);
+}
+.curr:hover{
+  border-color:#415043;
+  transform:translateY(-2px);
 }
 .curr-no{
   width:42px;height:42px;border-radius:50%;
   display:grid;place-items:center;
-  border:1px solid #384339;color:var(--lime);font-size:12px;font-weight:900
+  border:1px solid #39453b;
+  color:var(--lime);
+  font-size:12px;font-weight:900;
 }
-.curr-text{font-size:26px;font-weight:900;letter-spacing:-.045em}
+.curr-copy{padding-top:2px}
+.curr-text{
+  font-size:25px;
+  line-height:1.16;
+  font-weight:900;
+  letter-spacing:-.045em;
+}
+.curr-desc{
+  margin-top:13px;
+  font-size:15px;
+  line-height:1.62;
+  color:#8f9a92;
+  letter-spacing:-.02em;
+}
 
 /* ACTUAL SCREENS */
 .work{padding:118px 0 128px}
@@ -324,7 +354,7 @@ section{position:relative}
   .audience-card{grid-template-columns:64px 1fr;min-height:190px}
   .iconbox{width:64px;height:64px}.iconbox svg{width:30px;height:30px}
   .audience-card h3{font-size:23px}
-  .curr{grid-template-columns:58px 1fr}.curr-text{font-size:22px}
+  .curriculum{grid-template-columns:1fr;gap:12px}.curr{min-height:auto;grid-template-columns:50px 1fr;padding:22px}.curr-text{font-size:22px}.curr-desc{font-size:14px;line-height:1.55}
   .browserbody{grid-template-columns:86px 1fr}.cards{grid-template-columns:1fr 1fr}.mainarea{padding:20px}
   .price-box{padding:34px 20px}.new{font-size:74px}
 }
@@ -457,16 +487,16 @@ section{position:relative}
   <div class="wrap center">
     <h2 class="section-title">바이브코딩<br><span class="accent">커리큘럼 안내</span></h2>
     <div class="curriculum">
-      <div class="curr"><div class="curr-no">01</div><div class="curr-text">바이브코딩이란</div></div>
-      <div class="curr"><div class="curr-no">02</div><div class="curr-text">AI에게 지시하는 법</div></div>
-      <div class="curr"><div class="curr-no">03</div><div class="curr-text">랜딩페이지 만들기</div></div>
-      <div class="curr"><div class="curr-no">04</div><div class="curr-text">신청폼 만들기</div></div>
-      <div class="curr"><div class="curr-no">05</div><div class="curr-text">DB 저장하기</div></div>
-      <div class="curr"><div class="curr-no">06</div><div class="curr-text">문의 알림 받기</div></div>
-      <div class="curr"><div class="curr-no">07</div><div class="curr-text">고객 자동응답</div></div>
-      <div class="curr"><div class="curr-no">08</div><div class="curr-text">관리자 화면 만들기</div></div>
-      <div class="curr"><div class="curr-no">09</div><div class="curr-text">기능 수정하기</div></div>
-      <div class="curr"><div class="curr-no">10</div><div class="curr-text">복제해서 다시 쓰기</div></div>
+      <div class="curr"><div class="curr-no">01</div><div class="curr-copy"><div class="curr-text">바이브코딩이란</div><div class="curr-desc">AI와 대화하며 페이지와 기능을 구현하는 전체 제작 방식을 이해합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">02</div><div class="curr-copy"><div class="curr-text">AI에게 지시하는 법</div><div class="curr-desc">원하는 결과를 정확히 전달할 수 있도록 요청 문장과 수정 지시 방법을 익힙니다.</div></div></div>
+      <div class="curr"><div class="curr-no">03</div><div class="curr-copy"><div class="curr-text">랜딩페이지 만들기</div><div class="curr-desc">광고에 바로 활용할 수 있는 반응형 랜딩페이지를 직접 제작합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">04</div><div class="curr-copy"><div class="curr-text">신청폼 만들기</div><div class="curr-desc">이름·연락처·문의내용을 받을 수 있는 신청폼을 페이지에 연결합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">05</div><div class="curr-copy"><div class="curr-text">DB 저장하기</div><div class="curr-desc">신청폼으로 들어온 고객 정보를 저장하고 다시 확인할 수 있게 만듭니다.</div></div></div>
+      <div class="curr"><div class="curr-no">06</div><div class="curr-copy"><div class="curr-text">문의 알림 받기</div><div class="curr-desc">새로운 문의가 접수되면 바로 확인할 수 있도록 관리자 알림을 연결합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">07</div><div class="curr-copy"><div class="curr-text">고객 자동응답</div><div class="curr-desc">접수 완료 후 고객에게 자동으로 안내가 전달되는 응답 기능을 구현합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">08</div><div class="curr-copy"><div class="curr-text">관리자 화면 만들기</div><div class="curr-desc">접수 내역과 상태를 한 화면에서 확인하고 관리할 수 있게 구성합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">09</div><div class="curr-copy"><div class="curr-text">기능 수정하기</div><div class="curr-desc">기존 디자인을 유지하면서 필요한 문구와 기능만 정확하게 수정합니다.</div></div></div>
+      <div class="curr"><div class="curr-no">10</div><div class="curr-copy"><div class="curr-text">복제해서 다시 쓰기</div><div class="curr-desc">완성한 프로젝트를 복제해 다른 상품·광고·업무에 다시 활용합니다.</div></div></div>
     </div>
   </div>
 </section>
