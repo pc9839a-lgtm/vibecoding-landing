@@ -671,240 +671,357 @@ section{border-radius:0!important}
 }
 </style>
 
-<style id="heroImpact-v2">
-.hero.heroImpact{
-  position:relative!important;
-  min-height:1040px!important;
-  overflow:hidden!important;
-  padding:26px 0 74px!important;
-  background:#070907!important;
-  color:#fff!important;
-  isolation:isolate;
-}
-.heroImpact .impact-grid{
-  position:absolute;inset:0;z-index:0;opacity:.34;
-  background-image:
-    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
-  background-size:48px 48px;
-  mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 76%,transparent 100%);
-}
-.heroImpact .impact-glow{
-  position:absolute;z-index:0;left:50%;top:360px;width:720px;height:540px;
-  transform:translateX(-50%);border-radius:50%;
-  background:radial-gradient(circle,rgba(201,255,61,.2) 0%,rgba(102,169,40,.09) 35%,transparent 68%);
-  filter:blur(28px)
-}
-.impact-wrap{position:relative;z-index:2;width:min(1120px,calc(100% - 34px))!important}
-.impact-brand{
-  width:max-content;margin:0 auto;
-  padding:12px 18px;border-radius:999px;
-  border:1px solid #273028;background:#101511;
-  color:#9EA9A1;font-size:11px;font-weight:900;letter-spacing:.19em
-}
-.impact-copy{text-align:center;padding-top:42px}
-.impact-badge{
-  display:inline-flex;padding:9px 15px;border-radius:999px;
-  background:#C9FF3D;color:#11160F;
-  font-size:12px;font-weight:950;letter-spacing:.04em
-}
-.impact-copy h1{
-  margin:16px auto 0;max-width:880px;
-  font-size:clamp(78px,10.6vw,138px);
-  line-height:.82;letter-spacing:-.096em;font-weight:950;
-}
-.impact-copy h1 span{
-  -webkit-text-stroke:2px #fff;color:transparent;
-  margin-right:.08em
-}
-.impact-copy p{
-  margin:30px auto 0;font-size:22px;font-weight:780;letter-spacing:-.04em;color:#E4EAE5
-}
-.impact-stage{
-  position:relative;height:610px;margin:-6px auto 0;
-}
-.impact-word{
-  position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);
-  font-size:clamp(150px,20vw,260px);line-height:.8;font-weight:950;letter-spacing:-.1em;
-  color:rgba(255,255,255,.025);white-space:nowrap;pointer-events:none
-}
-.impact-svg{
-  position:absolute;left:50%;top:50%;width:min(1120px,108vw);height:auto;
-  transform:translate(-50%,-50%);
-  overflow:visible;
-}
-.impact-bottom{
-  margin:-2px auto 0;display:flex;justify-content:center;align-items:center;gap:14px;
-  color:#9AA49C;font-size:12px;font-weight:850
-}
-.impact-bottom b{color:#C9FF3D;font-size:14px}
 
+<style id="hero-a-v3">
+.hero-a {
+  position: relative;
+  overflow: hidden;
+  background: #070907;
+  color: #fff;
+  padding: 54px 0 74px;
+}
+.hero-a__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: .28;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 10%, #000 86%, transparent 100%);
+}
+.hero-a__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.hero-a__copy {
+  text-align: center;
+  padding-top: 8px;
+}
+.hero-a__title {
+  margin: 0;
+  font-size: clamp(80px, 10.7vw, 152px);
+  line-height: .84;
+  letter-spacing: -.09em;
+  font-weight: 950;
+  color: #c9ff3d;
+}
+.hero-a__title span { color: #fff; }
+.hero-a__desc {
+  margin: 24px 0 0;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  color: #eef2ee;
+}
+.hero-a__visual {
+  position: relative;
+  height: 620px;
+  margin-top: 36px;
+  perspective: 1600px;
+}
+.hero-a__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+.hero-a__glow--left {
+  width: 320px;height: 320px;left: 8%;top: 28%;
+  background: rgba(201,255,61,.14);
+}
+.hero-a__glow--right {
+  width: 260px;height: 260px;right: 8%;top: 42%;
+  background: rgba(116,255,179,.08);
+}
+.hero-a__browser {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 760px;
+  height: 420px;
+  transform: translate(-50%, -50%) rotateX(8deg) rotateY(-8deg) rotateZ(-1.5deg);
+  transform-style: preserve-3d;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(13,18,14,.94);
+  border: 1px solid rgba(191,218,194,.2);
+  box-shadow:
+    0 45px 90px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.03);
+  backdrop-filter: blur(18px);
+}
+.hero-a .browser-top {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background: #121813;
+  border-bottom: 1px solid #273028;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: #8f9992;
+}
+.hero-a .browser-top span { color: #dfe6e0; }
+.hero-a .browser-top em { font-style: normal;color:#c9ff3d;font-weight:900; }
+.browser-dots { display:flex; gap:6px; }
+.browser-dots i { width:7px;height:7px;border-radius:50%;background:#556159; }
+.browser-dots i:first-child { background:#c9ff3d; }
+.hero-a .browser-body {
+  display:grid;
+  grid-template-columns:110px 1fr;
+  height:calc(100% - 52px);
+}
+.hero-a .browser-side {
+  padding:22px 16px;
+  background:#0e140f;
+  border-right:1px solid #232c25;
+}
+.hero-a .browser-side b {
+  display:block;
+  margin-bottom:24px;
+  color:#c9ff3d;
+  font-size:16px;
+  letter-spacing:.14em;
+}
+.hero-a .browser-side i {
+  display:block;height:9px;border-radius:10px;background:#445148;margin:16px 0;
+}
+.hero-a .browser-side i.on { width:70%; background:#c9ff3d; }
+.hero-a .browser-main { padding:26px; }
+.hero-a .browser-head small {
+  display:block;color:#758177;font-size:10px;font-weight:900;letter-spacing:.12em;
+}
+.hero-a .browser-head h3 {
+  margin:8px 0 0;font-size:28px;letter-spacing:-.05em;
+}
+.hero-a .browser-stats {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px;
+}
+.hero-a .browser-stats div {
+  padding:14px;border-radius:16px;background:#151d17;border:1px solid #2a352c;
+}
+.hero-a .browser-stats small { display:block;color:#7d887f;font-size:10px; }
+.hero-a .browser-stats strong { display:block;margin-top:8px;font-size:30px;line-height:1; }
+.hero-a .browser-stats div:last-child strong { color:#c9ff3d; }
+.hero-a .browser-table { margin-top:16px;border-top:1px solid #283128; }
+.hero-a .browser-table div {
+  display:grid;grid-template-columns:1fr 1.7fr .6fr;gap:10px;
+  padding:12px 0;border-bottom:1px solid #222a24;font-size:12px;color:#aab3ab;
+}
+.hero-a .browser-table b { color:#eef3ef; }
+.hero-a .browser-table em { font-style:normal;color:#c9ff3d; }
+.hero-a__prompt {
+  position:absolute;left:3%;top:18%;width:250px;height:168px;
+  transform:rotate(-10deg) translateZ(80px);
+  border-radius:24px;overflow:hidden;
+  background:rgba(15,21,16,.94);
+  border:1px solid #304036;
+  box-shadow:0 28px 60px rgba(0,0,0,.42);
+}
+.prompt-top {
+  height:40px;display:flex;align-items:center;gap:6px;padding:0 14px;
+  background:#151c16;border-bottom:1px solid #29352c;
+}
+.prompt-top i { width:6px;height:6px;border-radius:50%;background:#4d584f; }
+.prompt-top i:first-child { background:#c9ff3d; }
+.prompt-body { padding:18px; }
+.prompt-body span {
+  display:block;height:8px;border-radius:8px;margin:13px 0;background:#48544a;
+}
+.prompt-body .w1 { width:70%;background:#c9ff3d; }
+.prompt-body .w2 { width:92%; }
+.prompt-body .w3 { width:58%; }
+.prompt-body .w4 { width:78%; }
+.hero-a__db {
+  position:absolute;right:5%;top:18%;width:136px;height:182px;
+  transform:rotate(8deg) translateZ(90px);
+  filter:drop-shadow(0 24px 34px rgba(0,0,0,.34));
+}
+.hero-a__db .db-top,
+.hero-a__db .db-bottom {
+  width:136px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,#eeffb1 0%,#c9ff3d 44%,#6a9223 100%);
+  border:1px solid #d8ff73;
+}
+.hero-a__db .db-body {
+  width:136px;height:112px;margin-top:-19px;margin-bottom:-19px;
+  background:linear-gradient(90deg,#73992b 0%,#c9ff3d 48%,#6c9225 100%);
+  border-left:1px solid #a7d82c;border-right:1px solid #7ca337;
+}
+.hero-a__db strong {
+  position:absolute;left:50%;top:74px;transform:translateX(-50%);
+  color:#162112;font-size:28px;font-weight:900;letter-spacing:-.04em;
+}
+.hero-a__alert {
+  position:absolute;right:1%;bottom:14%;
+  display:flex;gap:14px;align-items:center;
+  width:290px;padding:16px;border-radius:20px;
+  background:rgba(19,26,21,.96);
+  border:1px solid #354239;
+  box-shadow:0 24px 48px rgba(0,0,0,.4);
+  transform:rotate(5deg) translateZ(70px);
+}
+.alert-icon {
+  width:44px;height:44px;border-radius:14px;background:#c9ff3d;color:#101610;
+  display:grid;place-items:center;font-size:20px;font-weight:900;flex:0 0 44px;
+}
+.alert-text b { display:block;font-size:13px; }
+.alert-text span { display:block;margin-top:5px;color:#8b958d;font-size:11px; }
+.hero-a__keywords {
+  display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px;
+}
+.hero-a__keywords span {
+  padding:10px 14px;border-radius:999px;
+  background:#101511;border:1px solid #273028;color:#c4cbc6;
+  font-size:12px;font-weight:800;
+}
 @media(max-width:820px){
-  .hero.heroImpact{min-height:930px!important;padding-bottom:56px!important}
-  .impact-copy{padding-top:34px}
-  .impact-copy h1{font-size:68px;line-height:.86}
-  .impact-copy h1 span{-webkit-text-stroke:1.4px #fff}
-  .impact-copy p{font-size:17px;margin-top:22px}
-  .impact-stage{height:570px;margin-top:6px}
-  .impact-svg{width:1180px;max-width:none;transform:translate(-50%,-50%) scale(.69)}
-  .impact-word{font-size:160px}
-  .impact-bottom{gap:8px;font-size:10px;white-space:nowrap}
+  .hero-a{padding:36px 0 54px}
+  .hero-a__inner{width:min(100% - 24px,1120px)}
+  .hero-a__title{font-size:66px;line-height:.9}
+  .hero-a__desc{font-size:18px;margin-top:20px}
+  .hero-a__visual{height:500px;margin-top:24px}
+  .hero-a__browser{
+    width:92%;height:310px;
+    transform:translate(-50%,-50%) rotateX(5deg) rotateY(-4deg) rotateZ(-1deg);
+  }
+  .hero-a .browser-body{grid-template-columns:78px 1fr}
+  .hero-a .browser-side{padding:18px 12px}
+  .hero-a .browser-main{padding:18px 16px}
+  .hero-a .browser-head h3{font-size:20px}
+  .hero-a .browser-stats strong{font-size:20px}
+  .hero-a .browser-table div{font-size:10px;gap:6px}
+  .hero-a__prompt{width:180px;height:128px;left:-2%;top:16%}
+  .hero-a__db{width:104px;height:150px;right:-2%;top:16%}
+  .hero-a__db .db-top,.hero-a__db .db-bottom,.hero-a__db .db-body{width:104px}
+  .hero-a__db .db-body{height:94px}
+  .hero-a__db strong{top:58px;font-size:22px}
+  .hero-a__alert{width:220px;right:-2%;bottom:10%;padding:12px}
+  .alert-icon{width:36px;height:36px;flex-basis:36px;font-size:16px}
+  .alert-text b{font-size:11px}
+  .alert-text span{font-size:10px}
+  .hero-a__keywords{gap:8px;margin-top:8px}
+  .hero-a__keywords span{font-size:11px;padding:8px 12px}
 }
 </style>
 </head>
 <body>
 <main>
 
-<section class="hero heroImpact">
-  <div class="impact-grid"></div>
-  <div class="impact-glow"></div>
-  <div class="wrap impact-wrap">
+<section class="hero-a">
+  <div class="hero-a__bg"></div>
 
-    <div class="impact-brand">VIBE CODING</div>
-
-    <div class="impact-copy">
-      <div class="impact-badge">1인 마케터를 위한</div>
-      <h1><span>바이브</span>코딩</h1>
-      <p>원하는 걸 직접 만들 수 있습니다</p>
+  <div class="hero-a__inner">
+    <div class="hero-a__copy">
+      <h1 class="hero-a__title">
+        <span>바이브</span>코딩
+      </h1>
+      <p class="hero-a__desc">원하는 걸 직접 만들 수 있습니다</p>
     </div>
 
-    <div class="impact-stage" aria-hidden="true">
-      <div class="impact-word">BUILD</div>
+    <div class="hero-a__visual" aria-hidden="true">
+      <div class="hero-a__glow hero-a__glow--left"></div>
+      <div class="hero-a__glow hero-a__glow--right"></div>
 
-      <svg class="impact-svg" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="limeFace" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#F1FFC2"/>
-            <stop offset=".28" stop-color="#D7FF64"/>
-            <stop offset=".72" stop-color="#A6D823"/>
-            <stop offset="1" stop-color="#557519"/>
-          </linearGradient>
-          <linearGradient id="limeSide" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#B7EC2D"/>
-            <stop offset="1" stop-color="#425D13"/>
-          </linearGradient>
-          <linearGradient id="darkGlass" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#1D251F" stop-opacity=".98"/>
-            <stop offset="1" stop-color="#0A0F0B" stop-opacity=".96"/>
-          </linearGradient>
-          <radialGradient id="sphere" cx="30%" cy="25%" r="75%">
-            <stop offset="0" stop-color="#FFFFFF"/>
-            <stop offset=".14" stop-color="#EEFFB1"/>
-            <stop offset=".38" stop-color="#CCFF45"/>
-            <stop offset=".72" stop-color="#6C9625"/>
-            <stop offset="1" stop-color="#263413"/>
-          </radialGradient>
-          <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#182019"/>
-            <stop offset="1" stop-color="#0C110D"/>
-          </linearGradient>
-          <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
-            <feDropShadow dx="0" dy="32" stdDeviation="28" flood-color="#000000" flood-opacity=".55"/>
-          </filter>
-          <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="24"/>
-          </filter>
-        </defs>
+      <div class="hero-a__prompt">
+        <div class="prompt-top">
+          <i></i><i></i><i></i>
+        </div>
+        <div class="prompt-body">
+          <span class="w1"></span>
+          <span class="w2"></span>
+          <span class="w3"></span>
+          <span class="w4"></span>
+        </div>
+      </div>
 
-        <ellipse cx="608" cy="563" rx="380" ry="58" fill="#000" opacity=".34" filter="url(#softGlow)"/>
+      <div class="hero-a__db">
+        <div class="db-top"></div>
+        <div class="db-body"></div>
+        <div class="db-bottom"></div>
+        <strong>DB</strong>
+      </div>
 
-        <g transform="translate(525 176)" filter="url(#shadow)">
-          <path d="M0 72 L112 8 L224 72 L112 136 Z" fill="url(#limeFace)"/>
-          <path d="M0 72 L112 136 L112 262 L0 198 Z" fill="#6C9025"/>
-          <path d="M224 72 L112 136 L112 262 L224 198 Z" fill="url(#limeSide)"/>
-          <path d="M34 88 L112 132 L190 88 L112 44 Z" fill="#E9FF9A" opacity=".33"/>
-        </g>
+      <div class="hero-a__alert">
+        <div class="alert-icon">✓</div>
+        <div class="alert-text">
+          <b>새 문의가 접수되었습니다</b>
+          <span>자동 알림 · 방금 전</span>
+        </div>
+      </div>
 
-        <g transform="translate(265 116) rotate(-6 340 190)" filter="url(#shadow)">
-          <rect x="0" y="0" width="680" height="382" rx="28" fill="url(#darkGlass)" stroke="#364239" stroke-width="2"/>
-          <rect x="0" y="0" width="680" height="52" rx="28" fill="#121813"/>
-          <rect x="0" y="30" width="680" height="22" fill="#121813"/>
-          <circle cx="28" cy="26" r="5" fill="#C9FF3D"/>
-          <circle cx="46" cy="26" r="5" fill="#526057"/>
-          <circle cx="64" cy="26" r="5" fill="#526057"/>
-          <text x="340" y="31" text-anchor="middle" fill="#9BA69D" font-size="12" font-weight="800" letter-spacing="1.5">WORKING PAGE</text>
-          <text x="642" y="31" text-anchor="end" fill="#C9FF3D" font-size="11" font-weight="900">● LIVE</text>
+      <div class="hero-a__browser">
+        <div class="browser-top">
+          <div class="browser-dots">
+            <i></i><i></i><i></i>
+          </div>
+          <span>WORKING PAGE</span>
+          <em>LIVE</em>
+        </div>
 
-          <rect x="22" y="76" width="108" height="282" rx="18" fill="#0E140F" stroke="#283229"/>
-          <text x="76" y="108" text-anchor="middle" fill="#C9FF3D" font-size="16" font-weight="900" letter-spacing="1.5">VIBE</text>
-          <rect x="42" y="144" width="58" height="9" rx="5" fill="#C9FF3D"/>
-          <rect x="42" y="180" width="48" height="9" rx="5" fill="#455248"/>
-          <rect x="42" y="216" width="61" height="9" rx="5" fill="#455248"/>
-          <rect x="42" y="252" width="42" height="9" rx="5" fill="#455248"/>
+        <div class="browser-body">
+          <aside class="browser-side">
+            <b>VIBE</b>
+            <i class="on"></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </aside>
 
-          <text x="164" y="104" fill="#7C877F" font-size="10" font-weight="900" letter-spacing="1.6">LEAD DASHBOARD</text>
-          <text x="164" y="139" fill="#FFFFFF" font-size="28" font-weight="900">상담 접수 현황</text>
+          <div class="browser-main">
+            <div class="browser-head">
+              <small>LEAD DASHBOARD</small>
+              <h3>상담 접수 현황</h3>
+            </div>
 
-          <g transform="translate(160 165)">
-            <g>
-              <rect x="0" y="0" width="146" height="82" rx="16" fill="#151D17" stroke="#29342B"/>
-              <text x="16" y="27" fill="#7F8A82" font-size="10">오늘 접수</text>
-              <text x="16" y="61" fill="#FFFFFF" font-size="28" font-weight="900">18</text>
-            </g>
-            <g transform="translate(158 0)">
-              <rect x="0" y="0" width="146" height="82" rx="16" fill="#151D17" stroke="#29342B"/>
-              <text x="16" y="27" fill="#7F8A82" font-size="10">신규 문의</text>
-              <text x="16" y="61" fill="#FFFFFF" font-size="28" font-weight="900">07</text>
-            </g>
-            <g transform="translate(316 0)">
-              <rect x="0" y="0" width="146" height="82" rx="16" fill="#151D17" stroke="#29342B"/>
-              <text x="16" y="27" fill="#7F8A82" font-size="10">자동 발송</text>
-              <text x="16" y="61" fill="#C9FF3D" font-size="28" font-weight="900">18</text>
-            </g>
-          </g>
+            <div class="browser-stats">
+              <div>
+                <small>오늘 접수</small>
+                <strong>18</strong>
+              </div>
+              <div>
+                <small>신규 문의</small>
+                <strong>07</strong>
+              </div>
+              <div>
+                <small>자동 발송</small>
+                <strong>18</strong>
+              </div>
+            </div>
 
-          <g transform="translate(160 272)">
-            <line x1="0" y1="0" x2="462" y2="0" stroke="#2A332C"/>
-            <text x="0" y="30" fill="#DEE5DF" font-size="12" font-weight="800">김OO</text>
-            <text x="120" y="30" fill="#97A199" font-size="12">010-****-4821</text>
-            <text x="420" y="30" fill="#C9FF3D" font-size="11" font-weight="900">신규</text>
-            <line x1="0" y1="48" x2="462" y2="48" stroke="#222B24"/>
-            <text x="0" y="78" fill="#DEE5DF" font-size="12" font-weight="800">이OO</text>
-            <text x="120" y="78" fill="#97A199" font-size="12">010-****-9134</text>
-            <text x="420" y="78" fill="#97A199" font-size="11">확인</text>
-          </g>
-        </g>
-
-        <g transform="translate(130 156) rotate(-10 115 80)" filter="url(#shadow)">
-          <rect x="0" y="0" width="230" height="160" rx="22" fill="url(#panelGlow)" stroke="#344139"/>
-          <rect x="0" y="0" width="230" height="40" rx="22" fill="#151D17"/>
-          <rect x="0" y="24" width="230" height="16" fill="#151D17"/>
-          <text x="20" y="25" fill="#C9FF3D" font-size="10" font-weight="900">AI BUILD</text>
-          <rect x="22" y="67" width="132" height="8" rx="4" fill="#C9FF3D"/>
-          <rect x="22" y="89" width="175" height="8" rx="4" fill="#48554B"/>
-          <rect x="22" y="111" width="98" height="8" rx="4" fill="#48554B"/>
-          <rect x="22" y="133" width="144" height="8" rx="4" fill="#48554B"/>
-        </g>
-
-        <g transform="translate(945 118) rotate(8 66 100)" filter="url(#shadow)">
-          <ellipse cx="66" cy="30" rx="62" ry="26" fill="url(#limeFace)" stroke="#DFFF75"/>
-          <path d="M4 30 V154 C4 169 32 181 66 181 C100 181 128 169 128 154 V30" fill="url(#limeSide)" stroke="#A8D82C"/>
-          <ellipse cx="66" cy="86" rx="62" ry="26" fill="none" stroke="#6D9327" stroke-width="2"/>
-          <ellipse cx="66" cy="142" rx="62" ry="26" fill="none" stroke="#6D9327" stroke-width="2"/>
-          <ellipse cx="66" cy="154" rx="62" ry="26" fill="#789E2B" opacity=".85"/>
-          <text x="66" y="107" text-anchor="middle" fill="#152013" font-size="30" font-weight="950">DB</text>
-        </g>
-
-        <g transform="translate(870 430) rotate(5 150 55)" filter="url(#shadow)">
-          <rect x="0" y="0" width="300" height="110" rx="20" fill="#131A15" stroke="#364239"/>
-          <rect x="18" y="24" width="48" height="48" rx="14" fill="#C9FF3D"/>
-          <path d="M31 38h22v18H31z M31 40l11 8 11-8" fill="none" stroke="#111713" stroke-width="2.3"/>
-          <text x="82" y="43" fill="#FFFFFF" font-size="13" font-weight="900">새 문의가 접수되었습니다</text>
-          <text x="82" y="68" fill="#89948C" font-size="11">자동 알림 · 방금 전</text>
-        </g>
-
-        <circle cx="1050" cy="75" r="44" fill="url(#sphere)" filter="url(#shadow)"/>
-        <circle cx="118" cy="430" r="31" fill="url(#sphere)" filter="url(#shadow)"/>
-        <circle cx="1090" cy="355" r="17" fill="url(#sphere)"/>
-
-        <g transform="translate(190 455) rotate(-16 35 35)" filter="url(#shadow)">
-          <path d="M8 6 L68 53 L42 58 L57 83 L43 91 L27 64 L8 84 Z" fill="#FFFFFF"/>
-        </g>
-      </svg>
+            <div class="browser-table">
+              <div>
+                <b>김OO</b>
+                <span>010-****-4821</span>
+                <em>신규</em>
+              </div>
+              <div>
+                <b>이OO</b>
+                <span>010-****-9134</span>
+                <em>확인</em>
+              </div>
+              <div>
+                <b>박OO</b>
+                <span>010-****-2217</span>
+                <em>대기</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="impact-bottom">
-      <span>AI에게 말하고</span><b>→</b><span>직접 만들고</span><b>→</b><span>실제로 작동시킵니다</span>
+    <div class="hero-a__keywords">
+      <span>랜딩페이지</span>
+      <span>DB</span>
+      <span>자동화</span>
+      <span>관리자 화면</span>
     </div>
   </div>
 </section>
