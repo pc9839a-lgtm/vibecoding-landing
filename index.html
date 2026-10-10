@@ -886,6 +886,62 @@ section{border-radius:0!important}
   .hero-a__keywords span{font-size:11px;padding:8px 12px}
 }
 </style>
+<style id="hero-title-only-v1">
+.hero-a__copy{padding-top:28px!important;text-align:center!important}
+.hero-a__title{
+  position:relative!important;
+  z-index:8!important;
+  margin:0 auto!important;
+  width:max-content!important;
+  max-width:100%!important;
+  font-size:clamp(96px,13vw,188px)!important;
+  line-height:.78!important;
+  letter-spacing:-.105em!important;
+  font-weight:950!important;
+  color:#fff!important;
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.06),
+    0 18px 50px rgba(0,0,0,.38)!important;
+}
+.hero-a__title::after{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;bottom:-22px;
+  height:12px;
+  border-radius:999px;
+  background:#c9ff3d;
+  transform:skewX(-18deg);
+  box-shadow:0 0 28px rgba(201,255,61,.26);
+}
+.hero-a__visual{
+  margin-top:-4px!important;
+  height:650px!important;
+}
+.hero-a__browser{
+  top:48%!important;
+  width:790px!important;
+  height:435px!important;
+}
+.hero-a__prompt{top:15%!important}
+.hero-a__alert{bottom:12%!important}
+.hero-a__desc,
+.hero-a__keywords,
+.impact-badge,
+.hero3d-badge,
+.hero3d-tags,
+.hero3d-caption,
+.impact-bottom{display:none!important}
+@media(max-width:820px){
+  .hero-a__copy{padding-top:20px!important}
+  .hero-a__title{
+    font-size:clamp(68px,19vw,96px)!important;
+    line-height:.82!important;
+  }
+  .hero-a__title::after{bottom:-14px;height:8px}
+  .hero-a__visual{margin-top:10px!important;height:540px!important}
+  .hero-a__browser{width:94%!important;height:320px!important}
+}
+</style>
 </head>
 <body>
 <main>
@@ -895,10 +951,7 @@ section{border-radius:0!important}
 
   <div class="hero-a__inner">
     <div class="hero-a__copy">
-      <h1 class="hero-a__title">
-        <span>바이브</span>코딩
-      </h1>
-      <p class="hero-a__desc">원하는 걸 직접 만들 수 있습니다</p>
+      <h1 class="hero-a__title">바이브코딩</h1>
     </div>
 
     <div class="hero-a__visual" aria-hidden="true">
@@ -976,13 +1029,6 @@ section{border-radius:0!important}
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="hero-a__keywords">
-      <span>랜딩페이지</span>
-      <span>DB</span>
-      <span>자동화</span>
-      <span>관리자 화면</span>
     </div>
   </div>
 </section>
