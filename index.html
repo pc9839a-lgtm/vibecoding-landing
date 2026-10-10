@@ -675,328 +675,401 @@ section{border-radius:0!important}
 
 
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<style id="hero-v4-css">
-.hero-v4{
+
+<style id="courseHero-v1">
+.courseHero{
+  --blue:#2f5cff;
+  --blue2:#67c7ff;
+  --cyan:#9cecff;
+  --deep:#07123c;
+  --deep2:#0b1f68;
   --lime:#caff38;
   position:relative;
   overflow:hidden;
-  min-height:980px;
-  padding:54px 0 64px;
-  background:
-    radial-gradient(circle at 50% 56%,rgba(202,255,56,.10),transparent 29%),
-    linear-gradient(180deg,#060806 0%,#080b08 100%);
+  min-height:970px;
+  padding:40px 0 30px;
   color:#fff;
+  background:
+    radial-gradient(circle at 50% 60%,rgba(78,137,255,.24),transparent 33%),
+    radial-gradient(circle at 12% 24%,rgba(70,92,255,.22),transparent 28%),
+    radial-gradient(circle at 88% 32%,rgba(59,171,255,.18),transparent 26%),
+    linear-gradient(180deg,#071139 0%,#0a1a59 48%,#071039 100%);
   isolation:isolate;
 }
-.hero-v4__grid{
+.courseHero__grid{
   position:absolute;inset:0;z-index:0;
   background-image:
-    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
-  background-size:56px 56px;
-  mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 85%,transparent 100%);
+    linear-gradient(rgba(115,158,255,.10) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(115,158,255,.10) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:linear-gradient(to bottom,#000 0,#000 82%,transparent 100%);
 }
-.hero-v4__aurora{
-  position:absolute;left:50%;top:360px;width:760px;height:520px;
-  transform:translateX(-50%);
-  background:radial-gradient(ellipse,rgba(202,255,56,.12),rgba(98,160,49,.045) 43%,transparent 72%);
-  filter:blur(24px);
-  z-index:0;
+.courseHero__light{
+  position:absolute;border-radius:50%;filter:blur(80px);opacity:.58;z-index:0;pointer-events:none
 }
-.hero-v4__inner{
-  width:min(1180px,calc(100% - 36px));
+.courseHero__light--one{width:540px;height:540px;left:-180px;top:330px;background:#164dff}
+.courseHero__light--two{width:520px;height:520px;right:-160px;top:280px;background:#1a8cff}
+.courseHero__inner{
+  width:min(1040px,calc(100% - 32px));
   margin:0 auto;
   position:relative;
   z-index:2;
 }
-.hero-v4__title{
-  margin:0 auto;
+.courseHero__title{
+  position:relative;
+  z-index:20;
   width:max-content;
   max-width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:baseline;
-  gap:.12em;
+  margin:0 auto;
+  padding:26px 0 0;
   font-family:"Pretendard Variable","Pretendard","Noto Sans KR",sans-serif;
-  font-size:clamp(90px,11.2vw,158px);
-  line-height:.84;
-  letter-spacing:-.075em;
-  font-weight:900;
-  white-space:nowrap;
+  font-size:clamp(100px,12.7vw,170px);
+  line-height:.82;
+  letter-spacing:-.085em;
+  font-weight:950;
+  color:transparent;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#edf4ff 34%,#a7ddff 67%,#4a86ff 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-stroke:1px rgba(255,255,255,.18);
+  filter:drop-shadow(0 13px 3px rgba(2,9,42,.23)) drop-shadow(0 20px 26px rgba(38,97,255,.26));
 }
-.hero-v4__title span{color:#fff}
-.hero-v4__title strong{
-  color:var(--lime);
-  font-weight:900;
-  text-shadow:0 0 34px rgba(202,255,56,.12);
+.courseHero__title:before{
+  content:"";
+  position:absolute;
+  left:4%;right:4%;top:29%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);
+  filter:blur(.2px);
+  opacity:.75
 }
-.hero-v4__stage{
+.courseHero__scene{
   position:relative;
-  width:min(1040px,100%);
-  height:690px;
-  margin:-4px auto 0;
+  height:730px;
+  margin:-6px auto 0;
   perspective:1700px;
   transform-style:preserve-3d;
 }
-.hero-v4__halo{
-  position:absolute;
-  left:50%;top:50%;
-  border:1px solid rgba(202,255,56,.16);
-  border-radius:50%;
-  transform-style:preserve-3d;
-}
-.halo-a{
-  width:700px;height:260px;
-  transform:translate(-50%,-43%) rotateX(72deg) rotateZ(-11deg);
-}
-.halo-b{
-  width:560px;height:190px;
-  border-color:rgba(255,255,255,.08);
-  transform:translate(-50%,-37%) rotateX(67deg) rotateZ(56deg);
-}
-.hero-v4__stack{
-  position:absolute;
-  inset:0;
-  transform-style:preserve-3d;
-}
-.stack-panel{
+.courseHero__ring{
   position:absolute;
   left:50%;
-  overflow:hidden;
-  border-radius:30px;
-  border:1px solid rgba(139,161,144,.20);
-  background:rgba(13,18,14,.96);
-  box-shadow:0 42px 100px rgba(0,0,0,.50);
-  backdrop-filter:blur(18px);
+  top:54%;
+  border-radius:50%;
+  border:2px solid rgba(88,147,255,.70);
+  box-shadow:0 0 28px rgba(56,109,255,.30), inset 0 0 20px rgba(75,135,255,.12);
+  transform-style:preserve-3d;
 }
-.stack-panel--back{
-  top:180px;
-  width:690px;height:370px;
-  transform:translateX(-56%) rotateX(11deg) rotateY(20deg) rotateZ(-8deg) translateZ(-140px);
-  opacity:.50;
+.courseHero__ring--one{
+  width:980px;height:370px;
+  transform:translate(-50%,-50%) rotateX(72deg) rotateZ(-7deg);
 }
-.stack-panel--mid{
-  top:155px;
-  width:730px;height:400px;
-  transform:translateX(-46%) rotateX(8deg) rotateY(-17deg) rotateZ(7deg) translateZ(-65px);
-  opacity:.74;
+.courseHero__ring--two{
+  width:820px;height:285px;
+  border-color:rgba(118,195,255,.33);
+  transform:translate(-50%,-50%) rotateX(69deg) rotateZ(35deg);
 }
-.stack-panel--front{
-  top:150px;
-  width:790px;height:430px;
-  transform:translateX(-50%) rotateX(7deg) rotateY(-7deg) rotateZ(-1.2deg) translateZ(40px);
-  border-color:rgba(193,216,196,.24);
-  box-shadow:0 55px 120px rgba(0,0,0,.57);
-}
-.stack-bar,.front-top{
-  height:50px;
-  display:flex;align-items:center;
-  padding:0 18px;
-  border-bottom:1px solid #242d26;
-  background:#111713;
-}
-.stack-bar{gap:6px}
-.stack-bar i,.front-dots i{
-  width:7px;height:7px;border-radius:50%;background:#59655c
-}
-.stack-bar i:first-child,.front-dots i:first-child{background:var(--lime)}
-.stack-lines{padding:28px}
-.stack-lines b{
-  display:block;height:11px;border-radius:8px;background:#303a32;margin:20px 0;
-}
-.stack-lines b:nth-child(1){width:42%;background:var(--lime)}
-.stack-lines b:nth-child(2){width:72%}
-.stack-lines b:nth-child(3){width:58%}
-.stack-lines b:nth-child(4){width:83%}
-.stack-lines b:nth-child(5){width:49%}
-.stack-mid-body{display:grid;grid-template-columns:110px 1fr;height:calc(100% - 50px)}
-.stack-mid-left{padding:24px 16px;background:#0d130e;border-right:1px solid #232b24}
-.stack-mid-left i{
-  display:block;height:9px;border-radius:8px;background:#3c493f;margin:18px 0
-}
-.stack-mid-left i.active{width:70%;background:var(--lime)}
-.stack-mid-right{padding:27px}
-.mini-title{width:36%;height:13px;border-radius:8px;background:var(--lime)}
-.mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
-.mini-cards i{height:86px;border-radius:14px;background:#172019;border:1px solid #29342b}
-.mini-table{margin-top:18px;border-top:1px solid #263029}
-.mini-table i{display:block;height:42px;border-bottom:1px solid #242d26}
-.front-top{justify-content:space-between}
-.front-dots{display:flex;gap:6px}
-.front-pill{width:64px;height:9px;border-radius:9px;background:var(--lime)}
-.front-body{display:grid;grid-template-columns:118px 1fr;height:calc(100% - 50px)}
-.front-side{padding:24px 17px;background:#0d130e;border-right:1px solid #232b24}
-.front-side b{display:block;color:var(--lime);font-size:17px;letter-spacing:.14em;margin-bottom:24px}
-.front-side i{display:block;height:9px;border-radius:8px;background:#445148;margin:17px 0}
-.front-side i.active{width:72%;background:var(--lime)}
-.front-content{padding:28px 30px}
-.front-head span{display:block;width:95px;height:8px;border-radius:8px;background:#59655c}
-.front-head h3{margin:10px 0 0;font-size:29px;letter-spacing:-.05em}
-.front-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:22px}
-.front-stats div{
-  padding:15px;border-radius:16px;background:#151d17;border:1px solid #2b352d
-}
-.front-stats small{display:block;font-size:10px;color:#7e8981}
-.front-stats strong{display:block;margin-top:8px;font-size:31px;line-height:1}
-.front-stats div:last-child strong{color:var(--lime)}
-.front-table{margin-top:17px;border-top:1px solid #293229}
-.front-table div{
-  display:grid;grid-template-columns:1fr 1.7fr .6fr;gap:10px;
-  padding:12px 0;border-bottom:1px solid #222a24;
-  font-size:12px;color:#a5afa7
-}
-.front-table b{color:#eef3ef}
-.front-table em{font-style:normal;color:var(--lime)}
-.hero-v4__glass-card{
+.courseHero__monitor{
   position:absolute;
-  border:1px solid rgba(185,208,189,.22);
-  background:linear-gradient(145deg,rgba(32,42,35,.80),rgba(10,15,11,.78));
-  backdrop-filter:blur(18px);
-  box-shadow:0 30px 70px rgba(0,0,0,.40);
+  left:50%;top:48%;
+  width:700px;
+  transform:translate(-50%,-50%) rotateX(2deg);
+  transform-style:preserve-3d;
+  z-index:10;
 }
-.glass-card-a{
-  left:3%;top:245px;width:210px;height:150px;
-  border-radius:28px;
-  transform:rotate(-13deg) translateZ(120px);
-  padding:24px;
-}
-.glass-card-b{
-  right:1%;bottom:120px;width:220px;height:136px;
+.courseHero__monitorOuter{
+  position:relative;
+  height:390px;
+  overflow:hidden;
   border-radius:26px;
-  transform:rotate(9deg) translateZ(110px);
-  padding:22px;
-}
-.hero-v4__glass-card i{
-  display:block;height:9px;border-radius:8px;background:#4a574d;margin:15px 0
-}
-.hero-v4__glass-card i:first-of-type{width:65%;background:var(--lime)}
-.glass-knob{
-  width:42px;height:42px;border-radius:13px;
-  background:linear-gradient(145deg,#efffba,#bff32d 55%,#668d1f);
-  box-shadow:inset -8px -10px 15px rgba(47,72,17,.30),0 8px 20px rgba(0,0,0,.28)
-}
-.hero-v4__gel{
-  position:absolute;left:12%;bottom:105px;width:92px;height:92px;
-  border-radius:28px;
-  transform:rotate(-18deg) skewY(5deg);
-  background:linear-gradient(145deg,#f2ffc4 0%,#ccff40 28%,#8ec124 72%,#385111 100%);
-  box-shadow:
-    inset -18px -22px 32px rgba(32,51,10,.32),
-    inset 10px 8px 18px rgba(255,255,255,.26),
-    0 28px 48px rgba(0,0,0,.38);
-}
-.hero-v4__gel:before{
-  content:"";
-  position:absolute;inset:15px;
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,.20);
-}
-.hero-v4__chrome{
-  position:absolute;right:13%;top:122px;width:76px;height:76px;border-radius:50%;
+  padding:10px;
   background:
-    radial-gradient(circle at 31% 25%,#fff 0 7%,#dce4de 9%,#87928a 20%,#232924 50%,#eef2ef 64%,#4d5750 78%,#111 100%);
-  box-shadow:0 24px 42px rgba(0,0,0,.42);
+    linear-gradient(145deg,rgba(233,244,255,.55),rgba(72,112,205,.23) 24%,rgba(12,27,76,.94) 70%);
+  border:1px solid rgba(187,221,255,.48);
+  box-shadow:
+    0 32px 80px rgba(0,4,28,.52),
+    0 0 0 2px rgba(53,108,255,.12),
+    0 0 42px rgba(52,112,255,.32);
 }
-.hero-v4__orb{position:absolute;border-radius:50%;box-shadow:0 18px 30px rgba(0,0,0,.35)}
-.orb-a{
-  width:28px;height:28px;left:20%;top:160px;
-  background:radial-gradient(circle at 30% 25%,#fff,#eaff9a 22%,#87b329 68%,#243314);
+.courseHero__monitorOuter:before{
+  content:"";
+  position:absolute;inset:0;border-radius:26px;
+  background:linear-gradient(120deg,rgba(255,255,255,.22),transparent 18%,transparent 68%,rgba(71,143,255,.12));
+  pointer-events:none
 }
-.orb-b{
-  width:18px;height:18px;right:19%;bottom:160px;
-  background:radial-gradient(circle at 30% 25%,#fff,#dfffa1 18%,#78a022 70%,#1f2c12);
+.courseHero__monitorTop{
+  height:42px;
+  margin:-1px -1px 0;
+  display:grid;
+  grid-template-columns:90px 1fr 70px;
+  align-items:center;
+  padding:0 14px;
+  border-radius:18px 18px 0 0;
+  background:rgba(8,19,56,.98);
+  border-bottom:1px solid rgba(113,165,255,.18);
 }
-.orb-c{
-  width:14px;height:14px;right:27%;top:118px;background:var(--lime)
+.courseHero__dots{display:flex;gap:5px}
+.courseHero__dots i{width:7px;height:7px;border-radius:50%;background:#526a97}
+.courseHero__dots i:first-child{background:#79c5ff}
+.courseHero__monitorTop>span{
+  justify-self:center;width:125px;height:7px;border-radius:8px;background:rgba(131,178,255,.22)
+}
+.courseHero__monitorTop b{justify-self:end;font-size:10px;color:#9cecff;letter-spacing:.08em}
+.courseHero__screen{
+  height:calc(100% - 42px);
+  display:grid;
+  grid-template-columns:104px 1fr;
+  overflow:hidden;
+  border-radius:0 0 18px 18px;
+  background:
+    radial-gradient(circle at 65% 15%,rgba(50,98,208,.15),transparent 34%),
+    #08133b;
+}
+.courseHero__screenSide{
+  padding:22px 15px;
+  background:linear-gradient(180deg,#0a194b,#081237);
+  border-right:1px solid rgba(100,153,255,.16)
+}
+.courseHero__screenSide strong{
+  display:block;color:#a9e9ff;font-size:15px;letter-spacing:.14em;margin-bottom:22px
+}
+.courseHero__screenSide i{
+  display:block;height:8px;border-radius:7px;background:#31456f;margin:16px 0
+}
+.courseHero__screenSide i.active{width:68%;background:linear-gradient(90deg,#5fe4ff,#5b79ff)}
+.courseHero__screenMain{padding:24px}
+.courseHero__screenHead{
+  display:flex;align-items:end;justify-content:space-between
+}
+.courseHero__screenHead small{display:block;color:#6f89bd;font-size:9px;letter-spacing:.13em;font-weight:900}
+.courseHero__screenHead h3{margin:7px 0 0;font-size:25px;letter-spacing:-.045em}
+.courseHero__screenHead>span{
+  width:9px;height:9px;border-radius:50%;background:#79e5ff;
+  box-shadow:0 0 16px #6fddff
+}
+.courseHero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.courseHero__stats div{
+  padding:13px;border-radius:14px;
+  background:linear-gradient(180deg,rgba(29,58,119,.72),rgba(16,35,83,.76));
+  border:1px solid rgba(100,155,255,.20);
+  box-shadow:inset 0 1px rgba(255,255,255,.025)
+}
+.courseHero__stats small{display:block;color:#7d96c5;font-size:9px}
+.courseHero__stats strong{display:block;margin-top:6px;font-size:26px}
+.courseHero__stats div:last-child strong{
+  color:#82e8ff;text-shadow:0 0 13px rgba(91,220,255,.24)
+}
+.courseHero__rows{margin-top:15px;border-top:1px solid rgba(100,153,255,.14)}
+.courseHero__rows div{
+  display:grid;grid-template-columns:1fr 1.7fr .6fr;gap:8px;
+  padding:11px 0;border-bottom:1px solid rgba(100,153,255,.12);
+  color:#8fa4ce;font-size:11px
+}
+.courseHero__rows b{color:#e8f0ff}
+.courseHero__rows em{font-style:normal;color:#7ee8ff}
+.courseHero__neck{
+  width:120px;height:72px;margin:-2px auto 0;
+  background:linear-gradient(90deg,#557dd8,#d9eaff 48%,#6c9cf2);
+  clip-path:polygon(23% 0,77% 0,92% 100%,8% 100%);
+  box-shadow:0 12px 26px rgba(0,6,36,.28)
+}
+.courseHero__base{
+  width:270px;height:28px;margin:-2px auto 0;border-radius:50%;
+  background:linear-gradient(180deg,#d9eaff,#5476c7 58%,#14265d);
+  box-shadow:0 14px 22px rgba(0,5,34,.40),0 0 22px rgba(77,142,255,.26)
+}
+.courseHero__pedestal{
+  position:absolute;
+  left:50%;bottom:54px;
+  width:530px;height:92px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:
+    radial-gradient(ellipse at 50% 35%,rgba(111,199,255,.76),rgba(40,87,228,.95) 36%,#11216a 69%,#060c32 100%);
+  border:1px solid rgba(126,198,255,.50);
+  box-shadow:
+    inset 0 13px 22px rgba(127,211,255,.28),
+    0 0 0 9px rgba(27,63,171,.36),
+    0 20px 60px rgba(0,7,49,.50),
+    0 0 40px rgba(57,122,255,.55);
+  z-index:4
+}
+.courseHero__pedestal:after{
+  content:"";position:absolute;left:9%;right:9%;top:8px;height:2px;border-radius:50%;
+  background:linear-gradient(90deg,transparent,#96e8ff,transparent);
+  box-shadow:0 0 16px #63cfff
+}
+.courseHero__flare{
+  position:absolute;left:50%;bottom:62px;width:480px;height:36px;transform:translateX(-50%);
+  border-radius:50%;background:#5ebcff;filter:blur(22px);opacity:.38;z-index:2
+}
+.courseHero__float{
+  position:absolute;z-index:14;
+  width:145px;height:145px;
+  border-radius:30px;
+  padding:9px;
+  background:linear-gradient(145deg,#f9fcff,#d4e3ff 40%,#6f98ff 100%);
+  box-shadow:0 30px 54px rgba(0,7,45,.40),0 0 24px rgba(88,148,255,.23);
+}
+.courseHero__float:after{
+  content:"";position:absolute;inset:11px -9px -11px 9px;z-index:-1;
+  border-radius:27px;background:linear-gradient(145deg,#3158b4,#0f245e);
+}
+.courseHero__floatFace{
+  width:100%;height:100%;border-radius:22px;
+  display:grid;place-items:center;
+  background:linear-gradient(145deg,#f9fcff,#dfeaff);
+  color:#245cf0;
+  box-shadow:inset -14px -18px 28px rgba(52,92,183,.12)
+}
+.courseHero__floatFace svg{width:72px;height:72px}
+.courseHero__float--code{
+  left:4%;top:290px;
+  transform:rotate(-11deg) rotateY(17deg);
+}
+.courseHero__float--cursor{
+  right:3%;top:270px;
+  transform:rotate(9deg) rotateY(-16deg);
+}
+.courseHero__float--cursor .courseHero__floatFace{
+  color:#27b9ff;
+  background:linear-gradient(145deg,#ffffff,#d9f5ff)
+}
+.courseHero__backPanel{
+  position:absolute;z-index:2;
+  width:260px;height:210px;
+  border-radius:26px;
+  border:1px solid rgba(98,150,255,.25);
+  background:linear-gradient(145deg,rgba(24,57,129,.50),rgba(8,20,63,.46));
+  backdrop-filter:blur(12px);
+  box-shadow:0 25px 60px rgba(0,5,36,.30)
+}
+.courseHero__backPanel--left{
+  left:10%;top:335px;transform:rotate(-7deg)
+}
+.courseHero__backPanel--right{
+  right:9%;top:360px;transform:rotate(7deg)
+}
+.courseHero__backPanel--left span{
+  display:block;height:9px;margin:24px 22px;border-radius:8px;background:rgba(109,153,255,.28)
+}
+.courseHero__backPanel--left span:first-child{width:58%;background:rgba(126,220,255,.55)}
+.courseHero__chart{
+  height:100%;display:flex;align-items:flex-end;gap:12px;padding:28px
+}
+.courseHero__chart i{
+  flex:1;border-radius:9px 9px 3px 3px;
+  background:linear-gradient(180deg,#74dcff,#3d69ff);
+  box-shadow:0 0 18px rgba(76,143,255,.22)
 }
 @media(max-width:820px){
-  .hero-v4{min-height:820px;padding:38px 0 44px}
-  .hero-v4__inner{width:min(100% - 20px,1180px)}
-  .hero-v4__title{
-    font-size:clamp(62px,18vw,92px);
-    gap:.08em;
+  .courseHero{min-height:760px;padding:30px 0 20px}
+  .courseHero__inner{width:min(100% - 20px,1040px)}
+  .courseHero__title{
+    font-size:clamp(66px,19vw,98px);
+    line-height:.86;
     letter-spacing:-.07em;
   }
-  .hero-v4__stage{height:590px;margin-top:4px}
-  .stack-panel--back{width:520px;height:300px;top:168px}
-  .stack-panel--mid{width:540px;height:310px;top:160px}
-  .stack-panel--front{
-    width:92%;height:328px;top:170px;
-    transform:translateX(-50%) rotateX(5deg) rotateY(-3deg) rotateZ(-1deg) translateZ(40px)
-  }
-  .front-body{grid-template-columns:78px 1fr}
-  .front-side{padding:18px 11px}.front-side b{font-size:13px}
-  .front-content{padding:18px 16px}.front-head h3{font-size:21px}
-  .front-stats strong{font-size:20px}.front-table div{font-size:10px;gap:5px}
-  .glass-card-a{left:-6%;top:230px;width:155px;height:115px}
-  .glass-card-b{right:-7%;bottom:120px;width:165px;height:108px}
-  .hero-v4__gel{left:4%;bottom:86px;width:72px;height:72px;border-radius:22px}
-  .hero-v4__chrome{right:5%;top:118px;width:56px;height:56px}
-  .halo-a{width:470px}.halo-b{width:390px}
+  .courseHero__scene{height:585px;margin-top:-2px}
+  .courseHero__monitor{width:86%;top:47%}
+  .courseHero__monitorOuter{height:310px;border-radius:22px}
+  .courseHero__monitorTop{height:38px}
+  .courseHero__screen{height:calc(100% - 38px);grid-template-columns:78px 1fr}
+  .courseHero__screenSide{padding:18px 11px}.courseHero__screenSide strong{font-size:12px}
+  .courseHero__screenMain{padding:17px 14px}
+  .courseHero__screenHead h3{font-size:20px}
+  .courseHero__stats strong{font-size:19px}
+  .courseHero__rows div{font-size:9px;gap:5px}
+  .courseHero__neck{width:86px;height:54px}
+  .courseHero__base{width:190px;height:22px}
+  .courseHero__pedestal{width:340px;height:66px;bottom:42px}
+  .courseHero__flare{width:310px;bottom:48px}
+  .courseHero__float{width:96px;height:96px;border-radius:22px}
+  .courseHero__float:after{border-radius:20px}
+  .courseHero__floatFace{border-radius:16px}
+  .courseHero__floatFace svg{width:50px;height:50px}
+  .courseHero__float--code{left:-2%;top:250px}
+  .courseHero__float--cursor{right:-2%;top:236px}
+  .courseHero__backPanel{width:180px;height:150px}
+  .courseHero__backPanel--left{left:2%;top:310px}
+  .courseHero__backPanel--right{right:1%;top:325px}
+  .courseHero__ring--one{width:620px;height:250px}
+  .courseHero__ring--two{width:520px;height:190px}
 }
 </style>
 </head>
 <body>
 <main>
 
-<section class="hero-v4">
-  <div class="hero-v4__grid"></div>
-  <div class="hero-v4__aurora"></div>
+<section class="courseHero">
+  <div class="courseHero__grid"></div>
+  <div class="courseHero__light courseHero__light--one"></div>
+  <div class="courseHero__light courseHero__light--two"></div>
 
-  <div class="hero-v4__inner">
-    <h1 class="hero-v4__title"><span>바이브</span><strong>코딩</strong></h1>
+  <div class="courseHero__inner">
+    <h1 class="courseHero__title">바이브코딩</h1>
 
-    <div class="hero-v4__stage" aria-hidden="true">
-      <div class="hero-v4__halo halo-a"></div>
-      <div class="hero-v4__halo halo-b"></div>
+    <div class="courseHero__scene" aria-hidden="true">
+      <div class="courseHero__ring courseHero__ring--one"></div>
+      <div class="courseHero__ring courseHero__ring--two"></div>
 
-      <div class="hero-v4__orb orb-a"></div>
-      <div class="hero-v4__orb orb-b"></div>
-      <div class="hero-v4__orb orb-c"></div>
-
-      <div class="hero-v4__stack">
-        <div class="stack-panel stack-panel--back">
-          <div class="stack-bar"><i></i><i></i><i></i></div>
-          <div class="stack-lines">
-            <b></b><b></b><b></b><b></b><b></b>
-          </div>
+      <div class="courseHero__float courseHero__float--code">
+        <div class="courseHero__floatFace">
+          <svg viewBox="0 0 88 88">
+            <path d="M34 26 17 44l17 18M54 26l17 18-17 18M50 18 38 70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
+      </div>
 
-        <div class="stack-panel stack-panel--mid">
-          <div class="stack-bar"><i></i><i></i><i></i></div>
-          <div class="stack-mid-body">
-            <div class="stack-mid-left">
+      <div class="courseHero__float courseHero__float--cursor">
+        <div class="courseHero__floatFace">
+          <svg viewBox="0 0 88 88">
+            <path d="M22 14 67 48l-22 4 12 20-11 6-12-21-12 15Z" fill="currentColor"/>
+            <path d="M58 15v10M70 23l-7 7M49 7l-3 10" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="courseHero__backPanel courseHero__backPanel--left">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="courseHero__backPanel courseHero__backPanel--right">
+        <div class="courseHero__chart">
+          <i style="height:34%"></i><i style="height:46%"></i><i style="height:61%"></i><i style="height:80%"></i>
+        </div>
+      </div>
+
+      <div class="courseHero__monitor">
+        <div class="courseHero__monitorOuter">
+          <div class="courseHero__monitorTop">
+            <div class="courseHero__dots"><i></i><i></i><i></i></div>
+            <span></span>
+            <b>LIVE</b>
+          </div>
+
+          <div class="courseHero__screen">
+            <div class="courseHero__screenSide">
+              <strong>VIBE</strong>
               <i class="active"></i><i></i><i></i><i></i>
             </div>
-            <div class="stack-mid-right">
-              <div class="mini-title"></div>
-              <div class="mini-cards"><i></i><i></i><i></i></div>
-              <div class="mini-table"><i></i><i></i><i></i></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="stack-panel stack-panel--front">
-          <div class="front-top">
-            <div class="front-dots"><i></i><i></i><i></i></div>
-            <div class="front-pill"></div>
-          </div>
-          <div class="front-body">
-            <div class="front-side">
-              <b>VIBE</b>
-              <i class="active"></i><i></i><i></i><i></i>
-            </div>
-            <div class="front-content">
-              <div class="front-head">
+            <div class="courseHero__screenMain">
+              <div class="courseHero__screenHead">
+                <div>
+                  <small>LEAD DASHBOARD</small>
+                  <h3>상담 접수 현황</h3>
+                </div>
                 <span></span>
-                <h3>상담 접수 현황</h3>
               </div>
-              <div class="front-stats">
+
+              <div class="courseHero__stats">
                 <div><small>오늘 접수</small><strong>18</strong></div>
                 <div><small>신규 문의</small><strong>07</strong></div>
                 <div><small>자동 발송</small><strong>18</strong></div>
               </div>
-              <div class="front-table">
+
+              <div class="courseHero__rows">
                 <div><b>김OO</b><span>010-****-4821</span><em>신규</em></div>
                 <div><b>이OO</b><span>010-****-9134</span><em>확인</em></div>
                 <div><b>박OO</b><span>010-****-2217</span><em>대기</em></div>
@@ -1005,19 +1078,12 @@ section{border-radius:0!important}
           </div>
         </div>
 
-        <div class="hero-v4__glass-card glass-card-a">
-          <div class="glass-knob"></div>
-          <i></i><i></i><i></i>
-        </div>
-        <div class="hero-v4__glass-card glass-card-b">
-          <i></i><i></i><i></i>
-        </div>
+        <div class="courseHero__neck"></div>
+        <div class="courseHero__base"></div>
       </div>
 
-      <div class="hero-v4__gel">
-        <span></span>
-      </div>
-      <div class="hero-v4__chrome"></div>
+      <div class="courseHero__pedestal"></div>
+      <div class="courseHero__flare"></div>
     </div>
   </div>
 </section>
