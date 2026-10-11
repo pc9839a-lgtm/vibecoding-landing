@@ -1473,242 +1473,145 @@ section{border-radius:0!important}
 </style>
 
 
-<style id="directBuild-v1">
-.directBuild{
+
+<style id="audienceEditorial-v1">
+.audienceEditorial{
   position:relative;
   overflow:hidden;
-  min-height:1100px;
-  padding:132px 0 116px;
-  background:
-    radial-gradient(circle at 58% 56%,rgba(202,255,56,.10),transparent 30%),
-    linear-gradient(180deg,#060806 0%,#0a0f09 57%,#060806 100%);
-  color:#fff;
+  padding:118px 0 128px;
+  background:#f2f5e9;
+  color:#0a0d0a;
 }
-.directBuild:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(202,255,56,.026) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(202,255,56,.026) 1px,transparent 1px);
-  background-size:72px 72px;
-  mask-image:linear-gradient(to bottom,transparent,#000 13%,#000 88%,transparent);
-}
-.directBuild__inner{
-  width:min(1080px,calc(100% - 34px));
+.audienceEditorial__inner{
+  width:min(980px,calc(100% - 28px));
   margin:0 auto;
-  position:relative;
-  z-index:3;
 }
-.directBuild__copy{
-  position:relative;
-  z-index:8;
-  width:max-content;
-  max-width:100%;
-}
-.directBuild__copy h2{
+.audienceEditorial h2{
   margin:0;
+  text-align:center;
   font-family:"Pretendard Variable","Pretendard","Noto Sans KR",sans-serif;
-  font-size:clamp(84px,10vw,142px);
-  line-height:.80;
-  letter-spacing:-.09em;
+  font-size:clamp(58px,7.6vw,96px);
+  line-height:.92;
+  letter-spacing:-.078em;
   font-weight:950;
+  color:#0b0e0b;
+}
+.audienceEditorial h2 span{
+  color:#91c91f;
+}
+.audienceEditorial__grid{
+  margin-top:72px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.audienceEditorial__card{
+  min-height:220px;
+  padding:30px 30px 28px;
+  border-radius:16px;
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  overflow:hidden;
+}
+.audienceEditorial__card strong{
+  position:relative;
+  z-index:2;
+  font-size:clamp(28px,3.5vw,44px);
+  line-height:1.08;
+  letter-spacing:-.055em;
+  font-weight:950;
+}
+.audienceEditorial__card--dark{
+  background:#090c09;
   color:#fff;
 }
-.directBuild__copy h2 span{color:#caff38}
-.directBuild__ghost{
-  position:absolute;
-  z-index:1;
-  font-family:"Pretendard Variable","Pretendard","Noto Sans KR",sans-serif;
-  font-size:clamp(140px,19vw,270px);
-  line-height:.8;
-  letter-spacing:-.1em;
-  font-weight:950;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(202,255,56,.075);
-  opacity:.8;
-  user-select:none;
-}
-.directBuild__ghost--one{right:-2%;top:70px;transform:rotate(5deg)}
-.directBuild__ghost--two{left:-4%;top:410px;transform:rotate(-7deg)}
-.directBuild__ghost--three{right:-2%;bottom:100px;transform:rotate(7deg)}
-.directBuild__visual{
-  position:relative;
-  height:660px;
-  margin:-6px auto 0;
-  perspective:1800px;
-}
-.directBuild__slash{
-  position:absolute;
-  left:50%;top:49%;
-  width:1050px;height:170px;
-  transform:translate(-50%,-50%) rotate(-12deg);
-  border-radius:80px;
-  background:linear-gradient(90deg,transparent 0%,rgba(202,255,56,.03) 12%,rgba(202,255,56,.12) 52%,rgba(202,255,56,.02) 88%,transparent 100%);
-  border-top:1px solid rgba(202,255,56,.18);
-  border-bottom:1px solid rgba(202,255,56,.07);
-  filter:drop-shadow(0 18px 55px rgba(0,0,0,.24));
-}
-.directBuild__browser{
-  position:absolute;
-  left:50%;top:51%;
-  width:830px;height:470px;
-  transform:translate(-50%,-50%) rotateX(7deg) rotateY(-9deg) rotateZ(2.2deg);
-  border-radius:34px;
-  overflow:hidden;
-  background:#0b120c;
-  border:1px solid rgba(215,255,144,.20);
-  box-shadow:
-    0 62px 145px rgba(0,0,0,.58),
-    0 0 56px rgba(202,255,56,.09);
-}
-.directBuild__browser:after{
+.audienceEditorial__card--dark:before{
   content:"";
-  position:absolute;inset:-35%;
-  background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.09) 47%,transparent 58%);
-  transform:translateX(-24%);
-  pointer-events:none;
-}
-.directBuild__browserTop{
-  height:49px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:0 17px;
-  background:#111814;
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.directBuild__browserTop i{
-  width:7px;height:7px;border-radius:50%;background:#59635b
-}
-.directBuild__browserTop i:first-child{background:#caff38}
-.directBuild__browserTop span{
-  width:160px;height:7px;border-radius:8px;
-  margin-left:auto;margin-right:auto;
-  background:rgba(202,255,56,.10);
-}
-.directBuild__browserBody{
-  height:calc(100% - 49px);
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-}
-.directBuild__page{
-  padding:43px 36px;
-  background:
-    radial-gradient(circle at 18% 8%,rgba(202,255,56,.055),transparent 28%),
-    #0d150e;
-  border-right:1px solid rgba(255,255,255,.06);
-}
-.directBuild__miniTag{
-  width:64px;height:7px;border-radius:7px;background:#caff38
-}
-.directBuild__headline{
-  width:82%;height:29px;margin-top:22px;border-radius:7px;background:#eff3ed
-}
-.directBuild__sub{
-  width:58%;height:12px;margin-top:14px;border-radius:6px;background:#465148
-}
-.directBuild__cta{
-  width:120px;height:40px;margin-top:26px;border-radius:10px;background:#caff38
-}
-.directBuild__thumbs{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px
-}
-.directBuild__thumbs i{
-  height:92px;border-radius:14px;
-  background:
-    linear-gradient(145deg,rgba(202,255,56,.08),rgba(202,255,56,.02)),
-    #151e17;
-  border:1px solid rgba(202,255,56,.08)
-}
-.directBuild__panel{
-  padding:43px 31px;
-  background:linear-gradient(180deg,#0f180f,#09100a)
-}
-.directBuild__panelTitle{
-  width:60%;height:22px;border-radius:7px;background:#edf2eb;margin-bottom:30px
-}
-.directBuild__panelRow{
-  display:grid;grid-template-columns:.8fr 1.2fr .45fr;gap:10px;align-items:center;height:68px;
-  border-top:1px solid rgba(255,255,255,.06)
-}
-.directBuild__panelRow i,.directBuild__panelRow b{
-  height:9px;border-radius:8px;background:#465148
-}
-.directBuild__panelRow i:nth-child(2){background:#2c362e}
-.directBuild__panelRow b{background:#caff38}
-.directBuild__note{
   position:absolute;
-  z-index:12;
-  min-width:230px;
-  padding:17px 19px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:24px;
-  border-radius:18px;
-  box-shadow:0 20px 50px rgba(0,0,0,.38);
-  font-size:14px;
-  letter-spacing:-.03em;
-  font-weight:900
+  right:-45px;top:-55px;
+  width:180px;height:180px;
+  border-radius:50%;
+  border:1px solid rgba(202,255,56,.20);
 }
-.directBuild__note span{opacity:.7}
-.directBuild__note b{font-size:15px}
-.directBuild__note--one{
-  left:4%;top:128px;
-  color:#eef2ec;
-  background:rgba(17,25,18,.90);
-  border:1px solid rgba(255,255,255,.08);
-  transform:rotate(-6deg);
-  backdrop-filter:blur(16px);
+.audienceEditorial__card--light{
+  background:#fff;
+  color:#0b0e0b;
+  border:1px solid rgba(10,13,10,.10);
 }
-.directBuild__note--one b{color:#7f897f}
-.directBuild__note--two{
-  right:4%;bottom:92px;
-  color:#111610;
+.audienceEditorial__card--light:nth-child(2):before{
+  content:"";
+  position:absolute;
+  width:110px;height:7px;
+  left:30px;top:28px;
   background:#caff38;
-  transform:rotate(5deg)
 }
-.directBuild__footer{
-  margin:16px auto 0;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px 28px
+.audienceEditorial__card--light:nth-child(3):before{
+  content:"";
+  position:absolute;
+  left:30px;top:28px;
+  width:72px;height:72px;
+  border:11px solid #0b0e0b;
+  border-right-color:#caff38;
+  border-radius:50%;
 }
-.directBuild__footer span{
-  color:#747d75;
-  font-size:14px;
-  font-weight:850;
-  letter-spacing:-.02em
+.audienceEditorial__card--lime{
+  background:#caff38;
+  color:#101410;
 }
-.directBuild__footer span+span:before{
-  content:"·";
-  margin-right:28px;
-  color:#caff38
+.audienceEditorial__card--lime:before{
+  content:"01";
+  position:absolute;
+  right:24px;top:16px;
+  font-size:70px;
+  line-height:1;
+  font-weight:950;
+  color:rgba(16,20,16,.09);
+}
+.audienceEditorial__card--wide{
+  grid-column:1 / -1;
+  min-height:210px;
+  background:#0a0d0a;
+  color:#fff;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:end;
+}
+.audienceEditorial__card--wide strong{
+  font-size:clamp(34px,4.6vw,58px);
+}
+.audienceEditorial__card--wide span{
+  align-self:end;
+  color:#caff38;
+  font-size:clamp(18px,2vw,24px);
+  font-weight:900;
+  letter-spacing:-.035em;
+  white-space:nowrap;
 }
 @media(max-width:820px){
-  .directBuild{min-height:860px;padding:92px 0 82px}
-  .directBuild__inner{width:min(100% - 22px,1080px)}
-  .directBuild__copy h2{font-size:62px}
-  .directBuild__ghost{font-size:120px}
-  .directBuild__ghost--one{top:42px}
-  .directBuild__ghost--two{top:330px}
-  .directBuild__visual{height:500px;margin-top:26px}
-  .directBuild__slash{width:760px;height:120px}
-  .directBuild__browser{
-    width:94%;height:340px;
-    transform:translate(-50%,-50%) rotateX(3deg) rotateY(-4deg) rotateZ(1deg)
+  .audienceEditorial{padding:88px 0 94px}
+  .audienceEditorial__inner{width:min(100% - 20px,980px)}
+  .audienceEditorial h2{font-size:52px}
+  .audienceEditorial__grid{margin-top:48px;gap:10px}
+  .audienceEditorial__card{
+    min-height:170px;
+    padding:22px 20px 20px;
+    border-radius:13px;
   }
-  .directBuild__browserBody{grid-template-columns:1fr 1fr}
-  .directBuild__page,.directBuild__panel{padding:28px 18px}
-  .directBuild__thumbs i{height:60px}
-  .directBuild__note{min-width:180px;padding:13px 14px;font-size:12px}
-  .directBuild__note--one{left:0;top:70px}
-  .directBuild__note--two{right:0;bottom:58px}
-  .directBuild__footer{gap:8px 14px;margin-top:0}
-  .directBuild__footer span{font-size:12px}
-  .directBuild__footer span+span:before{margin-right:14px}
+  .audienceEditorial__card strong{font-size:25px}
+  .audienceEditorial__card--light:nth-child(2):before{left:20px;top:20px;width:80px}
+  .audienceEditorial__card--light:nth-child(3):before{left:20px;top:19px;width:54px;height:54px;border-width:9px}
+  .audienceEditorial__card--wide{
+    min-height:190px;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .audienceEditorial__card--wide strong{font-size:31px}
+  .audienceEditorial__card--wide span{
+    font-size:16px;
+    white-space:normal;
+  }
 }
 </style>
 </head>
@@ -1936,60 +1839,31 @@ section{border-radius:0!important}
   </div>
 </section>
 
-<section class="directBuild">
-  <div class="directBuild__ghost directBuild__ghost--one">외주</div>
-  <div class="directBuild__ghost directBuild__ghost--two">수정</div>
-  <div class="directBuild__ghost directBuild__ghost--three">대기</div>
+<section class="audienceEditorial">
+  <div class="audienceEditorial__inner">
+    <h2>이런 분께<br><span>추천드립니다</span></h2>
 
-  <div class="directBuild__inner">
-    <div class="directBuild__copy">
-      <h2>만드는 것도,<br>고치는 것도<br><span>이제 직접.</span></h2>
-    </div>
+    <div class="audienceEditorial__grid">
+      <article class="audienceEditorial__card audienceEditorial__card--dark">
+        <strong>제휴마케팅을<br>처음 시작한다면</strong>
+      </article>
 
-    <div class="directBuild__visual" aria-hidden="true">
-      <div class="directBuild__slash"></div>
+      <article class="audienceEditorial__card audienceEditorial__card--light">
+        <strong>광고 랜딩을<br>직접 운영하고 싶다면</strong>
+      </article>
 
-      <div class="directBuild__browser">
-        <div class="directBuild__browserTop">
-          <i></i><i></i><i></i>
-          <span></span>
-        </div>
-        <div class="directBuild__browserBody">
-          <div class="directBuild__page">
-            <div class="directBuild__miniTag"></div>
-            <div class="directBuild__headline"></div>
-            <div class="directBuild__sub"></div>
-            <div class="directBuild__cta"></div>
-            <div class="directBuild__thumbs">
-              <i></i><i></i><i></i>
-            </div>
-          </div>
+      <article class="audienceEditorial__card audienceEditorial__card--light">
+        <strong>노코드에서<br>한 단계 더 나가고 싶다면</strong>
+      </article>
 
-          <div class="directBuild__panel">
-            <div class="directBuild__panelTitle"></div>
-            <div class="directBuild__panelRow"><i></i><i></i><b></b></div>
-            <div class="directBuild__panelRow"><i></i><i></i><b></b></div>
-            <div class="directBuild__panelRow"><i></i><i></i><b></b></div>
-          </div>
-        </div>
-      </div>
+      <article class="audienceEditorial__card audienceEditorial__card--lime">
+        <strong>문의 접수와 알림까지<br>자동화하고 싶다면</strong>
+      </article>
 
-      <div class="directBuild__note directBuild__note--one">
-        <span>수정 요청</span>
-        <b>대기</b>
-      </div>
-      <div class="directBuild__note directBuild__note--two">
-        <span>직접 수정</span>
-        <b>완료</b>
-      </div>
-    </div>
-
-    <div class="directBuild__footer">
-      <span>랜딩페이지</span>
-      <span>신청폼</span>
-      <span>DB</span>
-      <span>알림</span>
-      <span>관리자 화면</span>
+      <article class="audienceEditorial__card audienceEditorial__card--wide">
+        <strong>아이디어는 많은데<br>구현이 늘 늦어진다면</strong>
+        <span>이제 직접 만들 차례입니다.</span>
+      </article>
     </div>
   </div>
 </section>
