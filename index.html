@@ -978,195 +978,212 @@ section{border-radius:0!important}
 
 
 
-<style id="vibeIntro-v4">
-.vibeIntroV4{
+
+<style id="vibeIntro-v5">
+.vibeIntroV5{
   position:relative;
   overflow:hidden;
-  padding:128px 0 112px;
+  padding:150px 0 130px;
   background:#070907;
   color:#fff;
 }
-.vibeIntroV4:before{
+.vibeIntroV5:before{
   content:"";
   position:absolute;
-  left:50%;
-  top:46%;
-  width:840px;
-  height:520px;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(202,255,56,.09),transparent 68%);
-  filter:blur(22px);
-  pointer-events:none;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 62%,rgba(202,255,56,.10),transparent 30%),
+    linear-gradient(rgba(202,255,56,.026) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(202,255,56,.026) 1px,transparent 1px);
+  background-size:auto,72px 72px,72px 72px;
+  mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
 }
-.vibeIntroV4__inner{
-  width:min(960px,calc(100% - 30px));
+.vibeIntroV5__inner{
+  width:min(1120px,calc(100% - 34px));
   margin:0 auto;
   position:relative;
   z-index:2;
 }
-.vibeIntroV4__copy{
-  text-align:center;
+.vibeIntroV5__copy{
+  max-width:980px;
+  margin:0 auto;
+  text-align:left;
 }
-.vibeIntroV4__copy h2{
+.vibeIntroV5__copy h2{
   margin:0;
-  font-size:clamp(66px,8.4vw,112px);
-  line-height:.9;
-  letter-spacing:-.08em;
+  font-size:clamp(74px,9.3vw,132px);
+  line-height:.86;
+  letter-spacing:-.085em;
   font-weight:950;
 }
-.vibeIntroV4__copy p{
-  margin:42px 0 0;
-  font-size:clamp(30px,4vw,54px);
-  line-height:1.2;
-  letter-spacing:-.06em;
-  font-weight:900;
-  color:#737b73;
+.vibeIntroV5__copy h2 span{color:#caff38}
+.vibeIntroV5__copy p{
+  margin:54px 0 0;
+  max-width:720px;
+  color:#8f978f;
+  font-size:clamp(23px,2.7vw,34px);
+  line-height:1.45;
+  letter-spacing:-.045em;
+  font-weight:750;
 }
-.vibeIntroV4__copy h2 span{color:#caff38}
-.vibeIntroV4__copy p strong{
-  color:#fff;
+.vibeIntroV5__copy p strong{
+  color:#f2f5ef;
   font-weight:950;
 }
-.vibeIntroV4__definition{
-  margin:32px auto 0;
-  color:#7f887f;
-  font-size:17px;
-  line-height:1.65;
-  letter-spacing:-.025em;
-  font-weight:650;
-}
-.vibeIntroV4__definition b{
-  color:#caff38;
-  font-weight:900;
-}
-.vibeIntroV4__scene{
-  margin:88px auto 0;
-  display:grid;
-  grid-template-columns:.9fr 72px 1.1fr;
-  align-items:center;
-  gap:22px;
-  width:min(900px,100%);
-}
-.vibeIntroV4__prompt{
+.vibeIntroV5__visual{
   position:relative;
-  padding:30px 28px;
-  border-radius:26px;
-  background:#caff38;
-  color:#111710;
-  box-shadow:0 28px 65px rgba(0,0,0,.30);
-  transform:rotate(-2deg);
+  width:min(1040px,100%);
+  height:720px;
+  margin:92px auto 0;
 }
-.vibeIntroV4__prompt span{
-  display:block;
-  font-size:22px;
-  line-height:1.4;
-  letter-spacing:-.04em;
-  font-weight:950;
-}
-.vibeIntroV4__prompt span+span{margin-top:9px}
-.vibeIntroV4__arrow{
-  text-align:center;
-  color:#caff38;
-  font-size:46px;
-  font-weight:300;
-  opacity:.78;
-}
-.vibeIntroV4__screen{
-  border-radius:28px;
+.vibeIntroV5__browser{
+  position:absolute;
+  left:50%;top:51%;
+  width:900px;height:500px;
+  transform:translate(-50%,-50%) rotateX(4deg) rotateZ(-1.3deg);
+  border-radius:34px;
   overflow:hidden;
-  background:#0c130d;
-  border:1px solid rgba(210,255,138,.20);
+  background:#0b120c;
+  border:1px solid rgba(213,255,139,.20);
   box-shadow:
-    0 36px 88px rgba(0,0,0,.42),
-    0 0 38px rgba(202,255,56,.07);
-  transform:rotate(1.5deg);
+    0 60px 140px rgba(0,0,0,.52),
+    0 0 60px rgba(202,255,56,.10);
 }
-.vibeIntroV4__top{
-  height:46px;
+.vibeIntroV5__browserTop{
+  height:50px;
   display:flex;
   align-items:center;
   gap:6px;
-  padding:0 16px;
-  background:#121914;
+  padding:0 18px;
+  background:#111813;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
-.vibeIntroV4__top i{
-  width:7px;height:7px;border-radius:50%;background:#555f57;
+.vibeIntroV5__browserTop i{width:7px;height:7px;border-radius:50%;background:#58625a}
+.vibeIntroV5__browserTop i:first-child{background:#caff38}
+.vibeIntroV5__browserTop span{
+  width:170px;height:7px;border-radius:10px;
+  margin-left:auto;margin-right:auto;
+  background:rgba(202,255,56,.10);
 }
-.vibeIntroV4__top i:first-child{background:#caff38}
-.vibeIntroV4__body{
-  padding:30px;
+.vibeIntroV5__browserBody{
+  height:calc(100% - 50px);
+  display:grid;
+  grid-template-columns:1.04fr .96fr;
 }
-.vibeIntroV4__titleLine{
-  width:58%;
-  height:20px;
-  margin-bottom:26px;
-  border-radius:6px;
-  background:#eaf0ea;
+.vibeIntroV5__page{
+  padding:46px 38px;
+  background:
+    radial-gradient(circle at 18% 8%,rgba(202,255,56,.06),transparent 28%),
+    #0c150d;
+  border-right:1px solid rgba(255,255,255,.06);
 }
-.vibeIntroV4__field{
-  height:44px;
-  margin-top:11px;
-  border-radius:10px;
-  background:#151e17;
-  border:1px solid #2d382f;
+.vibeIntroV5__eyebrow{width:64px;height:7px;border-radius:6px;background:#caff38}
+.vibeIntroV5__headline{width:78%;height:30px;border-radius:7px;background:#eef3ed;margin-top:22px}
+.vibeIntroV5__subline{width:52%;height:12px;border-radius:6px;background:#435046;margin-top:14px}
+.vibeIntroV5__form{margin-top:42px}
+.vibeIntroV5__form i{
+  display:block;height:44px;margin-top:11px;border-radius:10px;background:#151e17;border:1px solid #2d382f
 }
-.vibeIntroV4__field.big{height:76px}
-.vibeIntroV4__button{
-  height:48px;
-  margin-top:14px;
-  border-radius:10px;
+.vibeIntroV5__form i:nth-child(3){height:78px}
+.vibeIntroV5__form b{
+  display:block;height:48px;margin-top:14px;border-radius:10px;background:#caff38
+}
+.vibeIntroV5__admin{
+  padding:46px 34px;
+  background:linear-gradient(180deg,#0e180f,#0a120b);
+}
+.vibeIntroV5__adminHead{
+  width:62%;height:22px;border-radius:6px;background:#edf2ec;margin-bottom:30px
+}
+.vibeIntroV5__adminRow{
+  display:grid;grid-template-columns:.85fr 1.25fr .42fr;gap:10px;align-items:center;
+  height:66px;border-top:1px solid rgba(255,255,255,.07)
+}
+.vibeIntroV5__adminRow i,.vibeIntroV5__adminRow b{
+  height:9px;border-radius:8px;background:#445048
+}
+.vibeIntroV5__adminRow i:nth-child(2){background:#2d372f}
+.vibeIntroV5__adminRow b{background:#caff38}
+.vibeIntroV5__prompt{
+  position:absolute;
+  left:0;top:56px;z-index:5;
+  width:360px;
+  padding:24px 26px;
+  border-radius:24px;
   background:#caff38;
+  color:#101610;
+  box-shadow:0 24px 58px rgba(0,0,0,.34);
+  transform:rotate(-4deg);
 }
-.vibeIntroV4__bottom{
-  margin:76px auto 0;
+.vibeIntroV5__prompt b{
+  display:block;
+  font-size:23px;
+  line-height:1.28;
+  letter-spacing:-.045em;
+  font-weight:950
+}
+.vibeIntroV5__prompt span{
+  display:block;
+  margin-top:11px;
+  font-size:16px;
+  line-height:1.48;
+  letter-spacing:-.025em;
+  font-weight:750
+}
+.vibeIntroV5__result{
+  position:absolute;
+  right:0;bottom:58px;z-index:5;
+  padding:14px 19px;
+  border-radius:999px;
+  background:#f3f6f1;
+  color:#111610;
+  font-size:13px;
+  letter-spacing:.08em;
+  font-weight:950;
+  box-shadow:0 18px 42px rgba(0,0,0,.30);
+  transform:rotate(3deg);
+}
+.vibeIntroV5__flow{
+  margin:20px auto 0;
   display:flex;
-  align-items:center;
   justify-content:center;
-  gap:10px;
+  gap:32px;
   flex-wrap:wrap;
 }
-.vibeIntroV4__bottom span{
+.vibeIntroV5__flow span{
   position:relative;
-  color:#8d958d;
-  font-size:14px;
+  color:#7b837b;
+  font-size:15px;
+  font-weight:850;
   letter-spacing:-.02em;
-  font-weight:800;
 }
-.vibeIntroV4__bottom span+span:before{
-  content:"/";
-  margin-right:10px;
-  color:#3b423b;
+.vibeIntroV5__flow span+span:before{
+  content:"→";
+  position:absolute;
+  left:-22px;
+  color:#caff38;
+  opacity:.65;
 }
 @media(max-width:820px){
-  .vibeIntroV4{padding:90px 0 86px}
-  .vibeIntroV4__inner{width:min(100% - 22px,960px)}
-  .vibeIntroV4__copy h2{font-size:56px}
-  .vibeIntroV4__copy p{font-size:30px;margin-top:28px}
-  .vibeIntroV4__definition{font-size:15px;margin-top:24px}
-  .vibeIntroV4__scene{
-    margin-top:58px;
-    grid-template-columns:1fr;
-    gap:18px;
+  .vibeIntroV5{padding:96px 0 90px}
+  .vibeIntroV5__inner{width:min(100% - 22px,1120px)}
+  .vibeIntroV5__copy{max-width:none}
+  .vibeIntroV5__copy h2{font-size:58px}
+  .vibeIntroV5__copy p{font-size:23px;margin-top:34px}
+  .vibeIntroV5__visual{height:560px;margin-top:60px}
+  .vibeIntroV5__browser{
+    width:94%;height:360px;
+    transform:translate(-50%,-50%) rotateX(2deg) rotateZ(-.6deg)
   }
-  .vibeIntroV4__prompt{
-    max-width:88%;
-    padding:22px 20px;
-    border-radius:22px;
-  }
-  .vibeIntroV4__prompt span{font-size:18px}
-  .vibeIntroV4__arrow{
-    transform:rotate(90deg);
-    font-size:34px;
-    line-height:1;
-  }
-  .vibeIntroV4__screen{
-    width:94%;
-    margin-left:auto;
-  }
-  .vibeIntroV4__bottom{margin-top:48px;gap:8px}
-  .vibeIntroV4__bottom span{font-size:12px}
+  .vibeIntroV5__browserBody{grid-template-columns:1fr 1fr}
+  .vibeIntroV5__page,.vibeIntroV5__admin{padding:28px 18px}
+  .vibeIntroV5__prompt{left:1%;top:38px;width:270px;padding:18px 19px}
+  .vibeIntroV5__prompt b{font-size:18px}
+  .vibeIntroV5__prompt span{font-size:13px}
+  .vibeIntroV5__result{right:1%;bottom:42px;font-size:11px}
+  .vibeIntroV5__flow{gap:21px;margin-top:0}
+  .vibeIntroV5__flow span{font-size:12px}
+  .vibeIntroV5__flow span+span:before{left:-15px}
 }
 </style>
 </head>
@@ -1278,43 +1295,54 @@ section{border-radius:0!important}
   </div>
 </section>
 
-<section class="vibeIntroV4">
-  <div class="vibeIntroV4__inner">
-    <div class="vibeIntroV4__copy">
-      <h2>아이디어를<br><span>실제 서비스로.</span></h2>
+<section class="vibeIntroV5">
+  <div class="vibeIntroV5__inner">
+    <div class="vibeIntroV5__copy">
+      <h2>
+        아이디어를<br>
+        <span>말로 만들고,</span><br>
+        실제로 작동시킵니다.
+      </h2>
       <p>
-        바이브코딩은 AI를 활용해<br>
-        <strong>화면·기능·데이터를 직접 연결하고</strong><br>
-        배포까지 완성하는 개발 방식입니다.
+        바이브코딩은 AI와 대화하며<br>
+        기획·화면·기능·데이터를 연결해<br>
+        <strong>실제 웹서비스를 완성하는 개발 방식입니다.</strong>
       </p>
-      <div class="vibeIntroV4__definition">
-        코드를 처음부터 쓰는 대신,<br>
-        AI에게 정확하게 지시하고 결과를 판단하며<br>
-        <b>실제로 쓰이는 페이지와 서비스를 만듭니다.</b>
-      </div>
     </div>
 
-    <div class="vibeIntroV4__scene" aria-hidden="true">
-      <div class="vibeIntroV4__prompt">
-        <span>상담 신청페이지 만들어줘.</span>
-        <span>이름, 연락처, 문의내용 받게.</span>
+    <div class="vibeIntroV5__visual" aria-hidden="true">
+      <div class="vibeIntroV5__prompt">
+        <b>“상담 신청페이지 만들어줘.”</b>
+        <span>이름, 연락처, 문의내용 받고<br>접수되면 저장되게.</span>
       </div>
 
-      <div class="vibeIntroV4__arrow">→</div>
-
-      <div class="vibeIntroV4__screen">
-        <div class="vibeIntroV4__top"><i></i><i></i><i></i></div>
-        <div class="vibeIntroV4__body">
-          <div class="vibeIntroV4__titleLine"></div>
-          <div class="vibeIntroV4__field"></div>
-          <div class="vibeIntroV4__field"></div>
-          <div class="vibeIntroV4__field big"></div>
-          <div class="vibeIntroV4__button"></div>
+      <div class="vibeIntroV5__browser">
+        <div class="vibeIntroV5__browserTop">
+          <i></i><i></i><i></i>
+          <span></span>
+        </div>
+        <div class="vibeIntroV5__browserBody">
+          <div class="vibeIntroV5__page">
+            <div class="vibeIntroV5__eyebrow"></div>
+            <div class="vibeIntroV5__headline"></div>
+            <div class="vibeIntroV5__subline"></div>
+            <div class="vibeIntroV5__form">
+              <i></i><i></i><i></i><b></b>
+            </div>
+          </div>
+          <div class="vibeIntroV5__admin">
+            <div class="vibeIntroV5__adminHead"></div>
+            <div class="vibeIntroV5__adminRow"><i></i><i></i><b></b></div>
+            <div class="vibeIntroV5__adminRow"><i></i><i></i><b></b></div>
+            <div class="vibeIntroV5__adminRow"><i></i><i></i><b></b></div>
+          </div>
         </div>
       </div>
+
+      <div class="vibeIntroV5__result">PAGE + DB + ADMIN</div>
     </div>
 
-    <div class="vibeIntroV4__bottom">
+    <div class="vibeIntroV5__flow">
       <span>기획</span>
       <span>AI 지시</span>
       <span>제작</span>
