@@ -973,6 +973,173 @@ section{border-radius:0!important}
   .courseHero__wave{width:390px;height:180px;top:315px}
 }
 </style>
+<style id="courseSnapshot-v1">
+.courseSnapshot{
+  position:relative;
+  overflow:hidden;
+  padding:32px 0 92px;
+  background:#050805;
+}
+.courseSnapshot:before{
+  content:"";
+  position:absolute;
+  left:50%;top:-220px;
+  width:860px;height:420px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(202,255,56,.13),transparent 67%);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.courseSnapshot__inner{
+  width:min(1040px,calc(100% - 34px));
+  margin:0 auto;
+  position:relative;
+  z-index:2;
+}
+.courseSnapshot__card{
+  min-height:230px;
+  display:grid;
+  grid-template-columns:1.05fr 1fr 1.18fr;
+  align-items:stretch;
+  overflow:hidden;
+  border-radius:34px;
+  border:1px solid rgba(204,255,105,.18);
+  background:
+    linear-gradient(135deg,rgba(30,45,29,.86),rgba(10,17,11,.94) 45%,rgba(18,31,17,.94));
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.035);
+}
+.courseSnapshot__card>div{
+  position:relative;
+  padding:34px 30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.courseSnapshot__card>div+div{
+  border-left:1px solid rgba(190,232,117,.10);
+}
+.courseSnapshot__course{
+  background:
+    radial-gradient(circle at 26% 22%,rgba(202,255,56,.13),transparent 36%);
+}
+.courseSnapshot__mark{
+  position:absolute;
+  left:30px;top:28px;
+  width:92px;height:72px;
+  transform:rotate(-6deg);
+}
+.courseSnapshot__mark span{
+  position:absolute;
+  left:0;
+  width:76px;height:18px;
+  border-radius:7px;
+  border:1px solid rgba(218,255,151,.26);
+  background:linear-gradient(90deg,rgba(202,255,56,.82),rgba(120,157,54,.20));
+  box-shadow:0 9px 18px rgba(0,0,0,.16);
+}
+.courseSnapshot__mark span:nth-child(1){top:0}
+.courseSnapshot__mark span:nth-child(2){top:22px;left:9px;width:84px;opacity:.74}
+.courseSnapshot__mark span:nth-child(3){top:44px;left:18px;width:68px;opacity:.48}
+.courseSnapshot__course strong,
+.courseSnapshot__coach strong{
+  max-width:260px;
+  color:#f5f8f5;
+  font-size:25px;
+  line-height:1.14;
+  letter-spacing:-.05em;
+  font-weight:900;
+}
+.courseSnapshot__coach{
+  align-items:flex-start;
+}
+.courseSnapshot__orb{
+  position:absolute;
+  left:31px;top:28px;
+  width:82px;height:82px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 29% 24%,#fff 0 7%,#efffb7 10%,#caff38 40%,#769c28 72%,#263314 100%);
+  box-shadow:
+    inset -16px -18px 26px rgba(35,51,12,.32),
+    0 16px 28px rgba(0,0,0,.28),
+    0 0 24px rgba(202,255,56,.12);
+}
+.courseSnapshot__orb:after{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border:1px solid rgba(202,255,56,.24);
+  border-radius:50%;
+  transform:rotateX(68deg);
+}
+.courseSnapshot__orb span{
+  color:#172010;
+  font-size:18px;
+  font-weight:950;
+  letter-spacing:-.05em;
+}
+.courseSnapshot__price{
+  justify-content:center!important;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 70% 28%,rgba(202,255,56,.18),transparent 34%),
+    linear-gradient(145deg,rgba(202,255,56,.08),transparent 55%);
+}
+.courseSnapshot__price:before{
+  content:"";
+  position:absolute;
+  left:18%;right:18%;bottom:34px;
+  height:3px;
+  border-radius:50%;
+  background:linear-gradient(90deg,transparent,#caff38,transparent);
+  box-shadow:0 0 18px rgba(202,255,56,.5);
+  opacity:.55;
+}
+.courseSnapshot__price strong{
+  color:#caff38;
+  font-size:clamp(48px,5.3vw,70px);
+  line-height:.9;
+  letter-spacing:-.07em;
+  font-weight:950;
+  text-shadow:0 12px 24px rgba(0,0,0,.28);
+}
+.courseSnapshot__price em{
+  margin-left:3px;
+  font-style:normal;
+  color:#fff;
+  font-size:.34em;
+  letter-spacing:-.03em;
+}
+@media(max-width:820px){
+  .courseSnapshot{padding:18px 0 66px}
+  .courseSnapshot__inner{width:min(100% - 20px,1040px)}
+  .courseSnapshot__card{
+    grid-template-columns:1fr 1fr;
+    border-radius:26px;
+  }
+  .courseSnapshot__card>div{
+    min-height:190px;
+    padding:26px 22px;
+  }
+  .courseSnapshot__card>div+div{border-left:1px solid rgba(190,232,117,.10)}
+  .courseSnapshot__price{
+    grid-column:1/-1;
+    min-height:165px!important;
+    border-left:0!important;
+    border-top:1px solid rgba(190,232,117,.10);
+  }
+  .courseSnapshot__mark{left:22px;top:24px;transform:scale(.82) rotate(-6deg);transform-origin:left top}
+  .courseSnapshot__orb{left:22px;top:24px;width:68px;height:68px}
+  .courseSnapshot__course strong,.courseSnapshot__coach strong{font-size:21px}
+  .courseSnapshot__price strong{font-size:58px}
+}
+</style>
 </head>
 <body>
 <main>
@@ -1082,12 +1249,28 @@ section{border-radius:0!important}
   </div>
 </section>
 
-<section class="summary light">
-  <div class="wrap">
-    <div class="summary-grid">
-      <div class="summary-item"><span>COURSE</span><strong>바이브코딩 입문 강의</strong></div>
-      <div class="summary-item"><span>COACHING</span><strong>1개월 1:1 온라인 코칭</strong></div>
-      <div class="summary-item"><span>OPEN PRICE</span><strong>290,000원</strong></div>
+<section class="courseSnapshot">
+  <div class="courseSnapshot__inner">
+    <div class="courseSnapshot__card">
+      <div class="courseSnapshot__course">
+        <div class="courseSnapshot__mark">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <strong>바이브코딩 입문 강의</strong>
+      </div>
+
+      <div class="courseSnapshot__coach">
+        <div class="courseSnapshot__orb">
+          <span>1:1</span>
+        </div>
+        <strong>1개월 1:1 온라인 코칭</strong>
+      </div>
+
+      <div class="courseSnapshot__price">
+        <strong>290,000<em>원</em></strong>
+      </div>
     </div>
   </div>
 </section>
