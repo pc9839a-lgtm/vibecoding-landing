@@ -974,238 +974,222 @@ section{border-radius:0!important}
 }
 </style>
 
-<style id="courseBuild-v1">
-.courseBuild{
+
+<style id="vibeIntro-v1">
+.vibeIntro{
   position:relative;
   overflow:hidden;
-  padding:112px 0 126px;
-  background:
-    radial-gradient(circle at 50% 56%,rgba(202,255,56,.09),transparent 32%),
-    #070a07;
+  padding:120px 0 130px;
   color:#fff;
+  background:
+    radial-gradient(circle at 78% 20%,rgba(202,255,56,.08),transparent 28%),
+    radial-gradient(circle at 18% 68%,rgba(155,203,50,.06),transparent 26%),
+    #070a07;
 }
-.courseBuild__glow{
-  position:absolute;
-  left:50%;top:48%;
-  width:780px;height:420px;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(202,255,56,.11),transparent 68%);
-  filter:blur(30px);
+.vibeIntro:before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(202,255,56,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(202,255,56,.035) 1px,transparent 1px);
+  background-size:62px 62px;
+  mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);
   pointer-events:none;
 }
-.courseBuild__inner{
+.vibeIntro__inner{
   width:min(1040px,calc(100% - 34px));
   margin:0 auto;
   position:relative;
   z-index:2;
 }
-.courseBuild__title{
-  margin:0 auto;
+.vibeIntro__head{
   text-align:center;
-  font-size:clamp(54px,7vw,88px);
-  line-height:.92;
+  max-width:860px;
+  margin:0 auto;
+}
+.vibeIntro__head h2{
+  margin:0;
+  font-size:clamp(56px,7vw,86px);
+  line-height:.94;
   letter-spacing:-.075em;
   font-weight:950;
-  color:#fff;
 }
-.courseBuild__title span{
-  color:#caff38;
-}
-.courseBuild__scene{
-  position:relative;
-  margin:72px auto 0;
-  min-height:520px;
-  display:grid;
-  grid-template-columns:.92fr 72px 1.28fr;
-  align-items:center;
-  gap:18px;
-  perspective:1500px;
-}
-.courseBuild__chat{
-  position:relative;
-  z-index:5;
-  padding:26px 24px;
-  border-radius:30px;
-  border:1px solid rgba(202,255,56,.16);
-  background:
-    linear-gradient(145deg,rgba(27,39,27,.90),rgba(10,16,11,.96));
-  box-shadow:
-    0 34px 80px rgba(0,0,0,.36),
-    inset 0 1px 0 rgba(255,255,255,.025);
-  transform:rotateY(8deg) rotateZ(-2deg);
-}
-.courseBuild__bubble{
-  max-width:88%;
-  padding:14px 16px;
-  border-radius:16px;
-  margin:11px 0;
-  font-size:15px;
-  line-height:1.45;
-  letter-spacing:-.025em;
-}
-.courseBuild__bubble--user{
-  margin-left:auto;
+.vibeIntro__head h2:after{
+  content:"";
+  display:block;
+  width:76px;height:4px;
+  margin:28px auto 0;
+  border-radius:10px;
   background:#caff38;
-  color:#101610;
-  font-weight:850;
-  box-shadow:0 10px 24px rgba(202,255,56,.08);
+  box-shadow:0 0 22px rgba(202,255,56,.45);
 }
-.courseBuild__bubble--ai{
-  background:#141c15;
-  border:1px solid #29342b;
-  color:#e7ede8;
+.vibeIntro__head p{
+  margin:34px auto 0;
+  color:#c7cec7;
+  font-size:clamp(19px,2.1vw,26px);
+  line-height:1.55;
+  letter-spacing:-.035em;
+  font-weight:650;
 }
-.courseBuild__connector{
+.vibeIntro__head strong{color:#caff38;font-weight:900}
+.vibeIntro__process{
+  margin:54px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.vibeIntro__process span{
+  min-width:92px;
+  padding:13px 17px;
+  border-radius:14px;
+  text-align:center;
+  color:#f1f5f1;
+  background:linear-gradient(180deg,#151c16,#0f1510);
+  border:1px solid rgba(190,232,117,.14);
+  font-size:14px;
+  font-weight:800;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+.vibeIntro__process span:nth-of-type(2),
+.vibeIntro__process span:nth-of-type(6){
+  color:#17200f;
+  background:#caff38;
+  border-color:#caff38;
+}
+.vibeIntro__process i{
+  width:20px;height:1px;
+  background:linear-gradient(90deg,rgba(202,255,56,.15),rgba(202,255,56,.70));
   position:relative;
-  height:100%;
-  display:grid;
-  place-items:center;
-  z-index:3;
 }
-.courseBuild__connector span{
-  position:relative;
-  width:100%;
-  height:2px;
-  background:linear-gradient(90deg,rgba(202,255,56,.15),#caff38,rgba(202,255,56,.15));
-  box-shadow:0 0 18px rgba(202,255,56,.35);
-}
-.courseBuild__connector span:after{
+.vibeIntro__process i:after{
   content:"";
   position:absolute;
-  right:-2px;top:50%;
-  width:11px;height:11px;
-  border-top:2px solid #caff38;
-  border-right:2px solid #caff38;
+  right:-1px;top:50%;
+  width:6px;height:6px;
+  border-top:1px solid #caff38;
+  border-right:1px solid #caff38;
   transform:translateY(-50%) rotate(45deg);
 }
-.courseBuild__result{
+.vibeIntro__grid{
+  margin-top:74px;
+  display:grid;
+  grid-template-columns:1fr 1.05fr;
+  gap:22px;
+}
+.vibeIntro__card{
   position:relative;
-  z-index:6;
-  border-radius:32px;
   overflow:hidden;
-  border:1px solid rgba(207,255,113,.20);
-  background:#0b120c;
+  min-height:520px;
+  border-radius:30px;
+  padding:36px;
+  background:
+    linear-gradient(145deg,rgba(29,42,28,.90),rgba(10,16,11,.96));
+  border:1px solid rgba(196,239,119,.15);
   box-shadow:
-    0 42px 100px rgba(0,0,0,.44),
-    0 0 34px rgba(154,205,48,.08);
-  transform:rotateY(-8deg) rotateZ(1.5deg);
+    0 30px 80px rgba(0,0,0,.30),
+    inset 0 1px 0 rgba(255,255,255,.025);
 }
-.courseBuild__browserTop{
-  height:46px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-  padding:0 16px;
-  background:#111713;
-  border-bottom:1px solid #263028;
-}
-.courseBuild__browserTop i{
-  width:7px;height:7px;border-radius:50%;background:#526058;
-}
-.courseBuild__browserTop i:first-child{background:#caff38}
-.courseBuild__resultBody{
-  display:grid;
-  grid-template-columns:.86fr 1.14fr;
-  min-height:350px;
-}
-.courseBuild__form{
-  padding:28px 24px;
-  background:
-    radial-gradient(circle at 20% 10%,rgba(202,255,56,.055),transparent 34%),
-    #0d150e;
-  border-right:1px solid #253027;
-}
-.courseBuild__form h3{
-  margin:0 0 24px;
-  font-size:26px;
-  letter-spacing:-.05em;
-}
-.courseBuild__field{
-  height:44px;
-  margin-top:11px;
-  border-radius:11px;
-  border:1px solid #2c382e;
-  background:#151d17;
-}
-.courseBuild__field--big{height:76px}
-.courseBuild__button{
-  height:48px;
-  margin-top:14px;
-  border-radius:11px;
-  background:linear-gradient(90deg,#bde934,#caff38);
-  box-shadow:0 10px 24px rgba(202,255,56,.08);
-}
-.courseBuild__data{
-  padding:28px 24px;
-  background:
-    linear-gradient(180deg,rgba(26,41,24,.55),rgba(10,19,11,.88));
-}
-.courseBuild__dataHead{
-  display:grid;
-  grid-template-columns:1fr 78px;
-  gap:12px;
-  margin-bottom:20px;
-}
-.courseBuild__dataHead span{
-  height:12px;border-radius:8px;background:#3e4c41;
-}
-.courseBuild__dataHead span:last-child{background:#caff38}
-.courseBuild__dataRow{
-  display:grid;
-  grid-template-columns:.75fr 1.3fr .45fr;
-  gap:10px;
-  align-items:center;
-  min-height:56px;
-  border-top:1px solid #283229;
-}
-.courseBuild__dataRow i,
-.courseBuild__dataRow b{
-  height:9px;border-radius:8px;background:#56635a;
-}
-.courseBuild__dataRow i:nth-child(2){background:#3e4a40}
-.courseBuild__dataRow b{background:#caff38}
-.courseBuild__float{
+.vibeIntro__card:before{
+  content:"";
   position:absolute;
+  width:260px;height:260px;
   border-radius:50%;
-  background:radial-gradient(circle at 30% 24%,#fff,#ebff9d 14%,#caff38 38%,#769b29 72%,#263414 100%);
-  box-shadow:inset -12px -14px 22px rgba(35,50,13,.28),0 18px 30px rgba(0,0,0,.34);
+  background:radial-gradient(circle,rgba(202,255,56,.09),transparent 70%);
+  filter:blur(6px);
+  pointer-events:none;
 }
-.courseBuild__float--one{
-  width:34px;height:34px;left:39%;top:5%;
+.vibeIntro__card--ai:before{right:-90px;top:-100px}
+.vibeIntro__card--skills:before{left:-90px;bottom:-110px}
+.vibeIntro__card h3{
+  position:relative;
+  z-index:2;
+  margin:0 0 30px;
+  font-size:32px;
+  line-height:1;
+  letter-spacing:-.05em;
+  font-weight:950;
 }
-.courseBuild__float--two{
-  width:18px;height:18px;right:3%;bottom:10%;
+.vibeIntro__tool{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:62px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:18px 0;
+  border-top:1px solid rgba(182,220,114,.10);
+}
+.vibeIntro__tool:first-of-type{border-top:0}
+.vibeIntro__toolIcon{
+  width:56px;height:56px;
+  display:grid;place-items:center;
+  border-radius:17px;
+  color:#15200e;
+  background:
+    linear-gradient(145deg,#f2ffc1,#caff38 58%,#85aa2f);
+  box-shadow:
+    inset -8px -10px 16px rgba(53,76,17,.18),
+    0 12px 22px rgba(0,0,0,.24);
+  font-size:20px;
+  font-weight:950;
+}
+.vibeIntro__tool strong{
+  display:block;
+  color:#f5f8f5;
+  font-size:21px;
+  letter-spacing:-.03em;
+  font-weight:900;
+}
+.vibeIntro__tool p{
+  margin:7px 0 0;
+  color:#94a095;
+  font-size:14px;
+  line-height:1.5;
+  letter-spacing:-.02em;
+}
+.vibeIntro__skillList{
+  position:relative;
+  z-index:2;
+  border-top:1px solid rgba(182,220,114,.10);
+}
+.vibeIntro__skillList div{
+  min-height:54px;
+  display:grid;
+  grid-template-columns:48px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(182,220,114,.08);
+}
+.vibeIntro__skillList b{
+  color:#caff38;
+  font-size:13px;
+  letter-spacing:.03em;
+  font-weight:900;
+}
+.vibeIntro__skillList span{
+  color:#eef2ee;
+  font-size:18px;
+  letter-spacing:-.03em;
+  font-weight:800;
 }
 @media(max-width:820px){
-  .courseBuild{padding:82px 0 92px}
-  .courseBuild__inner{width:min(100% - 22px,1040px)}
-  .courseBuild__title{font-size:48px}
-  .courseBuild__scene{
-    margin-top:48px;
-    min-height:auto;
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-  .courseBuild__chat,
-  .courseBuild__result{
-    transform:none;
-  }
-  .courseBuild__connector{
-    height:42px;
-  }
-  .courseBuild__connector span{
-    width:2px;height:42px;
-    background:linear-gradient(180deg,rgba(202,255,56,.15),#caff38,rgba(202,255,56,.15));
-  }
-  .courseBuild__connector span:after{
-    right:auto;left:50%;top:auto;bottom:-2px;
-    transform:translateX(-50%) rotate(135deg);
-  }
-  .courseBuild__resultBody{grid-template-columns:1fr}
-  .courseBuild__form{border-right:0;border-bottom:1px solid #253027}
-  .courseBuild__float--one{left:6%;top:24%}
-  .courseBuild__float--two{right:4%;bottom:4%}
+  .vibeIntro{padding:88px 0 96px}
+  .vibeIntro__inner{width:min(100% - 22px,1040px)}
+  .vibeIntro__head h2{font-size:52px}
+  .vibeIntro__head p{font-size:18px;line-height:1.6}
+  .vibeIntro__process{gap:8px;margin-top:38px}
+  .vibeIntro__process span{min-width:auto;padding:10px 12px;font-size:12px}
+  .vibeIntro__process i{width:10px}
+  .vibeIntro__grid{grid-template-columns:1fr;gap:16px;margin-top:48px}
+  .vibeIntro__card{min-height:auto;padding:28px 23px;border-radius:24px}
+  .vibeIntro__card h3{font-size:27px;margin-bottom:24px}
+  .vibeIntro__tool{grid-template-columns:52px 1fr;gap:13px;padding:15px 0}
+  .vibeIntro__toolIcon{width:48px;height:48px;border-radius:15px;font-size:17px}
+  .vibeIntro__tool strong{font-size:18px}
+  .vibeIntro__tool p{font-size:13px}
+  .vibeIntro__skillList div{min-height:49px}
+  .vibeIntro__skillList span{font-size:16px}
 }
 </style>
 </head>
@@ -1317,49 +1301,70 @@ section{border-radius:0!important}
   </div>
 </section>
 
-<section class="courseBuild">
-  <div class="courseBuild__glow"></div>
-  <div class="courseBuild__inner">
-    <h2 class="courseBuild__title">원하는 걸 직접<br><span>만들 수 있습니다</span></h2>
+<section class="vibeIntro">
+  <div class="vibeIntro__inner">
+    <div class="vibeIntro__head">
+      <h2>바이브코딩이란?</h2>
+      <p>
+        AI에게 원하는 화면과 기능을 말로 설명하고,<br>
+        만들어진 코드를 수정하고 테스트하면서<br>
+        <strong>실제 웹페이지와 서비스를 완성하는 방식입니다.</strong>
+      </p>
+    </div>
 
-    <div class="courseBuild__scene">
-      <div class="courseBuild__chat">
-        <div class="courseBuild__bubble courseBuild__bubble--user">상담 신청페이지 만들어줘.</div>
-        <div class="courseBuild__bubble courseBuild__bubble--user">이름, 연락처, 문의내용 받게.</div>
-        <div class="courseBuild__bubble courseBuild__bubble--user">모바일에서도 깔끔하게 보여줘.</div>
-        <div class="courseBuild__bubble courseBuild__bubble--ai">요청한 페이지를 만들었습니다.</div>
-      </div>
+    <div class="vibeIntro__process">
+      <span>기획</span>
+      <i></i>
+      <span>AI 지시</span>
+      <i></i>
+      <span>제작</span>
+      <i></i>
+      <span>수정</span>
+      <i></i>
+      <span>테스트</span>
+      <i></i>
+      <span>배포</span>
+    </div>
 
-      <div class="courseBuild__connector">
-        <span></span>
-      </div>
-
-      <div class="courseBuild__result">
-        <div class="courseBuild__browserTop">
-          <i></i><i></i><i></i>
-        </div>
-        <div class="courseBuild__resultBody">
-          <div class="courseBuild__form">
-            <h3>상담 신청</h3>
-            <div class="courseBuild__field"></div>
-            <div class="courseBuild__field"></div>
-            <div class="courseBuild__field courseBuild__field--big"></div>
-            <div class="courseBuild__button"></div>
-          </div>
-
-          <div class="courseBuild__data">
-            <div class="courseBuild__dataHead">
-              <span></span><span></span>
-            </div>
-            <div class="courseBuild__dataRow"><i></i><i></i><b></b></div>
-            <div class="courseBuild__dataRow"><i></i><i></i><b></b></div>
-            <div class="courseBuild__dataRow"><i></i><i></i><b></b></div>
+    <div class="vibeIntro__grid">
+      <article class="vibeIntro__card vibeIntro__card--ai">
+        <h3>AI를 제대로 쓰는 법</h3>
+        <div class="vibeIntro__tool">
+          <div class="vibeIntro__toolIcon">C</div>
+          <div>
+            <strong>ChatGPT</strong>
+            <p>기획 · 카피 · 기능 설계 · 코드 생성 · 오류 분석</p>
           </div>
         </div>
-      </div>
+        <div class="vibeIntro__tool">
+          <div class="vibeIntro__toolIcon">A</div>
+          <div>
+            <strong>Claude</strong>
+            <p>긴 코드 수정 · 페이지 개선 · 기능 추가</p>
+          </div>
+        </div>
+        <div class="vibeIntro__tool">
+          <div class="vibeIntro__toolIcon">&lt;/&gt;</div>
+          <div>
+            <strong>AI 코딩 도구</strong>
+            <p>코드 작성 · 수정 · 디버깅 · 프로젝트 관리</p>
+          </div>
+        </div>
+      </article>
 
-      <div class="courseBuild__float courseBuild__float--one"></div>
-      <div class="courseBuild__float courseBuild__float--two"></div>
+      <article class="vibeIntro__card vibeIntro__card--skills">
+        <h3>이 강의에서 배우는 것</h3>
+        <div class="vibeIntro__skillList">
+          <div><b>01</b><span>랜딩페이지 제작</span></div>
+          <div><b>02</b><span>모바일 화면 수정</span></div>
+          <div><b>03</b><span>신청폼 연결</span></div>
+          <div><b>04</b><span>고객정보 DB 저장</span></div>
+          <div><b>05</b><span>문의 알림 연결</span></div>
+          <div><b>06</b><span>관리자 화면 제작</span></div>
+          <div><b>07</b><span>오류 확인 · 기능 수정</span></div>
+          <div><b>08</b><span>배포 · 복제 · 재사용</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
