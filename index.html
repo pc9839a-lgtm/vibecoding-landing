@@ -229,344 +229,279 @@ main{overflow:hidden}
 .definition-process span:nth-child(2),
 .definition-process span:nth-child(6){background:var(--lime)}
 
-/* AI WORKFLOW */
-.aiWorkflow{
+/* AI WORKFLOW STATIC */
+.aiWorkflowStatic{
   position:relative;
-  background:#070907;
+  padding:150px 0 150px;
+  background:
+    radial-gradient(circle at 80% 18%,rgba(202,255,56,.055),transparent 28%),
+    #070907;
   color:#fff;
 }
-.aiWorkflow__intro{
-  padding-top:148px;
-  text-align:center;
-}
-.aiWorkflow__intro .lead{color:#899289}
-.aiWorkflow__scroll{
-  position:relative;
-  height:430vh;
-  margin-top:72px;
-}
-.aiWorkflow__sticky{
-  position:sticky;
-  top:0;
-  height:100vh;
-  min-height:760px;
-  padding:34px 0 28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 70% 42%,rgba(202,255,56,.055),transparent 28%),
-    linear-gradient(180deg,#070907,#090c09);
-  z-index:2;
-}
-.aiWorkflow__sticky:before{
+.aiWorkflowStatic:before{
   content:"";
   position:absolute;inset:0;
   background-image:
     linear-gradient(rgba(202,255,56,.018) 1px,transparent 1px),
     linear-gradient(90deg,rgba(202,255,56,.018) 1px,transparent 1px);
-  background-size:54px 54px;
-  pointer-events:none;
+  background-size:58px 58px;
+  mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);
 }
-.aiWorkflow__meta{
-  position:relative;z-index:3;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:18px;
-}
-.aiWorkflow__phase{
-  display:flex;align-items:baseline;gap:14px;
-}
-.aiWorkflow__phaseNo{
-  color:var(--lime);
-  font:800 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-  letter-spacing:.08em;
-}
-.aiWorkflow__phaseTitle{
-  font-size:24px;
-  letter-spacing:-.04em;
-  font-weight:950;
-}
-.aiWorkflow__progress{display:flex;gap:7px}
-.aiWorkflow__progress i{
-  width:36px;height:3px;border-radius:3px;background:#283028;
-  transition:.35s ease;
-}
-.aiWorkflow__workspace{
-  position:relative;z-index:3;
-  height:min(690px,calc(100vh - 150px));
-  min-height:570px;
-  display:flex;
-  flex-direction:column;
+.aiWorkflowStatic .wrap{position:relative;z-index:2}
+.aiWorkflowStatic__head{text-align:center}
+.aiWorkflowStatic__head .lead{color:#899289}
+.aiWorkflowStatic__workspace{
+  margin-top:82px;
   border:1px solid rgba(255,255,255,.11);
   background:#0a0e0a;
-  box-shadow:0 45px 100px rgba(0,0,0,.42);
+  box-shadow:0 45px 110px rgba(0,0,0,.40);
 }
-.aiWorkflow__topbar{
-  flex:0 0 46px;
+.aiWorkflowStatic__topbar{
+  height:48px;
   display:grid;
-  grid-template-columns:110px 1fr 160px;
+  grid-template-columns:120px 1fr 180px;
   align-items:center;
   padding:0 16px;
   border-bottom:1px solid rgba(255,255,255,.08);
   background:#0d110d;
 }
-.aiWorkflow__traffic{display:flex;gap:6px}
-.aiWorkflow__traffic i{width:7px;height:7px;border-radius:50%;background:#3a423a}
-.aiWorkflow__traffic i:first-child{background:var(--lime)}
-.aiWorkflow__topbar>strong{
+.aiWorkflowStatic__traffic{display:flex;gap:6px}
+.aiWorkflowStatic__traffic i{width:7px;height:7px;border-radius:50%;background:#394139}
+.aiWorkflowStatic__traffic i:first-child{background:var(--lime)}
+.aiWorkflowStatic__topbar>strong{
   justify-self:center;
+  color:#7f887f;
   font:800 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-  color:#838c83;
-  letter-spacing:.03em;
 }
-.aiWorkflow__connection{
+.aiWorkflowStatic__topbar>span{
   justify-self:end;
   display:flex;align-items:center;gap:7px;
-  color:#a7b0a7;
+  color:#a2aba2;
   font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
   letter-spacing:.06em;
 }
-.aiWorkflow__connection span{
-  width:7px;height:7px;border-radius:50%;background:var(--lime);
-  box-shadow:0 0 12px rgba(202,255,56,.55);
+.aiWorkflowStatic__topbar>span i{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--lime);
+  box-shadow:0 0 12px rgba(202,255,56,.5);
 }
-.aiWorkflow__body{
-  flex:1;
-  min-height:0;
-  display:grid;
-  grid-template-columns:280px 1fr;
+.aiWorkflowStatic__request{
+  padding:56px 58px 54px;
+  background:
+    linear-gradient(90deg,rgba(202,255,56,.055),transparent 42%),
+    #090c09;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
-.aiWorkflow__request{
-  position:relative;
-  padding:30px 24px;
-  border-right:1px solid rgba(255,255,255,.08);
-  background:#090c09;
-}
-.aiWorkflow__requestLabel{
-  color:#596259;
+.aiWorkflowStatic__request small{
+  color:#5e675e;
   font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
   letter-spacing:.12em;
 }
-.aiWorkflow__request p{
-  margin:32px 0 0;
-  font-size:25px;
-  line-height:1.38;
-  letter-spacing:-.045em;
-  font-weight:820;
+.aiWorkflowStatic__request p{
+  margin:22px 0 0;
+  max-width:840px;
+  font-size:clamp(36px,4.8vw,62px);
+  line-height:1.1;
+  letter-spacing:-.06em;
+  font-weight:900;
 }
-.aiWorkflow__request p b{color:var(--lime);font-weight:950}
-.aiWorkflow__requestFoot{
-  position:absolute;left:24px;right:24px;bottom:24px;
-  padding-top:14px;
-  border-top:1px solid rgba(255,255,255,.07);
-  color:#626b62;
-  font-size:12px;font-weight:700;
+.aiWorkflowStatic__request p b{color:var(--lime)}
+.aiWorkflowStatic__request em{
+  display:block;
+  margin-top:28px;
+  color:#6d766d;
+  font-style:normal;
+  font-size:14px;
+  font-weight:750;
 }
-.aiWorkflow__screen{
+.aiWorkflowStatic__step{
   position:relative;
-  min-width:0;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 68% 18%,rgba(202,255,56,.035),transparent 26%),
-    #0b100c;
+  padding:70px 58px 72px 132px;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
-.aiWorkflow__pane{
-  position:absolute;inset:0;
-  padding:42px 46px;
-  opacity:0;
-  transform:translateY(18px) scale(.99);
-  pointer-events:none;
-  transition:opacity .42s ease,transform .42s ease;
+.aiWorkflowStatic__num{
+  position:absolute;
+  left:58px;top:76px;
+  color:var(--lime);
+  font:850 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.06em;
 }
-.aiWorkflow__eyebrow{
+.aiWorkflowStatic__copy span{
   color:var(--lime);
   font:850 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
   letter-spacing:.12em;
 }
-.aiWorkflow__pane h3{
+.aiWorkflowStatic__copy h3{
   margin:14px 0 0;
-  font-size:clamp(36px,4vw,54px);
+  font-size:clamp(40px,5vw,66px);
   line-height:1.02;
-  letter-spacing:-.062em;
+  letter-spacing:-.065em;
   font-weight:950;
 }
-.aiWorkflow__plan{
+.aiWorkflowStatic__copy h3 strong{color:var(--lime)}
+.aiWorkflowStatic__copy p{
+  margin:18px 0 0;
+  max-width:730px;
+  color:#7f887f;
+  font-size:16px;
+  line-height:1.6;
+  font-weight:680;
+}
+.aiWorkflowStatic__toolgrid{
   margin-top:40px;
-  border-top:1px solid rgba(255,255,255,.10);
-}
-.aiWorkflow__plan span{
-  min-height:60px;
-  display:flex;align-items:center;gap:16px;
-  border-bottom:1px solid rgba(255,255,255,.07);
-  color:#b2bab2;font-size:15px;font-weight:750;
-}
-.aiWorkflow__plan i{
-  font-style:normal;color:#5d675d;
-  font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-}
-.aiWorkflow__toolLog{
-  margin-top:34px;
-  border-top:1px solid rgba(255,255,255,.10);
-}
-.aiWorkflow__toolLog div{
-  min-height:54px;
   display:grid;
-  grid-template-columns:110px 1fr 70px;
-  gap:18px;
-  align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.07);
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.09);
+  border-bottom:1px solid rgba(255,255,255,.09);
 }
-.aiWorkflow__toolLog code{
-  color:#fff;font-size:13px;font-weight:850
+.aiWorkflowStatic__toolgrid div{
+  min-height:92px;
+  padding:20px;
+  border-right:1px solid rgba(255,255,255,.07);
+  display:flex;flex-direction:column;justify-content:space-between;
 }
-.aiWorkflow__toolLog span{color:#707970;font-size:13px}
-.aiWorkflow__toolLog b{
-  justify-self:end;color:var(--lime);
+.aiWorkflowStatic__toolgrid div:last-child{border-right:0}
+.aiWorkflowStatic__toolgrid code{
+  color:#dce3dc;font-size:13px;font-weight:800
+}
+.aiWorkflowStatic__toolgrid b{
+  color:var(--lime);
   font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-.aiWorkflow__mcpDef{
-  margin:24px 0 0;
-  max-width:640px;
-  color:#7d867d;
-  font-size:14px;line-height:1.55;font-weight:680;
+.aiWorkflowStatic__connector{
+  position:relative;
+  height:52px;
 }
-.aiWorkflow__mcpDef b{color:#fff}
-.aiWorkflow__repo{
-  height:100%;
+.aiWorkflowStatic__connector:before{
+  content:"";
+  position:absolute;
+  left:89px;top:0;bottom:0;width:1px;
+  background:linear-gradient(var(--lime),rgba(202,255,56,.08));
+}
+.aiWorkflowStatic__connector span{
+  position:absolute;left:85px;top:21px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--lime);
+  box-shadow:0 0 12px rgba(202,255,56,.45);
+}
+.aiWorkflowStatic__repo{
+  margin-top:40px;
   display:grid;
-  grid-template-columns:170px 1fr;
+  grid-template-columns:180px 1fr;
   border:1px solid rgba(255,255,255,.09);
-}
-.aiWorkflow__tree{
-  padding:18px 14px;
   background:#090c09;
+}
+.aiWorkflowStatic__repo aside{
+  padding:20px 16px;
   border-right:1px solid rgba(255,255,255,.08);
 }
-.aiWorkflow__tree strong{
-  display:block;margin-bottom:18px;color:#5e675e;
-  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em
+.aiWorkflowStatic__repo aside strong{
+  display:block;margin-bottom:18px;color:#596259;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace
 }
-.aiWorkflow__tree span{
-  display:block;padding:8px 8px;color:#687168;
-  font:700 12px/1.1 ui-monospace,SFMono-Regular,Menlo,monospace
+.aiWorkflowStatic__repo aside span{
+  display:block;padding:8px;color:#687168;
+  font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace
 }
-.aiWorkflow__tree span.active{background:#182019;color:var(--lime)}
-.aiWorkflow__code{position:relative;overflow:hidden;background:#0b100c}
-.aiWorkflow__codeTop{
-  height:42px;padding:0 16px;
-  display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid rgba(255,255,255,.07)
+.aiWorkflowStatic__repo aside .active{
+  background:#182019;color:var(--lime)
 }
-.aiWorkflow__codeTop span{color:#b6beb6;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
-.aiWorkflow__codeTop b{color:var(--lime);font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
-.aiWorkflow__code pre{
-  margin:0;padding:28px 24px;color:#9aa39a;
+.aiWorkflowStatic__repo pre{
+  margin:0;padding:28px 24px;color:#99a299;
   font:500 13px/2 ui-monospace,SFMono-Regular,Menlo,monospace;
-  white-space:pre-wrap
+  white-space:pre-wrap;
 }
-.aiWorkflow__code pre em{display:inline-block;width:34px;color:#465046;font-style:normal}
-.aiWorkflow__code pre mark{
-  padding:3px 5px;background:rgba(202,255,56,.10);color:#dfff82
+.aiWorkflowStatic__repo pre em{
+  display:inline-block;width:34px;color:#465046;font-style:normal
 }
-.aiWorkflow__scan{
-  position:absolute;left:0;right:0;top:48%;
-  height:1px;background:linear-gradient(90deg,transparent,var(--lime),transparent);
-  box-shadow:0 0 14px rgba(202,255,56,.38);
+.aiWorkflowStatic__repo mark{
+  background:rgba(202,255,56,.10);color:#dfff82;padding:3px 5px
 }
-.aiWorkflow__diffHead{
+.aiWorkflowStatic__diff{
+  margin-top:40px;
+  border:1px solid rgba(255,255,255,.09);
+  background:#090c09;
+}
+.aiWorkflowStatic__diffHead{
+  height:44px;
   display:flex;align-items:center;gap:18px;
-  padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.09);
-  color:#b7bfb7;font:750 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+  padding:0 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  color:#b6beb6;
+  font:750 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-.aiWorkflow__diffHead b{color:#86db4e}.aiWorkflow__diffHead i{color:#db6767;font-style:normal}
-.aiWorkflow__diff{
-  margin-top:24px;border:1px solid rgba(255,255,255,.08);background:#090c09
-}
-.aiWorkflow__diff pre{
+.aiWorkflowStatic__diffHead b{color:#86db4e}
+.aiWorkflowStatic__diffHead i{color:#db6767;font-style:normal}
+.aiWorkflowStatic__diff pre{
   margin:0;padding:24px;color:#879087;
-  font:500 13px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap
+  font:500 13px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;
+  white-space:pre-wrap;
 }
-.aiWorkflow__diff .add{display:block;background:rgba(85,170,55,.10);color:#b8e69a}
-.aiWorkflow__diff .ctx{display:block}
-.aiWorkflow__runtime{
-  margin-top:22px;
+.aiWorkflowStatic__diff .add{
+  display:block;background:rgba(85,170,55,.10);color:#b8e69a
+}
+.aiWorkflowStatic__diff .ctx{display:block}
+.aiWorkflowStatic__runtime{
+  margin-top:20px;
   display:grid;
-  grid-template-columns:1fr auto;
-  border-top:1px solid rgba(255,255,255,.08)
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
-.aiWorkflow__runtime span,.aiWorkflow__runtime b{
-  padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);
-  font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+.aiWorkflowStatic__runtime span{
+  padding:18px;
+  border-right:1px solid rgba(255,255,255,.07);
+  color:#697269;
+  font:750 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-.aiWorkflow__runtime span{color:#687168}
-.aiWorkflow__runtime b{color:var(--lime)}
-.aiWorkflow__deployStatus{
-  width:min(520px,90%);
-  margin:48px auto 0;text-align:center;
+.aiWorkflowStatic__runtime span:last-child{border-right:0}
+.aiWorkflowStatic__runtime b{
+  display:block;margin-top:6px;color:var(--lime)
 }
-.aiWorkflow__deployPulse{
-  display:block;width:14px;height:14px;margin:0 auto 18px;border-radius:50%;
-  background:var(--lime);box-shadow:0 0 0 10px rgba(202,255,56,.05),0 0 28px rgba(202,255,56,.38)
+.aiWorkflowStatic__deploy{
+  margin-top:40px;
+  padding:50px 40px;
+  text-align:center;
+  border:1px solid rgba(202,255,56,.16);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(202,255,56,.10),transparent 48%),
+    #090c09;
 }
-.aiWorkflow__deployStatus small{
-  display:block;color:#778077;
-  font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em
+.aiWorkflowStatic__deploy small{
+  color:#707970;
+  font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
 }
-.aiWorkflow__deployStatus strong{
+.aiWorkflowStatic__deploy>strong{
   display:block;margin-top:10px;color:var(--lime);
-  font-size:clamp(56px,6.5vw,86px);line-height:.9;letter-spacing:-.07em;font-weight:950
+  font-size:clamp(64px,8vw,108px);
+  line-height:.88;letter-spacing:-.075em;font-weight:950
 }
-.aiWorkflow__deployStatus p{
-  margin:20px 0 0;color:#a4ada4;font-size:17px;line-height:1.5;font-weight:750
+.aiWorkflowStatic__deploy p{
+  margin:20px 0 0;color:#a2aba2;font-size:17px;font-weight:750
 }
-.aiWorkflow__url{
-  margin:26px auto 0;padding:15px 18px;
-  border:1px solid rgba(255,255,255,.10);background:#090c09;
-  color:#b9c2b9;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+.aiWorkflowStatic__deploy div{
+  width:min(520px,100%);
+  margin:28px auto 0;padding:15px 18px;
+  border:1px solid rgba(255,255,255,.10);
+  color:#b7c0b7;
+  font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  text-align:left;
 }
-.aiWorkflow__url b{float:right;color:var(--lime)}
-.aiWorkflow__checks{
-  width:min(520px,90%);margin:28px auto 0;
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid rgba(255,255,255,.08);
-  border-bottom:1px solid rgba(255,255,255,.08)
+.aiWorkflowStatic__deploy div b{float:right;color:var(--lime)}
+.aiWorkflowStatic__footer{
+  min-height:48px;
+  display:flex;align-items:center;justify-content:center;gap:26px;
+  color:#566056;
+  font:750 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-.aiWorkflow__checks span{
-  padding:15px 8px;text-align:center;color:#697269;font-size:11px;font-weight:700;
-  border-right:1px solid rgba(255,255,255,.07)
-}
-.aiWorkflow__checks span:last-child{border-right:0}
-.aiWorkflow__checks b{display:block;margin-top:5px;color:#d6ded6;font-size:11px}
-.aiWorkflow__statusbar{
-  flex:0 0 38px;
-  display:flex;align-items:center;justify-content:center;gap:24px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#535d53;background:#090c09;
-  font:750 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace
-}
-.aiWorkflow__statusbar .hot{color:var(--lime)}
-.aiWorkflow__markers{
-  position:absolute;inset:0;
-  z-index:1;
-  pointer-events:none;
-}
-.aiWorkflow__step{height:86vh}
-.aiWorkflow__sticky[data-active="1"] .aiWorkflow__pane--1,
-.aiWorkflow__sticky[data-active="2"] .aiWorkflow__pane--2,
-.aiWorkflow__sticky[data-active="3"] .aiWorkflow__pane--3,
-.aiWorkflow__sticky[data-active="4"] .aiWorkflow__pane--4,
-.aiWorkflow__sticky[data-active="5"] .aiWorkflow__pane--5{
-  opacity:1;transform:none;pointer-events:auto
-}
-.aiWorkflow__sticky[data-active="1"] .aiWorkflow__progress i:nth-child(-n+1),
-.aiWorkflow__sticky[data-active="2"] .aiWorkflow__progress i:nth-child(-n+2),
-.aiWorkflow__sticky[data-active="3"] .aiWorkflow__progress i:nth-child(-n+3),
-.aiWorkflow__sticky[data-active="4"] .aiWorkflow__progress i:nth-child(-n+4),
-.aiWorkflow__sticky[data-active="5"] .aiWorkflow__progress i:nth-child(-n+5){
-  background:var(--lime)
+.aiWorkflowStatic__footer .hot{color:var(--lime)}
+
+@media print{
+  .aiWorkflowStatic{padding:70px 0!important}
+  .aiWorkflowStatic__workspace{box-shadow:none!important}
+  .aiWorkflowStatic__step,
+  .aiWorkflowStatic__request{break-inside:avoid}
 }
 
 /* SKILLS */
@@ -1107,134 +1042,116 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="aiWorkflow dark">
-  <div class="aiWorkflow__intro wrap">
-    <h2 class="h2">AI에게 질문만 하는 단계에서<br><span class="lime">직접 작업시키는 단계로.</span></h2>
-    <p class="lead">저장소를 읽고, 데이터를 연결하고, 코드를 고치고, 배포까지.</p>
-  </div>
+<section class="aiWorkflowStatic dark">
+  <div class="wrap">
+    <div class="aiWorkflowStatic__head">
+      <h2 class="h2">AI에게 질문만 하는 단계에서<br><span class="lime">직접 작업시키는 단계로.</span></h2>
+      <p class="lead">한 번의 요청이 저장소 확인부터 DB 연결, 수정, 배포까지 실제 작업으로 이어집니다.</p>
+    </div>
 
-  <div class="aiWorkflow__scroll">
-    <div class="aiWorkflow__sticky" data-active="1">
-      <div class="aiWorkflow__meta wrap">
-        <div class="aiWorkflow__phase">
-          <span class="aiWorkflow__phaseNo">01</span>
-          <strong class="aiWorkflow__phaseTitle">요청</strong>
-        </div>
-        <div class="aiWorkflow__progress"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="aiWorkflowStatic__workspace">
+      <div class="aiWorkflowStatic__topbar">
+        <div class="aiWorkflowStatic__traffic"><i></i><i></i><i></i></div>
+        <strong>vibe-workspace</strong>
+        <span><i></i>MCP CONNECTED</span>
       </div>
 
-      <div class="aiWorkflow__workspace wrap">
-        <div class="aiWorkflow__topbar">
-          <div class="aiWorkflow__traffic"><i></i><i></i><i></i></div>
-          <strong>vibe-workspace</strong>
-          <div class="aiWorkflow__connection"><span></span>MCP CONNECTED</div>
+      <div class="aiWorkflowStatic__request">
+        <small>REQUEST</small>
+        <p>GitHub 저장소 확인해.<br>현재 신청폼 구조 읽고<br><b>DB 저장 붙인 다음 배포까지 해줘.</b></p>
+        <em>기존 디자인 유지 · 필요한 기능만 수정</em>
+      </div>
+
+      <div class="aiWorkflowStatic__step aiWorkflowStatic__step--mcp">
+        <div class="aiWorkflowStatic__num">01</div>
+        <div class="aiWorkflowStatic__copy">
+          <span>MCP</span>
+          <h3>AI가 외부 도구를<br>직접 사용합니다.</h3>
+          <p>MCP(Model Context Protocol)는 AI가 GitHub·파일·DB·외부 서비스 같은 도구를 읽고 사용할 수 있게 연결하는 표준입니다.</p>
         </div>
+        <div class="aiWorkflowStatic__toolgrid">
+          <div><code>github</code><b>CONNECTED</b></div>
+          <div><code>files</code><b>READY</b></div>
+          <div><code>database</code><b>READY</b></div>
+          <div><code>deploy</code><b>READY</b></div>
+        </div>
+      </div>
 
-        <div class="aiWorkflow__body">
-          <aside class="aiWorkflow__request">
-            <div class="aiWorkflow__requestLabel">REQUEST</div>
-            <p>GitHub 저장소 확인해.<br>현재 신청폼 구조 읽고<br><b>DB 저장 붙인 다음<br>배포까지 해줘.</b></p>
-            <div class="aiWorkflow__requestFoot">범위: 기존 디자인 유지</div>
+      <div class="aiWorkflowStatic__connector"><span></span></div>
+
+      <div class="aiWorkflowStatic__step aiWorkflowStatic__step--read">
+        <div class="aiWorkflowStatic__num">02</div>
+        <div class="aiWorkflowStatic__copy">
+          <span>READ</span>
+          <h3>프로젝트를 읽고<br>현재 구조를 파악합니다.</h3>
+        </div>
+        <div class="aiWorkflowStatic__repo">
+          <aside>
+            <strong>PROJECT</strong>
+            <span>▾ src</span>
+            <span class="active">form.js</span>
+            <span>api.js</span>
+            <span>styles.css</span>
+            <span>index.html</span>
           </aside>
-
-          <div class="aiWorkflow__screen">
-            <div class="aiWorkflow__pane aiWorkflow__pane--1">
-              <div class="aiWorkflow__eyebrow">PLAN</div>
-              <h3>요청을 작업 단위로<br>쪼갭니다.</h3>
-              <div class="aiWorkflow__plan">
-                <span><i>01</i> 저장소 구조 확인</span>
-                <span><i>02</i> 신청폼 데이터 흐름 파악</span>
-                <span><i>03</i> DB 저장 기능 연결</span>
-                <span><i>04</i> 오류 확인 후 배포</span>
-              </div>
-            </div>
-
-            <div class="aiWorkflow__pane aiWorkflow__pane--2">
-              <div class="aiWorkflow__eyebrow">MCP</div>
-              <h3>AI가 외부 도구를<br>직접 사용합니다.</h3>
-              <div class="aiWorkflow__toolLog">
-                <div><code>github</code><span>repository connected</span><b>READY</b></div>
-                <div><code>files</code><span>workspace mounted</span><b>READY</b></div>
-                <div><code>database</code><span>schema access granted</span><b>READY</b></div>
-                <div><code>deploy</code><span>production target linked</span><b>READY</b></div>
-              </div>
-              <p class="aiWorkflow__mcpDef"><b>MCP</b>는 AI가 GitHub·파일·DB·외부 서비스 같은 도구를 사용할 수 있게 연결하는 표준입니다.</p>
-            </div>
-
-            <div class="aiWorkflow__pane aiWorkflow__pane--3">
-              <div class="aiWorkflow__repo">
-                <div class="aiWorkflow__tree">
-                  <strong>PROJECT</strong>
-                  <span>▾ src</span>
-                  <span class="active">form.js</span>
-                  <span>api.js</span>
-                  <span>styles.css</span>
-                  <span>index.html</span>
-                </div>
-                <div class="aiWorkflow__code">
-                  <div class="aiWorkflow__codeTop"><span>form.js</span><b>READING</b></div>
-                  <pre><em>24</em> form.addEventListener('submit', async (e) =&gt; {
+          <pre><em>24</em> form.addEventListener('submit', async (e) =&gt; {
 <em>25</em>   e.preventDefault()
 <em>26</em>   const payload = new FormData(form)
 <em>27</em>   <mark>await saveLead(payload)</mark>
 <em>28</em> })</pre>
-                  <div class="aiWorkflow__scan"></div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
 
-            <div class="aiWorkflow__pane aiWorkflow__pane--4">
-              <div class="aiWorkflow__diffHead">
-                <span>3 files changed</span><b>+48</b><i>-6</i>
-              </div>
-              <div class="aiWorkflow__diff">
-                <pre><span class="ctx"> export async function submitLead(data) {</span>
+      <div class="aiWorkflowStatic__connector"><span></span></div>
+
+      <div class="aiWorkflowStatic__step aiWorkflowStatic__step--build">
+        <div class="aiWorkflowStatic__num">03</div>
+        <div class="aiWorkflowStatic__copy">
+          <span>BUILD · DEBUG</span>
+          <h3>기능을 붙이고<br>오류까지 확인합니다.</h3>
+        </div>
+
+        <div class="aiWorkflowStatic__diff">
+          <div class="aiWorkflowStatic__diffHead"><span>3 files changed</span><b>+48</b><i>-6</i></div>
+          <pre><span class="ctx"> export async function submitLead(data) {</span>
 <span class="add">+  const result = await db.insert('leads', data)</span>
 <span class="add">+  await sendNotification(result.id)</span>
 <span class="add">+  return { ok: true, id: result.id }</span>
 <span class="ctx"> }</span></pre>
-              </div>
-              <div class="aiWorkflow__runtime">
-                <span>POST /api/leads</span><b>200 OK</b>
-                <span>DB INSERT</span><b>SUCCESS</b>
-                <span>notification</span><b>SENT</b>
-              </div>
-            </div>
-
-            <div class="aiWorkflow__pane aiWorkflow__pane--5">
-              <div class="aiWorkflow__deployStatus">
-                <span class="aiWorkflow__deployPulse"></span>
-                <small>PRODUCTION</small>
-                <strong>DEPLOYED</strong>
-                <p>신청 → DB 저장 → 알림까지<br>실제 주소에서 작동합니다.</p>
-                <div class="aiWorkflow__url">https://your-page.pages.dev <b>↗</b></div>
-              </div>
-              <div class="aiWorkflow__checks">
-                <span>Build <b>Passed</b></span>
-                <span>Database <b>Connected</b></span>
-                <span>Form test <b>Passed</b></span>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="aiWorkflow__statusbar">
-          <span>ChatGPT / Claude</span>
-          <span class="hot">MCP</span>
-          <span>GitHub</span>
-          <span>API</span>
-          <span>DB</span>
-          <span>Deploy</span>
+        <div class="aiWorkflowStatic__runtime">
+          <span>POST /api/leads <b>200 OK</b></span>
+          <span>DB INSERT <b>SUCCESS</b></span>
+          <span>notification <b>SENT</b></span>
         </div>
       </div>
-    </div>
 
-    <div class="aiWorkflow__markers" aria-hidden="true">
-      <div class="aiWorkflow__step" data-step="1"></div>
-      <div class="aiWorkflow__step" data-step="2"></div>
-      <div class="aiWorkflow__step" data-step="3"></div>
-      <div class="aiWorkflow__step" data-step="4"></div>
-      <div class="aiWorkflow__step" data-step="5"></div>
+      <div class="aiWorkflowStatic__connector"><span></span></div>
+
+      <div class="aiWorkflowStatic__step aiWorkflowStatic__step--deploy">
+        <div class="aiWorkflowStatic__num">04</div>
+        <div class="aiWorkflowStatic__copy">
+          <span>DEPLOY</span>
+          <h3>내 컴퓨터가 아니라<br><strong>실제 주소에서 작동합니다.</strong></h3>
+        </div>
+
+        <div class="aiWorkflowStatic__deploy">
+          <small>PRODUCTION</small>
+          <strong>DEPLOYED</strong>
+          <p>신청 → DB 저장 → 알림까지 연결 완료</p>
+          <div>https://your-page.pages.dev <b>↗</b></div>
+        </div>
+      </div>
+
+      <div class="aiWorkflowStatic__footer">
+        <span>ChatGPT / Claude</span>
+        <span class="hot">MCP</span>
+        <span>GitHub</span>
+        <span>API</span>
+        <span>DB</span>
+        <span>Deploy</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1418,31 +1335,6 @@ main{overflow:hidden}
 
 <footer class="footer">VIBE CODING</footer>
 </main>
-<script id="ai-workflow-script">
-(() => {
-  const section = document.querySelector('.aiWorkflow');
-  if (!section || matchMedia('(max-width: 820px)').matches) return;
-  const sticky = section.querySelector('.aiWorkflow__sticky');
-  const phaseNo = section.querySelector('.aiWorkflow__phaseNo');
-  const phaseTitle = section.querySelector('.aiWorkflow__phaseTitle');
-  const steps = [...section.querySelectorAll('.aiWorkflow__step')];
-  const titles = ['요청','연결','읽기','수정','배포'];
 
-  const setStep = (step) => {
-    sticky.dataset.active = String(step);
-    phaseNo.textContent = '0' + step;
-    phaseTitle.textContent = titles[step - 1];
-  };
-
-  const io = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
-    if (visible[0]) setStep(Number(visible[0].target.dataset.step));
-  }, {rootMargin:'-38% 0px -38% 0px', threshold:0});
-
-  steps.forEach(step => io.observe(step));
-})();
-</script>
 </body>
 </html>
