@@ -1713,6 +1713,124 @@ section{border-radius:0!important}
   }
 }
 </style>
+<style id="curriculumEditorial-v1">
+.curriculumEditorial{
+  position:relative;
+  overflow:hidden;
+  padding:132px 0 138px;
+  background:#080b08;
+  color:#fff;
+}
+.curriculumEditorial:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 8%,rgba(202,255,56,.09),transparent 26%),
+    radial-gradient(circle at 12% 88%,rgba(202,255,56,.05),transparent 22%);
+  pointer-events:none;
+}
+.curriculumEditorial__bgNum{
+  position:absolute;
+  right:-34px;
+  top:18px;
+  font-size:clamp(250px,34vw,520px);
+  line-height:.74;
+  letter-spacing:-.11em;
+  font-weight:950;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(202,255,56,.07);
+  user-select:none;
+}
+.curriculumEditorial__inner{
+  width:min(1020px,calc(100% - 34px));
+  margin:0 auto;
+  position:relative;
+  z-index:2;
+}
+.curriculumEditorial h2{
+  margin:0;
+  text-align:center;
+  font-size:clamp(62px,8vw,104px);
+  line-height:.9;
+  letter-spacing:-.08em;
+  font-weight:950;
+}
+.curriculumEditorial h2 span{color:#caff38}
+.curriculumEditorial__cols{
+  margin-top:92px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+}
+.curriculumEditorial__col{
+  border-top:2px solid rgba(202,255,56,.45);
+}
+.curriculumEditorial article{
+  display:grid;
+  grid-template-columns:60px 1fr;
+  gap:18px;
+  align-items:start;
+  padding:26px 0 24px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.curriculumEditorial article em{
+  font-style:normal;
+  color:#caff38;
+  font-size:15px;
+  line-height:1.2;
+  letter-spacing:.02em;
+  font-weight:950;
+}
+.curriculumEditorial article strong{
+  display:block;
+  color:#fff;
+  font-size:26px;
+  line-height:1.08;
+  letter-spacing:-.05em;
+  font-weight:950;
+}
+.curriculumEditorial article p{
+  margin:9px 0 0;
+  color:#7f887f;
+  font-size:14px;
+  line-height:1.5;
+  letter-spacing:-.02em;
+  font-weight:650;
+}
+.curriculumEditorial article:nth-child(5){
+  border-bottom:0;
+}
+.curriculumEditorial__col:last-child article:last-child strong{
+  color:#caff38;
+}
+@media(max-width:820px){
+  .curriculumEditorial{padding:92px 0 98px}
+  .curriculumEditorial__inner{width:min(100% - 22px,1020px)}
+  .curriculumEditorial h2{font-size:54px}
+  .curriculumEditorial__cols{
+    margin-top:58px;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .curriculumEditorial__col{
+    border-top:2px solid rgba(202,255,56,.34);
+  }
+  .curriculumEditorial__col+.curriculumEditorial__col{
+    border-top:0;
+  }
+  .curriculumEditorial article{
+    grid-template-columns:48px 1fr;
+    gap:12px;
+    padding:22px 0 20px;
+  }
+  .curriculumEditorial article strong{font-size:22px}
+  .curriculumEditorial article p{font-size:13px}
+  .curriculumEditorial__bgNum{
+    font-size:220px;
+    right:-20px;top:16px;
+  }
+}
+</style>
 </head>
 <body>
 <main>
@@ -1980,20 +2098,57 @@ section{border-radius:0!important}
   </div>
 </section>
 
-<section class="curriculum-sec dark">
-  <div class="wrap center">
-    <h2 class="section-title">바이브코딩<br><span class="accent">커리큘럼 안내</span></h2>
-    <div class="curriculum">
-      <div class="curr"><div class="curr-no">01</div><div class="curr-copy"><div class="curr-text">바이브코딩이란</div><div class="curr-desc">AI와 대화하며 페이지와 기능을 구현하는 전체 제작 방식을 이해합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">02</div><div class="curr-copy"><div class="curr-text">AI에게 지시하는 법</div><div class="curr-desc">원하는 결과를 정확히 전달할 수 있도록 요청 문장과 수정 지시 방법을 익힙니다.</div></div></div>
-      <div class="curr"><div class="curr-no">03</div><div class="curr-copy"><div class="curr-text">랜딩페이지 만들기</div><div class="curr-desc">광고에 바로 활용할 수 있는 반응형 랜딩페이지를 직접 제작합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">04</div><div class="curr-copy"><div class="curr-text">신청폼 만들기</div><div class="curr-desc">이름·연락처·문의내용을 받을 수 있는 신청폼을 페이지에 연결합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">05</div><div class="curr-copy"><div class="curr-text">DB 저장하기</div><div class="curr-desc">신청폼으로 들어온 고객 정보를 저장하고 다시 확인할 수 있게 만듭니다.</div></div></div>
-      <div class="curr"><div class="curr-no">06</div><div class="curr-copy"><div class="curr-text">문의 알림 받기</div><div class="curr-desc">새로운 문의가 접수되면 바로 확인할 수 있도록 관리자 알림을 연결합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">07</div><div class="curr-copy"><div class="curr-text">고객 자동응답</div><div class="curr-desc">접수 완료 후 고객에게 자동으로 안내가 전달되는 응답 기능을 구현합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">08</div><div class="curr-copy"><div class="curr-text">관리자 화면 만들기</div><div class="curr-desc">접수 내역과 상태를 한 화면에서 확인하고 관리할 수 있게 구성합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">09</div><div class="curr-copy"><div class="curr-text">기능 수정하기</div><div class="curr-desc">기존 디자인을 유지하면서 필요한 문구와 기능만 정확하게 수정합니다.</div></div></div>
-      <div class="curr"><div class="curr-no">10</div><div class="curr-copy"><div class="curr-text">복제해서 다시 쓰기</div><div class="curr-desc">완성한 프로젝트를 복제해 다른 상품·광고·업무에 다시 활용합니다.</div></div></div>
+<section class="curriculumEditorial">
+  <div class="curriculumEditorial__bgNum">10</div>
+  <div class="curriculumEditorial__inner">
+    <h2>딱 10개만<br><span>배웁니다.</span></h2>
+
+    <div class="curriculumEditorial__cols">
+      <div class="curriculumEditorial__col">
+        <article>
+          <em>01</em>
+          <div><strong>바이브코딩이란</strong><p>AI와 대화하며 페이지와 기능을 만드는 방식을 익힙니다.</p></div>
+        </article>
+        <article>
+          <em>02</em>
+          <div><strong>AI에게 지시하는 법</strong><p>원하는 결과가 나오도록 요청하고 수정하는 법을 배웁니다.</p></div>
+        </article>
+        <article>
+          <em>03</em>
+          <div><strong>랜딩페이지 만들기</strong><p>광고에 바로 활용할 수 있는 반응형 페이지를 직접 만듭니다.</p></div>
+        </article>
+        <article>
+          <em>04</em>
+          <div><strong>신청폼 만들기</strong><p>이름 · 연락처 · 문의내용을 받는 폼을 연결합니다.</p></div>
+        </article>
+        <article>
+          <em>05</em>
+          <div><strong>DB 저장하기</strong><p>접수된 고객정보가 자동으로 저장되게 만듭니다.</p></div>
+        </article>
+      </div>
+
+      <div class="curriculumEditorial__col">
+        <article>
+          <em>06</em>
+          <div><strong>문의 알림 받기</strong><p>새 문의가 들어오면 바로 확인할 수 있게 연결합니다.</p></div>
+        </article>
+        <article>
+          <em>07</em>
+          <div><strong>고객 자동응답</strong><p>접수 후 고객에게 자동 안내가 전달되게 만듭니다.</p></div>
+        </article>
+        <article>
+          <em>08</em>
+          <div><strong>관리자 화면 만들기</strong><p>접수 내역과 진행 상태를 한 화면에서 관리합니다.</p></div>
+        </article>
+        <article>
+          <em>09</em>
+          <div><strong>기능 수정하기</strong><p>기존 디자인은 두고 필요한 기능만 정확하게 고칩니다.</p></div>
+        </article>
+        <article>
+          <em>10</em>
+          <div><strong>복제해서 다시 쓰기</strong><p>완성한 프로젝트를 다른 상품과 업무에 다시 활용합니다.</p></div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
