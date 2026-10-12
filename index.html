@@ -229,182 +229,345 @@ main{overflow:hidden}
 .definition-process span:nth-child(2),
 .definition-process span:nth-child(6){background:var(--lime)}
 
-/* AI SYSTEM */
-.aiSystem{
+/* AI WORKFLOW */
+.aiWorkflow{
   position:relative;
-  overflow:hidden;
-  padding:148px 0 142px;
-  background:
-    radial-gradient(circle at 50% 50%,rgba(202,255,56,.08),transparent 30%),
-    #080a08;
+  background:#070907;
   color:#fff;
 }
-.aiSystem:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(202,255,56,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(202,255,56,.025) 1px,transparent 1px);
-  background-size:68px 68px;
-  mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 88%,transparent);
+.aiWorkflow__intro{
+  padding-top:148px;
+  text-align:center;
 }
-.aiSystem .wrap{position:relative;z-index:2}
-.aiSystem__head{text-align:center}
-.aiSystem__head .lead{color:#899289}
-.aiSystem__stage{
+.aiWorkflow__intro .lead{color:#899289}
+.aiWorkflow__scroll{
   position:relative;
-  width:min(940px,100%);
-  height:720px;
-  margin:74px auto 0;
+  height:430vh;
+  margin-top:72px;
 }
-.aiSystem__ring{
-  position:absolute;
-  left:50%;top:50%;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
-  pointer-events:none;
-}
-.aiSystem__ring--one{
-  width:520px;height:520px;
-  border:1px solid rgba(202,255,56,.11);
-}
-.aiSystem__ring--two{
-  width:330px;height:330px;
-  border:1px solid rgba(255,255,255,.07);
-}
-.aiSystem__hub{
-  position:absolute;
-  left:50%;top:50%;
-  width:250px;height:250px;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
+.aiWorkflow__sticky{
+  position:sticky;
+  top:0;
+  height:100vh;
+  min-height:760px;
+  padding:34px 0 28px;
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
-  text-align:center;
+  overflow:hidden;
   background:
-    radial-gradient(circle at 32% 25%,rgba(255,255,255,.11),transparent 24%),
-    linear-gradient(145deg,#caff38,#9fd91f);
-  color:#0b0e0b;
-  box-shadow:
-    0 0 0 16px rgba(202,255,56,.04),
-    0 34px 80px rgba(0,0,0,.40),
-    0 0 54px rgba(202,255,56,.17);
-  z-index:5;
-}
-.aiSystem__hub small{
-  font-size:10px;
-  letter-spacing:.13em;
-  font-weight:900;
-  opacity:.62;
-}
-.aiSystem__hub strong{
-  margin-top:7px;
-  font-size:76px;
-  line-height:.92;
-  letter-spacing:-.07em;
-  font-weight:950;
-}
-.aiSystem__hub p{
-  margin:12px 0 0;
-  font-size:14px;
-  line-height:1.42;
-  letter-spacing:-.03em;
-  font-weight:800;
-}
-.aiSystem__node{
-  position:absolute;
-  width:270px;
-  min-height:160px;
-  padding:22px 22px 20px;
-  border-radius:18px;
-  background:rgba(12,17,13,.92);
-  border:1px solid rgba(255,255,255,.09);
-  box-shadow:0 24px 54px rgba(0,0,0,.28);
-  backdrop-filter:blur(12px);
-  z-index:4;
-}
-.aiSystem__node em{
-  display:block;
-  font-style:normal;
-  color:#7b857b;
-  font-size:12px;
-  letter-spacing:.08em;
-  font-weight:900;
-}
-.aiSystem__node strong{
-  display:block;
-  margin-top:12px;
-  font-size:28px;
-  line-height:1.06;
-  letter-spacing:-.045em;
-  font-weight:950;
-}
-.aiSystem__node p{
-  margin:10px 0 0;
-  color:#778177;
-  font-size:14px;
-  line-height:1.52;
-  letter-spacing:-.02em;
-  font-weight:650;
-}
-.aiSystem__node--prompt{left:0;top:55px}
-.aiSystem__node--api{right:0;top:55px}
-.aiSystem__node--debug{left:0;bottom:55px}
-.aiSystem__node--deploy{right:0;bottom:55px}
-.aiSystem__node--api strong,
-.aiSystem__node--deploy strong{color:var(--lime)}
-.aiSystem__flow{
-  position:absolute;
-  width:175px;
-  height:1px;
-  background:linear-gradient(90deg,rgba(202,255,56,.10),rgba(202,255,56,.65));
+    radial-gradient(circle at 70% 42%,rgba(202,255,56,.055),transparent 28%),
+    linear-gradient(180deg,#070907,#090c09);
   z-index:2;
 }
-.aiSystem__flow:after{
+.aiWorkflow__sticky:before{
   content:"";
-  position:absolute;
-  right:-1px;top:50%;
-  width:7px;height:7px;
-  border-radius:50%;
-  background:var(--lime);
-  transform:translateY(-50%);
-  box-shadow:0 0 14px rgba(202,255,56,.65);
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(202,255,56,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(202,255,56,.018) 1px,transparent 1px);
+  background-size:54px 54px;
+  pointer-events:none;
 }
-.aiSystem__flow--a{left:235px;top:206px;transform:rotate(31deg)}
-.aiSystem__flow--b{right:235px;top:206px;transform:rotate(149deg)}
-.aiSystem__flow--c{left:235px;bottom:206px;transform:rotate(-31deg)}
-.aiSystem__flow--d{right:235px;bottom:206px;transform:rotate(-149deg)}
-.aiSystem__stackline{
-  margin:26px auto 0;
+.aiWorkflow__meta{
+  position:relative;z-index:3;
   display:flex;
-  justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
-  gap:10px 16px;
-  color:#fff;
-  font-size:clamp(18px,2vw,24px);
-  font-weight:900;
-  letter-spacing:-.03em;
+  justify-content:space-between;
+  margin-bottom:18px;
 }
-.aiSystem__stackline i{
-  font-style:normal;
-  color:#4c554c;
-  font-weight:600;
+.aiWorkflow__phase{
+  display:flex;align-items:baseline;gap:14px;
 }
-.aiSystem__stackline span:nth-of-type(4){color:var(--lime)}
-.aiSystem__closing{
-  margin:34px auto 0;
-  text-align:center;
-  color:#7f887f;
-  font-size:17px;
-  line-height:1.55;
-  letter-spacing:-.025em;
-  font-weight:700;
+.aiWorkflow__phaseNo{
+  color:var(--lime);
+  font:800 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;
 }
-.aiSystem__closing strong{color:#fff;font-weight:950}
+.aiWorkflow__phaseTitle{
+  font-size:24px;
+  letter-spacing:-.04em;
+  font-weight:950;
+}
+.aiWorkflow__progress{display:flex;gap:7px}
+.aiWorkflow__progress i{
+  width:36px;height:3px;border-radius:3px;background:#283028;
+  transition:.35s ease;
+}
+.aiWorkflow__workspace{
+  position:relative;z-index:3;
+  height:min(690px,calc(100vh - 150px));
+  min-height:570px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid rgba(255,255,255,.11);
+  background:#0a0e0a;
+  box-shadow:0 45px 100px rgba(0,0,0,.42);
+}
+.aiWorkflow__topbar{
+  flex:0 0 46px;
+  display:grid;
+  grid-template-columns:110px 1fr 160px;
+  align-items:center;
+  padding:0 16px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:#0d110d;
+}
+.aiWorkflow__traffic{display:flex;gap:6px}
+.aiWorkflow__traffic i{width:7px;height:7px;border-radius:50%;background:#3a423a}
+.aiWorkflow__traffic i:first-child{background:var(--lime)}
+.aiWorkflow__topbar>strong{
+  justify-self:center;
+  font:800 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:#838c83;
+  letter-spacing:.03em;
+}
+.aiWorkflow__connection{
+  justify-self:end;
+  display:flex;align-items:center;gap:7px;
+  color:#a7b0a7;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.06em;
+}
+.aiWorkflow__connection span{
+  width:7px;height:7px;border-radius:50%;background:var(--lime);
+  box-shadow:0 0 12px rgba(202,255,56,.55);
+}
+.aiWorkflow__body{
+  flex:1;
+  min-height:0;
+  display:grid;
+  grid-template-columns:280px 1fr;
+}
+.aiWorkflow__request{
+  position:relative;
+  padding:30px 24px;
+  border-right:1px solid rgba(255,255,255,.08);
+  background:#090c09;
+}
+.aiWorkflow__requestLabel{
+  color:#596259;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+.aiWorkflow__request p{
+  margin:32px 0 0;
+  font-size:25px;
+  line-height:1.38;
+  letter-spacing:-.045em;
+  font-weight:820;
+}
+.aiWorkflow__request p b{color:var(--lime);font-weight:950}
+.aiWorkflow__requestFoot{
+  position:absolute;left:24px;right:24px;bottom:24px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.07);
+  color:#626b62;
+  font-size:12px;font-weight:700;
+}
+.aiWorkflow__screen{
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 68% 18%,rgba(202,255,56,.035),transparent 26%),
+    #0b100c;
+}
+.aiWorkflow__pane{
+  position:absolute;inset:0;
+  padding:42px 46px;
+  opacity:0;
+  transform:translateY(18px) scale(.99);
+  pointer-events:none;
+  transition:opacity .42s ease,transform .42s ease;
+}
+.aiWorkflow__eyebrow{
+  color:var(--lime);
+  font:850 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+.aiWorkflow__pane h3{
+  margin:14px 0 0;
+  font-size:clamp(36px,4vw,54px);
+  line-height:1.02;
+  letter-spacing:-.062em;
+  font-weight:950;
+}
+.aiWorkflow__plan{
+  margin-top:40px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.aiWorkflow__plan span{
+  min-height:60px;
+  display:flex;align-items:center;gap:16px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b2bab2;font-size:15px;font-weight:750;
+}
+.aiWorkflow__plan i{
+  font-style:normal;color:#5d675d;
+  font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+.aiWorkflow__toolLog{
+  margin-top:34px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.aiWorkflow__toolLog div{
+  min-height:54px;
+  display:grid;
+  grid-template-columns:110px 1fr 70px;
+  gap:18px;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.aiWorkflow__toolLog code{
+  color:#fff;font-size:13px;font-weight:850
+}
+.aiWorkflow__toolLog span{color:#707970;font-size:13px}
+.aiWorkflow__toolLog b{
+  justify-self:end;color:var(--lime);
+  font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+.aiWorkflow__mcpDef{
+  margin:24px 0 0;
+  max-width:640px;
+  color:#7d867d;
+  font-size:14px;line-height:1.55;font-weight:680;
+}
+.aiWorkflow__mcpDef b{color:#fff}
+.aiWorkflow__repo{
+  height:100%;
+  display:grid;
+  grid-template-columns:170px 1fr;
+  border:1px solid rgba(255,255,255,.09);
+}
+.aiWorkflow__tree{
+  padding:18px 14px;
+  background:#090c09;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+.aiWorkflow__tree strong{
+  display:block;margin-bottom:18px;color:#5e675e;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em
+}
+.aiWorkflow__tree span{
+  display:block;padding:8px 8px;color:#687168;
+  font:700 12px/1.1 ui-monospace,SFMono-Regular,Menlo,monospace
+}
+.aiWorkflow__tree span.active{background:#182019;color:var(--lime)}
+.aiWorkflow__code{position:relative;overflow:hidden;background:#0b100c}
+.aiWorkflow__codeTop{
+  height:42px;padding:0 16px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.aiWorkflow__codeTop span{color:#b6beb6;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+.aiWorkflow__codeTop b{color:var(--lime);font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+.aiWorkflow__code pre{
+  margin:0;padding:28px 24px;color:#9aa39a;
+  font:500 13px/2 ui-monospace,SFMono-Regular,Menlo,monospace;
+  white-space:pre-wrap
+}
+.aiWorkflow__code pre em{display:inline-block;width:34px;color:#465046;font-style:normal}
+.aiWorkflow__code pre mark{
+  padding:3px 5px;background:rgba(202,255,56,.10);color:#dfff82
+}
+.aiWorkflow__scan{
+  position:absolute;left:0;right:0;top:48%;
+  height:1px;background:linear-gradient(90deg,transparent,var(--lime),transparent);
+  box-shadow:0 0 14px rgba(202,255,56,.38);
+}
+.aiWorkflow__diffHead{
+  display:flex;align-items:center;gap:18px;
+  padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.09);
+  color:#b7bfb7;font:750 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+}
+.aiWorkflow__diffHead b{color:#86db4e}.aiWorkflow__diffHead i{color:#db6767;font-style:normal}
+.aiWorkflow__diff{
+  margin-top:24px;border:1px solid rgba(255,255,255,.08);background:#090c09
+}
+.aiWorkflow__diff pre{
+  margin:0;padding:24px;color:#879087;
+  font:500 13px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap
+}
+.aiWorkflow__diff .add{display:block;background:rgba(85,170,55,.10);color:#b8e69a}
+.aiWorkflow__diff .ctx{display:block}
+.aiWorkflow__runtime{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  border-top:1px solid rgba(255,255,255,.08)
+}
+.aiWorkflow__runtime span,.aiWorkflow__runtime b{
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);
+  font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+}
+.aiWorkflow__runtime span{color:#687168}
+.aiWorkflow__runtime b{color:var(--lime)}
+.aiWorkflow__deployStatus{
+  width:min(520px,90%);
+  margin:48px auto 0;text-align:center;
+}
+.aiWorkflow__deployPulse{
+  display:block;width:14px;height:14px;margin:0 auto 18px;border-radius:50%;
+  background:var(--lime);box-shadow:0 0 0 10px rgba(202,255,56,.05),0 0 28px rgba(202,255,56,.38)
+}
+.aiWorkflow__deployStatus small{
+  display:block;color:#778077;
+  font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em
+}
+.aiWorkflow__deployStatus strong{
+  display:block;margin-top:10px;color:var(--lime);
+  font-size:clamp(56px,6.5vw,86px);line-height:.9;letter-spacing:-.07em;font-weight:950
+}
+.aiWorkflow__deployStatus p{
+  margin:20px 0 0;color:#a4ada4;font-size:17px;line-height:1.5;font-weight:750
+}
+.aiWorkflow__url{
+  margin:26px auto 0;padding:15px 18px;
+  border:1px solid rgba(255,255,255,.10);background:#090c09;
+  color:#b9c2b9;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+}
+.aiWorkflow__url b{float:right;color:var(--lime)}
+.aiWorkflow__checks{
+  width:min(520px,90%);margin:28px auto 0;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+.aiWorkflow__checks span{
+  padding:15px 8px;text-align:center;color:#697269;font-size:11px;font-weight:700;
+  border-right:1px solid rgba(255,255,255,.07)
+}
+.aiWorkflow__checks span:last-child{border-right:0}
+.aiWorkflow__checks b{display:block;margin-top:5px;color:#d6ded6;font-size:11px}
+.aiWorkflow__statusbar{
+  flex:0 0 38px;
+  display:flex;align-items:center;justify-content:center;gap:24px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#535d53;background:#090c09;
+  font:750 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace
+}
+.aiWorkflow__statusbar .hot{color:var(--lime)}
+.aiWorkflow__markers{
+  position:absolute;inset:0;
+  z-index:1;
+  pointer-events:none;
+}
+.aiWorkflow__step{height:86vh}
+.aiWorkflow__sticky[data-active="1"] .aiWorkflow__pane--1,
+.aiWorkflow__sticky[data-active="2"] .aiWorkflow__pane--2,
+.aiWorkflow__sticky[data-active="3"] .aiWorkflow__pane--3,
+.aiWorkflow__sticky[data-active="4"] .aiWorkflow__pane--4,
+.aiWorkflow__sticky[data-active="5"] .aiWorkflow__pane--5{
+  opacity:1;transform:none;pointer-events:auto
+}
+.aiWorkflow__sticky[data-active="1"] .aiWorkflow__progress i:nth-child(-n+1),
+.aiWorkflow__sticky[data-active="2"] .aiWorkflow__progress i:nth-child(-n+2),
+.aiWorkflow__sticky[data-active="3"] .aiWorkflow__progress i:nth-child(-n+3),
+.aiWorkflow__sticky[data-active="4"] .aiWorkflow__progress i:nth-child(-n+4),
+.aiWorkflow__sticky[data-active="5"] .aiWorkflow__progress i:nth-child(-n+5){
+  background:var(--lime)
+}
 
 /* SKILLS */
 .skills{
@@ -806,7 +969,32 @@ main{overflow:hidden}
   .hero-orbit{display:none}
   .marquee-track{padding:18px 0 20px}
   .marquee-track span{font-size:38px}
-  .definition,.aiSystem,.difference,.target,.curriculum,.projects,.reuse,.materials,.coaching,.price{padding-top:92px;padding-bottom:98px}
+  .definition,.difference,.target,.curriculum,.projects,.reuse,.materials,.coaching,.price{padding-top:92px;padding-bottom:98px}
+  .aiWorkflow__intro{padding-top:92px}
+  .aiWorkflow__scroll{height:auto;margin-top:50px}
+  .aiWorkflow__sticky{position:relative;height:auto;min-height:0;padding:0 0 90px}
+  .aiWorkflow__meta{margin-bottom:14px}
+  .aiWorkflow__workspace{height:auto;min-height:0}
+  .aiWorkflow__body{grid-template-columns:1fr}
+  .aiWorkflow__request{border-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding:22px 18px}
+  .aiWorkflow__request p{font-size:22px;margin-top:20px}
+  .aiWorkflow__requestFoot{position:static;margin-top:24px}
+  .aiWorkflow__screen{min-height:620px}
+  .aiWorkflow__pane{padding:28px 20px}
+  .aiWorkflow__pane h3{font-size:36px}
+  .aiWorkflow__pane{position:relative;display:none;opacity:1;transform:none}
+  .aiWorkflow__pane--1,.aiWorkflow__pane--2,.aiWorkflow__pane--3,.aiWorkflow__pane--4,.aiWorkflow__pane--5{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
+  .aiWorkflow__pane--5{border-bottom:0}
+  .aiWorkflow__repo{grid-template-columns:105px 1fr}
+  .aiWorkflow__tree{padding:14px 9px}
+  .aiWorkflow__tree span{font-size:10px;padding:7px 5px}
+  .aiWorkflow__code pre{font-size:10px;padding:20px 12px}
+  .aiWorkflow__toolLog div{grid-template-columns:84px 1fr 50px;gap:8px}
+  .aiWorkflow__toolLog span{font-size:11px}
+  .aiWorkflow__diff pre{font-size:10px;padding:18px 12px}
+  .aiWorkflow__statusbar{gap:12px;overflow:auto;justify-content:flex-start;padding:0 14px}
+  .aiWorkflow__markers{display:none}
+  .aiWorkflow__progress{display:none}
   .h2{font-size:52px}
   .lead{font-size:18px;margin-top:22px}
   .definition:after{font-size:210px;bottom:-38px}
@@ -919,68 +1107,135 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="aiSystem dark">
-  <div class="wrap">
-    <div class="aiSystem__head">
-      <h2 class="h2">AI를 쓰는 법이 아니라<br><span class="lime">AI와 개발하는 법.</span></h2>
-      <p class="lead">프롬프트 하나가 아니라, 도구를 연결하고 실제 작업까지 이어갑니다.</p>
-    </div>
+<section class="aiWorkflow dark">
+  <div class="aiWorkflow__intro wrap">
+    <h2 class="h2">AI에게 질문만 하는 단계에서<br><span class="lime">직접 작업시키는 단계로.</span></h2>
+    <p class="lead">저장소를 읽고, 데이터를 연결하고, 코드를 고치고, 배포까지.</p>
+  </div>
 
-    <div class="aiSystem__stage">
-      <div class="aiSystem__ring aiSystem__ring--one"></div>
-      <div class="aiSystem__ring aiSystem__ring--two"></div>
-
-      <div class="aiSystem__hub">
-        <small>MODEL CONTEXT PROTOCOL</small>
-        <strong>MCP</strong>
-        <p>AI와 외부 도구를 연결하는<br>작업의 중심</p>
+  <div class="aiWorkflow__scroll">
+    <div class="aiWorkflow__sticky" data-active="1">
+      <div class="aiWorkflow__meta wrap">
+        <div class="aiWorkflow__phase">
+          <span class="aiWorkflow__phaseNo">01</span>
+          <strong class="aiWorkflow__phaseTitle">요청</strong>
+        </div>
+        <div class="aiWorkflow__progress"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
 
-      <article class="aiSystem__node aiSystem__node--prompt">
-        <em>PROMPTING</em>
-        <strong>정확하게 지시</strong>
-        <p>화면·기능·수정 범위를 AI가 이해하게 전달합니다.</p>
-      </article>
+      <div class="aiWorkflow__workspace wrap">
+        <div class="aiWorkflow__topbar">
+          <div class="aiWorkflow__traffic"><i></i><i></i><i></i></div>
+          <strong>vibe-workspace</strong>
+          <div class="aiWorkflow__connection"><span></span>MCP CONNECTED</div>
+        </div>
 
-      <article class="aiSystem__node aiSystem__node--api">
-        <em>API · DB</em>
-        <strong>데이터를 연결</strong>
-        <p>폼, 외부 API, 데이터 저장을 실제 서비스에 붙입니다.</p>
-      </article>
+        <div class="aiWorkflow__body">
+          <aside class="aiWorkflow__request">
+            <div class="aiWorkflow__requestLabel">REQUEST</div>
+            <p>GitHub 저장소 확인해.<br>현재 신청폼 구조 읽고<br><b>DB 저장 붙인 다음<br>배포까지 해줘.</b></p>
+            <div class="aiWorkflow__requestFoot">범위: 기존 디자인 유지</div>
+          </aside>
 
-      <article class="aiSystem__node aiSystem__node--debug">
-        <em>DEBUG</em>
-        <strong>오류를 해결</strong>
-        <p>로그와 에러 메시지로 원인을 좁혀 필요한 부분만 고칩니다.</p>
-      </article>
+          <div class="aiWorkflow__screen">
+            <div class="aiWorkflow__pane aiWorkflow__pane--1">
+              <div class="aiWorkflow__eyebrow">PLAN</div>
+              <h3>요청을 작업 단위로<br>쪼갭니다.</h3>
+              <div class="aiWorkflow__plan">
+                <span><i>01</i> 저장소 구조 확인</span>
+                <span><i>02</i> 신청폼 데이터 흐름 파악</span>
+                <span><i>03</i> DB 저장 기능 연결</span>
+                <span><i>04</i> 오류 확인 후 배포</span>
+              </div>
+            </div>
 
-      <article class="aiSystem__node aiSystem__node--deploy">
-        <em>DEPLOY</em>
-        <strong>실제로 배포</strong>
-        <p>GitHub와 배포 환경을 연결해 실제 주소에서 운영합니다.</p>
-      </article>
+            <div class="aiWorkflow__pane aiWorkflow__pane--2">
+              <div class="aiWorkflow__eyebrow">MCP</div>
+              <h3>AI가 외부 도구를<br>직접 사용합니다.</h3>
+              <div class="aiWorkflow__toolLog">
+                <div><code>github</code><span>repository connected</span><b>READY</b></div>
+                <div><code>files</code><span>workspace mounted</span><b>READY</b></div>
+                <div><code>database</code><span>schema access granted</span><b>READY</b></div>
+                <div><code>deploy</code><span>production target linked</span><b>READY</b></div>
+              </div>
+              <p class="aiWorkflow__mcpDef"><b>MCP</b>는 AI가 GitHub·파일·DB·외부 서비스 같은 도구를 사용할 수 있게 연결하는 표준입니다.</p>
+            </div>
 
-      <div class="aiSystem__flow aiSystem__flow--a"></div>
-      <div class="aiSystem__flow aiSystem__flow--b"></div>
-      <div class="aiSystem__flow aiSystem__flow--c"></div>
-      <div class="aiSystem__flow aiSystem__flow--d"></div>
+            <div class="aiWorkflow__pane aiWorkflow__pane--3">
+              <div class="aiWorkflow__repo">
+                <div class="aiWorkflow__tree">
+                  <strong>PROJECT</strong>
+                  <span>▾ src</span>
+                  <span class="active">form.js</span>
+                  <span>api.js</span>
+                  <span>styles.css</span>
+                  <span>index.html</span>
+                </div>
+                <div class="aiWorkflow__code">
+                  <div class="aiWorkflow__codeTop"><span>form.js</span><b>READING</b></div>
+                  <pre><em>24</em> form.addEventListener('submit', async (e) =&gt; {
+<em>25</em>   e.preventDefault()
+<em>26</em>   const payload = new FormData(form)
+<em>27</em>   <mark>await saveLead(payload)</mark>
+<em>28</em> })</pre>
+                  <div class="aiWorkflow__scan"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="aiWorkflow__pane aiWorkflow__pane--4">
+              <div class="aiWorkflow__diffHead">
+                <span>3 files changed</span><b>+48</b><i>-6</i>
+              </div>
+              <div class="aiWorkflow__diff">
+                <pre><span class="ctx"> export async function submitLead(data) {</span>
+<span class="add">+  const result = await db.insert('leads', data)</span>
+<span class="add">+  await sendNotification(result.id)</span>
+<span class="add">+  return { ok: true, id: result.id }</span>
+<span class="ctx"> }</span></pre>
+              </div>
+              <div class="aiWorkflow__runtime">
+                <span>POST /api/leads</span><b>200 OK</b>
+                <span>DB INSERT</span><b>SUCCESS</b>
+                <span>notification</span><b>SENT</b>
+              </div>
+            </div>
+
+            <div class="aiWorkflow__pane aiWorkflow__pane--5">
+              <div class="aiWorkflow__deployStatus">
+                <span class="aiWorkflow__deployPulse"></span>
+                <small>PRODUCTION</small>
+                <strong>DEPLOYED</strong>
+                <p>신청 → DB 저장 → 알림까지<br>실제 주소에서 작동합니다.</p>
+                <div class="aiWorkflow__url">https://your-page.pages.dev <b>↗</b></div>
+              </div>
+              <div class="aiWorkflow__checks">
+                <span>Build <b>Passed</b></span>
+                <span>Database <b>Connected</b></span>
+                <span>Form test <b>Passed</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aiWorkflow__statusbar">
+          <span>ChatGPT / Claude</span>
+          <span class="hot">MCP</span>
+          <span>GitHub</span>
+          <span>API</span>
+          <span>DB</span>
+          <span>Deploy</span>
+        </div>
+      </div>
     </div>
 
-    <div class="aiSystem__stackline">
-      <span>ChatGPT</span>
-      <i>+</i>
-      <span>Claude</span>
-      <i>+</i>
-      <span>GitHub</span>
-      <i>+</i>
-      <span>MCP</span>
-      <i>+</i>
-      <span>API</span>
-      <i>+</i>
-      <span>DB</span>
+    <div class="aiWorkflow__markers" aria-hidden="true">
+      <div class="aiWorkflow__step" data-step="1"></div>
+      <div class="aiWorkflow__step" data-step="2"></div>
+      <div class="aiWorkflow__step" data-step="3"></div>
+      <div class="aiWorkflow__step" data-step="4"></div>
+      <div class="aiWorkflow__step" data-step="5"></div>
     </div>
-
-    <p class="aiSystem__closing">도구 이름을 외우는 강의가 아니라<br><strong>서로 연결해서 결과를 만드는 강의입니다.</strong></p>
   </div>
 </section>
 
@@ -1163,5 +1418,31 @@ main{overflow:hidden}
 
 <footer class="footer">VIBE CODING</footer>
 </main>
+<script id="ai-workflow-script">
+(() => {
+  const section = document.querySelector('.aiWorkflow');
+  if (!section || matchMedia('(max-width: 820px)').matches) return;
+  const sticky = section.querySelector('.aiWorkflow__sticky');
+  const phaseNo = section.querySelector('.aiWorkflow__phaseNo');
+  const phaseTitle = section.querySelector('.aiWorkflow__phaseTitle');
+  const steps = [...section.querySelectorAll('.aiWorkflow__step')];
+  const titles = ['요청','연결','읽기','수정','배포'];
+
+  const setStep = (step) => {
+    sticky.dataset.active = String(step);
+    phaseNo.textContent = '0' + step;
+    phaseTitle.textContent = titles[step - 1];
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+    if (visible[0]) setStep(Number(visible[0].target.dataset.step));
+  }, {rootMargin:'-38% 0px -38% 0px', threshold:0});
+
+  steps.forEach(step => io.observe(step));
+})();
+</script>
 </body>
 </html>
