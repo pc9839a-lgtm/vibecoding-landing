@@ -229,98 +229,182 @@ main{overflow:hidden}
 .definition-process span:nth-child(2),
 .definition-process span:nth-child(6){background:var(--lime)}
 
-/* AI DEVELOPMENT */
-.aiDev{
+/* AI SYSTEM */
+.aiSystem{
   position:relative;
+  overflow:hidden;
   padding:148px 0 142px;
-  background:#080a08;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(202,255,56,.08),transparent 30%),
+    #080a08;
   color:#fff;
 }
-.aiDev:before{
+.aiSystem:before{
   content:"";
   position:absolute;
   inset:0;
-  background:
-    radial-gradient(circle at 85% 18%,rgba(202,255,56,.07),transparent 26%);
+  background-image:
+    linear-gradient(rgba(202,255,56,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(202,255,56,.025) 1px,transparent 1px);
+  background-size:68px 68px;
+  mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 88%,transparent);
+}
+.aiSystem .wrap{position:relative;z-index:2}
+.aiSystem__head{text-align:center}
+.aiSystem__head .lead{color:#899289}
+.aiSystem__stage{
+  position:relative;
+  width:min(940px,100%);
+  height:720px;
+  margin:74px auto 0;
+}
+.aiSystem__ring{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
   pointer-events:none;
 }
-.aiDev .wrap{position:relative;z-index:2}
-.aiDev__head{text-align:center}
-.aiDev__head .lead{color:#899289}
-.aiDev__stack{
-  margin-top:84px;
-  border-top:1px solid rgba(255,255,255,.14);
+.aiSystem__ring--one{
+  width:520px;height:520px;
+  border:1px solid rgba(202,255,56,.11);
 }
-.aiDev__row{
-  min-height:176px;
-  display:grid;
-  grid-template-columns:280px 1fr;
-  gap:54px;
+.aiSystem__ring--two{
+  width:330px;height:330px;
+  border:1px solid rgba(255,255,255,.07);
+}
+.aiSystem__hub{
+  position:absolute;
+  left:50%;top:50%;
+  width:250px;height:250px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
   align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.09);
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 32% 25%,rgba(255,255,255,.11),transparent 24%),
+    linear-gradient(145deg,#caff38,#9fd91f);
+  color:#0b0e0b;
+  box-shadow:
+    0 0 0 16px rgba(202,255,56,.04),
+    0 34px 80px rgba(0,0,0,.40),
+    0 0 54px rgba(202,255,56,.17);
+  z-index:5;
 }
-.aiDev__term{
-  font-size:clamp(34px,4.3vw,58px);
-  line-height:.95;
-  letter-spacing:-.055em;
+.aiSystem__hub small{
+  font-size:10px;
+  letter-spacing:.13em;
+  font-weight:900;
+  opacity:.62;
+}
+.aiSystem__hub strong{
+  margin-top:7px;
+  font-size:76px;
+  line-height:.92;
+  letter-spacing:-.07em;
   font-weight:950;
-  color:#fff;
 }
-.aiDev__row--focus .aiDev__term{
-  color:var(--lime);
+.aiSystem__hub p{
+  margin:12px 0 0;
+  font-size:14px;
+  line-height:1.42;
+  letter-spacing:-.03em;
+  font-weight:800;
 }
-.aiDev__copy strong{
+.aiSystem__node{
+  position:absolute;
+  width:270px;
+  min-height:160px;
+  padding:22px 22px 20px;
+  border-radius:18px;
+  background:rgba(12,17,13,.92);
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 24px 54px rgba(0,0,0,.28);
+  backdrop-filter:blur(12px);
+  z-index:4;
+}
+.aiSystem__node em{
   display:block;
-  font-size:clamp(24px,2.8vw,36px);
-  line-height:1.12;
+  font-style:normal;
+  color:#7b857b;
+  font-size:12px;
+  letter-spacing:.08em;
+  font-weight:900;
+}
+.aiSystem__node strong{
+  display:block;
+  margin-top:12px;
+  font-size:28px;
+  line-height:1.06;
   letter-spacing:-.045em;
   font-weight:950;
 }
-.aiDev__copy p{
-  margin:11px 0 0;
-  max-width:650px;
-  color:#7f887f;
-  font-size:16px;
-  line-height:1.62;
+.aiSystem__node p{
+  margin:10px 0 0;
+  color:#778177;
+  font-size:14px;
+  line-height:1.52;
   letter-spacing:-.02em;
   font-weight:650;
 }
-.aiDev__row--focus{
-  position:relative;
+.aiSystem__node--prompt{left:0;top:55px}
+.aiSystem__node--api{right:0;top:55px}
+.aiSystem__node--debug{left:0;bottom:55px}
+.aiSystem__node--deploy{right:0;bottom:55px}
+.aiSystem__node--api strong,
+.aiSystem__node--deploy strong{color:var(--lime)}
+.aiSystem__flow{
+  position:absolute;
+  width:175px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(202,255,56,.10),rgba(202,255,56,.65));
+  z-index:2;
 }
-.aiDev__row--focus:before{
+.aiSystem__flow:after{
   content:"";
   position:absolute;
-  left:-18px;
-  top:18px;
-  bottom:18px;
-  width:4px;
+  right:-1px;top:50%;
+  width:7px;height:7px;
+  border-radius:50%;
   background:var(--lime);
+  transform:translateY(-50%);
+  box-shadow:0 0 14px rgba(202,255,56,.65);
 }
-.aiDev__tools{
-  margin-top:64px;
-  padding:28px 0 0;
+.aiSystem__flow--a{left:235px;top:206px;transform:rotate(31deg)}
+.aiSystem__flow--b{right:235px;top:206px;transform:rotate(149deg)}
+.aiSystem__flow--c{left:235px;bottom:206px;transform:rotate(-31deg)}
+.aiSystem__flow--d{right:235px;bottom:206px;transform:rotate(-149deg)}
+.aiSystem__stackline{
+  margin:26px auto 0;
   display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:30px;
-  border-top:1px solid rgba(202,255,56,.20);
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px 16px;
+  color:#fff;
+  font-size:clamp(18px,2vw,24px);
+  font-weight:900;
+  letter-spacing:-.03em;
 }
-.aiDev__tools strong{
-  color:var(--lime);
-  font-size:clamp(22px,2.6vw,34px);
-  line-height:1.12;
-  letter-spacing:-.04em;
-  font-weight:950;
+.aiSystem__stackline i{
+  font-style:normal;
+  color:#4c554c;
+  font-weight:600;
 }
-.aiDev__tools span{
-  max-width:420px;
-  text-align:right;
+.aiSystem__stackline span:nth-of-type(4){color:var(--lime)}
+.aiSystem__closing{
+  margin:34px auto 0;
+  text-align:center;
   color:#7f887f;
-  font-size:14px;
-  line-height:1.5;
+  font-size:17px;
+  line-height:1.55;
+  letter-spacing:-.025em;
   font-weight:700;
 }
+.aiSystem__closing strong{color:#fff;font-weight:950}
 
 /* SKILLS */
 .skills{
@@ -722,21 +806,28 @@ main{overflow:hidden}
   .hero-orbit{display:none}
   .marquee-track{padding:18px 0 20px}
   .marquee-track span{font-size:38px}
-  .definition,.aiDev,.difference,.target,.curriculum,.projects,.reuse,.materials,.coaching,.price{padding-top:92px;padding-bottom:98px}
+  .definition,.aiSystem,.difference,.target,.curriculum,.projects,.reuse,.materials,.coaching,.price{padding-top:92px;padding-bottom:98px}
   .h2{font-size:52px}
   .lead{font-size:18px;margin-top:22px}
   .definition:after{font-size:210px;bottom:-38px}
   .definition-process{margin-top:50px;grid-template-columns:repeat(3,1fr)}
   .definition-process span{min-height:66px;font-size:14px;border-bottom:1px solid var(--lineL)}
-  .aiDev__stack{margin-top:56px}
-  .aiDev__row{min-height:0;grid-template-columns:1fr;gap:10px;padding:28px 0}
-  .aiDev__term{font-size:38px}
-  .aiDev__copy strong{font-size:25px}
-  .aiDev__copy p{font-size:14px}
-  .aiDev__row--focus:before{left:-10px;top:18px;bottom:18px;width:3px}
-  .aiDev__tools{margin-top:46px;display:block}
-  .aiDev__tools strong{font-size:25px}
-  .aiDev__tools span{display:block;max-width:none;text-align:left;margin-top:12px;font-size:13px}
+  .aiSystem__stage{height:auto;margin-top:56px;display:grid;grid-template-columns:1fr;gap:12px}
+  .aiSystem__ring,.aiSystem__flow{display:none}
+  .aiSystem__hub{
+    position:relative;left:auto;top:auto;transform:none;
+    width:100%;height:auto;border-radius:18px;padding:28px 22px;
+  }
+  .aiSystem__hub strong{font-size:54px}
+  .aiSystem__hub p{font-size:13px}
+  .aiSystem__node{
+    position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    width:100%;min-height:0;padding:22px 20px;border-radius:16px
+  }
+  .aiSystem__node strong{font-size:25px}
+  .aiSystem__node p{font-size:13px}
+  .aiSystem__stackline{margin-top:38px;font-size:17px;gap:8px 11px}
+  .aiSystem__closing{font-size:14px;margin-top:26px}
   .skills{padding-top:92px}
   .skill-list{margin-top:52px}
   .skill-row{min-height:0;display:block;padding:24px 0}
@@ -828,59 +919,68 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="aiDev dark">
+<section class="aiSystem dark">
   <div class="wrap">
-    <div class="aiDev__head">
+    <div class="aiSystem__head">
       <h2 class="h2">AI를 쓰는 법이 아니라<br><span class="lime">AI와 개발하는 법.</span></h2>
-      <p class="lead">페이지 하나 만드는 수준에서 끝내지 않습니다.</p>
+      <p class="lead">프롬프트 하나가 아니라, 도구를 연결하고 실제 작업까지 이어갑니다.</p>
     </div>
 
-    <div class="aiDev__stack">
-      <article class="aiDev__row">
-        <div class="aiDev__term">PROMPTING</div>
-        <div class="aiDev__copy">
-          <strong>원하는 결과를 정확하게 지시하는 법</strong>
-          <p>화면, 기능, 수정 범위, 오류 상황을 AI가 이해할 수 있게 전달합니다.</p>
-        </div>
+    <div class="aiSystem__stage">
+      <div class="aiSystem__ring aiSystem__ring--one"></div>
+      <div class="aiSystem__ring aiSystem__ring--two"></div>
+
+      <div class="aiSystem__hub">
+        <small>MODEL CONTEXT PROTOCOL</small>
+        <strong>MCP</strong>
+        <p>AI와 외부 도구를 연결하는<br>작업의 중심</p>
+      </div>
+
+      <article class="aiSystem__node aiSystem__node--prompt">
+        <em>PROMPTING</em>
+        <strong>정확하게 지시</strong>
+        <p>화면·기능·수정 범위를 AI가 이해하게 전달합니다.</p>
       </article>
 
-      <article class="aiDev__row aiDev__row--focus">
-        <div class="aiDev__term">MCP</div>
-        <div class="aiDev__copy">
-          <strong>AI를 외부 도구와 직접 연결합니다</strong>
-          <p>MCP(Model Context Protocol)를 이용해 AI가 GitHub, 파일, 데이터, 외부 서비스 같은 도구를 읽고 작업하도록 연결합니다.</p>
-        </div>
+      <article class="aiSystem__node aiSystem__node--api">
+        <em>API · DB</em>
+        <strong>데이터를 연결</strong>
+        <p>폼, 외부 API, 데이터 저장을 실제 서비스에 붙입니다.</p>
       </article>
 
-      <article class="aiDev__row">
-        <div class="aiDev__term">API · DB</div>
-        <div class="aiDev__copy">
-          <strong>페이지를 실제 서비스로 만듭니다</strong>
-          <p>신청폼 데이터를 저장하고, 외부 API를 연결하고, 필요한 정보를 화면에 불러옵니다.</p>
-        </div>
+      <article class="aiSystem__node aiSystem__node--debug">
+        <em>DEBUG</em>
+        <strong>오류를 해결</strong>
+        <p>로그와 에러 메시지로 원인을 좁혀 필요한 부분만 고칩니다.</p>
       </article>
 
-      <article class="aiDev__row">
-        <div class="aiDev__term">DEBUG</div>
-        <div class="aiDev__copy">
-          <strong>오류를 찾고 필요한 부분만 고칩니다</strong>
-          <p>콘솔 로그와 에러 메시지를 읽고 AI와 원인을 좁혀 수정합니다.</p>
-        </div>
+      <article class="aiSystem__node aiSystem__node--deploy">
+        <em>DEPLOY</em>
+        <strong>실제로 배포</strong>
+        <p>GitHub와 배포 환경을 연결해 실제 주소에서 운영합니다.</p>
       </article>
 
-      <article class="aiDev__row">
-        <div class="aiDev__term">DEPLOY</div>
-        <div class="aiDev__copy">
-          <strong>내 컴퓨터가 아니라 실제 주소에 올립니다</strong>
-          <p>GitHub와 배포 환경을 연결해 수정·배포·복제까지 직접 운영합니다.</p>
-        </div>
-      </article>
+      <div class="aiSystem__flow aiSystem__flow--a"></div>
+      <div class="aiSystem__flow aiSystem__flow--b"></div>
+      <div class="aiSystem__flow aiSystem__flow--c"></div>
+      <div class="aiSystem__flow aiSystem__flow--d"></div>
     </div>
 
-    <div class="aiDev__tools">
-      <strong>ChatGPT · Claude · GitHub · MCP · API · DB</strong>
-      <span>도구 이름만 배우는 게 아니라, 서로 연결해서 쓰는 법을 다룹니다.</span>
+    <div class="aiSystem__stackline">
+      <span>ChatGPT</span>
+      <i>+</i>
+      <span>Claude</span>
+      <i>+</i>
+      <span>GitHub</span>
+      <i>+</i>
+      <span>MCP</span>
+      <i>+</i>
+      <span>API</span>
+      <i>+</i>
+      <span>DB</span>
     </div>
+
+    <p class="aiSystem__closing">도구 이름을 외우는 강의가 아니라<br><strong>서로 연결해서 결과를 만드는 강의입니다.</strong></p>
   </div>
 </section>
 
