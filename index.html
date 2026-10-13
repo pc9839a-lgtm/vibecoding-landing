@@ -148,32 +148,158 @@ main{overflow:hidden}
 }
 .hero-bottom span:nth-child(3){color:var(--lime)}
 
-/* MARQUEE */
-.marquee{
+/* WHY VIBE */
+.whyVibe{
+  position:relative;
   overflow:hidden;
-  border-top:1px solid #202620;
-  border-bottom:1px solid #202620;
-  background:#0a0d0a;
+  padding:148px 0 144px;
+  background:#f2f5e9;
+  color:#0b0e0b;
 }
-.marquee-track{
-  width:max-content;
-  display:flex;
-  gap:42px;
-  align-items:center;
-  padding:22px 0 24px;
-  animation:marquee 26s linear infinite;
+.whyVibe:before{
+  content:"";
+  position:absolute;
+  left:-8%;
+  right:-8%;
+  top:47%;
+  height:170px;
+  transform:rotate(-7deg);
+  background:linear-gradient(90deg,transparent,rgba(202,255,56,.32),transparent);
+  border-top:1px solid rgba(11,14,11,.05);
+  border-bottom:1px solid rgba(11,14,11,.04);
+  pointer-events:none;
 }
-.marquee-track span{
-  font-size:clamp(38px,5vw,64px);
-  line-height:1;
-  letter-spacing:-.055em;
+.whyVibe .wrap{position:relative;z-index:2}
+.whyVibe__intro{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+.whyVibe__intro h2{
+  margin:0;
+  font-size:clamp(66px,8.3vw,110px);
+  line-height:.91;
+  letter-spacing:-.082em;
   font-weight:950;
-  white-space:nowrap;
-  color:#fff;
 }
-.marquee-track b{color:var(--lime)}
-.marquee-track i{font-style:normal;color:#2d352e}
-@keyframes marquee{to{transform:translateX(-50%)}}
+.whyVibe__intro h2 span{
+  color:#6f9f0f;
+}
+.whyVibe__intro p{
+  margin:32px auto 0;
+  color:#606860;
+  font-size:clamp(19px,2vw,25px);
+  line-height:1.55;
+  letter-spacing:-.035em;
+  font-weight:720;
+}
+.whyVibe__scene{
+  margin:86px auto 0;
+  max-width:920px;
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  align-items:stretch;
+  border-top:1px solid rgba(11,14,11,.14);
+  border-bottom:1px solid rgba(11,14,11,.14);
+}
+.whyVibe__before{
+  padding:34px 34px 32px 0;
+  border-right:1px solid rgba(11,14,11,.14);
+}
+.whyVibe__before small,
+.whyVibe__prompt small{
+  display:block;
+  color:#899189;
+  font:850 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+.whyVibe__line{
+  padding:18px 0;
+  border-bottom:1px solid rgba(11,14,11,.10);
+  color:#7b837b;
+  font-size:26px;
+  line-height:1.1;
+  letter-spacing:-.045em;
+  font-weight:850;
+}
+.whyVibe__line:first-of-type{margin-top:20px}
+.whyVibe__line:last-child{border-bottom:0}
+.whyVibe__prompt{
+  position:relative;
+  padding:34px 0 32px 46px;
+}
+.whyVibe__prompt p{
+  margin:20px 0 0;
+  font-size:clamp(36px,4.5vw,60px);
+  line-height:1.12;
+  letter-spacing:-.06em;
+  font-weight:920;
+}
+.whyVibe__prompt p b{
+  position:relative;
+  font-weight:950;
+}
+.whyVibe__prompt p b:after{
+  content:"";
+  position:absolute;
+  left:-1%;
+  right:-1%;
+  bottom:.02em;
+  height:.20em;
+  background:#caff38;
+  z-index:-1;
+}
+.whyVibe__prompt span{
+  display:block;
+  margin-top:28px;
+  color:#566056;
+  font-size:15px;
+  line-height:1.5;
+  font-weight:780;
+}
+.whyVibe__statement{
+  margin-top:96px;
+  text-align:center;
+}
+.whyVibe__statement span,
+.whyVibe__statement strong{
+  display:block;
+  font-size:clamp(48px,6.8vw,90px);
+  line-height:.97;
+  letter-spacing:-.072em;
+  font-weight:950;
+}
+.whyVibe__statement span{color:#a4aca4}
+.whyVibe__statement strong{
+  margin-top:8px;
+  color:#0b0e0b;
+}
+@media(max-width:820px){
+  .whyVibe{padding:92px 0 96px}
+  .whyVibe__intro{text-align:left}
+  .whyVibe__intro h2{font-size:52px}
+  .whyVibe__intro p{font-size:17px}
+  .whyVibe__scene{
+    margin-top:58px;
+    grid-template-columns:1fr;
+  }
+  .whyVibe__before{
+    padding:26px 0;
+    border-right:0;
+    border-bottom:1px solid rgba(11,14,11,.14);
+  }
+  .whyVibe__line{font-size:22px}
+  .whyVibe__prompt{padding:28px 0}
+  .whyVibe__prompt p{font-size:36px}
+  .whyVibe__statement{
+    margin-top:66px;
+    text-align:left;
+  }
+  .whyVibe__statement span,.whyVibe__statement strong{font-size:45px}
+}
+@media print{
+  .whyVibe__scene,.whyVibe__statement{break-inside:avoid}
+}
 
 /* DEFINITION */
 .definition{
@@ -1013,14 +1139,33 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="marquee">
-  <div class="marquee-track">
-    <span>외주 맡기고 <b>기다리고</b></span><i>→</i>
-    <span>수정 요청하고 <b>또 기다리고</b></span><i>→</i>
-    <span>이제 <b>직접 만듭니다</b></span><i>→</i>
-    <span>외주 맡기고 <b>기다리고</b></span><i>→</i>
-    <span>수정 요청하고 <b>또 기다리고</b></span><i>→</i>
-    <span>이제 <b>직접 만듭니다</b></span><i>→</i>
+<section class="whyVibe">
+  <div class="wrap">
+    <div class="whyVibe__intro">
+      <h2>만들고 싶은 건 있는데<br><span>늘 누군가를 기다렸다면.</span></h2>
+      <p>랜딩페이지 하나, 신청폼 하나, 문구 수정 하나.<br>작은 아이디어도 직접 구현하지 못하면 결국 멈춥니다.</p>
+    </div>
+
+    <div class="whyVibe__scene">
+      <div class="whyVibe__before">
+        <small>BEFORE</small>
+        <div class="whyVibe__line">외주 요청</div>
+        <div class="whyVibe__line">견적 확인</div>
+        <div class="whyVibe__line">수정 전달</div>
+        <div class="whyVibe__line">다시 대기</div>
+      </div>
+
+      <div class="whyVibe__prompt">
+        <small>NOW</small>
+        <p>“이름이랑 연락처 받는<br>신청페이지 만들어줘.<br><b>모바일에서도 깔끔하게.</b>”</p>
+        <span>→ 바로 만들고, 보고, 다시 수정합니다.</span>
+      </div>
+    </div>
+
+    <div class="whyVibe__statement">
+      <span>아이디어를 설명하는 사람에서</span>
+      <strong>직접 만들어 쓰는 사람으로.</strong>
+    </div>
   </div>
 </section>
 
