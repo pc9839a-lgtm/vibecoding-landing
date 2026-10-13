@@ -1194,6 +1194,346 @@ main{overflow:hidden}
   .price-card{margin-top:52px;padding:40px 12px 34px}
   .price-card .new{font-size:76px}
 }
+
+/* GLOBAL RHYTHM + CENTER ALIGNMENT */
+:root{
+  --section-y:112px;
+  --section-gap:58px;
+}
+.hero{
+  padding-top:72px;
+  padding-bottom:92px;
+}
+.hero-stage{margin-top:52px}
+
+.vibeBuild{
+  min-height:auto;
+  padding:var(--section-y) 0;
+}
+.vibeBuild__title{
+  text-align:center;
+}
+.vibeBuild__stage{
+  margin-top:var(--section-gap);
+  height:690px;
+}
+
+.vibeWhat,
+.difference,
+.target,
+.curriculum,
+.projects,
+.reuse,
+.materials,
+.coaching,
+.price{
+  padding-top:var(--section-y);
+  padding-bottom:var(--section-y);
+}
+.skills{
+  padding-top:var(--section-y);
+}
+.vibeWhat__head,
+.skills .head,
+.difference .head,
+.target .head,
+.curriculum .head,
+.projects .head,
+.reuse .head,
+.materials .head,
+.coaching .head,
+.price .head{
+  text-align:center;
+}
+.vibeWhat__head p,
+.head .lead{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:760px;
+}
+
+/* MCP: one centered composition, not left/right split */
+.mcpLite__hero{
+  min-height:auto;
+  padding:var(--section-y) 0;
+}
+.mcpLite__heroGrid{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:var(--section-gap);
+  text-align:center;
+}
+.mcpLite__copy{
+  width:100%;
+  text-align:center;
+}
+.mcpLite__copy h2{
+  text-align:center;
+}
+.mcpLite__copy p{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.mcpLite__visual{
+  width:100%;
+  min-height:500px;
+}
+.mcpLite__mcp{
+  padding:92px 0;
+}
+.mcpLite__actions{
+  padding:92px 0;
+}
+.mcpLite__actions .wrap{
+  justify-content:center;
+  text-align:center;
+}
+
+/* consistent content gaps */
+.vibeWhat__visual{margin-top:var(--section-gap)}
+.vibeWhat__bottom{margin-top:44px}
+.skill-list{margin-top:var(--section-gap)}
+.skills-bottom{margin-top:var(--section-gap)}
+.difference-stage{margin-top:var(--section-gap)}
+.difference-shot{margin-top:var(--section-gap)}
+.target-lines{margin-top:var(--section-gap)}
+.curriculum-grid{margin-top:var(--section-gap)}
+.project-showcase{margin-top:var(--section-gap)}
+.reuse-chain{margin-top:var(--section-gap)}
+.material-list{margin-top:var(--section-gap)}
+.coach-box{margin-top:var(--section-gap)}
+.price-card{margin-top:var(--section-gap)}
+
+/* center the actual section content as well */
+.skill-row{
+  min-height:auto;
+  padding:30px 0;
+  display:block;
+  text-align:center;
+}
+.skill-row span{
+  display:block;
+  max-width:680px;
+  margin:12px auto 0;
+  text-align:center;
+}
+.skills-bottom .wrap{
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+.skills-bottom span{
+  text-align:center;
+  max-width:680px;
+}
+
+.diff-line{
+  min-height:auto;
+  padding:30px 0;
+  grid-template-columns:1fr;
+  gap:10px;
+  text-align:center;
+}
+.diff-line small,
+.diff-line strong{
+  text-align:center;
+}
+
+.target-line{
+  min-height:auto;
+  padding:28px 0;
+  grid-template-columns:1fr;
+  gap:9px;
+  text-align:center;
+}
+.target-line strong,
+.target-line span{
+  text-align:center;
+}
+
+.curr-item{
+  grid-template-columns:1fr;
+  gap:7px;
+  padding:25px 0;
+  text-align:center;
+}
+.curr-item em,
+.curr-item strong,
+.curr-item p{
+  text-align:center;
+}
+.curr-item p{
+  max-width:430px;
+  margin:8px auto 0;
+}
+
+.project-showcase{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  grid-template-columns:1fr;
+  gap:36px;
+}
+.project-copy{
+  position:static;
+  text-align:center;
+  max-width:720px;
+  margin:0 auto;
+}
+.project-copy p{
+  margin-left:auto;
+  margin-right:auto;
+}
+.project-meta{
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  gap:5px;
+}
+
+.reuse-chain div{
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.material-row{
+  min-height:auto;
+  padding:27px 0;
+  grid-template-columns:1fr;
+  gap:7px;
+  text-align:center;
+}
+.material-row strong,
+.material-row span{
+  text-align:center;
+}
+
+.coach-line{
+  text-align:center;
+}
+.price-card{
+  text-align:center;
+}
+
+@media(max-width:820px){
+  :root{
+    --section-y:78px;
+    --section-gap:42px;
+  }
+  .wrap{width:min(100% - 28px,1040px)}
+  .hero{
+    padding-top:52px;
+    padding-bottom:72px;
+  }
+  .hero h1,
+  .hero .tagline{
+    text-align:center;
+  }
+  .hero-stage{margin-top:40px}
+
+  .vibeBuild{
+    min-height:auto;
+    padding:var(--section-y) 0;
+  }
+  .vibeBuild__title{
+    text-align:center;
+    font-size:48px;
+  }
+  .vibeBuild__stage{
+    height:1030px;
+    margin-top:var(--section-gap);
+  }
+
+  .vibeWhat,
+  .difference,
+  .target,
+  .curriculum,
+  .projects,
+  .reuse,
+  .materials,
+  .coaching,
+  .price{
+    padding-top:var(--section-y);
+    padding-bottom:var(--section-y);
+  }
+  .skills{padding-top:var(--section-y)}
+
+  .vibeWhat__head,
+  .vibeWhat__bottom,
+  .mcpLite__copy,
+  .project-copy,
+  .reuse .head,
+  .materials .head,
+  .coaching .head,
+  .price .head{
+    text-align:center;
+  }
+  .vibeWhat__head h2,
+  .vibeWhat__head p,
+  .vibeWhat__bottom strong{
+    text-align:center;
+  }
+
+  .mcpLite__hero{
+    padding:var(--section-y) 0;
+  }
+  .mcpLite__heroGrid{
+    gap:var(--section-gap);
+    text-align:center;
+  }
+  .mcpLite__copy h2{
+    font-size:52px;
+    text-align:center;
+  }
+  .mcpLite__copy p{
+    text-align:center;
+  }
+  .mcpLite__visual{
+    min-height:380px;
+  }
+  .mcpLite__mcp,
+  .mcpLite__actions{
+    padding:72px 0;
+  }
+  .mcpLite__actions .wrap{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .skill-row,
+  .diff-line,
+  .target-line,
+  .curr-item,
+  .material-row{
+    text-align:center;
+  }
+  .skill-row span,
+  .skills-bottom span,
+  .diff-line small,
+  .diff-line strong,
+  .target-line strong,
+  .curr-item em,
+  .curr-item strong,
+  .curr-item p,
+  .material-row strong{
+    text-align:center;
+  }
+
+  .skills-bottom .wrap{
+    text-align:center;
+  }
+  .reuse-chain div{
+    text-align:center;
+  }
+  .project-meta{
+    align-items:center;
+    text-align:center;
+  }
+}
+
 </style>
 </head>
 <body>
