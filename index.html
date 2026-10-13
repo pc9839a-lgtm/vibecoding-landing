@@ -148,138 +148,250 @@ main{overflow:hidden}
 }
 .hero-bottom span:nth-child(3){color:var(--lime)}
 
-/* PAIN PROOF — follows original landing visual language */
-.painProof{
+/* VIBE BUILD — restored from the user's original landing concept */
+.vibeBuild{
   position:relative;
-  padding:112px 0 116px;
-  background:#f7f8f6;
-  color:#0b0e0b;
+  overflow:hidden;
+  min-height:1080px;
+  padding:112px 0 118px;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(202,255,56,.08),transparent 25%),
+    linear-gradient(180deg,#070a08 0%,#050706 100%);
+  color:#fff;
 }
-.painProof__head{
-  text-align:center;
-}
-.painProof__head h2{
+.vibeBuild__title{
   margin:0;
-  font-size:clamp(48px,6vw,76px);
-  line-height:1;
-  letter-spacing:-.067em;
+  font-size:clamp(62px,7vw,88px);
+  line-height:1.02;
+  letter-spacing:-.065em;
   font-weight:950;
 }
-.painProof__head h2 span{
-  color:#6f55ff;
+.vibeBuild__title span{color:var(--lime)}
+.vibeBuild__stage{
+  position:relative;
+  height:720px;
+  margin-top:68px;
 }
-.painProof__grid{
-  margin-top:64px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-.painProof__item{
-  min-height:240px;
-  padding:28px 24px 26px;
-  background:#fff;
-  border:1px solid #e4e8e2;
-  border-radius:20px;
-  box-shadow:0 16px 34px rgba(24,34,24,.055);
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-}
-.painProof__icon{
-  width:78px;
-  height:78px;
+.vibeBuild__chat{
+  position:absolute;
+  left:0;
+  top:32px;
+  width:330px;
+  padding:22px;
   border-radius:24px;
-  display:grid;
-  place-items:center;
-  background:#f0f2ed;
+  background:#0d120f;
+  border:1px solid #243027;
+  box-shadow:0 24px 60px rgba(0,0,0,.34);
+  z-index:3;
 }
-.painProof__icon svg{
-  width:42px;
-  height:42px;
-  fill:none;
-  stroke:#111511;
-  stroke-width:2.6;
-  stroke-linecap:round;
-  stroke-linejoin:round;
+.vibeBuild__chatHead{
+  padding-bottom:16px;
+  margin-bottom:18px;
+  border-bottom:1px solid #1d261f;
+  color:#818d84;
+  font:800 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;
 }
-.painProof__item:nth-child(2) .painProof__icon,
-.painProof__item:nth-child(4) .painProof__icon{
-  background:#efffd0;
+.vibeBuild__bubble{
+  max-width:88%;
+  padding:13px 14px;
+  margin:10px 0;
+  border-radius:16px;
+  font-size:14px;
+  line-height:1.45;
 }
-.painProof__item p{
-  margin:26px 0 0;
-  color:#677067;
-  font-size:16px;
-  line-height:1.55;
-  letter-spacing:-.03em;
-  font-weight:700;
+.vibeBuild__bubble--me{
+  margin-left:auto;
+  color:#0b110b;
+  background:var(--lime);
+  border-bottom-right-radius:5px;
+  font-weight:780;
 }
-.painProof__item p strong{
-  display:block;
-  margin-top:3px;
-  color:#111511;
-  font-size:18px;
-  line-height:1.38;
-  letter-spacing:-.04em;
-  font-weight:900;
+.vibeBuild__bubble--ai{
+  background:#171e19;
+  color:#dbe1dc;
+  border:1px solid #263129;
+  border-bottom-left-radius:5px;
 }
-.painProof__bridge{
-  margin:54px auto 0;
-  padding-top:34px;
-  max-width:900px;
-  border-top:1px solid #dce1da;
+.vibeBuild__code{
+  position:absolute;
+  left:286px;
+  top:135px;
+  width:405px;
+  height:360px;
+  padding:22px;
+  border-radius:24px;
+  background:#0a0d0b;
+  border:1px solid #263027;
+  box-shadow:0 28px 65px rgba(0,0,0,.44);
+  transform:rotate(-2deg);
+  z-index:2;
+}
+.vibeBuild__codeTop{
   display:flex;
-  align-items:baseline;
-  justify-content:center;
-  gap:16px;
-  text-align:center;
+  gap:7px;
+  margin-bottom:22px;
 }
-.painProof__bridge span{
-  color:#7c857c;
-  font-size:18px;
-  font-weight:850;
+.vibeBuild__codeTop i{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#59635c;
 }
-.painProof__bridge strong{
-  color:#0b0e0b;
-  font-size:clamp(28px,3vw,40px);
-  line-height:1.1;
+.vibeBuild__codeTop i:first-child{background:var(--lime)}
+.vibeBuild__code pre{
+  margin:0;
+  color:#9da7a0;
+  font:500 13px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;
+  white-space:pre-wrap;
+}
+.vibeBuild__code pre span{color:#9ae65b}
+.vibeBuild__code pre b{color:#7da6ff;font-weight:700}
+.vibeBuild__result{
+  position:absolute;
+  right:0;
+  top:52px;
+  width:380px;
+  height:610px;
+  border-radius:34px;
+  overflow:hidden;
+  background:#edf0ea;
+  border:1px solid #334236;
+  box-shadow:0 34px 80px rgba(0,0,0,.46);
+  transform:rotate(3deg);
+  z-index:4;
+}
+.vibeBuild__resultCover{
+  height:180px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:18px 20px;
+  background:
+    radial-gradient(circle at 78% 25%,rgba(199,255,65,.48),transparent 18%),
+    linear-gradient(135deg,#263225 0%,#777c63 46%,#bbb39a 100%);
+}
+.vibeBuild__resultCover:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:90px;
+  background:linear-gradient(transparent,rgba(0,0,0,.42));
+}
+.vibeBuild__resultCover span{
+  position:relative;
+  z-index:2;
+  color:#eff5ef;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;
+}
+.vibeBuild__resultBody{
+  padding:22px 24px;
+  color:#111711;
+}
+.vibeBuild__resultBody h3{
+  margin:0 0 18px;
+  font-size:28px;
+  line-height:1.15;
   letter-spacing:-.05em;
   font-weight:950;
 }
+.vibeBuild__resultBody label{
+  display:block;
+  margin:10px 0 5px;
+  color:#7e867e;
+  font-size:10px;
+  font-weight:800;
+}
+.vibeBuild__field{
+  height:38px;
+  border-radius:9px;
+  background:#fff;
+  border:1px solid #d8ddd7;
+}
+.vibeBuild__field--large{height:58px}
+.vibeBuild__button{
+  height:46px;
+  margin-top:14px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  background:#121812;
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+}
+.vibeBuild__done{
+  display:inline-flex;
+  margin-top:14px;
+  padding:7px 11px;
+  border-radius:999px;
+  color:#263019;
+  background:#d3ff6a;
+  font-size:11px;
+  font-weight:900;
+}
+.vibeBuild__connector{
+  position:absolute;
+  left:330px;
+  top:500px;
+  width:310px;
+  height:120px;
+  border-bottom:2px solid rgba(202,255,56,.52);
+  border-radius:0 0 50% 50%;
+  transform:rotate(-7deg);
+}
+.vibeBuild__connector:after{
+  content:"";
+  position:absolute;
+  right:-2px;
+  bottom:-6px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--lime);
+  box-shadow:0 0 22px rgba(202,255,56,.7);
+}
 @media(max-width:820px){
-  .painProof{padding:82px 0 88px}
-  .painProof__head h2{font-size:46px}
-  .painProof__grid{
-    margin-top:46px;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+  .vibeBuild{
+    min-height:1320px;
+    padding:88px 0 96px;
   }
-  .painProof__item{
-    min-height:210px;
-    padding:22px 15px 20px;
-    border-radius:16px;
+  .vibeBuild__title{font-size:52px}
+  .vibeBuild__stage{
+    height:1050px;
+    margin-top:50px;
   }
-  .painProof__icon{
-    width:62px;
-    height:62px;
-    border-radius:18px;
+  .vibeBuild__chat{
+    width:78%;
+    left:0;
+    top:0;
   }
-  .painProof__icon svg{width:34px;height:34px}
-  .painProof__item p{font-size:14px;margin-top:20px}
-  .painProof__item p strong{font-size:16px}
-  .painProof__bridge{
-    margin-top:42px;
-    padding-top:28px;
-    display:block;
-    text-align:left;
+  .vibeBuild__code{
+    left:8%;
+    top:340px;
+    width:78%;
+    height:310px;
   }
-  .painProof__bridge span{display:block;font-size:15px;margin-bottom:8px}
-  .painProof__bridge strong{font-size:31px}
+  .vibeBuild__result{
+    right:0;
+    top:610px;
+    width:74%;
+    height:500px;
+  }
+  .vibeBuild__resultCover{height:145px}
+  .vibeBuild__resultBody h3{font-size:23px}
+  .vibeBuild__connector{display:none}
 }
 @media print{
-  .painProof__item,.painProof__bridge{break-inside:avoid}
+  .vibeBuild{
+    min-height:auto;
+    padding:80px 0;
+  }
+  .vibeBuild__stage{height:700px}
+  .vibeBuild__chat,
+  .vibeBuild__code,
+  .vibeBuild__result{box-shadow:none}
 }
 
 /* DEFINITION */
@@ -1120,59 +1232,47 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="painProof">
+<section class="vibeBuild">
   <div class="wrap">
-    <div class="painProof__head">
-      <h2>혹시 <span>이런 경험</span> 있으신가요?</h2>
-    </div>
+    <h2 class="vibeBuild__title">원하는 걸<br><span>직접 만들 수 있습니다</span></h2>
 
-    <div class="painProof__grid">
-      <article class="painProof__item">
-        <div class="painProof__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path d="M18 22h22l8-6v30l-8-6H18z"></path>
-            <path d="M18 40l-4 10h10l4-10"></path>
-            <path d="M47 23l6-4M48 32h7M47 41l6 4"></path>
-          </svg>
+    <div class="vibeBuild__stage">
+      <div class="vibeBuild__chat">
+        <div class="vibeBuild__chatHead">AI CHAT</div>
+        <div class="vibeBuild__bubble vibeBuild__bubble--me">상담 신청페이지 만들어줘.</div>
+        <div class="vibeBuild__bubble vibeBuild__bubble--me">이름, 연락처, 문의내용 받게.</div>
+        <div class="vibeBuild__bubble vibeBuild__bubble--me">모바일에서도 깔끔하게 보여줘.</div>
+        <div class="vibeBuild__bubble vibeBuild__bubble--ai">요청한 페이지를 만들었습니다.</div>
+      </div>
+
+      <div class="vibeBuild__code">
+        <div class="vibeBuild__codeTop"><i></i><i></i><i></i></div>
+        <pre><span>&lt;section</span> class=<b>"consult"</b><span>&gt;</span>
+  &lt;h1&gt;상담 신청&lt;/h1&gt;
+  &lt;form&gt;
+    &lt;input name=<b>"name"</b>&gt;
+    &lt;input name=<b>"phone"</b>&gt;
+    &lt;textarea name=<b>"message"</b>&gt;
+    &lt;button&gt;접수하기&lt;/button&gt;
+  &lt;/form&gt;
+<span>&lt;/section&gt;</span></pre>
+      </div>
+
+      <div class="vibeBuild__result">
+        <div class="vibeBuild__resultCover">
+          <span>LIVE PREVIEW</span>
         </div>
-        <p>광고 문의가 들어왔는데<br><strong>확인이 늦어서 고객을 놓친 적</strong></p>
-      </article>
-
-      <article class="painProof__item">
-        <div class="painProof__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <rect x="14" y="11" width="36" height="42" rx="4"></rect>
-            <path d="M22 22h20M22 31h20M22 40h12"></path>
-            <path d="M38 38l5 5 9-11"></path>
-          </svg>
+        <div class="vibeBuild__resultBody">
+          <h3>무료 상담 신청</h3>
+          <label>이름</label><div class="vibeBuild__field"></div>
+          <label>연락처</label><div class="vibeBuild__field"></div>
+          <label>문의내용</label><div class="vibeBuild__field vibeBuild__field--large"></div>
+          <div class="vibeBuild__button">접수하기</div>
+          <div class="vibeBuild__done">완성</div>
         </div>
-        <p>신청폼은 있지만<br><strong>접수할 때마다 따로 정리하는 일</strong></p>
-      </article>
+      </div>
 
-      <article class="painProof__item">
-        <div class="painProof__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path d="M13 17h38v26H28l-10 8v-8h-5z"></path>
-            <path d="M22 26h20M22 34h13"></path>
-          </svg>
-        </div>
-        <p>문의가 들어올 때마다<br><strong>문자·카톡을 직접 보내는 일</strong></p>
-      </article>
-
-      <article class="painProof__item">
-        <div class="painProof__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path d="M15 45l4-13L42 9l13 13-23 23z"></path>
-            <path d="M19 32l13 13M39 12l13 13"></path>
-          </svg>
-        </div>
-        <p>랜딩 한 줄 바꾸려고<br><strong>또 외주 수정부터 기다리는 일</strong></p>
-      </article>
-    </div>
-
-    <div class="painProof__bridge">
-      <span>이제는</span>
-      <strong>필요한 걸 직접 만들고, 바로 고칩니다.</strong>
+      <div class="vibeBuild__connector"></div>
     </div>
   </div>
 </section>
