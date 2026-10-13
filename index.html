@@ -641,28 +641,15 @@ main{overflow:hidden}
     padding:10px 8px;
     font-size:9px;
   }
-  .mcpLite__mcp{padding:72px 0}
-  .mcpLite__mcp strong{font-size:92px}
-  .mcpLite__mcp p{font-size:28px}
-  .mcpLite__actions{padding:70px 0}
-  .mcpLite__actions .wrap{
-    justify-content:flex-start;
-    gap:12px;
-  }
-  .mcpLite__actions span,
-  .mcpLite__actions strong{font-size:34px}
-  .mcpLite__actions i{font-size:22px}
 }
 @media print{
-  .mcpLite__hero,
-  .mcpLite__mcp,
-  .mcpLite__actions{break-inside:avoid}
+  .mcpLite__hero{break-inside:avoid}
   .mcpLite__screen{box-shadow:none}
 }
 
 /* BUILD SYSTEM */
 .buildSystem{
-  padding:84px 0 92px;
+  padding:72px 0 82px;
   background:var(--lime);
   color:#0a0d0a;
   overflow:hidden;
@@ -672,8 +659,8 @@ main{overflow:hidden}
 }
 .buildSystem__head h2{
   margin:0;
-  font-size:clamp(58px,7vw,92px);
-  line-height:.94;
+  font-size:clamp(48px,5.2vw,68px);
+  line-height:.96;
   letter-spacing:-.075em;
   font-weight:950;
 }
@@ -683,8 +670,8 @@ main{overflow:hidden}
 }
 .buildSystem__stage{
   position:relative;
-  height:500px;
-  margin-top:38px;
+  height:470px;
+  margin-top:32px;
 }
 .buildSystem__shot{
   position:absolute;
@@ -704,25 +691,25 @@ main{overflow:hidden}
 }
 .buildSystem__shot--center{
   left:50%;
-  top:18px;
-  width:58%;
-  height:410px;
+  top:8px;
+  width:60%;
+  height:400px;
   transform:translateX(-50%);
   z-index:3;
 }
 .buildSystem__shot--left{
   left:1%;
-  top:92px;
-  width:31%;
-  height:300px;
+  top:76px;
+  width:30%;
+  height:288px;
   transform:rotate(-6deg);
   z-index:1;
 }
 .buildSystem__shot--right{
   right:1%;
-  top:92px;
-  width:31%;
-  height:300px;
+  top:76px;
+  width:30%;
+  height:288px;
   transform:rotate(6deg);
   z-index:1;
 }
@@ -1354,16 +1341,6 @@ main{overflow:hidden}
 .mcpLite__visual{
   width:100%;
   min-height:450px;
-}
-.mcpLite__mcp{
-  padding:92px 0;
-}
-.mcpLite__actions{
-  padding:92px 0;
-}
-.mcpLite__actions .wrap{
-  justify-content:center;
-  text-align:center;
 }
 
 /* consistent content gaps */
