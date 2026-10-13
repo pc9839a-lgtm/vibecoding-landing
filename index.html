@@ -148,194 +148,138 @@ main{overflow:hidden}
 }
 .hero-bottom span:nth-child(3){color:var(--lime)}
 
-/* WHY VIBE 2 */
-.whyVibe2{
-  background:#f3f5ef;
-  color:#0a0d0a;
+/* PAIN PROOF — follows original landing visual language */
+.painProof{
+  position:relative;
+  padding:112px 0 116px;
+  background:#f7f8f6;
+  color:#0b0e0b;
 }
-.whyVibe2__top{
-  padding-top:134px;
-  padding-bottom:78px;
+.painProof__head{
   text-align:center;
 }
-.whyVibe2__top h2{
+.painProof__head h2{
   margin:0;
-  font-size:clamp(62px,7.7vw,102px);
-  line-height:.92;
-  letter-spacing:-.082em;
-  font-weight:950;
-}
-.whyVibe2__top h2 span{
-  color:#6f9f0f;
-}
-.whyVibe2__top p{
-  margin:30px auto 0;
-  max-width:760px;
-  color:#646c64;
-  font-size:clamp(18px,1.9vw,23px);
-  line-height:1.6;
-  letter-spacing:-.03em;
-  font-weight:720;
-}
-.whyVibe2__split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  width:100%;
-}
-.whyVibe2__old,
-.whyVibe2__new{
-  min-height:620px;
-  display:flex;
-  align-items:center;
-}
-.whyVibe2__old{
-  background:#080a08;
-  color:#fff;
-}
-.whyVibe2__new{
-  background:#caff38;
-  color:#0a0d0a;
-}
-.whyVibe2__sideInner{
-  width:min(500px,calc(100% - 64px));
-  margin:0 auto;
-}
-.whyVibe2__label{
-  display:block;
-  margin-bottom:34px;
-  font-size:14px;
+  font-size:clamp(48px,6vw,76px);
   line-height:1;
-  font-weight:900;
-  letter-spacing:-.02em;
-  opacity:.58;
-}
-.whyVibe2__oldWords{
-  display:grid;
-  gap:4px;
-}
-.whyVibe2__oldWords strong{
-  position:relative;
-  width:max-content;
-  max-width:100%;
-  font-size:clamp(45px,5vw,68px);
-  line-height:1.03;
-  letter-spacing:-.065em;
+  letter-spacing:-.067em;
   font-weight:950;
-  color:#fff;
 }
-.whyVibe2__oldWords strong:after{
-  content:"";
-  position:absolute;
-  left:-2%;
-  right:-2%;
-  top:54%;
-  height:3px;
-  background:#4c544c;
-  transform:rotate(-2deg);
+.painProof__head h2 span{
+  color:#6f55ff;
 }
-.whyVibe2__old p{
-  margin:34px 0 0;
-  color:#788178;
-  font-size:17px;
+.painProof__grid{
+  margin-top:64px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.painProof__item{
+  min-height:240px;
+  padding:28px 24px 26px;
+  background:#fff;
+  border:1px solid #e4e8e2;
+  border-radius:20px;
+  box-shadow:0 16px 34px rgba(24,34,24,.055);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+.painProof__icon{
+  width:78px;
+  height:78px;
+  border-radius:24px;
+  display:grid;
+  place-items:center;
+  background:#f0f2ed;
+}
+.painProof__icon svg{
+  width:42px;
+  height:42px;
+  fill:none;
+  stroke:#111511;
+  stroke-width:2.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.painProof__item:nth-child(2) .painProof__icon,
+.painProof__item:nth-child(4) .painProof__icon{
+  background:#efffd0;
+}
+.painProof__item p{
+  margin:26px 0 0;
+  color:#677067;
+  font-size:16px;
   line-height:1.55;
-  letter-spacing:-.025em;
+  letter-spacing:-.03em;
   font-weight:700;
 }
-.whyVibe2__new blockquote{
-  margin:0;
-  padding:0;
-  font-size:clamp(38px,4.4vw,60px);
-  line-height:1.12;
-  letter-spacing:-.062em;
+.painProof__item p strong{
+  display:block;
+  margin-top:3px;
+  color:#111511;
+  font-size:18px;
+  line-height:1.38;
+  letter-spacing:-.04em;
   font-weight:900;
 }
-.whyVibe2__new blockquote b{
-  position:relative;
-  display:inline-block;
-  font-weight:950;
-}
-.whyVibe2__new blockquote b:after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-5px;
-  height:6px;
-  background:#0a0d0a;
-}
-.whyVibe2__new p{
-  margin:36px 0 0;
-  color:#344034;
-  font-size:17px;
-  line-height:1.5;
-  letter-spacing:-.025em;
-  font-weight:850;
-}
-.whyVibe2__bottom{
-  padding-top:110px;
-  padding-bottom:124px;
+.painProof__bridge{
+  margin:54px auto 0;
+  padding-top:34px;
+  max-width:900px;
+  border-top:1px solid #dce1da;
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:16px;
   text-align:center;
 }
-.whyVibe2__bottom span,
-.whyVibe2__bottom strong{
-  display:block;
-  font-size:clamp(48px,6.5vw,88px);
-  line-height:.98;
-  letter-spacing:-.072em;
+.painProof__bridge span{
+  color:#7c857c;
+  font-size:18px;
+  font-weight:850;
+}
+.painProof__bridge strong{
+  color:#0b0e0b;
+  font-size:clamp(28px,3vw,40px);
+  line-height:1.1;
+  letter-spacing:-.05em;
   font-weight:950;
 }
-.whyVibe2__bottom span{
-  color:#a3aba3;
-}
-.whyVibe2__bottom strong{
-  margin-top:10px;
-  color:#0a0d0a;
-}
 @media(max-width:820px){
-  .whyVibe2__top{
-    padding-top:88px;
-    padding-bottom:54px;
+  .painProof{padding:82px 0 88px}
+  .painProof__head h2{font-size:46px}
+  .painProof__grid{
+    margin-top:46px;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .painProof__item{
+    min-height:210px;
+    padding:22px 15px 20px;
+    border-radius:16px;
+  }
+  .painProof__icon{
+    width:62px;
+    height:62px;
+    border-radius:18px;
+  }
+  .painProof__icon svg{width:34px;height:34px}
+  .painProof__item p{font-size:14px;margin-top:20px}
+  .painProof__item p strong{font-size:16px}
+  .painProof__bridge{
+    margin-top:42px;
+    padding-top:28px;
+    display:block;
     text-align:left;
   }
-  .whyVibe2__top h2{
-    font-size:50px;
-  }
-  .whyVibe2__top p{
-    font-size:17px;
-    line-height:1.55;
-  }
-  .whyVibe2__split{
-    grid-template-columns:1fr;
-  }
-  .whyVibe2__old,
-  .whyVibe2__new{
-    min-height:430px;
-  }
-  .whyVibe2__sideInner{
-    width:min(100% - 32px,500px);
-  }
-  .whyVibe2__oldWords strong{
-    font-size:42px;
-  }
-  .whyVibe2__new blockquote{
-    font-size:36px;
-  }
-  .whyVibe2__bottom{
-    padding-top:76px;
-    padding-bottom:84px;
-    text-align:left;
-  }
-  .whyVibe2__bottom span,
-  .whyVibe2__bottom strong{
-    font-size:44px;
-  }
+  .painProof__bridge span{display:block;font-size:15px;margin-bottom:8px}
+  .painProof__bridge strong{font-size:31px}
 }
 @media print{
-  .whyVibe2__old,
-  .whyVibe2__new,
-  .whyVibe2__bottom{
-    break-inside:avoid;
-  }
+  .painProof__item,.painProof__bridge{break-inside:avoid}
 }
 
 /* DEFINITION */
@@ -1176,41 +1120,60 @@ main{overflow:hidden}
   </div>
 </section>
 
-<section class="whyVibe2">
-  <div class="whyVibe2__top wrap">
-    <h2>만들고 싶은 건 있는데<br><span>코딩을 몰라서 멈췄다면.</span></h2>
-    <p>바이브코딩은 개발 공부부터 다시 시작하는 방식이 아닙니다.<br>원하는 결과를 말하고, 나온 화면을 보며 바로 고쳐가는 방식입니다.</p>
-  </div>
+<section class="painProof">
+  <div class="wrap">
+    <div class="painProof__head">
+      <h2>혹시 <span>이런 경험</span> 있으신가요?</h2>
+    </div>
 
-  <div class="whyVibe2__split">
-    <div class="whyVibe2__old">
-      <div class="whyVibe2__sideInner">
-        <span class="whyVibe2__label">예전엔</span>
-        <div class="whyVibe2__oldWords">
-          <strong>외주 맡기고</strong>
-          <strong>수정 요청하고</strong>
-          <strong>다시 기다리고</strong>
+    <div class="painProof__grid">
+      <article class="painProof__item">
+        <div class="painProof__icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M18 22h22l8-6v30l-8-6H18z"></path>
+            <path d="M18 40l-4 10h10l4-10"></path>
+            <path d="M47 23l6-4M48 32h7M47 41l6 4"></path>
+          </svg>
         </div>
-        <p>작은 수정 하나에도<br>시간과 비용이 들었습니다.</p>
-      </div>
+        <p>광고 문의가 들어왔는데<br><strong>확인이 늦어서 고객을 놓친 적</strong></p>
+      </article>
+
+      <article class="painProof__item">
+        <div class="painProof__icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="14" y="11" width="36" height="42" rx="4"></rect>
+            <path d="M22 22h20M22 31h20M22 40h12"></path>
+            <path d="M38 38l5 5 9-11"></path>
+          </svg>
+        </div>
+        <p>신청폼은 있지만<br><strong>접수할 때마다 따로 정리하는 일</strong></p>
+      </article>
+
+      <article class="painProof__item">
+        <div class="painProof__icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M13 17h38v26H28l-10 8v-8h-5z"></path>
+            <path d="M22 26h20M22 34h13"></path>
+          </svg>
+        </div>
+        <p>문의가 들어올 때마다<br><strong>문자·카톡을 직접 보내는 일</strong></p>
+      </article>
+
+      <article class="painProof__item">
+        <div class="painProof__icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M15 45l4-13L42 9l13 13-23 23z"></path>
+            <path d="M19 32l13 13M39 12l13 13"></path>
+          </svg>
+        </div>
+        <p>랜딩 한 줄 바꾸려고<br><strong>또 외주 수정부터 기다리는 일</strong></p>
+      </article>
     </div>
 
-    <div class="whyVibe2__new">
-      <div class="whyVibe2__sideInner">
-        <span class="whyVibe2__label">이제는</span>
-        <blockquote>
-          “이름이랑 연락처 받는<br>
-          신청페이지 만들어줘.<br>
-          <b>모바일에서도 깔끔하게.</b>”
-        </blockquote>
-        <p>말하고 → 보고 → 고치고 → 바로 씁니다.</p>
-      </div>
+    <div class="painProof__bridge">
+      <span>이제는</span>
+      <strong>필요한 걸 직접 만들고, 바로 고칩니다.</strong>
     </div>
-  </div>
-
-  <div class="whyVibe2__bottom wrap">
-    <span>아이디어를 설명하는 사람에서</span>
-    <strong>직접 만들어 쓰는 사람으로.</strong>
   </div>
 </section>
 
