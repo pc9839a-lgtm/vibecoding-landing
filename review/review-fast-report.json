@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T14:33:53.025Z",
+  "at": "2026-10-16T14:40:07.998Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10483,
+        "height": 10382,
         "imgs": [
           {
             "src": "assets/cases/awards-hero.jpg",
@@ -60,7 +60,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 12833,
+        "height": 12672,
         "imgs": [
           {
             "src": "assets/cases/awards-hero.jpg",
