@@ -122,5 +122,65 @@
       "scrollY": 0
     },
     "errors": []
+  },
+  {
+    "key": "awards-hero",
+    "width": 1440,
+    "url": "https://awards.pagero.kr/",
+    "selector": "body",
+    "label": "Brand Awards actual home hero",
+    "ok": true,
+    "meta": {
+      "title": "브랜드어워즈 참가 문의 | 브랜드대상 신청 · 기업 수상 마케팅",
+      "heading": "브랜드어워즈 참가 문의",
+      "forms": 2,
+      "scrollY": 0
+    },
+    "errors": []
+  },
+  {
+    "key": "awards-hero",
+    "width": 390,
+    "url": "https://awards.pagero.kr/",
+    "selector": "body",
+    "label": "Brand Awards actual home hero",
+    "ok": true,
+    "meta": {
+      "title": "브랜드어워즈 참가 문의 | 브랜드대상 신청 · 기업 수상 마케팅",
+      "heading": "브랜드어워즈 참가 문의",
+      "forms": 2,
+      "scrollY": 0
+    },
+    "errors": []
+  },
+  {
+    "key": "calltag-hero",
+    "width": 1440,
+    "url": "https://calltag.pagero.kr/",
+    "selector": "body",
+    "label": "CallTag actual service home hero",
+    "ok": true,
+    "meta": {
+      "title": "고객관리 앱 콜태그 | 통화 후 상담기록·재연락 CRM",
+      "heading": "통화 후 고객관리.",
+      "forms": 0,
+      "scrollY": 0
+    },
+    "errors": []
+  },
+  {
+    "key": "calltag-hero",
+    "width": 390,
+    "url": "https://calltag.pagero.kr/",
+    "selector": "body",
+    "label": "CallTag actual service home hero",
+    "ok": true,
+    "meta": {
+      "title": "고객관리 앱 콜태그 | 통화 후 상담기록·재연락 CRM",
+      "heading": "통화 후 고객관리.",
+      "forms": 0,
+      "scrollY": 0
+    },
+    "errors": []
   }
 ]
