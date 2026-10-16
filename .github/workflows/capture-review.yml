@@ -46,10 +46,14 @@ jobs:
         run: |
           git config user.name "vibecoding-qa"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          if ! git diff --quiet HEAD origin/main -- index.html assets/site.css assets/cases; then
+            echo "Source files changed while reviewing; newer workflow will generate fresh screenshots"
+            exit 0
+          fi
+          git reset --mixed origin/main
           git add review/hero-mobile-390.jpg review/hero-desktop-1440.jpg review/mobile-390.jpg review/desktop-1440.jpg review/review-fast-report.json
           if ! git diff --cached --quiet; then
             git commit -m "Capture updated 390px and 1440px design review"
-            git fetch origin main
-            git rebase origin/main
             git push origin HEAD:main
           fi
