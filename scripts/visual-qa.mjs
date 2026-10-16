@@ -19,13 +19,14 @@ let failed=false;
 const results=[];
 try{
  for(const width of [360,390,1440]){
+  console.log('START_WIDTH '+width);
   const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'reduce'});
   const errors=[];
   page.on('pageerror',err=>errors.push(err.message));
   await page.goto('http://127.0.0.1:4178/',{waitUntil:'load',timeout:30000});
   await page.evaluate(async()=>{
-    await document.fonts.ready;
-    await Promise.all([...document.images].map(img=>(img.decode?.().catch(()=>{})||Promise.resolve())));
+    await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,3000))]);
+    await Promise.race([Promise.all([...document.images].map(img=>(img.decode?.().catch(()=>{})||Promise.resolve()))),new Promise(resolve=>setTimeout(resolve,6000))]);
   });
   const initial=await page.evaluate(()=>{
     const images=[...document.images];
@@ -52,7 +53,11 @@ try{
   await page.evaluate(()=>scrollTo(0,0));
   await page.waitForTimeout(180);
   const file=path.join(root,'review',width===1440?'desktop-1440.jpg':'mobile-'+width+'.jpg');
+  const heroFile=path.join(root,'review',width===1440?'hero-desktop-1440.jpg':'hero-mobile-'+width+'.jpg');
+  await page.screenshot({path:heroFile,fullPage:false,type:'jpeg',quality:85,animations:'disabled'});
+  console.log('HERO_RENDERED '+width);
   await page.screenshot({path:file,fullPage:true,type:'jpeg',quality:83,animations:'disabled'});
+  console.log('FULL_RENDERED '+width);
   const passed=initial.scrollWidth<=width+1&&initial.images.every(i=>i.loaded)&&initial.brokenAnchors.length===0&&clicks.every(c=>c.ok)&&initial.price.right<=width+1&&initial.price.left>=-1&&errors.length===0;
   results.push({width,passed,...initial,clicks,errors,screenshot:path.relative(root,file)});
   if(!passed)failed=true;
