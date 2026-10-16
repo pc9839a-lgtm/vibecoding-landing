@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T13:13:30.130Z",
+  "at": "2026-10-16T13:16:22.070Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10759,
+        "height": 10043,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
