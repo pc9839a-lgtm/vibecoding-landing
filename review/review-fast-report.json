@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T14:40:07.998Z",
+  "at": "2026-10-16T14:45:10.413Z",
   "result": [
     {
       "width": 390,
@@ -8,12 +8,8 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10382,
+        "height": 9416,
         "imgs": [
-          {
-            "src": "assets/cases/awards-hero.jpg",
-            "ok": true
-          },
           {
             "src": "assets/cases/peopleent.jpg",
             "ok": true
@@ -60,12 +56,8 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 12672,
+        "height": 11743,
         "imgs": [
-          {
-            "src": "assets/cases/awards-hero.jpg",
-            "ok": true
-          },
           {
             "src": "assets/cases/peopleent.jpg",
             "ok": true
