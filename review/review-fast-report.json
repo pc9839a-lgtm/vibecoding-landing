@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T14:21:40.899Z",
+  "at": "2026-10-16T14:33:53.025Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10740,
+        "height": 10483,
         "imgs": [
           {
             "src": "assets/cases/awards-hero.jpg",
@@ -37,10 +37,6 @@
             "target": true
           },
           {
-            "hash": "#projects",
-            "target": true
-          },
-          {
             "hash": "#curriculum",
             "target": true
           }
@@ -49,10 +45,6 @@
       "clickResults": [
         {
           "hash": "#curriculum",
-          "clicked": true
-        },
-        {
-          "hash": "#projects",
           "clicked": true
         },
         {
@@ -68,7 +60,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 13124,
+        "height": 12833,
         "imgs": [
           {
             "src": "assets/cases/awards-hero.jpg",
@@ -97,10 +89,6 @@
             "target": true
           },
           {
-            "hash": "#projects",
-            "target": true
-          },
-          {
             "hash": "#curriculum",
             "target": true
           }
@@ -109,10 +97,6 @@
       "clickResults": [
         {
           "hash": "#curriculum",
-          "clicked": true
-        },
-        {
-          "hash": "#projects",
           "clicked": true
         },
         {
