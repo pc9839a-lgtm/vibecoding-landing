@@ -9,7 +9,9 @@ const projects=[
  {key:'pagero',url:'https://pagero.kr/',selector:'body',label:'PageRo public landing page'},
  {key:'cruise-partner',url:'https://cruiseplay-dyt.pages.dev/partner/',selector:'#partnerInquiryForm',label:'Cruise partner consultation form'},
  {key:'brand-awards',url:'https://awards.pagero.kr/',selector:'#contact',label:'Brand Awards public contact form'},
- {key:'peopleent',url:'https://peopleent.pagero.kr/',selector:'body',label:'PEOPLEENT public landing page'}
+ {key:'peopleent',url:'https://peopleent.pagero.kr/',selector:'body',label:'PEOPLEENT public landing page'},
+ {key:'awards-hero',url:'https://awards.pagero.kr/',selector:'body',label:'Brand Awards actual home hero'},
+ {key:'calltag-hero',url:'https://calltag.pagero.kr/',selector:'body',label:'CallTag actual service home hero'}
 ];
 const report=[];
 try{
