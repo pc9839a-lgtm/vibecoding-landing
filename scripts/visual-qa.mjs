@@ -44,8 +44,8 @@ try{
   const anchors=['#pricing','#work','#curriculum','#apply','#results'];
   const clicks=[];
   for(const anchor of anchors){
-    if(await page.locator('a[href="'+anchor+'"]').count()){
-      await page.locator('a[href="'+anchor+'"]').first().click({timeout:15000});
+    if(await page.locator('a[href="'+anchor+'"]:visible').count()){
+      await page.locator('a[href="'+anchor+'"]:visible').first().click({timeout:15000});
       clicks.push({anchor,hash:new URL(page.url()).hash,ok:new URL(page.url()).hash===anchor});
     }
   }
