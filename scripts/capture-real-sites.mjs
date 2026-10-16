@@ -34,7 +34,11 @@ try{
    }else{await page.evaluate(()=>window.scrollTo(0,0))}
    await page.waitForTimeout(600);
    const imagePath=path.join(out,p.key+(width===390?'-mobile':'')+'.jpg');
-   await page.screenshot({path:imagePath,type:'jpeg',quality:87,animations:'disabled',timeout:20000});
+   if(p.key==='brand-awards'&&width===390){
+     await page.locator('#mainForm').first().screenshot({path:imagePath,type:'jpeg',quality:87,animations:'disabled',timeout:20000});
+   }else{
+     await page.screenshot({path:imagePath,type:'jpeg',quality:87,animations:'disabled',timeout:20000});
+   }
    const meta=await page.evaluate(()=>({
      title:document.title,heading:document.querySelector('h1')?.innerText?.slice(0,100)||'',
      forms:document.querySelectorAll('form').length,scrollY:window.scrollY
