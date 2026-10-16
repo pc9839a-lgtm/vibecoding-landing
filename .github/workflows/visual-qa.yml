@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "vibe-landing-qa"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add review/mobile-360.jpg review/mobile-390.jpg review/desktop-1440.jpg review/qa-report.json
+          git add review/mobile-360.jpg review/mobile-390.jpg review/desktop-1440.jpg review/hero-mobile-360.jpg review/hero-mobile-390.jpg review/hero-desktop-1440.jpg review/qa-report.json
           if ! git diff --cached --quiet; then
             git commit -m "Add verified full-page screenshots for mobile and desktop"
             git push
