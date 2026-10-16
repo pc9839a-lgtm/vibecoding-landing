@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T11:45:18.906Z",
+  "at": "2026-10-16T11:56:07.016Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 6885,
+        "height": 5820,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
@@ -16,14 +16,6 @@
           },
           {
             "src": "assets/landing-builder.png",
-            "ok": true
-          },
-          {
-            "src": "assets/intake-ledger.png",
-            "ok": true
-          },
-          {
-            "src": "assets/customer-crm.png",
             "ok": true
           }
         ],
@@ -64,7 +56,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 10250,
+        "height": 8149,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
@@ -72,14 +64,6 @@
           },
           {
             "src": "assets/landing-builder.png",
-            "ok": true
-          },
-          {
-            "src": "assets/intake-ledger.png",
-            "ok": true
-          },
-          {
-            "src": "assets/customer-crm.png",
             "ok": true
           }
         ],
