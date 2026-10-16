@@ -14,14 +14,14 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .hero__header{padding:35px 0 0;display:flex;justify-content:space-between;align-items:center;gap:22px;font-size:17px;line-height:1.4;font-weight:800;color:#f3edf3}
 .hero__header span:first-child{letter-spacing:.26em;font-size:16px}
 .hero__header span:last-child{color:#d7ccd5;font-weight:650}
-.hero__copy{max-width:1150px;margin:113px auto 0;text-align:center}
+.hero__copy{max-width:1150px;margin:113px auto 0;text-align:center;position:relative;z-index:4}
 .hero h1{font-size:clamp(76px,9.8vw,147px);letter-spacing:-.093em;line-height:1.05;font-weight:950;margin:0;text-align:center;text-shadow:0 7px 34px rgba(0,0,0,.3)}
 .hero h1 span{background:linear-gradient(100deg,#ff65bd 13%,#bf7cff 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero__headline{font-size:clamp(29px,3vw,44px);font-weight:850;letter-spacing:-.058em;line-height:1.35;margin:40px auto 0;text-align:center}
 .hero__summary{color:#ede2eb;font-size:19px;font-weight:650;line-height:1.6;letter-spacing:-.025em;margin:23px auto 0}
 .hero__button{display:inline-flex;justify-content:center;align-items:center;gap:34px;padding:20px 31px;min-height:62px;text-decoration:none;border-radius:9px;background:#f66fbb;color:#180f18;font-size:18px;font-weight:880;letter-spacing:-.035em;margin:35px auto 0;transition:background .2s ease,transform .2s ease}
 .hero__button:hover{background:#ff9cd2;transform:translateY(-2px)}
-.hero__showpiece{width:min(1100px,100%);margin:97px auto 0;position:relative;isolation:isolate}
+.hero__showpiece{width:min(1100px,100%);margin:97px auto 0;position:relative;isolation:isolate;z-index:1}
 .hero__showpiece:before{content:"";position:absolute;z-index:-1;inset:-20% -15%;background:radial-gradient(ellipse at 50% 70%,rgba(248,106,190,.24),transparent 65%);filter:blur(30px)}
 .hero__screenshot{overflow:hidden;display:block;color:inherit;text-decoration:none;background:#18121a;border:10px solid #2f2430;border-radius:23px;box-shadow:0 55px 100px rgba(0,0,0,.45),0 0 80px rgba(194,60,177,.12);transform:perspective(1800px) rotateX(4deg)}
 .showpiece__top{height:38px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#201920;padding:0 19px;font-size:14px;font-weight:740;color:#eee0ec;letter-spacing:-.02em}
