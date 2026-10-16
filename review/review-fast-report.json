@@ -1,0 +1,130 @@
+{
+  "pass": true,
+  "at": "2026-10-16T07:25:53.548Z",
+  "result": [
+    {
+      "width": 390,
+      "passed": true,
+      "meta": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "height": 10544,
+        "priceBox": {
+          "x": 17,
+          "y": 9038.21875,
+          "width": 356,
+          "height": 88.546875,
+          "top": 9038.21875,
+          "right": 373,
+          "bottom": 9126.765625,
+          "left": 17
+        },
+        "imgs": [
+          {
+            "src": "assets/landing-builder.png",
+            "ok": true
+          },
+          {
+            "src": "assets/intake-ledger.png",
+            "ok": true
+          },
+          {
+            "src": "assets/customer-crm.png",
+            "ok": true
+          }
+        ],
+        "anchors": [
+          {
+            "hash": "#work",
+            "target": true
+          },
+          {
+            "hash": "#pricing",
+            "target": true
+          },
+          {
+            "hash": "#curriculum",
+            "target": true
+          }
+        ]
+      },
+      "clickResults": [
+        {
+          "hash": "#work",
+          "clicked": true
+        },
+        {
+          "hash": "#pricing",
+          "clicked": true
+        },
+        {
+          "hash": "#curriculum",
+          "clicked": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "meta": {
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "height": 14825,
+        "priceBox": {
+          "x": 210,
+          "y": 13232.40625,
+          "width": 1020,
+          "height": 215.28125,
+          "top": 13232.40625,
+          "right": 1230,
+          "bottom": 13447.6875,
+          "left": 210
+        },
+        "imgs": [
+          {
+            "src": "assets/landing-builder.png",
+            "ok": true
+          },
+          {
+            "src": "assets/intake-ledger.png",
+            "ok": true
+          },
+          {
+            "src": "assets/customer-crm.png",
+            "ok": true
+          }
+        ],
+        "anchors": [
+          {
+            "hash": "#work",
+            "target": true
+          },
+          {
+            "hash": "#pricing",
+            "target": true
+          },
+          {
+            "hash": "#curriculum",
+            "target": true
+          }
+        ]
+      },
+      "clickResults": [
+        {
+          "hash": "#work",
+          "clicked": true
+        },
+        {
+          "hash": "#pricing",
+          "clicked": true
+        },
+        {
+          "hash": "#curriculum",
+          "clicked": true
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
