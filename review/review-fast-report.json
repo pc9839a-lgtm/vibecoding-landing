@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T11:56:07.016Z",
+  "at": "2026-10-16T13:09:18.834Z",
   "result": [
     {
       "width": 390,
@@ -8,14 +8,26 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 5820,
+        "height": 9212,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
             "ok": true
           },
           {
-            "src": "assets/landing-builder.png",
+            "src": "assets/cases/peopleent.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/cruise-partner.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/brand-awards.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/pagero.jpg",
             "ok": true
           }
         ],
@@ -56,14 +68,26 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 8149,
+        "height": 10338,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
             "ok": true
           },
           {
-            "src": "assets/landing-builder.png",
+            "src": "assets/cases/peopleent.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/cruise-partner.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/brand-awards.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/pagero.jpg",
             "ok": true
           }
         ],
