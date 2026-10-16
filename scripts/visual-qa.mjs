@@ -31,7 +31,7 @@ try{
     const images=[...document.images];
     const links=[...document.querySelectorAll('a[href^="#"]')].map(a=>({label:a.textContent.trim(),href:a.getAttribute('href')}));
     const existing=new Set([...document.querySelectorAll('[id]')].map(e=>e.id));
-    const price=document.querySelector('.price-box__new')?.getBoundingClientRect();
+    const price=document.querySelector('.price__amount')?.getBoundingClientRect();
     return {
       viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,documentHeight:document.documentElement.scrollHeight,
       images:images.map(i=>({src:i.getAttribute('src'),loaded:i.complete&&i.naturalWidth>0})),
