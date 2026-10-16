@@ -22,6 +22,10 @@ try{
    const response=await page.goto(p.url,{waitUntil:'domcontentloaded',timeout:25000});
    if(!response||response.status()>=400)throw Error('HTTP '+response?.status());
    await page.locator('img').evaluateAll(list=>list.forEach(i=>i.loading='eager'));
+   if(p.key==='brand-awards'){
+     await page.locator('#mainForm select[name="program"]').selectOption({label:'상담 후 추천'});
+     await page.waitForTimeout(350);
+   }
    await page.waitForTimeout(1000);
    if(p.selector!=='body'){
      const el=page.locator(p.selector).first();
