@@ -1,6 +1,22 @@
 [
   {
     "key": "pagero",
+    "width": 1440,
+    "url": "https://pagero.kr/",
+    "selector": "body",
+    "label": "PageRo public landing page",
+    "ok": true,
+    "meta": {
+      "title": "페이지로 | 모바일 랜딩페이지 제작·접수 관리",
+      "heading": "모바일 페이지를\n빠르게 만드세요",
+      "forms": 0,
+      "scrollY": 0
+    },
+    "errors": []
+  },
+  {
+    "key": "pagero",
+    "width": 390,
     "url": "https://pagero.kr/",
     "selector": "body",
     "label": "PageRo public landing page",
@@ -15,6 +31,7 @@
   },
   {
     "key": "cruise-partner",
+    "width": 1440,
     "url": "https://cruiseplay-dyt.pages.dev/partner/",
     "selector": "#partnerInquiryForm",
     "label": "Cruise partner consultation form",
@@ -30,7 +47,25 @@
     ]
   },
   {
+    "key": "cruise-partner",
+    "width": 390,
+    "url": "https://cruiseplay-dyt.pages.dev/partner/",
+    "selector": "#partnerInquiryForm",
+    "label": "Cruise partner consultation form",
+    "ok": true,
+    "meta": {
+      "title": "크루즈 파트너 활동 안내 | 오케이크루즈",
+      "heading": "무료로 크루즈여행을 하면서\n수익도 낼 수 있다면?",
+      "forms": 1,
+      "scrollY": 25954
+    },
+    "errors": [
+      "Invalid regular expression: /[�-\u001f<>]/g: Range out of order in character class"
+    ]
+  },
+  {
     "key": "brand-awards",
+    "width": 1440,
     "url": "https://awards.pagero.kr/",
     "selector": "#contact",
     "label": "Brand Awards public contact form",
@@ -44,7 +79,38 @@
     "errors": []
   },
   {
+    "key": "brand-awards",
+    "width": 390,
+    "url": "https://awards.pagero.kr/",
+    "selector": "#contact",
+    "label": "Brand Awards public contact form",
+    "ok": true,
+    "meta": {
+      "title": "브랜드어워즈 참가 문의 | 브랜드대상 신청 · 기업 수상 마케팅",
+      "heading": "브랜드어워즈 참가 문의",
+      "forms": 2,
+      "scrollY": 11040
+    },
+    "errors": []
+  },
+  {
     "key": "peopleent",
+    "width": 1440,
+    "url": "https://peopleent.pagero.kr/",
+    "selector": "body",
+    "label": "PEOPLEENT public landing page",
+    "ok": true,
+    "meta": {
+      "title": "기업행사 대행 | 컨퍼런스, 세미나, 공공기관 행사 운영 | PEOPLEENT",
+      "heading": "기업행사 대행 | 컨퍼런스 | 세미나 | 공공기관 행사 운영",
+      "forms": 0,
+      "scrollY": 0
+    },
+    "errors": []
+  },
+  {
+    "key": "peopleent",
+    "width": 390,
     "url": "https://peopleent.pagero.kr/",
     "selector": "body",
     "label": "PEOPLEENT public landing page",
