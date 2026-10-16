@@ -41,13 +41,13 @@ try{
       sections:document.querySelectorAll('main > section').length,faq:document.querySelectorAll('details').length
     };
   });
-  const anchors=['#pricing','#work','#curriculum','#apply','#results'];
   const clicks=[];
-  for(const anchor of anchors){
-    if(await page.locator('a[href="'+anchor+'"]:visible').count()){
-      await page.locator('a[href="'+anchor+'"]:visible').first().click({timeout:15000});
-      clicks.push({anchor,hash:new URL(page.url()).hash,ok:new URL(page.url()).hash===anchor});
-    }
+  const visibleAnchorCount=await page.locator('a[href^="#"]:visible').count();
+  for(let i=0;i<visibleAnchorCount;i++){
+    const link=page.locator('a[href^="#"]:visible').nth(i);
+    const anchor=await link.getAttribute('href');
+    await link.click({timeout:15000});
+    clicks.push({anchor,hash:new URL(page.url()).hash,ok:new URL(page.url()).hash===anchor});
   }
   await page.evaluate(()=>scrollTo(0,0));
   await page.waitForTimeout(180);
