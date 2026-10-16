@@ -1,0 +1,52 @@
+name: Full Page Visual Review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - assets/site.css
+      - assets/*.png
+      - scripts/capture-review.mjs
+      - .github/workflows/capture-review.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vibecoding-visual-review-fast
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Capture and verify
+        run: node scripts/capture-review.mjs
+      - name: Save QA images as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-full-page-captures
+          path: review/
+          if-no-files-found: warn
+      - name: Commit visual report
+        if: success()
+        run: |
+          git config user.name "vibecoding-qa"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add review/hero-mobile-390.jpg review/hero-desktop-1440.jpg review/mobile-390.jpg review/desktop-1440.jpg review/review-fast-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Capture updated 390px and 1440px design review"
+            git push
+          fi
