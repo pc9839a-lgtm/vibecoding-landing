@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-16T06:17:16.221Z",
+  "timestamp": "2026-10-16T06:19:39.445Z",
   "passed": true,
   "results": [
     {
@@ -48,6 +48,16 @@
       "faq": 5,
       "clicks": [
         {
+          "anchor": "#top",
+          "hash": "#top",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
           "anchor": "#pricing",
           "hash": "#pricing",
           "ok": true
@@ -58,8 +68,23 @@
           "ok": true
         },
         {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
           "anchor": "#apply",
           "hash": "#apply",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
           "ok": true
         }
       ],
@@ -112,6 +137,16 @@
       "faq": 5,
       "clicks": [
         {
+          "anchor": "#top",
+          "hash": "#top",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
           "anchor": "#pricing",
           "hash": "#pricing",
           "ok": true
@@ -122,8 +157,23 @@
           "ok": true
         },
         {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
           "anchor": "#apply",
           "hash": "#apply",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
           "ok": true
         }
       ],
@@ -176,6 +226,21 @@
       "faq": 5,
       "clicks": [
         {
+          "anchor": "#top",
+          "hash": "#top",
+          "ok": true
+        },
+        {
+          "anchor": "#curriculum",
+          "hash": "#curriculum",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
           "anchor": "#pricing",
           "hash": "#pricing",
           "ok": true
@@ -186,13 +251,18 @@
           "ok": true
         },
         {
-          "anchor": "#curriculum",
-          "hash": "#curriculum",
+          "anchor": "#pricing",
+          "hash": "#pricing",
           "ok": true
         },
         {
           "anchor": "#apply",
           "hash": "#apply",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
           "ok": true
         }
       ],
