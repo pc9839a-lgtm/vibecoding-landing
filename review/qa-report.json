@@ -1,0 +1,203 @@
+{
+  "timestamp": "2026-10-16T06:17:16.221Z",
+  "passed": true,
+  "results": [
+    {
+      "width": 360,
+      "passed": true,
+      "viewport": 360,
+      "scrollWidth": 360,
+      "documentHeight": 11092,
+      "images": [
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        }
+      ],
+      "brokenAnchors": [],
+      "price": {
+        "left": 40,
+        "right": 320
+      },
+      "horizontalElements": [],
+      "sections": 11,
+      "faq": 5,
+      "clicks": [
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
+          "anchor": "#work",
+          "hash": "#work",
+          "ok": true
+        },
+        {
+          "anchor": "#apply",
+          "hash": "#apply",
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "screenshot": "review/mobile-360.jpg"
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "viewport": 390,
+      "scrollWidth": 390,
+      "documentHeight": 10861,
+      "images": [
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        }
+      ],
+      "brokenAnchors": [],
+      "price": {
+        "left": 42,
+        "right": 348
+      },
+      "horizontalElements": [],
+      "sections": 11,
+      "faq": 5,
+      "clicks": [
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
+          "anchor": "#work",
+          "hash": "#work",
+          "ok": true
+        },
+        {
+          "anchor": "#apply",
+          "hash": "#apply",
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "screenshot": "review/mobile-390.jpg"
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "documentHeight": 12013,
+      "images": [
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/landing-builder.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/intake-ledger.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/customer-crm.png",
+          "loaded": true
+        }
+      ],
+      "brokenAnchors": [],
+      "price": {
+        "left": 353,
+        "right": 1087
+      },
+      "horizontalElements": [],
+      "sections": 11,
+      "faq": 5,
+      "clicks": [
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
+          "ok": true
+        },
+        {
+          "anchor": "#work",
+          "hash": "#work",
+          "ok": true
+        },
+        {
+          "anchor": "#curriculum",
+          "hash": "#curriculum",
+          "ok": true
+        },
+        {
+          "anchor": "#apply",
+          "hash": "#apply",
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "screenshot": "review/desktop-1440.jpg"
+    }
+  ]
+}
