@@ -22,8 +22,13 @@ try{
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:4184/',{waitUntil:'domcontentloaded',timeout:20000});
   await page.locator('img').evaluateAll(list=>list.forEach(i=>i.loading='eager'));
-  await page.waitForTimeout(850);
+  for(const img of await page.locator('img').all()){
+    await img.scrollIntoViewIfNeeded({timeout:10000});
+    await img.evaluate(async el=>{await Promise.race([el.decode().catch(()=>{}),new Promise(done=>setTimeout(done,5000))])});
+    await page.waitForTimeout(130);
+  }
   await page.evaluate(()=>window.scrollTo(0,0));
+  await page.waitForTimeout(450);
   const meta=await page.evaluate(()=>({
    viewport:innerWidth,
    pageWidth:document.documentElement.scrollWidth,
