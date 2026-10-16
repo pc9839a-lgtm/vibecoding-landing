@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-16T11:22:02.465Z",
+  "at": "2026-10-16T11:34:12.732Z",
   "result": [
     {
       "width": 390,
@@ -8,17 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10187,
-        "priceBox": {
-          "x": 17,
-          "y": 8680.6875,
-          "width": 356,
-          "height": 88.546875,
-          "top": 8680.6875,
-          "right": 373,
-          "bottom": 8769.234375,
-          "left": 17
-        },
+        "height": 3404,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
@@ -43,7 +33,7 @@
             "target": true
           },
           {
-            "hash": "#work",
+            "hash": "#projects",
             "target": true
           },
           {
@@ -58,7 +48,7 @@
           "clicked": true
         },
         {
-          "hash": "#work",
+          "hash": "#projects",
           "clicked": true
         },
         {
@@ -74,17 +64,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 13806,
-        "priceBox": {
-          "x": 210,
-          "y": 12299.703125,
-          "width": 1020,
-          "height": 215.28125,
-          "top": 12299.703125,
-          "right": 1230,
-          "bottom": 12514.984375,
-          "left": 210
-        },
+        "height": 6076,
         "imgs": [
           {
             "src": "assets/landing-builder.png",
@@ -109,7 +89,7 @@
             "target": true
           },
           {
-            "hash": "#work",
+            "hash": "#projects",
             "target": true
           },
           {
@@ -124,7 +104,7 @@
           "clicked": true
         },
         {
-          "hash": "#work",
+          "hash": "#projects",
           "clicked": true
         },
         {
