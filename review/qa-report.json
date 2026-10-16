@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-16T06:19:39.445Z",
+  "timestamp": "2026-10-16T07:18:04.711Z",
   "passed": true,
   "results": [
     {
@@ -7,7 +7,7 @@
       "passed": true,
       "viewport": 360,
       "scrollWidth": 360,
-      "documentHeight": 11092,
+      "documentHeight": 9304,
       "images": [
         {
           "src": "assets/landing-builder.png",
@@ -40,8 +40,8 @@
       ],
       "brokenAnchors": [],
       "price": {
-        "left": 40,
-        "right": 320
+        "left": 0,
+        "right": 360
       },
       "horizontalElements": [],
       "sections": 11,
@@ -50,6 +50,11 @@
         {
           "anchor": "#top",
           "hash": "#top",
+          "ok": true
+        },
+        {
+          "anchor": "#curriculum",
+          "hash": "#curriculum",
           "ok": true
         },
         {
@@ -96,7 +101,7 @@
       "passed": true,
       "viewport": 390,
       "scrollWidth": 390,
-      "documentHeight": 10861,
+      "documentHeight": 9328,
       "images": [
         {
           "src": "assets/landing-builder.png",
@@ -129,8 +134,8 @@
       ],
       "brokenAnchors": [],
       "price": {
-        "left": 42,
-        "right": 348
+        "left": 0,
+        "right": 390
       },
       "horizontalElements": [],
       "sections": 11,
@@ -139,6 +144,11 @@
         {
           "anchor": "#top",
           "hash": "#top",
+          "ok": true
+        },
+        {
+          "anchor": "#curriculum",
+          "hash": "#curriculum",
           "ok": true
         },
         {
@@ -185,7 +195,7 @@
       "passed": true,
       "viewport": 1440,
       "scrollWidth": 1440,
-      "documentHeight": 12013,
+      "documentHeight": 13770,
       "images": [
         {
           "src": "assets/landing-builder.png",
@@ -218,8 +228,8 @@
       ],
       "brokenAnchors": [],
       "price": {
-        "left": 353,
-        "right": 1087
+        "left": 0,
+        "right": 1440
       },
       "horizontalElements": [],
       "sections": 11,
@@ -258,6 +268,11 @@
         {
           "anchor": "#apply",
           "hash": "#apply",
+          "ok": true
+        },
+        {
+          "anchor": "#pricing",
+          "hash": "#pricing",
           "ok": true
         },
         {
