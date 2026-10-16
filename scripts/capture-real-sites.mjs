@@ -14,7 +14,8 @@ const projects=[
 const report=[];
 try{
  for(const p of projects){
-  const page=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1,reducedMotion:'reduce'});
+  for(const width of [1440,390]){
+  const page=await browser.newPage({viewport:{width,height:960},deviceScaleFactor:1,reducedMotion:'reduce'});
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   try{
@@ -32,18 +33,19 @@ try{
      },p.selector);
    }else{await page.evaluate(()=>window.scrollTo(0,0))}
    await page.waitForTimeout(600);
-   const imagePath=path.join(out,p.key+'.jpg');
+   const imagePath=path.join(out,p.key+(width===390?'-mobile':'')+'.jpg');
    await page.screenshot({path:imagePath,type:'jpeg',quality:87,animations:'disabled',timeout:20000});
    const meta=await page.evaluate(()=>({
      title:document.title,heading:document.querySelector('h1')?.innerText?.slice(0,100)||'',
      forms:document.querySelectorAll('form').length,scrollY:window.scrollY
    }));
-   report.push({key:p.key,url:p.url,selector:p.selector,label:p.label,ok:true,meta,errors:errors.slice(0,3)});
+   report.push({key:p.key,width,url:p.url,selector:p.selector,label:p.label,ok:true,meta,errors:errors.slice(0,3)});
    console.log('CAPTURED '+p.key+' '+meta.title);
   }catch(e){
-    report.push({key:p.key,url:p.url,selector:p.selector,label:p.label,ok:false,error:String(e).slice(0,400)});
+    report.push({key:p.key,width,url:p.url,selector:p.selector,label:p.label,ok:false,error:String(e).slice(0,400)});
     console.log('CAPTURE_FAIL '+p.key+' '+String(e).slice(0,400));
   }finally{await page.close()}
+ }
  }
 }finally{await browser.close()}
 fs.writeFileSync(path.join(out,'capture-report.json'),JSON.stringify(report,null,2));
