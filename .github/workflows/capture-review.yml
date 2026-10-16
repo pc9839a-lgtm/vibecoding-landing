@@ -48,5 +48,7 @@ jobs:
           git add review/hero-mobile-390.jpg review/hero-desktop-1440.jpg review/mobile-390.jpg review/desktop-1440.jpg review/review-fast-report.json
           if ! git diff --cached --quiet; then
             git commit -m "Capture updated 390px and 1440px design review"
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
