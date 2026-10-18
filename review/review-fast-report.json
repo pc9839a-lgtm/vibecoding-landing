@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-18T03:53:19.238Z",
+  "at": "2026-10-18T11:48:39.436Z",
   "result": [
     {
       "width": 390,
@@ -33,6 +33,10 @@
             "target": true
           },
           {
+            "hash": "#projects",
+            "target": true
+          },
+          {
             "hash": "#curriculum",
             "target": true
           }
@@ -41,6 +45,10 @@
       "clickResults": [
         {
           "hash": "#curriculum",
+          "clicked": true
+        },
+        {
+          "hash": "#projects",
           "clicked": true
         },
         {
@@ -81,6 +89,10 @@
             "target": true
           },
           {
+            "hash": "#projects",
+            "target": true
+          },
+          {
             "hash": "#curriculum",
             "target": true
           }
@@ -89,6 +101,10 @@
       "clickResults": [
         {
           "hash": "#curriculum",
+          "clicked": true
+        },
+        {
+          "hash": "#projects",
           "clicked": true
         },
         {
