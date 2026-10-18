@@ -27,7 +27,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .hero__step{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-width:0;min-height:72px;padding:7px 3px;color:#fff;font-size:clamp(19px,2vw,28px);font-weight:880;white-space:nowrap;letter-spacing:-.04em;text-shadow:0 3px 8px #160a1a}
 .hero__step:not(:last-child):after{content:"";position:absolute;right:0;top:22%;height:56%;border-right:1px solid rgba(255,203,235,.25)}
 .hero__facts{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 17px;margin:24px auto 0;font-size:clamp(15px,1.3vw,18px);font-weight:750;color:#eadddf;animation:heroReveal .6s ease-out .52s both}
-.hero__facts span+span:before{content:"";display:inline-block;border-left:1px solid rgba(255,188,223,.4);height:.8em;margin-right:17px}
+.hero__facts span{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:7px 13px;border:1px solid rgba(255,192,233,.21);border-radius:99px;background:rgba(36,22,39,.56)}
+.hero__facts span+span:before{content:none}
 .hero__actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin:26px auto 0;animation:heroReveal .6s ease-out .68s both}
 .hero__action{display:inline-flex;align-items:center;justify-content:center;gap:19px;min-height:54px;min-width:184px;padding:13px 22px;border-radius:7px;font-size:17px;line-height:1.4;font-weight:810;letter-spacing:-.03em;text-decoration:none;transition:background-color .2s ease,border-color .2s ease}
 .hero__action--primary{background:#f171b8;color:#190c17}
@@ -126,7 +127,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .hero__step{min-height:62px;font-size:18px}
  .hero__step:not(:last-child):after{display:none}
  .hero__facts{margin-top:25px;max-width:340px;gap:8px 11px;font-size:14px}
- .hero__facts span+span:before{margin-right:10px}
+ .hero__facts span{padding:6px 9px;min-height:33px}
  .hero__actions{width:min(350px,100%);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:21px}
  .hero__action{min-width:0;min-height:52px;padding:12px 6px;gap:6px;font-size:14px;white-space:nowrap}
  .hero__halo{top:15%;width:700px;height:400px}
