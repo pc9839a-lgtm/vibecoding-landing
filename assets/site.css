@@ -40,24 +40,30 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @keyframes heroFloat{0%,100%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(2px)}50%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(-6px)}}
 @keyframes heroMobileFloat{0%,100%{transform:perspective(900px) rotateX(14deg) rotateZ(-2deg) translateY(2px)}50%{transform:perspective(900px) rotateX(14deg) rotateZ(-2deg) translateY(-6px)}}
 
-/* Second scene — one workflow rail, no recycled 3D objects */
-.connector{position:relative;isolation:isolate;overflow:hidden;background:#050507;color:#fff;min-height:850px;display:flex;align-items:center;padding:145px 0 155px}
-.connector__halo{position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(155deg,rgba(56,15,51,.13),transparent 53%),linear-gradient(0deg,rgba(98,36,87,.11),transparent 40%)}
-.connector__halo:before{content:"";position:absolute;top:4%;left:50%;transform:translateX(-50%) rotate(-8deg);width:min(1220px,120vw);height:600px;border-radius:50% 50% 0 0;border-top:2px solid rgba(240,128,189,.29);box-shadow:0 -22px 90px rgba(232,76,164,.13);filter:blur(8px)}
-.connector__inner{width:min(1280px,calc(100% - 100px));margin:auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(46px,6vw,110px);align-items:center}
-.connector__statement{text-align:left}
-.connector__statement h2{font-size:clamp(70px,7.3vw,114px);font-weight:960;line-height:1.17;letter-spacing:-.093em;margin:0}
+/* SECTION 2: What AI vibe coding is — definition, example, and working method */
+.connector{position:relative;isolation:isolate;overflow:hidden;background:#050507;color:#fff;min-height:850px;display:flex;align-items:center;padding:125px 0 138px}
+.connector__halo{position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse 42% 42% at 80% 54%,rgba(89,28,94,.22),transparent 86%),linear-gradient(165deg,rgba(42,17,36,.11),transparent 55%)}
+.connector__halo:before{content:"";position:absolute;top:3%;left:57%;width:min(1250px,112vw);height:580px;transform:translateX(-50%) rotate(-8deg);border-top:2px solid rgba(235,131,188,.18);border-radius:50% 50% 0 0;box-shadow:0 -21px 80px rgba(223,80,165,.1);filter:blur(8px)}
+.connector__inner{width:min(1270px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1.09fr) minmax(0,.91fr);gap:clamp(55px,6.5vw,115px);align-items:center}
+.connector__statement{text-align:left;min-width:0}
+.connector__subject{font-size:20px;line-height:1.5;font-weight:790;letter-spacing:-.035em;color:#f3b9dc;margin:0 0 30px}
+.connector__statement h2{font-size:clamp(60px,6.2vw,92px);font-weight:950;line-height:1.17;letter-spacing:-.089em;margin:0}
 .connector__statement em{font-style:normal;color:#f27dc1}
-.connector__flow{position:relative;padding:13px 0 13px 39px;min-width:0}
-.connector__line{position:absolute;top:45px;bottom:40px;left:14px;width:2px;background:linear-gradient(180deg,#9f6bea,#c877ce 42%,#ec7fb8 75%,#e9ac90);box-shadow:0 0 15px rgba(238,123,187,.29)}
-.connector__line:after{content:"";position:absolute;left:-3px;top:0;height:66px;width:8px;border-radius:90px;background:linear-gradient(180deg,transparent,#ffb2dc 43%,#fff0f8 54%,transparent);filter:blur(2px);animation:connectorTravel 8s ease-in-out infinite}
-.connector__stage{display:grid;grid-template-columns:50px minmax(0,1fr);gap:16px;align-items:center;min-height:103px;border-bottom:1px solid rgba(234,197,219,.18)}
-.connector__stage:last-child{border-bottom:0}
-.connector__index{font-size:17px;font-weight:810;letter-spacing:.02em;color:#d59bbf;font-variant-numeric:tabular-nums}
-.connector__stage strong{font-size:clamp(29px,3vw,42px);font-weight:880;letter-spacing:-.057em;line-height:1.3;color:#f6f2f6}
-.connector__stage:last-child strong{color:#f9a9d5}
-@keyframes connectorTravel{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(325px);opacity:1}}
-@keyframes connectorTravelMobile{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(270px);opacity:1}}
+.connector__definition{font-size:clamp(19px,1.75vw,23px);line-height:1.75;letter-spacing:-.035em;font-weight:650;color:#e9e0e7;margin:36px 0 0;max-width:640px}
+.connector__example{min-width:0;padding:22px 0 18px 38px;position:relative;border-left:2px solid rgba(221,124,197,.31)}
+.connector__example:before{content:"";position:absolute;left:-3px;top:3%;height:31%;width:4px;background:linear-gradient(#9d69eb,#ff89ca,transparent);box-shadow:0 0 24px rgba(244,96,181,.35)}
+.connector__example-label{color:#f6aacd;font-size:18px;font-weight:790;line-height:1.5;margin:0 0 23px;letter-spacing:-.02em}
+.connector__prompt{font-size:clamp(27px,2.65vw,38px);line-height:1.45;letter-spacing:-.061em;font-weight:850;color:#fff;margin:0;padding:0;border:0}
+.connector__process{margin:47px 0 0;position:relative;padding:0 0 0 24px}
+.connector__process-line{position:absolute;left:0;top:20px;bottom:21px;width:2px;background:linear-gradient(180deg,rgba(170,105,237,.9),rgba(231,124,200,.9),rgba(255,175,189,.8))}
+.connector__process-line:after{content:"";position:absolute;left:-3px;top:0;width:8px;height:48px;background:linear-gradient(180deg,transparent,#ffb2de,transparent);filter:blur(2px);animation:connectorTravel 8s ease-in-out infinite}
+.connector__process ol{padding:0;margin:0;list-style:none}
+.connector__process li{display:grid;grid-template-columns:45px minmax(0,1fr);gap:12px;align-items:center;min-height:74px;border-bottom:1px solid rgba(235,195,216,.15)}
+.connector__process li:last-child{border-bottom:0}
+.connector__process li span{font-size:17px;font-weight:760;color:#dfa7cc;font-variant-numeric:tabular-nums}
+.connector__process li strong{font-size:clamp(19px,1.75vw,24px);line-height:1.4;font-weight:760;letter-spacing:-.04em;color:#eae3ea}
+.connector__process li:last-child strong{color:#ffa2cf}
+@keyframes connectorTravel{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(136px);opacity:1}}
 .projects{background:var(--paper);color:var(--ink);padding-top:125px}
 .projects__title{text-align:center;margin:0 auto 110px;font-size:clamp(60px,7.6vw,106px);line-height:1.11;font-weight:950;letter-spacing:-.087em}
 .projects__title em{font-style:normal;color:#ca3b90}
@@ -136,17 +142,20 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .hero__action{min-width:0;min-height:52px;padding:12px 6px;gap:6px;font-size:14px;white-space:nowrap}
  .hero__halo{top:15%;width:700px;height:400px}
  .hero__rays{inset:-35% -100% -20%}
- .connector{min-height:0;padding:104px 0 115px}
- .connector__halo:before{top:2%;left:50%;width:750px;height:460px}
+ .connector{min-height:0;padding:93px 0 108px}
+ .connector__halo:before{top:8%;left:54%;width:710px;height:430px}
  .connector__inner{display:block;width:calc(100% - 40px)}
  .connector__statement{text-align:center}
- .connector__statement h2{font-size:clamp(52px,12.7vw,73px);line-height:1.21;letter-spacing:-.086em}
- .connector__flow{width:min(440px,100%);margin:71px auto 0;padding:8px 0 8px 35px}
- .connector__line{left:12px;top:36px;bottom:34px}
- .connector__line:after{height:55px;animation-name:connectorTravelMobile}
- .connector__stage{min-height:89px;grid-template-columns:46px minmax(0,1fr);gap:9px}
- .connector__index{font-size:16px}
- .connector__stage strong{font-size:clamp(26px,6.9vw,34px)}
+ .connector__subject{font-size:17px;margin:0 0 21px}
+ .connector__statement h2{font-size:clamp(45px,11.8vw,64px);line-height:1.19;letter-spacing:-.083em}
+ .connector__definition{font-size:17px;line-height:1.65;margin:26px auto 0;max-width:420px;text-align:left}
+ .connector__example{margin:66px auto 0;padding:11px 0 10px 22px;border-left-width:2px;width:min(450px,100%)}
+ .connector__example-label{font-size:16px;margin-bottom:19px}
+ .connector__prompt{font-size:clamp(25px,6.45vw,34px);line-height:1.51}
+ .connector__process{margin-top:31px;padding-left:21px}
+ .connector__process li{grid-template-columns:37px minmax(0,1fr);gap:11px;min-height:66px}
+ .connector__process li span{font-size:16px}
+ .connector__process li strong{font-size:19px}
  .projects{padding-top:88px}
  .projects__title{font-size:clamp(49px,12vw,73px);margin-bottom:78px}
  .project{padding:84px 0 92px}
@@ -186,7 +195,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 @media(max-width:375px){
  .hero h1{font-size:37px}
- .connector__statement h2{font-size:47px}
+ .connector__statement h2{font-size:43px}
  .tuition__price{font-size:68px}
 }
 @media(prefers-reduced-motion:reduce){
