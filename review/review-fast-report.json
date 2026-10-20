@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-20T08:26:24.480Z",
+  "at": "2026-10-20T08:45:56.912Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 10217,
+        "height": 10508,
         "imgs": [
           {
             "src": "assets/cases/peopleent.jpg",
@@ -64,7 +64,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 12244,
+        "height": 12602,
         "imgs": [
           {
             "src": "assets/cases/peopleent.jpg",
