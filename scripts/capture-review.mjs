@@ -41,6 +41,12 @@ try{
   console.log('FIRST_FOLD_SAVED '+width);
   await page.screenshot({path:path.join(out,width===390?'mobile-390.jpg':'desktop-1440.jpg'),fullPage:true,type:'jpeg',quality:width===1440?61:85,animations:'disabled',timeout:45000});
   console.log('FULL_SCREENSHOT_SAVED '+width);
+  await page.locator('.connector').screenshot({
+    path:path.join(out,width===390?'section-two-mobile-390.jpg':'section-two-desktop-1440.jpg'),
+    type:'jpeg',quality:87,animations:'disabled',timeout:25000
+  });
+  console.log('SECTION_TWO_SCREENSHOT_SAVED '+width);
+
   const links=await page.locator('a[href^="#"]:visible').count();
   const clickResults=[];
   for(let n=0;n<links;n++){
