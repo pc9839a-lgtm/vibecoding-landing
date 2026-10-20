@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 랜딩페이지부터 고객관리까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261020-centered">
+<link rel="stylesheet" href="assets/site.css?v=20261020-visual-demo">
 </head>
 <body>
 <main>
@@ -47,25 +47,37 @@
 </section>
 
 <section class="connector" aria-labelledby="connector-title">
-  <div class="connector__halo" aria-hidden="true"></div>
   <div class="connector__inner">
-    <div class="connector__statement">
-      <p class="connector__subject">AI 바이브코딩</p>
-      <h2 id="connector-title">AI에게<br>만들 기능을<br><em>설명합니다.</em></h2>
-      <p class="connector__definition">바이브코딩은 원하는 화면과 기능을 설명하고, AI가 작성한 코드를 실행해 보며 수정하는 개발 방식입니다.</p>
-    </div>
-    <div class="connector__example">
-      <p class="connector__example-label">요청 예시</p>
-      <blockquote class="connector__prompt">“광고용 랜딩페이지에<br>신청폼을 넣고,<br>고객 정보는 DB에 저장해줘.”</blockquote>
-      <div class="connector__process" aria-label="바이브코딩 작업 순서">
-        <div class="connector__process-line" aria-hidden="true"></div>
-        <ol>
-          <li><span>01</span><strong>만들 기능 설명</strong></li>
-          <li><span>02</span><strong>AI가 코드 작성</strong></li>
-          <li><span>03</span><strong>직접 실행·확인·수정</strong></li>
-        </ol>
+    <p class="connector__eyebrow">VIBE CODING · HOW IT WORKS</p>
+    <h2 class="connector__title" id="connector-title">코드 대신,<br><em>말로 만듭니다.</em></h2>
+    <p class="connector__sub">AI에 요청하고, 결과를 보며 고치는 개발 방식.</p>
+
+    <figure class="connector__demo" aria-label="AI에게 신청폼 제작을 요청하면 화면 시안을 확인하고 수정하는 과정을 표현한 예시">
+      <div class="connector__message">
+        <span class="connector__message-icon" aria-hidden="true">✦</span>
+        <span>“상담 신청폼 만들어줘.”</span>
+        <span class="connector__cursor" aria-hidden="true"></span>
       </div>
-    </div>
+      <div class="connector__down" aria-hidden="true"><span></span></div>
+      <div class="connector__window">
+        <div class="connector__window-bar">
+          <div class="connector__window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="connector__window-label">preview / landing-page</span>
+          <span class="connector__window-badge">화면 예시</span>
+        </div>
+        <div class="connector__window-body">
+          <div class="connector__demo-page">
+            <p class="connector__demo-brand">YOUR BUSINESS</p>
+            <h3>빠른 상담 신청</h3>
+            <div class="connector__demo-field">이름</div>
+            <div class="connector__demo-field">연락처</div>
+            <div class="connector__demo-submit">신청하기 <span aria-hidden="true">↗</span></div>
+          </div>
+          <div class="connector__db-proof"><span class="connector__db-dot" aria-hidden="true"></span>DB 저장까지 연결</div>
+        </div>
+      </div>
+      <figcaption class="connector__caption"><span>요청</span><b aria-hidden="true">→</b><span>AI 제작</span><b aria-hidden="true">→</b><span>실행·수정</span></figcaption>
+    </figure>
   </div>
 </section>
 
