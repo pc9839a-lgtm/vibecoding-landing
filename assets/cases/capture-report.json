@@ -33,14 +33,14 @@
     "key": "cruise-partner",
     "width": 1440,
     "url": "https://cruiseplay-dyt.pages.dev/partner/",
-    "selector": "#partnerInquiryForm",
-    "label": "Cruise partner consultation form",
+    "selector": "body",
+    "label": "Cruise Partner homepage hero",
     "ok": true,
     "meta": {
       "title": "크루즈 파트너 활동 안내 | 오케이크루즈",
       "heading": "무료로 크루즈여행을 하면서\n수익도 낼 수 있다면?",
       "forms": 1,
-      "scrollY": 38438
+      "scrollY": 0
     },
     "errors": [
       "Invalid regular expression: /[�-\u001f<>]/g: Range out of order in character class"
@@ -50,14 +50,14 @@
     "key": "cruise-partner",
     "width": 390,
     "url": "https://cruiseplay-dyt.pages.dev/partner/",
-    "selector": "#partnerInquiryForm",
-    "label": "Cruise partner consultation form",
+    "selector": "body",
+    "label": "Cruise Partner homepage hero",
     "ok": true,
     "meta": {
       "title": "크루즈 파트너 활동 안내 | 오케이크루즈",
       "heading": "무료로 크루즈여행을 하면서\n수익도 낼 수 있다면?",
       "forms": 1,
-      "scrollY": 25954
+      "scrollY": 0
     },
     "errors": [
       "Invalid regular expression: /[�-\u001f<>]/g: Range out of order in character class"
