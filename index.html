@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 랜딩페이지부터 고객관리까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261020-gallery-v1">
+<link rel="stylesheet" href="assets/site.css?v=20261020-beginner-roadmap">
 </head>
 <body>
 <main>
@@ -207,19 +207,97 @@
 </section>
 
 <section class="course" id="curriculum" aria-labelledby="curriculum-title">
- <div class="wrap">
+ <div class="course__wrap">
   <header class="course__heading">
-   <h2 id="curriculum-title">10단계 실습.</h2>
-   <p>페이지를 만들고, 문의가 들어온 뒤의 기능까지 연결합니다.</p>
+   <div class="course__eyebrow">BEGINNER → FIRST BUILD</div>
+   <h2 id="curriculum-title">완전 초보도,<br><em>순서대로 만듭니다.</em></h2>
+   <p>어려운 코드부터 외우지 않습니다.<br>AI에게 요청하는 법부터 작동하는 페이지까지, 10단계 실습.</p>
+   <div class="course__tools" aria-label="수업에서 활용할 수 있는 AI 도구의 예시">
+     <div class="course__tool"><span class="course__toolmark"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/openai.svg" width="25" height="25" loading="lazy" alt="OpenAI 로고"></span><span><small>AI 도구 예시</small>ChatGPT</span></div>
+     <span class="course__other">AI에게 요청하고 결과를 고치며 배우는 방식</span>
+   </div>
+   <p class="course__trademark">ChatGPT·OpenAI는 해당 기업의 상표이며, 본 강의는 OpenAI 공식 제휴·인증 과정이 아닙니다.</p>
   </header>
-  <div class="course__list">
-    <section class="course__chapter"><div class="course__chapter-name"><span>01</span><h3>페이지 제작</h3></div><ol start="1"><li><strong>바이브코딩 이해</strong><span>AI에게 화면과 기능을 요청하는 방법</span></li><li><strong>AI에게 지시하는 법</strong><span>결과를 보면서 수정 지시하기</span></li><li><strong>랜딩페이지 만들기</strong><span>광고용 반응형 페이지 제작</span></li></ol></section>
-    <section class="course__chapter"><div class="course__chapter-name"><span>02</span><h3>신청과 DB</h3></div><ol start="4"><li><strong>신청폼 만들기</strong><span>이름 · 연락처 · 문의내용 입력받기</span></li><li><strong>DB 자동 저장</strong><span>신청 내용을 데이터로 기록하기</span></li></ol></section>
-    <section class="course__chapter"><div class="course__chapter-name"><span>03</span><h3>알림과 관리</h3></div><ol start="6"><li><strong>문의 알림 연결</strong><span>새 문의를 알림으로 확인하기</span></li><li><strong>고객 자동응답</strong><span>접수 후 안내 메시지 설정</span></li><li><strong>관리자 화면 만들기</strong><span>접수 및 진행 현황 관리</span></li></ol></section>
-    <section class="course__chapter"><div class="course__chapter-name"><span>04</span><h3>수정과 재사용</h3></div><ol start="9"><li><strong>디자인과 기능 수정</strong><span>오류를 확인하고 필요한 부분 수정</span></li><li><strong>복제해서 다시 쓰기</strong><span>다른 상품과 업무에 재활용</span></li></ol></section>
+  <div class="course__phases">
+    <article class="course__phase" aria-labelledby="course-phase-1">
+      <div class="course__body">
+        <div class="course__count">STEP 01—03</div>
+        <h3 id="course-phase-1">AI와 대화하는 법</h3>
+        <p>AI를 처음 열어보는 사람도, 원하는 화면을 말로 설명하는 것부터 시작합니다.</p>
+        <ol class="course__topics" start="01"><li><b>01</b><span>바이브코딩 이해</span></li><li><b>02</b><span>AI에게 지시하는 법</span></li><li><b>03</b><span>랜딩페이지 만들기</span></li></ol>
+      </div>
+      <div class="course__visual" role="img" aria-label="AI와 대화하는 법 과정에서 살펴보는 화면의 구성 예시">
+        <div class="course__mock">
+ <div class="course__mockbar" aria-hidden="true"><i></i><i></i><i></i><span>AI conversation</span></div>
+ <div class="course__mockbody">
+   <div class="course__chatline">“내 상품 소개 페이지를 만들어줘.”</div>
+   <div class="course__chatline course__chatline--ai"><span class="course__chatlogo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/openai.svg" width="18" height="18" loading="lazy" alt=""></span>좋아요. 화면부터 만들어볼게요.</div>
+   <div class="course__skel" aria-hidden="true"></div><div class="course__skel course__skel--short" aria-hidden="true"></div>
+ </div>
+ </div>
+      </div>
+    </article>
+    <article class="course__phase" aria-labelledby="course-phase-2">
+      <div class="course__body">
+        <div class="course__count">STEP 04—05</div>
+        <h3 id="course-phase-2">고객 문의받는 페이지</h3>
+        <p>보여주기만 하는 페이지에서 끝내지 않고, 신청 내용을 받는 기능을 연결합니다.</p>
+        <ol class="course__topics" start="04"><li><b>04</b><span>신청폼 만들기</span></li><li><b>05</b><span>고객 DB 자동 저장</span></li></ol>
+      </div>
+      <div class="course__visual" role="img" aria-label="고객 문의받는 페이지 과정에서 살펴보는 화면의 구성 예시">
+        <div class="course__mock">
+ <div class="course__mockbar" aria-hidden="true"><i></i><i></i><i></i><span>preview / landing</span></div>
+ <div class="course__mockbody">
+  <div class="course__minilabel">MY BUSINESS</div>
+  <div class="course__minititle">빠른 상담 신청</div>
+  <div class="course__miniinput">이름</div><div class="course__miniinput">연락처</div>
+  <div class="course__minibutton">신청하기 ↗</div>
+ </div>
+ </div>
+      </div>
+    </article>
+    <article class="course__phase" aria-labelledby="course-phase-3">
+      <div class="course__body">
+        <div class="course__count">STEP 06—08</div>
+        <h3 id="course-phase-3">문의 확인하고 관리하기</h3>
+        <p>새로운 문의를 확인하고, 접수 안내와 관리 화면을 연결하는 과정을 배웁니다.</p>
+        <ol class="course__topics" start="06"><li><b>06</b><span>문의 알림 연결</span></li><li><b>07</b><span>고객 자동응답</span></li><li><b>08</b><span>관리자 화면 만들기</span></li></ol>
+      </div>
+      <div class="course__visual" role="img" aria-label="문의 확인하고 관리하기 과정에서 살펴보는 화면의 구성 예시">
+        <div class="course__mock">
+ <div class="course__mockbar" aria-hidden="true"><i></i><i></i><i></i><span>admin / customers</span></div>
+ <div class="course__mockbody">
+  <div class="course__tabletop">신규 문의 <small>● 접수 중</small></div>
+  <div class="course__tableline"><span>이름</span><span>문의 유형</span><span>상태</span></div>
+  <div class="course__tableline"><span>김○○</span><span>상품 상담</span><em>신규</em></div>
+  <div class="course__tableline"><span>박○○</span><span>서비스 문의</span><em>확인</em></div>
+  <div class="course__tableline"><span>이○○</span><span>견적 요청</span><em>신규</em></div>
+ </div></div>
+      </div>
+    </article>
+    <article class="course__phase" aria-labelledby="course-phase-4">
+      <div class="course__body">
+        <div class="course__count">STEP 09—10</div>
+        <h3 id="course-phase-4">고치고, 다시 활용하기</h3>
+        <p>완성한 페이지를 직접 수정하고 다른 상품·업무에 응용하는 방법까지 다룹니다.</p>
+        <ol class="course__topics" start="09"><li><b>09</b><span>디자인과 기능 수정</span></li><li><b>10</b><span>복제해서 다시 쓰기</span></li></ol>
+      </div>
+      <div class="course__visual" role="img" aria-label="고치고, 다시 활용하기 과정에서 살펴보는 화면의 구성 예시">
+        <div class="course__mock">
+ <div class="course__mockbar" aria-hidden="true"><i></i><i></i><i></i><span>my projects</span></div>
+ <div class="course__mockbody">
+  <div class="course__tabletop">내 프로젝트 <small>편집 가능</small></div>
+  <div class="course__repeat"><span>상품 소개 페이지</span><b>↗</b></div>
+  <div class="course__repeat"><span>상담 신청 페이지</span><b>↗</b></div>
+  <div class="course__repeat"><span>새 프로젝트 복제</span><b>＋</b></div>
+ </div></div>
+      </div>
+    </article>
   </div>
+  <div class="course__outro">처음에는 말로 요청하고, <span>마지막에는 직접 수정합니다.</span></div>
  </div>
 </section>
+
 <section class="benefit" aria-labelledby="benefit-title">
  <div class="wrap">
    <h2 id="benefit-title">수강 후에도<br><span>1:1 온라인 코칭.</span></h2>
