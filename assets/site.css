@@ -49,6 +49,30 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .definition__answer{margin:25px auto 0;font-size:clamp(20px,2.7vw,35px);line-height:1.52;letter-spacing:-.052em;font-weight:660}
 .definition__answer strong{color:#bb3a8d;font-weight:920}
 
+/* Definition artwork: lightweight CSS 3D, no image or JS dependencies */
+.definition__artwork{position:relative;isolation:isolate;width:min(690px,100%);height:346px;margin:42px auto 0;perspective:1050px;transform-style:preserve-3d}
+.definition__artwork:before{content:"";position:absolute;left:50%;bottom:23px;width:min(450px,86%);height:82px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(90,35,84,.25),rgba(112,62,129,.08) 51%,transparent 74%);filter:blur(17px);pointer-events:none}
+.definition__deck{position:absolute;left:50%;top:60%;width:386px;height:188px;transform:translate(-50%,-15%) rotateX(65deg) rotateZ(-10deg);border-radius:50%;border:1px solid rgba(250,202,249,.48);background:radial-gradient(ellipse at 30% 12%,#5c3668,#21182f 55%,#141323 77%);box-shadow:inset 0 3px 14px rgba(255,194,248,.22),inset 0 -12px 20px rgba(4,2,15,.5),0 15px 0 #171021,0 25px 25px rgba(22,12,34,.32),0 0 47px rgba(189,83,174,.16)}
+.definition__deck:before,.definition__deck:after{content:"";position:absolute;border:1px solid rgba(239,157,221,.35);border-radius:50%;inset:21px 40px;box-shadow:0 0 17px rgba(248,115,218,.14)}
+.definition__deck:after{inset:51px 108px;border-color:rgba(255,211,246,.53)}
+.definition__orbit{position:absolute;left:50%;top:46%;width:372px;height:130px;margin-left:-186px;margin-top:-65px;border-radius:50%;border:2px solid rgba(211,77,172,.30);transform:rotate(-18deg);box-shadow:0 0 18px rgba(200,74,167,.08);animation:definitionOrbit 16s ease-in-out infinite alternate;pointer-events:none}
+.definition__orbit:before{content:"";position:absolute;width:13px;height:13px;left:36px;top:12px;border-radius:50%;background:#f8a4e1;box-shadow:0 0 0 7px rgba(233,109,198,.13),0 0 23px rgba(224,87,176,.48)}
+.definition__orbit--back{width:286px;height:106px;margin-left:-143px;margin-top:-53px;transform:rotate(30deg);border-color:rgba(94,56,129,.20);animation-duration:19s;animation-direction:alternate-reverse}
+.definition__orbit--back:before{width:8px;height:8px;left:auto;right:26px;top:13px;background:#a06ed5;box-shadow:0 0 15px rgba(135,85,194,.38)}
+.definition__core{position:absolute;left:50%;top:46%;width:182px;height:182px;display:grid;place-items:center;border-radius:50%;transform:translate(-50%,-50%);border:1px solid rgba(255,234,252,.48);background:radial-gradient(circle at 29% 20%,#fff4ff 0%,#f7b4e5 9%,#d96ec4 27%,#9d4caa 51%,#4a2a6e 73%,#18142f 90%,#0d0c19 100%);box-shadow:inset 12px 16px 21px rgba(255,236,255,.26),inset -21px -30px 34px rgba(8,5,33,.65),0 22px 30px rgba(30,14,51,.32),0 0 56px rgba(203,94,179,.22);animation:definitionLevitate 6.4s ease-in-out infinite;will-change:transform}
+.definition__core:before{content:"";position:absolute;left:12%;top:9%;width:63%;height:21%;border-radius:50%;transform:rotate(-35deg);background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,0));filter:blur(8px)}
+.definition__core:after{content:"";position:absolute;inset:9px;border:1px solid rgba(255,232,251,.25);border-radius:50%;box-shadow:inset 0 0 20px rgba(247,178,242,.08)}
+.definition__core-mark{position:relative;z-index:1;color:#fff;letter-spacing:-.085em;font-size:57px;font-weight:950;text-shadow:0 4px 17px rgba(30,10,44,.36)}
+.definition__chip{position:absolute;z-index:3;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 16px;border:1px solid rgba(255,238,251,.42);border-radius:13px;background:linear-gradient(135deg,#302033,#191522);box-shadow:0 9px 18px rgba(42,18,48,.25),inset 0 1px 0 rgba(255,230,249,.17);color:#fff;white-space:nowrap;font-size:15px;font-weight:820;letter-spacing:-.025em;animation:definitionChipFloat 6s ease-in-out infinite}
+.definition__chip i{display:block;width:9px;height:9px;border-radius:50%;background:#f494ce;box-shadow:0 0 0 4px rgba(244,148,206,.11)}
+.definition__chip--one{left:4%;top:23%;animation-delay:-.3s}
+.definition__chip--two{right:4%;top:21%;animation-delay:-2s}
+.definition__chip--three{right:9%;bottom:8%;animation-delay:-3.8s}
+@keyframes definitionLevitate{0%,100%{transform:translate(-50%,-50%) translateY(0) rotate(-5deg)}50%{transform:translate(-50%,-50%) translateY(-12px) rotate(5deg)}}
+@keyframes definitionChipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes definitionOrbit{0%{transform:rotate(-18deg)}100%{transform:rotate(20deg)}}
+
+
 /* SECTION 3 — same visual demo, centered */
 
 .connector{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 50% 43% at 50% 51%,rgba(118,42,111,.15),transparent 82%),#08070c;color:#fff;text-align:center;padding:96px 0 108px}
@@ -169,6 +193,21 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .definition__eyebrow{font-size:11px;margin-bottom:19px}
  .definition h2{font-size:clamp(39px,10.5vw,52px)}
  .definition__answer{font-size:clamp(18px,5.1vw,23px);line-height:1.56;margin-top:21px}
+
+ .definition__artwork{width:100%;height:303px;margin-top:28px}
+ .definition__deck{width:252px;height:128px;top:60%;box-shadow:inset 0 3px 10px rgba(255,194,248,.22),inset 0 -9px 15px rgba(4,2,15,.5),0 10px 0 #171021,0 18px 22px rgba(22,12,34,.3)}
+ .definition__deck:before{inset:16px 26px}
+ .definition__deck:after{inset:36px 71px}
+ .definition__orbit{width:280px;height:102px;margin-left:-140px;margin-top:-51px;top:43%}
+ .definition__orbit--back{width:220px;height:79px;margin-left:-110px;margin-top:-40px}
+ .definition__core{width:141px;height:141px;top:43%}
+ .definition__core-mark{font-size:44px}
+ .definition__chip{min-height:39px;padding:9px 10px;gap:7px;font-size:12px;border-radius:10px}
+ .definition__chip i{width:7px;height:7px}
+ .definition__chip--one{left:0;top:19%}
+ .definition__chip--two{right:0;top:17%}
+ .definition__chip--three{right:9%;bottom:7%}
+
  .connector{padding:75px 0 82px}
  .connector__inner{width:calc(100% - 36px)}
  .connector__eyebrow{font-size:11px;margin-bottom:16px}
