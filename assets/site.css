@@ -40,30 +40,28 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @keyframes heroFloat{0%,100%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(2px)}50%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(-6px)}}
 @keyframes heroMobileFloat{0%,100%{transform:perspective(900px) rotateX(14deg) rotateZ(-2deg) translateY(2px)}50%{transform:perspective(900px) rotateX(14deg) rotateZ(-2deg) translateY(-6px)}}
 
-/* SECTION 2: What AI vibe coding is — definition, example, and working method */
-.connector{position:relative;isolation:isolate;overflow:hidden;background:#050507;color:#fff;min-height:850px;display:flex;align-items:center;padding:125px 0 138px}
-.connector__halo{position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse 42% 42% at 80% 54%,rgba(89,28,94,.22),transparent 86%),linear-gradient(165deg,rgba(42,17,36,.11),transparent 55%)}
-.connector__halo:before{content:"";position:absolute;top:3%;left:57%;width:min(1250px,112vw);height:580px;transform:translateX(-50%) rotate(-8deg);border-top:2px solid rgba(235,131,188,.18);border-radius:50% 50% 0 0;box-shadow:0 -21px 80px rgba(223,80,165,.1);filter:blur(8px)}
-.connector__inner{width:min(1270px,calc(100% - 96px));margin:auto;display:grid;grid-template-columns:minmax(0,1.09fr) minmax(0,.91fr);gap:clamp(55px,6.5vw,115px);align-items:center}
-.connector__statement{text-align:left;min-width:0}
-.connector__subject{font-size:20px;line-height:1.5;font-weight:790;letter-spacing:-.035em;color:#f3b9dc;margin:0 0 30px}
-.connector__statement h2{font-size:clamp(60px,6.2vw,92px);font-weight:950;line-height:1.17;letter-spacing:-.089em;margin:0}
-.connector__statement em{font-style:normal;color:#f27dc1}
-.connector__definition{font-size:clamp(19px,1.75vw,23px);line-height:1.75;letter-spacing:-.035em;font-weight:650;color:#e9e0e7;margin:36px 0 0;max-width:640px}
-.connector__example{min-width:0;padding:22px 0 18px 38px;position:relative;border-left:2px solid rgba(221,124,197,.31)}
-.connector__example:before{content:"";position:absolute;left:-3px;top:3%;height:31%;width:4px;background:linear-gradient(#9d69eb,#ff89ca,transparent);box-shadow:0 0 24px rgba(244,96,181,.35)}
-.connector__example-label{color:#f6aacd;font-size:18px;font-weight:790;line-height:1.5;margin:0 0 23px;letter-spacing:-.02em}
-.connector__prompt{font-size:clamp(27px,2.65vw,38px);line-height:1.45;letter-spacing:-.061em;font-weight:850;color:#fff;margin:0;padding:0;border:0}
-.connector__process{margin:47px 0 0;position:relative;padding:0 0 0 24px}
-.connector__process-line{position:absolute;left:0;top:20px;bottom:21px;width:2px;background:linear-gradient(180deg,rgba(170,105,237,.9),rgba(231,124,200,.9),rgba(255,175,189,.8))}
-.connector__process-line:after{content:"";position:absolute;left:-3px;top:0;width:8px;height:48px;background:linear-gradient(180deg,transparent,#ffb2de,transparent);filter:blur(2px);animation:connectorTravel 8s ease-in-out infinite}
-.connector__process ol{padding:0;margin:0;list-style:none}
-.connector__process li{display:grid;grid-template-columns:45px minmax(0,1fr);gap:12px;align-items:center;min-height:74px;border-bottom:1px solid rgba(235,195,216,.15)}
+/* SECTION 2 — AI 바이브코딩 설명을 중앙 한 열에 배치 */
+.connector{position:relative;isolation:isolate;overflow:hidden;min-height:850px;padding:140px 0 150px;display:flex;justify-content:center;align-items:center;background:#050507;color:#fff;text-align:center}
+.connector__halo{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 48% 43% at 50% 49%,rgba(88,27,95,.20),transparent 88%)}
+.connector__halo:before{content:"";position:absolute;top:5%;left:50%;width:min(1250px,112vw);height:530px;transform:translateX(-50%);border-top:2px solid rgba(235,131,188,.18);border-radius:50% 50% 0 0;box-shadow:0 -21px 80px rgba(223,80,165,.1);filter:blur(8px)}
+.connector__inner{width:min(870px,calc(100% - 64px));margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;text-align:center}
+.connector__statement{width:100%;min-width:0;text-align:center}
+.connector__subject{margin:0 0 25px;font-size:19px;line-height:1.5;font-weight:790;letter-spacing:-.035em;color:#f3b9dc}
+.connector__statement h2{margin:0;font-size:clamp(65px,6.3vw,91px);font-weight:950;line-height:1.16;letter-spacing:-.087em}
+.connector__statement h2 em{font-style:normal;color:#f27dc1}
+.connector__definition{max-width:790px;margin:29px auto 0;font-size:clamp(18px,1.65vw,22px);font-weight:640;line-height:1.75;letter-spacing:-.031em;color:#e9e0e7;text-align:center}
+.connector__example{position:relative;width:min(800px,100%);margin:66px auto 0;padding:0;text-align:center;border:0}
+.connector__example:before{content:none}
+.connector__example-label{font-size:18px;font-weight:800;color:#f6aacd;line-height:1.5;margin:0 0 18px;letter-spacing:-.025em}
+.connector__prompt{margin:0 auto;padding:0;border:0;text-align:center;font-size:clamp(26px,2.7vw,36px);font-weight:860;line-height:1.48;letter-spacing:-.056em;color:#fff}
+.connector__process{position:relative;margin:48px auto 0;padding:0;width:min(660px,100%);text-align:center}
+.connector__process-line{display:none}
+.connector__process ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;align-items:stretch}
+.connector__process li{min-height:68px;padding:12px 0;display:flex;align-items:center;justify-content:center;gap:15px;border-bottom:1px solid rgba(235,195,216,.15)}
 .connector__process li:last-child{border-bottom:0}
 .connector__process li span{font-size:17px;font-weight:760;color:#dfa7cc;font-variant-numeric:tabular-nums}
-.connector__process li strong{font-size:clamp(19px,1.75vw,24px);line-height:1.4;font-weight:760;letter-spacing:-.04em;color:#eae3ea}
+.connector__process li strong{font-size:clamp(19px,1.7vw,23px);line-height:1.45;font-weight:790;letter-spacing:-.04em;color:#eae3ea}
 .connector__process li:last-child strong{color:#ffa2cf}
-@keyframes connectorTravel{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(136px);opacity:1}}
 .projects{background:var(--paper);color:var(--ink);padding-top:125px}
 .projects__title{text-align:center;margin:0 auto 110px;font-size:clamp(60px,7.6vw,106px);line-height:1.11;font-weight:950;letter-spacing:-.087em}
 .projects__title em{font-style:normal;color:#ca3b90}
@@ -142,20 +140,20 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .hero__action{min-width:0;min-height:52px;padding:12px 6px;gap:6px;font-size:14px;white-space:nowrap}
  .hero__halo{top:15%;width:700px;height:400px}
  .hero__rays{inset:-35% -100% -20%}
- .connector{min-height:0;padding:93px 0 108px}
- .connector__halo:before{top:8%;left:54%;width:710px;height:430px}
- .connector__inner{display:block;width:calc(100% - 40px)}
+ .connector{min-height:0;padding:105px 0 112px}
+ .connector__halo:before{top:6%;left:50%;width:690px;height:430px}
+ .connector__inner{width:calc(100% - 38px);display:flex;flex-direction:column;align-items:center;text-align:center}
  .connector__statement{text-align:center}
- .connector__subject{font-size:17px;margin:0 0 21px}
- .connector__statement h2{font-size:clamp(45px,11.8vw,64px);line-height:1.19;letter-spacing:-.083em}
- .connector__definition{font-size:17px;line-height:1.65;margin:26px auto 0;max-width:420px;text-align:left}
- .connector__example{margin:66px auto 0;padding:11px 0 10px 22px;border-left-width:2px;width:min(450px,100%)}
- .connector__example-label{font-size:16px;margin-bottom:19px}
- .connector__prompt{font-size:clamp(25px,6.45vw,34px);line-height:1.51}
- .connector__process{margin-top:31px;padding-left:21px}
- .connector__process li{grid-template-columns:37px minmax(0,1fr);gap:11px;min-height:66px}
+ .connector__subject{font-size:17px;margin:0 0 20px}
+ .connector__statement h2{font-size:clamp(44px,11.4vw,64px);line-height:1.18;letter-spacing:-.082em}
+ .connector__definition{max-width:390px;font-size:17px;line-height:1.68;margin:26px auto 0;text-align:center}
+ .connector__example{width:100%;margin:57px auto 0;padding:0;border:0;text-align:center}
+ .connector__example-label{font-size:16px;margin:0 0 18px}
+ .connector__prompt{font-size:clamp(24px,6vw,32px);line-height:1.51;text-align:center}
+ .connector__process{width:100%;margin:37px auto 0;padding:0}
+ .connector__process li{min-height:65px;gap:12px;padding:10px 0;justify-content:center}
  .connector__process li span{font-size:16px}
- .connector__process li strong{font-size:19px}
+ .connector__process li strong{font-size:18px}
  .projects{padding-top:88px}
  .projects__title{font-size:clamp(49px,12vw,73px);margin-bottom:78px}
  .project{padding:84px 0 92px}
