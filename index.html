@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 랜딩페이지부터 고객관리까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261020-3d-editor">
+<link rel="stylesheet" href="assets/site.css?v=20261020-builder-v2">
 </head>
 <body>
 <main>
@@ -73,36 +73,45 @@
   </div>
 </section>
 
-<section class="connector" aria-labelledby="connector-title">
+<section class="connector" id="how-it-works" aria-labelledby="connector-title">
   <div class="connector__inner">
-    <p class="connector__eyebrow">HOW IT WORKS</p>
-    <h2 class="connector__title" id="connector-title">말하면,<br><em>이렇게 만들어집니다.</em></h2>
-    <figure class="connector__demo" aria-label="AI에게 신청폼 제작을 요청하면 화면 시안을 확인하고 수정하는 과정을 표현한 예시">
-      <div class="connector__message">
-        <span class="connector__message-icon" aria-hidden="true">✦</span>
-        <span>“상담 신청폼 만들어줘.”</span>
-        <span class="connector__cursor" aria-hidden="true"></span>
-      </div>
-      <div class="connector__down" aria-hidden="true"><span></span></div>
-      <div class="connector__window">
-        <div class="connector__window-bar">
-          <div class="connector__window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-          <span class="connector__window-label">preview / landing-page</span>
-          <span class="connector__window-badge">화면 예시</span>
+    <p class="connector__eyebrow">FROM PROMPT TO PRODUCT</p>
+    <h2 class="connector__title" id="connector-title">말하면,<br><em>작동하는 페이지로.</em></h2>
+    <div class="connector__stage" role="img" aria-label="AI에게 상담 신청 페이지 제작을 요청하고, 페이지 미리보기가 만들어져 고객 DB와 연결되는 흐름을 표현한 모션그래픽 예시">
+      <div class="connector__shell">
+        <div class="connector__chrome" aria-hidden="true">
+          <span class="connector__chrome-dots"><i></i><i></i><i></i></span>
+          <span class="connector__chrome-path">workspace / ai-builder</span>
+          <span class="connector__live">LIVE PREVIEW</span>
         </div>
-        <div class="connector__window-body">
-          <div class="connector__demo-page">
-            <p class="connector__demo-brand">YOUR BUSINESS</p>
-            <h3>빠른 상담 신청</h3>
-            <div class="connector__demo-field">이름</div>
-            <div class="connector__demo-field">연락처</div>
-            <div class="connector__demo-submit">신청하기 <span aria-hidden="true">↗</span></div>
+        <div class="connector__promptbar">
+          <span class="connector__prompt-icon" aria-hidden="true">✳</span>
+          <span class="connector__prompt-text">“상담 신청 페이지 만들어줘.”<span class="connector__prompt-caret" aria-hidden="true"></span></span>
+          <span class="connector__prompt-send" aria-hidden="true">↗</span>
+        </div>
+        <div class="connector__workarea">
+          <div class="connector__preview">
+            <div class="connector__browser">preview / landing</div>
+            <div class="connector__page">
+              <span class="connector__brand">YOUR BUSINESS</span>
+              <h3>빠른 상담 신청</h3>
+              <p>필요한 내용만 남겨주세요.</p>
+              <div class="connector__field">이름</div>
+              <div class="connector__field">연락처</div>
+              <div class="connector__submit">신청하기 <span aria-hidden="true">↗</span></div>
+            </div>
           </div>
-          <div class="connector__db-proof"><span class="connector__db-dot" aria-hidden="true"></span>DB 저장까지 연결</div>
+          <div class="connector__result">
+            <span class="connector__result-dot" aria-hidden="true"></span>
+            <span>고객 DB 자동 저장</span>
+            <span class="connector__result-state">CONNECTED</span>
+          </div>
+        </div>
+        <div class="connector__steps" aria-hidden="true">
+          <span>01 요청</span><i></i><span>02 AI 제작</span><i></i><strong>03 DB 연결</strong>
         </div>
       </div>
-      <figcaption class="connector__caption"><span>요청</span><b aria-hidden="true">→</b><span>AI 제작</span><b aria-hidden="true">→</b><span>실행·수정</span></figcaption>
-    </figure>
+    </div>
   </div>
 </section>
 
