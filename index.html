@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 랜딩페이지부터 고객관리까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261021-curriculum-compact-v2">
+<link rel="stylesheet" href="assets/site.css?v=20261021-curriculum-refined-v3">
 </head>
 <body>
 <main>
@@ -236,87 +236,64 @@
 
 <section class="learning" id="curriculum" aria-labelledby="curriculum-title">
   <div class="learning__wrap">
-    <header class="learning__heading">
-      <p class="learning__kicker">10단계 실전 커리큘럼</p>
-      <h2 id="curriculum-title">코딩 몰라도,<br><em>내 사이트를 완성하는 10단계</em></h2>
-    </header>
-    <div class="learning__grid" aria-label="실습 결과를 만드는 네 단계">
-      <article class="learning__card">
-        <div class="learning__art learning__art--landing" aria-hidden="true">
-          <div class="learning__window"><div class="learning__topbar"><i></i><i></i><i></i><span>my-landing</span></div>
-            <div class="learning__preview learning__preview--landing">
-              <small>MY BRAND</small><b>나만의 첫 페이지</b><span class="learning__fake-line"></span><span class="learning__fake-line learning__fake-line--short"></span><span class="learning__fake-cta">자세히 보기 ↗</span>
-            </div>
-          </div>
+    <div class="learning__layout">
+      <header class="learning__intro">
+        <p class="learning__eyebrow">PRACTICAL COURSE <span aria-hidden="true">—</span> 10 STEPS</p>
+        <h2 id="curriculum-title"><span>10단계 실습.</span><strong>결과는<br>내 사이트.</strong></h2>
+        <div class="learning__tool">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/openai.svg" alt="" width="20" height="20" loading="lazy">
+          <span>ChatGPT 활용 실습</span>
         </div>
-        <div class="learning__card-label"><span>01</span><h3>첫 화면 만들기</h3></div>
-      </article>
-      <article class="learning__card">
-        <div class="learning__art learning__art--form" aria-hidden="true">
-          <div class="learning__window"><div class="learning__topbar"><i></i><i></i><i></i><span>contact-form</span></div>
-            <div class="learning__preview learning__preview--form">
-              <b>상담 신청</b><span class="learning__fake-input">이름</span><span class="learning__fake-input">연락처</span><span class="learning__fake-submit">신청하기 ↗</span>
-            </div>
-          </div>
-        </div>
-        <div class="learning__card-label"><span>02</span><h3>문의폼 연결하기</h3></div>
-      </article>
-      <article class="learning__card">
-        <div class="learning__art learning__art--manage" aria-hidden="true">
-          <div class="learning__window"><div class="learning__topbar"><i></i><i></i><i></i><span>inquiry-admin</span></div>
-            <div class="learning__preview learning__preview--manage">
-              <div class="learning__fake-header"><b>문의 관리</b><small>● 2 NEW</small></div>
-              <div class="learning__fake-row"><span>김○○</span><span>상품 상담</span><em>신규</em></div>
-              <div class="learning__fake-row"><span>박○○</span><span>견적 요청</span><em>확인</em></div>
-              <div class="learning__fake-row"><span>이○○</span><span>서비스 문의</span><em>신규</em></div>
-            </div>
-          </div>
-        </div>
-        <div class="learning__card-label"><span>03</span><h3>고객 문의 관리하기</h3></div>
-      </article>
-      <article class="learning__card">
-        <div class="learning__art learning__art--complete" aria-hidden="true">
-          <div class="learning__window"><div class="learning__topbar"><i></i><i></i><i></i><span>my-projects</span></div>
-            <div class="learning__preview learning__preview--complete">
-              <b>내 프로젝트</b><span>상품 소개 페이지 <i>↗</i></span><span>상담 신청 페이지 <i>↗</i></span><span class="learning__fake-add">＋ 새 프로젝트</span>
-            </div>
-          </div>
-        </div>
-        <div class="learning__card-label"><span>04</span><h3>내 사이트 완성하기</h3></div>
-      </article>
+      </header>
+      <ol class="learning__flow" aria-label="실습으로 완성하는 네 가지 결과물">
+        <li class="learning__stage"><span class="learning__index">01</span><strong>첫 화면 만들기</strong></li>
+        <li class="learning__stage"><span class="learning__index">02</span><strong>문의폼 연결하기</strong></li>
+        <li class="learning__stage"><span class="learning__index">03</span><strong>고객 문의 관리하기</strong></li>
+        <li class="learning__stage"><span class="learning__index">04</span><strong>내 사이트 완성하기</strong></li>
+      </ol>
     </div>
-    <button class="learning__open" type="button" data-learning-open aria-haspopup="dialog" aria-controls="learning-detail">상세 커리큘럼 보기 <span aria-hidden="true">↗</span></button>
+    <details class="learning__details" id="curriculum-details">
+      <summary><span>10단계 상세 커리큘럼 보기</span><span class="learning__toggle" aria-hidden="true"></span></summary>
+      <div class="learning__details-body">
+        <section class="learning__group" aria-labelledby="learning-group-1">
+          <p>PART 01 <span>01—03</span></p>
+          <h3 id="learning-group-1">첫 화면 만들기</h3>
+          <ol start="1">
+            <li>바이브코딩 이해</li>
+            <li>AI에게 지시하는 법</li>
+            <li>랜딩페이지 만들기</li>
+          </ol>
+        </section>
+        <section class="learning__group" aria-labelledby="learning-group-2">
+          <p>PART 02 <span>04—05</span></p>
+          <h3 id="learning-group-2">문의폼 연결하기</h3>
+          <ol start="4">
+            <li>신청폼 만들기</li>
+            <li>고객 DB 자동 저장</li>
+          </ol>
+        </section>
+        <section class="learning__group" aria-labelledby="learning-group-3">
+          <p>PART 03 <span>06—08</span></p>
+          <h3 id="learning-group-3">고객 문의 관리하기</h3>
+          <ol start="6">
+            <li>문의 알림 연결</li>
+            <li>고객 자동응답</li>
+            <li>관리자 화면 만들기</li>
+          </ol>
+        </section>
+        <section class="learning__group" aria-labelledby="learning-group-4">
+          <p>PART 04 <span>09—10</span></p>
+          <h3 id="learning-group-4">내 사이트 완성하기</h3>
+          <ol start="9">
+            <li>디자인과 기능 수정</li>
+            <li>복제해서 다시 쓰기</li>
+          </ol>
+        </section>
+        <p class="learning__disclaimer">ChatGPT·OpenAI는 각 소유자의 상표이며, 본 강의는 OpenAI 공식 제휴·인증 과정이 아닙니다.</p>
+      </div>
+    </details>
   </div>
 </section>
-<dialog class="learning-modal" id="learning-detail" aria-labelledby="learning-detail-title">
-  <div class="learning-modal__inner">
-    <form class="learning-modal__close" method="dialog"><button type="submit" aria-label="상세 커리큘럼 닫기">닫기 <span aria-hidden="true">×</span></button></form>
-    <header class="learning-modal__header">
-      <p>바이브코딩 실전 강의</p>
-      <h2 id="learning-detail-title">10단계 상세 커리큘럼</h2>
-      <div class="learning-modal__tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/openai.svg" width="22" height="22" loading="lazy" alt="">ChatGPT 활용 예시 포함</div>
-    </header>
-    <div class="learning-modal__groups">
-      <section class="learning-modal__group" aria-labelledby="learning-group-1">
-        <div class="learning-modal__group-heading"><span>PART 01</span><h3 id="learning-group-1">첫 화면 만들기</h3></div>
-        <ol start="1"><li>바이브코딩 이해</li><li>AI에게 지시하는 법</li><li>랜딩페이지 만들기</li></ol>
-      </section>
-      <section class="learning-modal__group" aria-labelledby="learning-group-2">
-        <div class="learning-modal__group-heading"><span>PART 02</span><h3 id="learning-group-2">문의폼 연결하기</h3></div>
-        <ol start="4"><li>신청폼 만들기</li><li>고객 DB 자동 저장</li></ol>
-      </section>
-      <section class="learning-modal__group" aria-labelledby="learning-group-3">
-        <div class="learning-modal__group-heading"><span>PART 03</span><h3 id="learning-group-3">고객 문의 관리하기</h3></div>
-        <ol start="6"><li>문의 알림 연결</li><li>고객 자동응답</li><li>관리자 화면 만들기</li></ol>
-      </section>
-      <section class="learning-modal__group" aria-labelledby="learning-group-4">
-        <div class="learning-modal__group-heading"><span>PART 04</span><h3 id="learning-group-4">내 사이트 완성하기</h3></div>
-        <ol start="9"><li>디자인과 기능 수정</li><li>복제해서 다시 쓰기</li></ol>
-      </section>
-    </div>
-    <p class="learning-modal__note">ChatGPT·OpenAI는 각 소유자의 상표이며, 본 강의는 OpenAI 공식 제휴·인증 과정이 아닙니다.</p>
-  </div>
-</dialog>
 
 <section class="benefit" id="coaching" aria-labelledby="benefit-title">
   <div class="benefit__inner">
@@ -416,18 +393,6 @@
     }
   });
   update();
-})();
-</script>
-<script>
-(function(){
-  'use strict';
-  const dialog = document.getElementById('learning-detail');
-  const opener = document.querySelector('[data-learning-open]');
-  if (!dialog || !opener || typeof dialog.showModal !== 'function') return;
-  opener.addEventListener('click', () => dialog.showModal());
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) dialog.close();
-  });
 })();
 </script>
 </body>
