@@ -388,10 +388,10 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .learning:before{content:"";position:absolute;z-index:-1;top:-160px;left:50%;width:min(1400px,150vw);height:830px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(177,73,145,.19),transparent 70%);pointer-events:none}
 .learning__inner{position:relative;width:min(1160px,calc(100% - 64px));margin:auto}
 .learning__heading{max-width:1050px;margin:0 auto 78px;text-align:center}
-.learning__eyebrow{margin:0 0 18px;color:#e5a5cd;font-size:13px;font-weight:850;letter-spacing:.16em}
+.learning__eyebrow{margin:0 0 18px;color:#e5a5cd;font-size:15px;font-weight:860;letter-spacing:.02em;line-height:1.45}
 .learning__heading h2{margin:0;font-size:clamp(56px,7.3vw,100px);line-height:1.11;font-weight:950;letter-spacing:-.087em}
 .learning__heading em{font-style:normal;color:#ee89c1}
-.learning__intro{margin:25px auto 0;font-size:clamp(18px,1.9vw,22px);color:#decddd;line-height:1.56;font-weight:650;letter-spacing:-.025em}
+.learning__intro{margin:27px auto 0;font-size:clamp(19px,1.95vw,24px);color:#e6d8e4;line-height:1.58;font-weight:660;letter-spacing:-.028em}
 .learning__tool{display:inline-flex;align-items:center;gap:11px;margin-top:28px;padding:12px 18px;border:1px solid rgba(238,185,224,.31);border-radius:30px;background:rgba(255,255,255,.04);color:#f2dceb;font-size:16px;font-weight:810}
 .learning__tool img{width:20px;height:20px;filter:invert(1)}
 .learning__phases{display:grid;gap:98px}
@@ -404,16 +404,16 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .learning__phase-id span{color:#ac91af}
 .learning__phase-copy h3{margin:25px 0 0;font-size:clamp(32px,3.8vw,51px);line-height:1.2;font-weight:930;letter-spacing:-.071em}
 .learning__phase-copy h3 em{font-style:normal;color:#f29acc}
-.learning__phase-desc{margin:20px 0 26px;color:#e0d2e1;font-size:19px;line-height:1.56;font-weight:600;letter-spacing:-.029em}
+.learning__phase-desc{margin:22px 0 27px;color:#e6d4e6;font-size:19px;line-height:1.57;font-weight:620;letter-spacing:-.029em}
 .learning__lessons{list-style:none;margin:0;padding:0;border-top:1px solid rgba(244,206,237,.18)}
 .learning__lessons li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:start;padding:17px 0 18px;border-bottom:1px solid rgba(244,206,237,.17)}
 .learning__step-no{margin-top:3px;color:#f2abd5;font:850 17px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
-.learning__lessons strong{display:block;color:#fcf6fb;font-size:22px;line-height:1.38;font-weight:870;letter-spacing:-.035em}
-.learning__lessons p{margin:7px 0 0;color:#d7c8d9;font-size:17px;line-height:1.47;font-weight:590;letter-spacing:-.026em}
+.learning__lessons strong{display:block;color:#fcf6fb;font-size:22px;line-height:1.38;font-weight:880;letter-spacing:-.035em}
+.learning__lessons p{margin:7px 0 0;color:#d7c8d9;font-size:17px;line-height:1.49;font-weight:620;letter-spacing:-.026em}
 .learning__output{display:flex;align-items:center;gap:14px;margin-top:29px}
 .learning__output>span{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:11px;background:#e795c6;color:#2d1728;font-size:24px;font-weight:900}
 .learning__output small{display:block;font-size:14px;color:#d1b8d2;font-weight:760;line-height:1.45}
-.learning__output strong{display:block;margin-top:5px;font-size:20px;color:#ffe1f1;font-weight:850;line-height:1.43}
+.learning__output strong{display:block;margin-top:5px;font-size:20px;color:#ffe1f1;font-weight:870;line-height:1.43}
 .learning__visual{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:23px;border:1px solid rgba(255,224,246,.23);border-radius:22px;background:radial-gradient(ellipse at 47% 35%,rgba(178,87,155,.18),transparent 69%),linear-gradient(140deg,#291e30,#1b1521);box-shadow:0 26px 50px rgba(1,0,6,.24),inset 0 1px 0 rgba(255,255,255,.05)}
 .learning__visual-meta{display:flex;justify-content:space-between;gap:12px;margin:0 3px 20px;color:#e8a6ce;font:770 13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.03em}
 .learning__visual-meta span:last-child{color:#e0cedf;font-size:14px;letter-spacing:0}
