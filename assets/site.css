@@ -406,7 +406,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .course__wrap{width:calc(100% - 30px)}
  .course__heading{margin-bottom:34px}
  .course__eyebrow{font-size:11px;margin-bottom:16px}
- .course__heading h2{font-size:clamp(47px,11.8vw,66px);line-height:1.13}
+ .course__heading h2{font-size:clamp(38px,10vw,59px);line-height:1.15}
  .course__heading>p{font-size:16px;margin-top:17px;line-height:1.58}
  .course__tools{margin-top:20px;gap:9px}
  .course__tool{padding:8px 13px 8px 8px;font-size:14px}
@@ -428,7 +428,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .course__topics li{min-height:37px;padding:7px 0}
  .course__topics b{font-size:11px}
  .course__topics span{font-size:13px}
- .course__deliverable{margin-top:16px;padding:10px 11px}
+ .course__deliverable{margin-top:16px;padding:10px 11px;flex-wrap:wrap;column-gap:9px;row-gap:5px}
  .course__deliverable strong{font-size:12px}
  .course__deliverable small{font-size:10px}
  .course__visual{min-height:239px;padding:24px 29px}
