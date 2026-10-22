@@ -729,20 +729,20 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){.trydemo__entry--new{animation:none}.trydemo__submit{transition:none}.trydemo__submit:hover{transform:none}}
 
 
-/* CALLTAG COURSE BONUS — vertical narrative with large typographic scenes */
-.calltag{color:#271827;text-align:center;overflow:hidden}
+/* CALLTAG COURSE BONUS — unified background, app alerts and free month */
+.calltag{background:#f0bbd7;color:#271827;text-align:center;overflow:hidden}
 .calltag__container{width:min(1130px,calc(100% - 56px));margin:0 auto}
 .calltag__kicker{margin:0 0 24px;font-size:clamp(15px,1.45vw,19px);font-weight:830;line-height:1.4;letter-spacing:-.018em}
-.calltag__intro{background:#f0bbd7;padding:124px 0 94px}
+.calltag__intro{padding:124px 0 58px}
 .calltag__intro .calltag__kicker{color:#7c2e59}
 .calltag__intro h2{margin:0;font-size:clamp(53px,7.1vw,96px);font-weight:950;line-height:1.2;letter-spacing:-.086em}
 .calltag__intro h2 em{font-style:normal;color:#9a266d}
 .calltag__intro-closer{margin:32px 0 0;color:#683850;font-size:clamp(17px,2vw,25px);font-weight:750;line-height:1.5}
 .calltag__down{display:inline-flex;align-items:center;justify-content:center;margin-top:56px;width:62px;height:62px;border:2px solid #a25a83;border-radius:50%;font-size:34px;font-weight:600;color:#783452}
-.calltag__alert{background:#111014;color:#fff;padding:125px 0 146px}
-.calltag__alert .calltag__kicker{color:#e5a1ca}
-.calltag__alert h3{margin:0;font-size:clamp(58px,8.5vw,112px);font-weight:950;line-height:1.12;letter-spacing:-.092em}
-.calltag__alert h3 em{font-style:normal;color:#f69acb}
+.calltag__alert{padding:56px 0 85px}
+.calltag__alert .calltag__kicker{color:#763257}
+.calltag__alert h3{margin:0;font-size:clamp(42px,6.5vw,88px);font-weight:950;line-height:1.2;letter-spacing:-.075em}
+.calltag__alert h3 em{font-style:normal;color:#9a266d}
 .calltag__phone-wrap{display:flex;justify-content:center;margin:85px auto 0}
 .calltag__phone{width:min(100%,480px);padding:32px;border:10px solid #514451;border-radius:49px;background:#090909;color:#fff;text-align:left;box-shadow:16px 20px 0 rgba(239,130,194,.18),0 38px 90px rgba(0,0,0,.52)}
 .calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 4px 29px;border-bottom:1px solid #353535;color:#fff;font-size:30px;font-weight:900;line-height:1.2}
@@ -755,23 +755,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__notification p{margin:13px 0 0;color:#e5e5e5;font-size:17px;font-weight:610;line-height:1.6;overflow-wrap:anywhere}
 .calltag__notification-check{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:25px;padding-top:19px;border-top:1px solid #414141;color:#e8e8e8;font-size:17px;font-weight:790}
 .calltag__phone-footer{display:block;margin:28px 0 0;text-align:center;color:#929292;font-size:13px;font-weight:600;line-height:1.4}
-.calltag__benefits{background:#f8f3f5;padding:124px 0 130px}
-.calltag__benefits .calltag__kicker{margin-bottom:57px;color:#a03b78}
-.calltag__benefit{display:grid;grid-template-columns:90px minmax(0,1.15fr) minmax(0,.85fr);align-items:center;column-gap:28px;text-align:left;min-height:205px;border-top:1px solid #d2c3cf}
-.calltag__benefit:last-child{border-bottom:1px solid #d2c3cf}
-.calltag__benefit>span{color:#ab427e;font:850 19px/1.3 ui-monospace,Consolas,monospace}
-.calltag__benefit strong{display:block;font-size:clamp(46px,5.3vw,74px);font-weight:940;line-height:1.18;letter-spacing:-.078em}
-.calltag__benefit p{margin:0;color:#695866;font-size:clamp(18px,1.8vw,24px);font-weight:670;line-height:1.48;letter-spacing:-.035em}
-.calltag__more{background:#251a29;color:#fff;padding:123px 0 130px}
-.calltag__more .calltag__kicker{color:#eeabd3}
-.calltag__more h3{margin:0 0 88px;font-size:clamp(67px,9vw,118px);font-weight:950;line-height:1.14;letter-spacing:-.09em}
-.calltag__more h3 em{font-style:normal;color:#f49cca}
-.calltag__more-row{display:grid;grid-template-columns:175px minmax(0,1fr);gap:9px 30px;align-items:center;padding:42px 0;border-top:1px solid rgba(255,215,235,.28);text-align:left}
-.calltag__more-row:last-child{border-bottom:1px solid rgba(255,215,235,.28)}
-.calltag__more-row>span{color:#db9bbf;font:770 15px/1.45 ui-monospace,Consolas,monospace}
-.calltag__more-row strong{font-size:clamp(42px,5.5vw,74px);line-height:1.2;font-weight:910;letter-spacing:-.07em}
-.calltag__more-row p{grid-column:2;margin:0;color:#dfd0dc;font-size:clamp(18px,1.8vw,23px);font-weight:610;line-height:1.5}
-.calltag__offer{background:#ecaad2;padding:132px 0 145px}
+.calltag__offer{padding:80px 0 145px}
 .calltag__offer .calltag__kicker{color:#6d2550;font-size:clamp(19px,2vw,26px)}
 .calltag__offer h3{margin:0;font-size:clamp(83px,11vw,156px);font-weight:950;line-height:1.13;letter-spacing:-.095em}
 .calltag__offer h3 em{font-style:normal;color:#9b296d}
@@ -779,20 +763,15 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__link span{font-size:29px;line-height:1}
 .calltag__link:hover{background:#612347;transform:translateY(-2px)}
 .calltag__link:focus-visible{outline:3px solid #261625;outline-offset:4px}
-@media(max-width:850px){
-.calltag__benefit{grid-template-columns:65px minmax(0,1fr);gap:10px 20px;padding:32px 0;min-height:0}
-.calltag__benefit p{grid-column:2}
-.calltag__more-row{grid-template-columns:115px minmax(0,1fr);column-gap:20px}
-}
 @media(max-width:720px){
 .calltag__container{width:calc(100% - 36px)}
-.calltag__intro{padding:90px 0 76px}
+.calltag__intro{padding:90px 0 45px}
 .calltag__kicker{font-size:14px;margin-bottom:19px}
 .calltag__intro h2{font-size:clamp(40px,8.1vw,63px);letter-spacing:-.073em}
 .calltag__intro-closer{font-size:17px;margin-top:23px}
 .calltag__down{width:50px;height:50px;margin-top:37px;font-size:28px}
-.calltag__alert{padding:98px 0 104px}
-.calltag__alert h3{font-size:clamp(49px,9.8vw,75px)}
+.calltag__alert{padding:45px 0 70px}
+.calltag__alert h3{font-size:clamp(34px,7.7vw,57px);line-height:1.24}
 .calltag__phone-wrap{margin-top:56px}
 .calltag__phone{width:min(100%,420px);padding:23px;border-width:8px;border-radius:39px}
 .calltag__phone-top{font-size:25px;padding-bottom:22px}
@@ -802,19 +781,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__notification strong{font-size:28px}
 .calltag__notification p{font-size:15px}
 .calltag__notification-check{font-size:15px}
-.calltag__benefits{padding:90px 0 92px}
-.calltag__benefits .calltag__kicker{margin-bottom:37px}
-.calltag__benefit{grid-template-columns:43px 1fr;column-gap:14px;padding:32px 0}
-.calltag__benefit>span{font-size:15px}
-.calltag__benefit strong{font-size:clamp(40px,8.2vw,62px)}
-.calltag__benefit p{font-size:17px}
-.calltag__more{padding:94px 0 98px}
-.calltag__more h3{font-size:clamp(61px,11vw,89px);margin-bottom:56px}
-.calltag__more-row{grid-template-columns:1fr;gap:10px;padding:30px 0}
-.calltag__more-row>span{font-size:13px}
-.calltag__more-row strong{font-size:clamp(46px,9vw,68px)}
-.calltag__more-row p{grid-column:1;font-size:17px}
-.calltag__offer{padding:96px 0 107px}
+.calltag__offer{padding:65px 0 107px}
 .calltag__offer h3{font-size:clamp(67px,13.4vw,102px)}
 .calltag__offer .calltag__kicker{font-size:17px}
 .calltag__link{width:min(100%,370px);gap:20px;min-height:65px;margin-top:40px;padding:16px 20px;font-size:19px}
@@ -822,7 +789,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @media(max-width:370px){
 .calltag__container{width:calc(100% - 28px)}
 .calltag__intro h2{font-size:36px}
-.calltag__alert h3{font-size:44px}
+.calltag__alert h3{font-size:32px}
 .calltag__phone{padding:17px;border-width:7px}
 .calltag__offer h3{font-size:60px}
 }
