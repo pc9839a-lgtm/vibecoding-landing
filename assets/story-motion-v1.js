@@ -1,0 +1,70 @@
+/* Scroll motion for the Vibe Coding landing page.
+   Based on Cruiseplay's varied section entrances; no changes to functional UI. */
+(function(){
+  'use strict';
+  function setup(){
+    if(!('IntersectionObserver' in window)||!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    const groups=[
+      {selector:'#idea-bridge .idea-bridge__question',motion:'rise'},
+      {selector:'#vibe-coding .definition__eyebrow,#vibe-coding h2,#vibe-coding .definition__answer',motion:'rise'},
+      {selector:'#vibe-coding .definition__visual',motion:'zoom'},
+      {selector:'#how-it-works .connector__eyebrow,#how-it-works .connector__title',motion:'soft'},
+      {selector:'#how-it-works .connector__stage',motion:'zoom'},
+      {selector:'#use-cases .usecases__eyebrow,#use-cases .usecases__head h2',motion:'rise'},
+      {selector:'#use-cases .usecase',motion:'alternate'},
+      {selector:'#try-demo .trydemo__eyebrow,#try-demo .trydemo__heading h2',motion:'rise'},
+      {selector:'#try-demo .trydemo__formside,#try-demo .trydemo__resultside',motion:'alternate'},
+      {selector:'#calltag .calltag__intro .calltag__kicker,#calltag .calltag__intro h2,#calltag .calltag__intro-closer',motion:'rise'},
+      {selector:'#calltag .calltag__alert .calltag__kicker,#calltag .calltag__alert h3',motion:'soft'},
+      {selector:'#calltag .calltag__phone',motion:'zoom'},
+      {selector:'#calltag .calltag__offer .calltag__kicker,#calltag .calltag__offer h3',motion:'pop'},
+      {selector:'#projects .projects__eyebrow,#projects .projects__title,#projects .projects__description,#projects .projects__controls',motion:'rise'},
+      {selector:'#adsense-proof .adsense-proof__eyebrow,#adsense-proof .adsense-proof__head h2',motion:'rise'},
+      {selector:'#adsense-proof .adsense-proof__cost',motion:'alternate'},
+      {selector:'#adsense-proof .adsense-proof__approved',motion:'pop'},
+      {selector:'#adsense-proof .adsense-proof__site',motion:'rise'},
+      {selector:'#curriculum .learning__eyebrow,#curriculum .learning__heading h2,#curriculum .learning__intro',motion:'rise'},
+      {selector:'#curriculum .learning__chapter',motion:'alternate'},
+      {selector:'#coaching .support__kicker,#coaching .support__lead',motion:'rise'},
+      {selector:'#coaching .support__heading h2',motion:'pop'},
+      {selector:'#coaching .support__headline,#coaching .support__caption',motion:'rise'},
+      {selector:'#coaching .support__work h3,#coaching .support__items,#coaching .support__resources',motion:'rise'},
+      {selector:'#pricing .tuition__preorder,#pricing #price-title,#pricing .tuition__old',motion:'rise'},
+      {selector:'#pricing .tuition__price',motion:'pop'},
+      {selector:'#pricing .tuition__payment,#pricing .tuition__contents',motion:'rise'}
+    ];
+    const targets=[];
+    const seen=new Set();
+    for(const group of groups){
+      const elements=document.querySelectorAll(group.selector);
+      elements.forEach((el,i)=>{
+        if(seen.has(el))return;
+        seen.add(el);
+        const motion=group.motion==='alternate'?(i%2?'right':'left'):group.motion;
+        el.classList.add('vm-item','vm-'+motion);
+        el.style.setProperty('--vm-delay',String(Math.min(i,3)*95)+'ms');
+        targets.push(el);
+      });
+    }
+    if(!targets.length)return;
+    const viewport=window.innerHeight||document.documentElement.clientHeight;
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries){
+        if(!entry.isIntersecting)continue;
+        entry.target.classList.add('vm-in');
+        observer.unobserve(entry.target);
+      }
+    },{threshold:.08,rootMargin:'0px 0px -7% 0px'});
+    targets.forEach(el=>{
+      const rect=el.getBoundingClientRect();
+      if(rect.top<viewport*.92&&rect.bottom>0){
+        el.classList.add('vm-in');
+      }else{
+        observer.observe(el);
+      }
+    });
+    document.documentElement.classList.add('vm-ready');
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup,{once:true});
+  else setup();
+})();
