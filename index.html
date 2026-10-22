@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 랜딩페이지부터 고객관리까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261022-coaching-rebuild-v16">
+<link rel="stylesheet" href="assets/site.css?v=20261022-bridge-poster-v17">
 </head>
 <body>
 <main>
@@ -255,6 +255,13 @@
   </div>
 </section>
 
+<section class="idea-bridge" id="idea-bridge" aria-labelledby="idea-bridge-title">
+  <div class="idea-bridge__inner">
+    <p class="idea-bridge__thought">“이런 거 하나 있으면 좋겠는데.”</p>
+    <h2 id="idea-bridge-title"><span>그거,</span><br><em>만들어보죠.</em></h2>
+  </div>
+</section>
+
 <section class="learning" id="curriculum" aria-labelledby="curriculum-title">
   <div class="learning__inner">
     <header class="learning__heading">
@@ -478,6 +485,16 @@
     }
   });
   update();
+})();
+</script>
+<script>
+(function(){
+  var node=document.getElementById('idea-bridge');
+  if(!node||!('IntersectionObserver' in window))return;
+  var watcher=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting){node.classList.add('is-visible');watcher.disconnect();}
+  },{threshold:0.32});
+  watcher.observe(node);
 })();
 </script>
 </body>
