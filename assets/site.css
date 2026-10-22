@@ -383,88 +383,75 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 
 
-/* SECTION 5 — high-contrast editorial curriculum: deep-plum concept, white lessons */
-.learning{position:relative;isolation:isolate;overflow:hidden;padding:110px 0 119px;background:#100c15;color:#fff}
-.learning:before{content:"";position:absolute;z-index:-1;left:50%;top:-240px;width:min(1350px,150vw);height:850px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(198,77,154,.13),transparent 70%);pointer-events:none}
-.learning__inner{width:min(1160px,calc(100% - 64px));margin:0 auto}
-.learning__heading{text-align:center;margin:0 auto 73px}
-.learning__heading:after{content:"";display:block;width:68px;height:4px;margin:25px auto 0;border-radius:100px;background:#ee89c1}
-.learning__eyebrow{margin:0 0 18px;color:#f09dcc;font-size:15px;line-height:1.45;font-weight:850;letter-spacing:.1em}
-.learning__heading h2{margin:0;color:#fff;font-size:clamp(58px,7.2vw,94px);line-height:1.13;letter-spacing:-.085em;font-weight:950}
-.learning__intro{margin:20px auto 0;color:#e5dce6;font-size:clamp(18px,1.75vw,21px);font-weight:650;line-height:1.55;letter-spacing:-.026em}
-.learning__chapters{display:grid;gap:26px}
-.learning__chapter{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:0;min-width:0;overflow:hidden;align-items:stretch;border:1px solid #ded0de;border-radius:22px;background:#fcf9fb;box-shadow:0 14px 44px rgba(0,0,0,.18)}
-.learning__chapter-head{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:49px 43px 49px 45px;background:#302236;color:#fff}
-.learning__chapter:nth-child(even) .learning__chapter-head{background:#39253e}
-.learning__chapter-meta{display:flex;align-items:center;flex-wrap:wrap;gap:10px;color:#eab6d6;font:810 14px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.03em}
-.learning__chapter-meta span:first-child{display:inline-flex;align-items:center;justify-content:center;min-width:90px;padding:10px 13px;border-radius:7px;background:#ed98ca;color:#251628;font-weight:900}
-.learning__chapter-meta span:last-child{color:#f3cfeb}
-.learning__chapter-head h3{margin:31px 0 0;color:#fff;font-size:clamp(36px,3.8vw,50px);font-weight:930;line-height:1.24;letter-spacing:-.068em}
-.learning__chapter-head h3 em{font-style:normal;color:#f4a4d5}
-.learning__chapter-head>p{max-width:440px;margin:20px 0 0;color:#f0e3ef;font-size:18px;font-weight:620;line-height:1.56;letter-spacing:-.027em}
-.learning__chapter-body{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:39px 39px 37px;background:#fcf9fb;color:#211824}
+/* SECTION 5 — calm editorial curriculum */
+.learning{position:relative;overflow:hidden;background:#f7f5f2;color:#29242b;padding:108px 0 115px}
+.learning:before{display:none}
+.learning__inner{width:min(1160px,calc(100% - 68px));margin:0 auto}
+.learning__heading{text-align:center;margin:0 auto 70px}
+.learning__heading:after{display:block;content:"";width:48px;height:3px;margin:23px auto 0;border-radius:2px;background:#af407f}
+.learning__eyebrow{margin:0 0 14px;color:#9c4677;font-size:14px;line-height:1.4;font-weight:830;letter-spacing:.06em}
+.learning__heading h2{margin:0;color:#27202b;font-size:clamp(52px,6.9vw,90px);line-height:1.14;letter-spacing:-.08em;font-weight:930}
+.learning__intro{margin:19px auto 0;color:#625a63;font-size:clamp(18px,1.7vw,21px);font-weight:620;line-height:1.52;letter-spacing:-.028em}
+.learning__chapters{display:block;border-top:1px solid #dcd5dd}
+.learning__chapter{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:start;gap:50px;min-width:0;padding:68px 0 74px;border:0;border-bottom:1px solid #dcd5dd;border-radius:0;overflow:visible;background:transparent;box-shadow:none}
+.learning__chapter-head{min-width:0;display:block;padding:11px 5px 0 0;background:transparent;color:#27202b}
+.learning__chapter:nth-child(even) .learning__chapter-head{background:transparent}
+.learning__chapter-meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;font:790 14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.045em}
+.learning__chapter-meta span:first-child{display:inline-block;min-width:0;border:0;border-radius:6px;background:#eddfeb;color:#82305f;padding:7px 12px;font-weight:850}
+.learning__chapter-meta span:last-child{color:#7c737d}
+.learning__chapter-head h3{margin:24px 0 0;color:#27222a;font-size:clamp(34px,3.4vw,46px);line-height:1.28;letter-spacing:-.065em;font-weight:900}
+.learning__chapter-head h3 em{font-style:normal;color:#a63b75}
+.learning__chapter-body{display:block;min-width:0;padding:26px 30px 25px;border:1px solid #e6dfe5;border-radius:16px;background:#fff;box-shadow:0 7px 26px rgba(39,28,40,.045);color:#26232a}
 .learning__lessons{list-style:none;margin:0;padding:0}
-.learning__lessons li{display:grid;grid-template-columns:41px minmax(0,1fr);gap:14px;align-items:start;padding:19px 0;border-bottom:1px solid #e8dfe8}
-.learning__lessons li:first-child{padding-top:0}
-.learning__step-no{display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:#f7d9ed;color:#922664;font:900 16px/1 ui-monospace,SFMono-Regular,Consolas,monospace}
-.learning__lessons strong{display:block;color:#211823;font-size:22px;font-weight:900;line-height:1.39;letter-spacing:-.039em}
-.learning__lessons p{margin:7px 0 0;color:#675b68;font-size:17px;font-weight:640;line-height:1.48;letter-spacing:-.025em}
-.learning__output{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:24px;padding:17px 19px;border:0;border-radius:11px;background:#302236;color:#fff}
-.learning__output-label{flex:none;color:#f2b3d9;font-size:13px;line-height:1.4;font-weight:850}
-.learning__output strong{flex:1;min-width:0;color:#fff;text-align:right;font-size:18px;line-height:1.45;font-weight:880;letter-spacing:-.034em}
-.learning__output-check{flex:none;color:#f3a8d7;font-size:23px;line-height:1}
-.learning__finish{text-align:center;margin:81px auto 0;padding:50px 20px 54px;border-top:1px solid #564055;border-bottom:1px solid #38293b}
-.learning__finish p{margin:0 0 20px;color:#efaad4;font:800 14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
-.learning__finish h3{margin:0;color:#fff;font-size:clamp(34px,4.5vw,58px);font-weight:940;line-height:1.32;letter-spacing:-.072em}
-.learning__finish h3 em{font-style:normal;color:#f19cce}
-.learning__disclaimer{margin:28px auto 0;text-align:center;color:#c1afc1;font-size:12px;line-height:1.55}
-@media(max-width:1020px){
- .learning__chapter{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)}
- .learning__chapter-head{padding:38px 32px}
- .learning__chapter-head h3{font-size:clamp(31px,3.8vw,44px)}
- .learning__chapter-body{padding:34px 29px}
+.learning__lessons li{display:grid;grid-template-columns:35px minmax(0,1fr);gap:13px;align-items:start;padding:21px 0;border-bottom:1px solid #eee9ee}
+.learning__lessons li:first-child{padding-top:9px}
+.learning__lessons li:last-child{border-bottom:0}
+.learning__step-no{display:block;width:auto;height:auto;padding-top:3px;border-radius:0;background:transparent;color:#a13b76;font:850 17px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
+.learning__lessons strong{display:block;color:#29232d;font-size:21px;line-height:1.4;font-weight:860;letter-spacing:-.038em}
+.learning__lessons p{margin:6px 0 0;color:#68616b;font-size:16px;line-height:1.52;font-weight:560;letter-spacing:-.02em}
+.learning__output{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;margin-top:18px;padding:17px 18px;border:0;border-radius:9px;background:#f6eef4;color:#2a2530}
+.learning__output-label{color:#985076;font-size:13px;line-height:1.45;font-weight:760;white-space:nowrap}
+.learning__output strong{display:block;min-width:0;text-align:right;color:#362535;font-size:17px;line-height:1.46;font-weight:870;letter-spacing:-.035em}
+.learning__output-check{color:#aa467f;font-size:20px;line-height:1}
+.learning__disclaimer{margin:36px auto 0;color:#80767f;text-align:center;font-size:12px;line-height:1.55}
+@media(max-width:1000px){
+ .learning__chapter{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:30px}
+ .learning__chapter-head h3{font-size:clamp(31px,3.7vw,40px)}
+ .learning__chapter-body{padding:21px 24px}
  .learning__lessons strong{font-size:20px}
- .learning__lessons p{font-size:16px}
- .learning__output strong{font-size:16px}
+ .learning__output{grid-template-columns:1fr auto;gap:6px}
+ .learning__output-label{grid-column:1/-1}
+ .learning__output strong{text-align:left}
 }
 @media(max-width:800px){
- .learning{padding:88px 0 96px}
- .learning__inner{width:calc(100% - 36px)}
- .learning__heading{margin-bottom:51px}
+ .learning{padding:82px 0 90px}
+ .learning__inner{width:calc(100% - 40px)}
+ .learning__heading{margin-bottom:48px}
  .learning__eyebrow{font-size:12px}
- .learning__heading h2{font-size:clamp(40px,9.4vw,67px)}
- .learning__intro{font-size:18px}
- .learning__chapters{gap:21px}
- .learning__chapter{grid-template-columns:minmax(0,1fr);border-radius:18px}
- .learning__chapter-head{padding:31px 28px 28px}
+ .learning__heading h2{font-size:clamp(40px,9vw,60px)}
+ .learning__intro{font-size:17px}
+ .learning__chapter{display:block;padding:41px 0 47px}
+ .learning__chapter-head{padding:0}
  .learning__chapter-meta{font-size:13px}
- .learning__chapter-head h3{margin-top:22px;font-size:clamp(33px,7.2vw,47px)}
- .learning__chapter-head>p{margin-top:14px;font-size:17px;line-height:1.5}
- .learning__chapter-body{padding:27px 28px 29px}
- .learning__lessons li{padding:17px 0}
+ .learning__chapter-head h3{margin:19px 0 24px;font-size:clamp(32px,7.3vw,44px)}
+ .learning__chapter-body{padding:22px 25px}
  .learning__lessons strong{font-size:20px}
  .learning__lessons p{font-size:16px}
- .learning__output{margin-top:21px}
- .learning__finish{margin-top:68px;padding:43px 10px}
- .learning__finish h3{font-size:clamp(30px,7.3vw,45px)}
+ .learning__lessons li{padding:19px 0}
 }
 @media(max-width:430px){
- .learning__inner{width:calc(100% - 30px)}
- .learning__heading h2{font-size:clamp(36px,9.3vw,43px)}
+ .learning__inner{width:calc(100% - 32px)}
+ .learning__heading h2{font-size:clamp(36px,9vw,43px)}
  .learning__intro{font-size:16px}
- .learning__chapter-head{padding:27px 21px 26px}
- .learning__chapter-head h3{font-size:clamp(31px,7.6vw,37px)}
- .learning__chapter-head>p{font-size:16px}
- .learning__chapter-body{padding:24px 20px 24px}
- .learning__lessons li{grid-template-columns:35px minmax(0,1fr);gap:11px;padding:16px 0}
- .learning__step-no{width:33px;height:33px;font-size:14px}
- .learning__lessons strong{font-size:19px}
- .learning__lessons p{font-size:16px}
- .learning__output{display:grid;grid-template-columns:minmax(0,1fr) 24px;column-gap:10px;row-gap:5px;padding:15px}
- .learning__output-label{grid-column:1/-1}
- .learning__output strong{text-align:left;font-size:17px}
- .learning__output-check{font-size:21px}
- .learning__finish h3{font-size:clamp(28px,7vw,36px)}
+ .learning__chapter{padding:36px 0 41px}
+ .learning__chapter-head h3{font-size:clamp(30px,7.5vw,37px)}
+ .learning__chapter-body{padding:19px}
+ .learning__lessons li{grid-template-columns:31px minmax(0,1fr);gap:9px;padding:17px 0}
+ .learning__step-no{font-size:15px}
+ .learning__lessons strong{font-size:18px}
+ .learning__lessons p{font-size:15px}
+ .learning__output{padding:14px 15px}
+ .learning__output strong{font-size:16px}
  .learning__disclaimer{font-size:11px}
 }
 
