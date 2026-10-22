@@ -594,65 +594,72 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 
 
 
-/* ADSENSE REAL PROOF — clean typography, verified outcome, real site URL */
-.adsense-proof{position:relative;overflow:hidden;background:#f6f2f5;color:#211923;padding:114px 0 104px}
-.adsense-proof__inner{width:min(1120px,calc(100% - 64px));margin:0 auto}
-.adsense-proof__head{text-align:center;margin:0 auto 60px}
-.adsense-proof__eyebrow{margin:0 0 20px;color:#9b3e74;font-size:14px;font-weight:850;letter-spacing:.095em}
-.adsense-proof__eyebrow span{padding:0 8px;color:#bca6b5}
-.adsense-proof__head h2{margin:0;font-size:clamp(50px,6.4vw,85px);font-weight:940;line-height:1.17;letter-spacing:-.086em}
-.adsense-proof__head h2 em{font-style:normal;color:#b6317d}
-.adsense-proof__costs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid #2b212d;border-bottom:2px solid #2b212d}
-.adsense-proof__cost{text-align:center;padding:42px 20px 39px}
-.adsense-proof__cost:first-child{border-right:1px solid #d9ced7}
-.adsense-proof__cost p{margin:0;font-size:clamp(20px,2.1vw,27px);font-weight:810;letter-spacing:-.04em}
-.adsense-proof__cost strong{display:block;margin:5px 0 0;color:#b12b78;font-size:clamp(96px,11vw,158px);font-weight:950;line-height:1.18;letter-spacing:-.098em;font-variant-numeric:tabular-nums}
-.adsense-proof__cost strong span{margin-left:5px;font-size:.36em;letter-spacing:-.07em}
-.adsense-proof__cost-note{display:block;margin:10px 0 0;color:#625763;font-size:17px;font-weight:680;line-height:1.45}
-.adsense-proof__outcome{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:38px;align-items:center;margin-top:42px;padding:45px 48px;background:#281b2c;border-radius:20px;color:#fff}
-.adsense-proof__result{min-width:0}
-.adsense-proof__status{display:inline-flex;align-items:center;gap:10px;color:#f3acd6;font-size:15px;line-height:1.4;font-weight:800}
-.adsense-proof__status>span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#e89aca;color:#2e1b2b;font-size:16px;font-weight:900}
-.adsense-proof__result h3{margin:19px 0 0;font-size:clamp(34px,3.8vw,49px);line-height:1.25;font-weight:940;letter-spacing:-.066em}
-.adsense-proof__result h3 em{font-style:normal;color:#f5a2d2}
-.adsense-proof__result>p{max-width:440px;margin:16px 0 0;color:#dbcbdc;font-size:16px;line-height:1.52;font-weight:580}
-.adsense-proof__live{min-width:0;padding:28px 28px 27px;border:1px solid rgba(250,201,230,.3);border-radius:14px;background:#f8f5f8;color:#291d2b}
-.adsense-proof__live-label{color:#8b4473;font-size:14px;font-weight:810}
-.adsense-proof__live a{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:17px 0 0;padding:0 0 14px;border-bottom:1px solid #d6c6d3;color:#251725;text-decoration:none;font-size:clamp(17px,1.8vw,22px);font-weight:900;line-height:1.4;overflow-wrap:anywhere;letter-spacing:-.042em}
-.adsense-proof__live a:hover{color:#ad397c}
-.adsense-proof__live a:focus-visible{outline:3px solid #b63f87;outline-offset:5px}
-.adsense-proof__external{flex:none;color:#ac347d;font-size:28px;font-weight:720}
-.adsense-proof__live>p{margin:13px 0 0;color:#675c69;font-size:15px;font-weight:650}
-.adsense-proof__note{max-width:1040px;margin:19px auto 0;text-align:center;color:#756b75;font-size:13px;line-height:1.65;font-weight:540}
+/* ADSENSE REAL PROOF — oversized typography, 0-won hosting, approved site */
+.adsense-proof{position:relative;overflow:hidden;background:#f1b5d8;color:#23151f;padding:124px 0 125px}
+.adsense-proof__inner{width:min(1240px,calc(100% - 64px));margin:0 auto}
+.adsense-proof__head{text-align:center;margin:0 auto 84px}
+.adsense-proof__eyebrow{margin:0 0 28px;color:#783654;font-size:clamp(16px,1.6vw,21px);font-weight:840;line-height:1.5}
+.adsense-proof__head h2{margin:0;font-size:clamp(57px,7.1vw,106px);line-height:1.17;font-weight:950;letter-spacing:-.095em}
+.adsense-proof__head h2>span{display:block}
+.adsense-proof__head h2 em{color:#992764;font-style:normal}
+.adsense-proof__costs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:3px solid #2c1b2b;border-bottom:3px solid #2c1b2b}
+.adsense-proof__cost{min-width:0;padding:49px 25px 46px;text-align:center}
+.adsense-proof__cost:first-child{border-right:2px solid rgba(75,36,57,.24)}
+.adsense-proof__cost>p{margin:0;color:#42253a;font-size:clamp(21px,2.35vw,30px);font-weight:870;line-height:1.4;letter-spacing:-.05em}
+.adsense-proof__cost strong{display:block;margin:10px 0 0;color:#241420;font-size:clamp(142px,16.2vw,238px);font-weight:950;line-height:1.04;letter-spacing:-.105em;font-variant-numeric:tabular-nums}
+.adsense-proof__cost strong small{margin-left:11px;font-size:.28em;letter-spacing:-.06em}
+.adsense-proof__cost>span{display:block;margin-top:14px;color:#653c54;font-size:clamp(16px,1.6vw,20px);font-weight:720;line-height:1.5}
+.adsense-proof__approved{position:relative;overflow:hidden;margin:98px auto 0;padding:77px 72px 73px;background:#141017;color:#fff;text-align:left}
+.adsense-proof__approved-kicker{display:inline-block;color:#f3a2d0;font:840 16px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em}
+.adsense-proof__approved h3{position:relative;z-index:1;margin:28px 0 0;font-size:clamp(61px,7vw,99px);line-height:1.18;letter-spacing:-.09em;font-weight:950}
+.adsense-proof__approved h3 em{font-style:normal;color:#f4a0cf}
+.adsense-proof__approved-mark{position:absolute;right:4%;top:49%;transform:translateY(-50%);color:rgba(244,160,207,.11);font-size:clamp(220px,30vw,410px);line-height:1;font-weight:950;pointer-events:none}
+.adsense-proof__approved>p{position:relative;z-index:1;margin:25px 0 0;color:#e7d2e0;font-size:clamp(17px,1.8vw,23px);font-weight:690;line-height:1.5}
+.adsense-proof__site{display:flex;align-items:center;gap:20px;min-width:0;margin:0;padding:32px 18px 33px 25px;border-bottom:2px solid #351d2d;color:#291523;text-decoration:none;transition:background-color .2s ease}
+.adsense-proof__site:hover{background:rgba(255,255,255,.22)}
+.adsense-proof__site:focus-visible{outline:3px solid #612a4c;outline-offset:4px}
+.adsense-proof__site-label{flex:none;color:#6f3657;font-size:clamp(15px,1.55vw,20px);font-weight:800}
+.adsense-proof__site strong{min-width:0;margin-left:auto;font-size:clamp(17px,2.2vw,29px);font-weight:900;line-height:1.4;letter-spacing:-.04em;overflow-wrap:anywhere}
+.adsense-proof__site-arrow{flex:none;font-size:34px;line-height:1;color:#8e2e62}
+.adsense-proof__note{max-width:1020px;margin:19px auto 0;color:#69445c;font-size:13px;font-weight:590;line-height:1.7;text-align:center}
 @media(max-width:900px){
- .adsense-proof__outcome{gap:22px;padding:32px}
- .adsense-proof__result h3{font-size:clamp(32px,4.1vw,43px)}
- .adsense-proof__live{padding:23px}
+.adsense-proof__head h2{font-size:clamp(51px,7.25vw,72px)}
+.adsense-proof__cost strong{font-size:clamp(120px,16vw,165px)}
+.adsense-proof__approved{padding:62px 45px}
+.adsense-proof__approved h3{font-size:clamp(57px,7vw,74px)}
+.adsense-proof__approved-mark{right:2%;font-size:260px}
 }
 @media(max-width:700px){
- .adsense-proof{padding:87px 0 83px}
- .adsense-proof__inner{width:calc(100% - 36px)}
- .adsense-proof__head{margin-bottom:43px}
- .adsense-proof__eyebrow{font-size:12px;margin-bottom:18px}
- .adsense-proof__head h2{font-size:clamp(39px,8.9vw,60px)}
- .adsense-proof__cost{padding:29px 9px}
- .adsense-proof__cost p{font-size:clamp(16px,3.5vw,20px)}
- .adsense-proof__cost strong{font-size:clamp(67px,14.9vw,98px);margin-top:10px}
- .adsense-proof__cost-note{font-size:13px;line-height:1.5;margin-top:7px}
- .adsense-proof__outcome{grid-template-columns:1fr;gap:25px;margin-top:30px;padding:30px 23px;border-radius:15px}
- .adsense-proof__result h3{font-size:clamp(34px,7.6vw,48px)}
- .adsense-proof__result>p{font-size:15px}
- .adsense-proof__live a{font-size:clamp(17px,4vw,22px)}
- .adsense-proof__note{font-size:12px;text-align:left;margin-top:16px}
+.adsense-proof{padding:90px 0 93px}
+.adsense-proof__inner{width:calc(100% - 36px)}
+.adsense-proof__head{margin-bottom:54px}
+.adsense-proof__eyebrow{margin-bottom:20px;font-size:14px}
+.adsense-proof__head h2{font-size:clamp(34px,8.6vw,58px);letter-spacing:-.078em;line-height:1.23}
+.adsense-proof__cost{padding:33px 8px 31px}
+.adsense-proof__cost>p{font-size:clamp(15px,3.5vw,21px)}
+.adsense-proof__cost strong{margin-top:12px;font-size:clamp(90px,19.5vw,130px)}
+.adsense-proof__cost strong small{margin-left:5px}
+.adsense-proof__cost>span{font-size:12px;margin-top:10px}
+.adsense-proof__approved{margin-top:64px;padding:48px 25px 44px}
+.adsense-proof__approved-kicker{font-size:12px}
+.adsense-proof__approved h3{font-size:clamp(42px,10vw,70px);margin-top:25px}
+.adsense-proof__approved-mark{font-size:190px;right:-8%;top:48%}
+.adsense-proof__approved>p{font-size:15px;margin-top:23px}
+.adsense-proof__site{flex-wrap:wrap;gap:9px 12px;padding:24px 4px}
+.adsense-proof__site-label{flex:1 1 100%;font-size:14px}
+.adsense-proof__site strong{margin-left:0;flex:1 1 auto;font-size:clamp(18px,4.5vw,24px)}
+.adsense-proof__site-arrow{font-size:28px}
+.adsense-proof__note{margin-top:17px;font-size:12px;text-align:left}
 }
 @media(max-width:360px){
- .adsense-proof__inner{width:calc(100% - 28px)}
- .adsense-proof__head h2{font-size:36px}
- .adsense-proof__cost strong{font-size:61px}
- .adsense-proof__cost-note{font-size:12px}
- .adsense-proof__live{padding:18px}
+.adsense-proof__inner{width:calc(100% - 26px)}
+.adsense-proof__head h2{font-size:31px}
+.adsense-proof__cost strong{font-size:85px}
+.adsense-proof__cost>p{font-size:14px}
+.adsense-proof__approved{padding:43px 20px}
+.adsense-proof__approved h3{font-size:39px}
 }
-
+@media(prefers-reduced-motion:reduce){.adsense-proof__site{transition:none}}
 
 /* TRY DEMO — interactive form and client-side lead list */
 .trydemo{padding:116px 0 109px;position:relative;isolation:isolate;background:#f5f0f2;color:#281f2b}
