@@ -174,7 +174,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .support__lead{margin:44px 0 5px;font-size:clamp(34px,5.8vw,79px);line-height:1.2;font-weight:910;letter-spacing:-.077em}
 .support__heading h2{margin:0 auto;font-size:clamp(180px,31vw,390px);font-weight:950;line-height:.95;letter-spacing:-.14em;color:#f5a6d2;white-space:nowrap;font-variant-numeric:tabular-nums}
 .support__headline{margin:4px 0 0;font-size:clamp(53px,8.6vw,116px);line-height:1.13;letter-spacing:-.085em;font-weight:950}
-.support__caption{margin:30px auto 0;color:#d5c6d1;font-size:clamp(19px,2.05vw,27px);line-height:1.55;font-weight:630;letter-spacing:-.035em}
+
 .support__work{margin:82px auto 0;padding:55px 0 0;border-top:1px solid rgba(250,207,233,.29)}
 .support__work h3{margin:0;font-size:clamp(41px,5.3vw,72px);line-height:1.28;letter-spacing:-.077em;font-weight:920}
 .support__work h3 em{font-style:normal;color:#f3a0d1}
@@ -204,7 +204,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .support__lead{margin:39px 0 10px;font-size:clamp(33px,7.3vw,49px)}
  .support__heading h2{font-size:clamp(142px,33vw,245px);line-height:1;letter-spacing:-.14em}
  .support__headline{font-size:clamp(49px,10.4vw,74px)}
- .support__caption{margin-top:26px;font-size:17px}
+
  .support__work{margin-top:59px;padding-top:43px}
  .support__work h3{font-size:clamp(31px,7.6vw,49px)}
  .support__items{margin-top:43px}
@@ -358,7 +358,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .learning__heading:after{display:block;content:"";width:48px;height:3px;margin:23px auto 0;border-radius:2px;background:#af407f}
 .learning__eyebrow{margin:0 0 14px;color:#9c4677;font-size:14px;line-height:1.4;font-weight:830;letter-spacing:.06em}
 .learning__heading h2{margin:0;color:#27202b;font-size:clamp(52px,6.9vw,90px);line-height:1.14;letter-spacing:-.08em;font-weight:930}
-.learning__intro{margin:19px auto 0;color:#625a63;font-size:clamp(18px,1.7vw,21px);font-weight:620;line-height:1.52;letter-spacing:-.028em}
+
 .learning__chapters{display:block;border-top:1px solid #dcd5dd}
 .learning__chapter{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:start;gap:50px;min-width:0;padding:51px 0 57px;border:0;border-bottom:1px solid #dcd5dd;border-radius:0;overflow:visible;background:transparent;box-shadow:none}
 .learning__chapter-head{min-width:0;display:block;padding:11px 5px 0 0;background:transparent;color:#27202b}
@@ -380,7 +380,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .learning__output-label{color:#985076;font-size:13px;line-height:1.45;font-weight:760;white-space:nowrap}
 .learning__output strong{display:block;min-width:0;text-align:right;color:#362535;font-size:17px;line-height:1.46;font-weight:870;letter-spacing:-.035em}
 .learning__output-check{color:#aa467f;font-size:20px;line-height:1}
-.learning__disclaimer{margin:36px auto 0;color:#80767f;text-align:center;font-size:12px;line-height:1.55}
+
 @media(max-width:1000px){
  .learning__chapter{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:30px}
  .learning__chapter-head h3{font-size:clamp(31px,3.7vw,40px)}
@@ -396,7 +396,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .learning__heading{margin-bottom:48px}
  .learning__eyebrow{font-size:12px}
  .learning__heading h2{font-size:clamp(40px,9vw,60px)}
- .learning__intro{font-size:17px}
+
  .learning__chapter{display:block;padding:41px 0 47px}
  .learning__chapter-head{padding:0}
  .learning__chapter-meta{font-size:13px}
@@ -409,7 +409,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @media(max-width:430px){
  .learning__inner{width:calc(100% - 32px)}
  .learning__heading h2{font-size:clamp(36px,9vw,43px)}
- .learning__intro{font-size:16px}
+
  .learning__chapter{padding:36px 0 41px}
  .learning__chapter-head h3{font-size:clamp(30px,7.5vw,37px)}
  .learning__chapter-body{padding:19px}
@@ -419,7 +419,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .learning__lessons p{font-size:15px}
  .learning__output{padding:14px 15px}
  .learning__output strong{font-size:16px}
- .learning__disclaimer{font-size:11px}
+
 }
 
 /* USE CASES — broad application showcase, focused oversized examples */
@@ -474,7 +474,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .usecase__flow-symbol{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#f4deed;color:#a0427c;font:860 13px/1 ui-monospace,Consolas,monospace}
 .usecase__system-flow strong{font-size:19px;font-weight:830;letter-spacing:-.03em}
 .usecase__flow-check{font-size:14px;font-weight:800;color:#a34580}
-.usecases__footnote{margin:29px auto 0;text-align:center;color:#ae9bad;font-size:12px;line-height:1.55;font-weight:590}
+
 @media(max-width:1050px){
  .usecase{gap:37px;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr)}
  .usecase__copy h3{font-size:clamp(36px,4.1vw,50px)}
@@ -617,7 +617,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .adsense-proof__site-label{flex:none;color:#6f3657;font-size:clamp(15px,1.55vw,20px);font-weight:800}
 .adsense-proof__site strong{min-width:0;margin-left:auto;font-size:clamp(17px,2.2vw,29px);font-weight:900;line-height:1.4;letter-spacing:-.04em;overflow-wrap:anywhere}
 .adsense-proof__site-arrow{flex:none;font-size:34px;line-height:1;color:#8e2e62}
-.adsense-proof__note{max-width:1020px;margin:19px auto 0;color:#69445c;font-size:13px;font-weight:590;line-height:1.7;text-align:center}
+
 @media(max-width:900px){
 .adsense-proof__head h2{font-size:clamp(51px,7.25vw,72px)}
 .adsense-proof__cost strong{font-size:clamp(120px,16vw,165px)}
@@ -645,7 +645,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .adsense-proof__site-label{flex:1 1 100%;font-size:14px}
 .adsense-proof__site strong{margin-left:0;flex:1 1 auto;font-size:clamp(18px,4.5vw,24px)}
 .adsense-proof__site-arrow{font-size:28px}
-.adsense-proof__note{margin-top:17px;font-size:12px;text-align:left}
+
 }
 @media(max-width:360px){
 .adsense-proof__inner{width:calc(100% - 26px)}
@@ -695,7 +695,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .trydemo__entry--new{border-color:#c66ba4;background:#51324c;animation:trydemoEntry .35s ease-out both}
 .trydemo__entry--new .trydemo__tag{color:#3b1830;background:#f6b9db}
 .trydemo__status{min-height:21px;margin:19px 0 0;color:#edbadd;font-size:14px;line-height:1.5;font-weight:650}
-.trydemo__disclaimer{margin:20px 0 0;text-align:center;color:#716672;font-size:13px;line-height:1.6;font-weight:530}
+
 @keyframes trydemoEntry{from{opacity:.35;transform:translateY(-11px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:900px){
  .trydemo__formside,.trydemo__resultside{padding:29px 25px 32px}
@@ -718,7 +718,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .trydemo__submit{margin-top:25px}
  .trydemo__list{min-height:0}
  .trydemo__count{margin-top:23px}
- .trydemo__disclaimer{text-align:left;font-size:12px}
+
 }
 @media(max-width:390px){
  .trydemo__inner{width:calc(100% - 26px)}
@@ -740,7 +740,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__intro .calltag__kicker{color:#e8accf}
 .calltag__intro h2{margin:0;font-size:clamp(53px,7.1vw,96px);font-weight:950;line-height:1.2;letter-spacing:-.086em}
 .calltag__intro h2 em{font-style:normal;color:#f4a0ce}
-.calltag__intro-closer{margin:32px 0 0;color:#d6c7d3;font-size:clamp(17px,2vw,25px);font-weight:750;line-height:1.5}
+
 .calltag__down{display:inline-flex;align-items:center;justify-content:center;margin-top:35px;width:58px;height:58px;border:2px solid #b26899;border-radius:50%;font-size:32px;font-weight:600;color:#f0acd3}
 .calltag__alert{padding:42px 0 60px}
 .calltag__alert .calltag__kicker{color:#e8accf}
@@ -771,7 +771,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__intro{padding:72px 0 24px}
 .calltag__kicker{font-size:14px;margin-bottom:19px}
 .calltag__intro h2{font-size:clamp(40px,8.1vw,63px);letter-spacing:-.073em}
-.calltag__intro-closer{font-size:17px;margin-top:23px}
+
 .calltag__down{width:50px;height:50px;margin-top:37px;font-size:28px}
 .calltag__alert{padding:32px 0 52px}
 .calltag__alert h3{font-size:clamp(34px,7.7vw,57px);line-height:1.24}
