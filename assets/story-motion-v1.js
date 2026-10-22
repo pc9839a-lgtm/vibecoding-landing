@@ -6,6 +6,8 @@
     if(!('IntersectionObserver' in window)||!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     const groups=[
       {selector:'#idea-bridge .idea-bridge__question',motion:'rise'},
+      {selector:'#idea-bridge .idea-bridge__inner p',motion:'rise'},
+      {selector:'#idea-bridge .idea-bridge__inner h2',motion:'pop'},
       {selector:'#vibe-coding .definition__eyebrow,#vibe-coding h2,#vibe-coding .definition__answer',motion:'rise'},
       {selector:'#vibe-coding .definition__visual',motion:'zoom'},
       {selector:'#how-it-works .connector__eyebrow,#how-it-works .connector__title',motion:'soft'},
