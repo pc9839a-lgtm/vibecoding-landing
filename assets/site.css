@@ -179,29 +179,29 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 /* SECTION 6 — mentoring and resources: restrained split layout */
 .support{position:relative;isolation:isolate;overflow:hidden;padding:110px 0 116px;background:#141018;color:#fff}
 .support:before{content:"";position:absolute;z-index:-1;top:-240px;right:-250px;width:850px;height:850px;background:radial-gradient(circle,rgba(218,102,175,.13),transparent 65%);pointer-events:none}
-.support__inner{width:min(1140px,calc(100% - 64px));margin:0 auto}
-.support__heading{margin:0 0 51px;text-align:left}
+.support__inner{width:min(1140px,calc(100% - 64px));margin:0 auto;text-align:center}
+.support__heading{margin:0 0 51px;text-align:center}
 .support__kicker{display:block;margin-bottom:17px;color:#efa7d2;font-size:16px;font-weight:820;letter-spacing:.025em}
 .support__heading h2{margin:0;font-size:clamp(51px,6.7vw,89px);font-weight:950;letter-spacing:-.085em;line-height:1.16}
 .support__heading h2 em{font-style:normal;color:#ef9dce}
 .support__main{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:0;overflow:hidden;min-height:361px;border:1px solid rgba(243,195,222,.25);border-radius:20px}
-.support__number{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:38px 42px 38px;min-width:0;overflow:hidden;background:#ecd1e4;color:#321d32}
+.support__number{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:38px 42px 38px;min-width:0;overflow:hidden;background:#ecd1e4;color:#321d32}
 .support__number:after{content:"";position:absolute;right:-100px;bottom:-180px;width:420px;height:420px;border:1px solid rgba(112,43,102,.1);border-radius:50%;box-shadow:0 0 0 45px rgba(112,43,102,.055),0 0 0 94px rgba(112,43,102,.032);pointer-events:none}
 .support__number-label{position:relative;z-index:1;color:#79476c;font:820 13px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
 .support__number strong{position:relative;z-index:1;display:block;margin:13px 0 10px;white-space:nowrap;font-size:clamp(110px,14vw,186px);font-weight:950;line-height:.95;letter-spacing:-.14em}
 .support__number-caption{position:relative;z-index:1;font-size:22px;line-height:1.4;font-weight:820;letter-spacing:-.044em;color:#52394e}
-.support__details{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:45px 40px 42px;background:#251b29}
+.support__details{display:flex;flex-direction:column;justify-content:center;text-align:center;min-width:0;padding:45px 40px 42px;background:#251b29}
 .support__details h3{margin:0;color:#fff;font-size:clamp(29px,3vw,40px);font-weight:920;line-height:1.34;letter-spacing:-.071em}
 .support__items{display:flex;flex-direction:column;gap:0;margin-top:32px}
-.support__items span{display:flex;align-items:center;min-height:54px;padding:10px 0;border-bottom:1px solid rgba(242,209,232,.21);color:#e6d4e4;font-size:18px;line-height:1.4;font-weight:680;letter-spacing:-.023em}
+.support__items span{display:flex;align-items:center;justify-content:center;min-height:54px;padding:10px 0;border-bottom:1px solid rgba(242,209,232,.21);color:#e6d4e4;font-size:18px;line-height:1.4;font-weight:680;letter-spacing:-.023em}
 .support__items span:before{content:"";display:inline-block;flex:none;width:7px;height:7px;margin-right:13px;background:#ee9dca;border-radius:50%}
 .support__resources{margin-top:65px}
-.support__resources-head{display:flex;align-items:baseline;gap:13px;margin-bottom:20px}
+.support__resources-head{display:flex;align-items:baseline;justify-content:center;gap:13px;margin-bottom:20px}
 .support__resources-head h3{margin:0;color:#fff;font-size:clamp(29px,3vw,41px);font-weight:900;letter-spacing:-.056em}
 .support__resources-head>span{color:#f2abd7;font-size:17px;font-weight:830}
 .support__resources-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(241,201,224,.28);border-bottom:1px solid rgba(241,201,224,.28)}
-.support__resources-grid>div{display:flex;flex-direction:column;gap:13px;justify-content:center;min-width:0;min-height:135px;padding:25px 23px;border-right:1px solid rgba(241,201,224,.20)}
-.support__resources-grid>div:first-child{padding-left:0}
+.support__resources-grid>div{display:flex;flex-direction:column;align-items:center;gap:13px;justify-content:center;text-align:center;min-width:0;min-height:135px;padding:25px 23px;border-right:1px solid rgba(241,201,224,.20)}
+.support__resources-grid>div:first-child{padding-left:23px}
 .support__resources-grid>div:last-child{border-right:0}
 .support__resources-grid span{color:#e6a3cb;font:790 14px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
 .support__resources-grid strong{color:#f8f0f7;font-size:20px;line-height:1.38;font-weight:840;letter-spacing:-.042em}
@@ -235,8 +235,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .support__resources-head h3{font-size:32px}
  .support__resources-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .support__resources-grid>div{min-height:116px;border-right:0;border-bottom:1px solid rgba(241,201,224,.20);padding:20px 13px}
- .support__resources-grid>div:nth-child(odd){padding-left:0;border-right:1px solid rgba(241,201,224,.20)}
- .support__resources-grid>div:nth-child(even){padding-left:20px}
+ .support__resources-grid>div:nth-child(odd){padding-left:13px;border-right:1px solid rgba(241,201,224,.20)}
+ .support__resources-grid>div:nth-child(even){padding-left:13px}
  .support__resources-grid>div:nth-last-child(-n+2){border-bottom:0}
  .support__resources-grid strong{font-size:18px}
  .support__link{margin-top:33px;font-size:15px}
@@ -246,7 +246,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .support__number strong{font-size:110px}
  .support__details h3{font-size:29px}
  .support__resources-grid strong{font-size:16px}
- .support__resources-grid>div:nth-child(even){padding-left:14px}
+ .support__resources-grid>div:nth-child(even){padding-left:13px}
 }
 
 .tuition{background:#f5eef4;color:#180f18;padding:153px 0 165px;text-align:center}
