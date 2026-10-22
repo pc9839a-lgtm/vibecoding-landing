@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 웹사이트부터 업무 자동화까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261022-calltag-course-v23">
+<link rel="stylesheet" href="assets/site.css?v=20261022-calltag-vertical-v24">
 </head>
 <body>
 <main>
@@ -237,32 +237,27 @@
 
 <section class="calltag" id="calltag" aria-labelledby="calltag-title">
   <div class="calltag__inner">
-    <div class="calltag__copy">
-      <p class="calltag__eyebrow">문의 접수, 그 다음은?</p>
-      <h2 id="calltag-title">새 문의가 오면,<br><em>앱 알림으로 바로 확인.</em></h2>
-      <p class="calltag__description">앞에서 체험한 고객 문의 접수. 실제 운영 사이트에 콜태그를 연결하면 새로운 고객 DB를 휴대폰 앱 알림으로 확인할 수 있습니다.</p>
-      <p class="calltag__features">앱 알림 <span aria-hidden="true">·</span> 문자 자동화 <span aria-hidden="true">·</span> 통화 메모</p>
-      <div class="calltag__benefit">
-        <span>수강생 특별 혜택</span>
-        <strong>콜태그 앱 <em>1개월 무료</em></strong>
-        <p>바이브코딩 강의 수강생에게 콜태그 1개월 무료 이용권을 제공합니다.</p>
-      </div>
-      <a class="calltag__link" href="https://calltag.pagero.kr/" target="_blank" rel="noopener noreferrer" aria-label="콜태그 앱 공식 홈페이지 새 탭에서 열기">콜태그 홈페이지 보기 <span aria-hidden="true">↗</span></a>
-    </div>
-    <div class="calltag__illustration" aria-label="문의가 접수되면 앱 알림으로 확인하는 흐름 예시">
-      <div class="calltag__phone">
+    <header class="calltag__heading">
+      <p class="calltag__eyebrow">CALLTAG · 고객 DB 알림</p>
+      <h2 id="calltag-title">문의가 오면,<br><em>앱에서 바로.</em></h2>
+    </header>
+    <div class="calltag__phone-wrap">
+      <div class="calltag__phone" aria-label="콜태그 앱 알림 화면 예시">
         <div class="calltag__phone-top"><span>CALLTAG</span><span class="calltag__phone-dot" aria-hidden="true"></span></div>
-        <p class="calltag__phone-label">새 고객 DB 알림</p>
+        <p class="calltag__phone-label">새 고객 DB</p>
         <div class="calltag__notification" id="calltag-preview-card" aria-live="polite">
           <span class="calltag__notification-type"><i aria-hidden="true"></i> 신규 문의 접수</span>
           <strong id="calltag-preview-name">체험 고객</strong>
           <p id="calltag-preview-detail">웹사이트 제작 · 문의 접수 테스트입니다.</p>
           <span class="calltag__notification-check">알림 확인 <span aria-hidden="true">↗</span></span>
         </div>
-        <span class="calltag__phone-footer">CONTACT · NOTIFICATION</span>
+        <span class="calltag__phone-footer">앱 알림 화면 예시</span>
       </div>
-      <p class="calltag__flow"><span>사이트 문의 접수</span><b aria-hidden="true">→</b><span>콜태그 앱 알림</span><b aria-hidden="true">→</b><span>휴대폰 확인</span></p>
-      <p class="calltag__mock-note">알림 흐름을 보여주는 화면 예시이며, 위 체험폼에서 실제 앱 알림이 발송되지는 않습니다.</p>
+    </div>
+    <div class="calltag__offer">
+      <p>수강생 특별 혜택</p>
+      <h3>콜태그 앱<br><em>1개월 무료</em></h3>
+      <a class="calltag__link" href="https://calltag.pagero.kr/" target="_blank" rel="noopener noreferrer">콜태그 홈페이지 <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
@@ -628,7 +623,7 @@
       previewName.textContent = name;
       previewDetail.textContent = category + ' · ' + message;
     }
-    status.textContent = '접수 완료! 관리 화면과 아래 앱 알림 예시에 반영됐습니다. (실제 앱 전송 아님)'
+    status.textContent = '접수 완료'
     while (list.children.length > 4) list.lastElementChild.remove();
   });
 })();
