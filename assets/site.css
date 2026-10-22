@@ -729,22 +729,22 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){.trydemo__entry--new{animation:none}.trydemo__submit{transition:none}.trydemo__submit:hover{transform:none}}
 
 
-/* CALLTAG COURSE BONUS — unified background, app alerts and free month */
-.calltag{background:#f0bbd7;color:#271827;text-align:center;overflow:hidden}
+/* CALLTAG COURSE BONUS — unified dark background, pink accents */
+.calltag{background:#0b0a0f;color:#fff;text-align:center;overflow:hidden}
 .calltag__container{width:min(1130px,calc(100% - 56px));margin:0 auto}
 .calltag__kicker{margin:0 0 24px;font-size:clamp(15px,1.45vw,19px);font-weight:830;line-height:1.4;letter-spacing:-.018em}
 .calltag__intro{padding:124px 0 58px}
-.calltag__intro .calltag__kicker{color:#7c2e59}
+.calltag__intro .calltag__kicker{color:#e8accf}
 .calltag__intro h2{margin:0;font-size:clamp(53px,7.1vw,96px);font-weight:950;line-height:1.2;letter-spacing:-.086em}
-.calltag__intro h2 em{font-style:normal;color:#9a266d}
-.calltag__intro-closer{margin:32px 0 0;color:#683850;font-size:clamp(17px,2vw,25px);font-weight:750;line-height:1.5}
-.calltag__down{display:inline-flex;align-items:center;justify-content:center;margin-top:56px;width:62px;height:62px;border:2px solid #a25a83;border-radius:50%;font-size:34px;font-weight:600;color:#783452}
+.calltag__intro h2 em{font-style:normal;color:#f4a0ce}
+.calltag__intro-closer{margin:32px 0 0;color:#d6c7d3;font-size:clamp(17px,2vw,25px);font-weight:750;line-height:1.5}
+.calltag__down{display:inline-flex;align-items:center;justify-content:center;margin-top:56px;width:62px;height:62px;border:2px solid #b26899;border-radius:50%;font-size:34px;font-weight:600;color:#f0acd3}
 .calltag__alert{padding:56px 0 85px}
-.calltag__alert .calltag__kicker{color:#763257}
+.calltag__alert .calltag__kicker{color:#e8accf}
 .calltag__alert h3{margin:0;font-size:clamp(42px,6.5vw,88px);font-weight:950;line-height:1.2;letter-spacing:-.075em}
-.calltag__alert h3 em{font-style:normal;color:#9a266d}
+.calltag__alert h3 em{font-style:normal;color:#f4a0ce}
 .calltag__phone-wrap{display:flex;justify-content:center;margin:85px auto 0}
-.calltag__phone{width:min(100%,480px);padding:32px;border:10px solid #514451;border-radius:49px;background:#090909;color:#fff;text-align:left;box-shadow:16px 20px 0 rgba(239,130,194,.18),0 38px 90px rgba(0,0,0,.52)}
+.calltag__phone{width:min(100%,480px);padding:32px;border:10px solid #59435b;border-radius:49px;background:#090909;color:#fff;text-align:left;box-shadow:16px 20px 0 rgba(239,130,194,.15),0 38px 90px rgba(248,137,200,.12)}
 .calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 4px 29px;border-bottom:1px solid #353535;color:#fff;font-size:30px;font-weight:900;line-height:1.2}
 .calltag__phone-dot{width:11px;height:11px;flex:none;border-radius:50%;background:#bdbdbd}
 .calltag__phone-label{margin:31px 0 17px;color:#c5c5c5;font-size:18px;font-weight:750;line-height:1.45}
@@ -756,13 +756,13 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__notification-check{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:25px;padding-top:19px;border-top:1px solid #414141;color:#e8e8e8;font-size:17px;font-weight:790}
 .calltag__phone-footer{display:block;margin:28px 0 0;text-align:center;color:#929292;font-size:13px;font-weight:600;line-height:1.4}
 .calltag__offer{padding:80px 0 145px}
-.calltag__offer .calltag__kicker{color:#6d2550;font-size:clamp(19px,2vw,26px)}
+.calltag__offer .calltag__kicker{color:#edb5d7;font-size:clamp(19px,2vw,26px)}
 .calltag__offer h3{margin:0;font-size:clamp(83px,11vw,156px);font-weight:950;line-height:1.13;letter-spacing:-.095em}
-.calltag__offer h3 em{font-style:normal;color:#9b296d}
-.calltag__link{display:inline-flex;align-items:center;justify-content:center;gap:55px;min-height:76px;margin-top:57px;padding:20px 37px;border-radius:8px;background:#261625;color:#fff;text-decoration:none;font-size:clamp(20px,2vw,24px);font-weight:850;line-height:1.35;transition:background-color .18s ease,transform .18s ease}
+.calltag__offer h3 em{font-style:normal;color:#f4a0ce}
+.calltag__link{display:inline-flex;align-items:center;justify-content:center;gap:55px;min-height:76px;margin-top:57px;padding:20px 37px;border-radius:8px;background:#f0a0cf;color:#241523;text-decoration:none;font-size:clamp(20px,2vw,24px);font-weight:850;line-height:1.35;transition:background-color .18s ease,transform .18s ease}
 .calltag__link span{font-size:29px;line-height:1}
-.calltag__link:hover{background:#612347;transform:translateY(-2px)}
-.calltag__link:focus-visible{outline:3px solid #261625;outline-offset:4px}
+.calltag__link:hover{background:#ffd2eb;transform:translateY(-2px)}
+.calltag__link:focus-visible{outline:3px solid #f4a0ce;outline-offset:4px}
 @media(max-width:720px){
 .calltag__container{width:calc(100% - 36px)}
 .calltag__intro{padding:90px 0 45px}
