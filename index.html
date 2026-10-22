@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 웹사이트부터 업무 자동화까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261022-preorder-compact-v33">
+<link rel="stylesheet" href="assets/site.css?v=20261022-slides-autoplay-v34">
 <link rel="stylesheet" href="assets/story-motion-v1.css?v=20261022-cruise-inspired">
 </head>
 <body>
@@ -35,15 +35,7 @@
       </div>
     </div>
 
-    <div class="hero__facts" aria-label="강의 정보">
-      <span>10단계 실습</span>
-      <span>1개월 1:1 코칭</span>
-      <span>사전예약 99,000원</span>
-    </div>
-    <div class="hero__actions">
-      <a class="hero__action hero__action--primary" href="#curriculum">커리큘럼 보기 <span aria-hidden="true">↘</span></a>
-      <a class="hero__action hero__action--secondary" href="#projects">실제 결과물 보기 <span aria-hidden="true">↗</span></a>
-    </div>
+
   </div>
 </section>
 
@@ -278,12 +270,12 @@
     <header class="projects__heading">
       <p class="projects__eyebrow">실제 제작 · 운영 중인 웹사이트</p>
       <h2 class="projects__title" id="projects-title">직접 만든 웹사이트,<br><em>실제로 열어보세요.</em></h2>
-      <p class="projects__description">실제 사이트의 메인 화면을 옆으로 넘겨 확인해 보세요.</p>
+      <p class="projects__description">실제 제작한 사이트를 자동으로 보여드립니다.</p>
     </header>
     <div class="projects__controls" aria-label="프로젝트 슬라이드 조작">
       <span class="projects__counter" aria-live="polite"><strong id="projects-current">01</strong> <span>/ 04</span></span>
       <span class="projects__progress" aria-hidden="true"><span class="projects__progress-fill"></span></span>
-      <button class="projects__arrow projects__arrow--prev" type="button" aria-label="이전 사이트" disabled>←</button>
+      <button class="projects__arrow projects__arrow--prev" type="button" aria-label="이전 사이트">←</button>
       <button class="projects__arrow projects__arrow--next" type="button" aria-label="다음 사이트">→</button>
     </div>
     <div class="projects__slider" id="projects-slider" tabindex="0" aria-label="실제 제작 사이트 4개. 좌우로 스와이프하거나 화살표 키로 이동할 수 있습니다.">
@@ -545,40 +537,68 @@
   const current = document.getElementById('projects-current');
   const fill = document.querySelector('.projects__progress-fill');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const closest = () => {
+  const hoverCapable = window.matchMedia('(hover: hover)');
+  const PERIOD = 5200;
+  let inView = false, hovered = false, focused = false, manualUntil = 0;
+  if (!slides.length || !prev || !next || !current || !fill) return;
+  function closest(){
     const center = slider.getBoundingClientRect().left + slider.clientWidth / 2;
     let chosen = 0, distance = Infinity;
     slides.forEach((slide, index) => {
       const rect = slide.getBoundingClientRect();
       const delta = Math.abs(rect.left + rect.width / 2 - center);
-      if (delta < distance) { distance = delta; chosen = index; }
+      if (delta < distance){distance = delta;chosen = index;}
     });
     return chosen;
-  };
-  const update = () => {
+  }
+  function update(){
     const index = closest();
     current.textContent = String(index + 1).padStart(2, '0');
     fill.style.transform = 'scaleX(' + (index + 1) / slides.length + ')';
-    prev.disabled = index === 0;
-    next.disabled = index === slides.length - 1;
-  };
-  const go = (index) => {
-    const slide = slides[Math.max(0, Math.min(slides.length - 1, index))];
+    slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===index));
+  }
+  function go(index, automatic){
+    const dest = (index + slides.length) % slides.length;
+    const slide = slides[dest];
     if (!slide) return;
-    const position = slide.offsetLeft - (slider.clientWidth - slide.offsetWidth) / 2;
-    slider.scrollTo({left:position, behavior:reduced.matches ? 'instant' : 'smooth'});
-  };
-  prev.addEventListener('click', () => go(closest() - 1));
-  next.addEventListener('click', () => go(closest() + 1));
-  slider.addEventListener('scroll', update, {passive:true});
-  window.addEventListener('resize', update);
-  slider.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault();
-      go(closest() + (event.key === 'ArrowRight' ? 1 : -1));
-    }
+    const position = slide.offsetLeft + slide.offsetWidth/2 - slider.clientWidth/2;
+    const wraps = (automatic && dest===0 && index>=slides.length);
+    slider.scrollTo({left:position,behavior:reduced.matches || wraps ? 'auto' : 'smooth'});
+  }
+  const pause = () => { manualUntil=Date.now()+9500; };
+  prev.disabled=false;
+  next.disabled=false;
+  prev.addEventListener('click',()=>{pause();go(closest()-1,false);});
+  next.addEventListener('click',()=>{pause();go(closest()+1,false);});
+  slider.addEventListener('scroll',update,{passive:true});
+  slider.addEventListener('wheel',pause,{passive:true});
+  slider.addEventListener('pointerdown',pause,{passive:true});
+  slider.addEventListener('touchstart',pause,{passive:true});
+  slider.addEventListener('focusin',()=>{focused=true;pause();});
+  slider.addEventListener('focusout',()=>{focused=slider.contains(document.activeElement);pause();});
+  if (hoverCapable.matches){
+    slider.addEventListener('mouseenter',()=>{hovered=true;});
+    slider.addEventListener('mouseleave',()=>{hovered=false;});
+  }
+  slider.addEventListener('keydown',event=>{
+    if(event.key!=='ArrowLeft' && event.key!=='ArrowRight')return;
+    event.preventDefault();pause();
+    go(closest()+(event.key==='ArrowRight'?1:-1),false);
   });
+  window.addEventListener('resize',update,{passive:true});
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>{inView=Boolean(entries[0]&&entries[0].isIntersecting);},{threshold:.15});
+    io.observe(slider);
+  }else{inView=true;}
+  slider.classList.add('is-enhanced');
   update();
+  if(!reduced.matches && slides.length>1){
+    const timer=window.setInterval(()=>{
+      if(!inView || document.hidden || hovered || focused || Date.now()<manualUntil)return;
+      go(closest()+1,true);
+    },PERIOD);
+    window.addEventListener('pagehide',()=>window.clearInterval(timer),{once:true});
+  }
 })();
 </script>
 <script>
