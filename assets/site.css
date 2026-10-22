@@ -26,15 +26,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .hero__machine-inner:before{content:"";position:absolute;left:10%;right:10%;top:50%;height:2px;background:linear-gradient(90deg,rgba(188,115,255,.2),rgba(253,145,211,.52),rgba(244,139,172,.2));box-shadow:0 0 16px rgba(247,119,191,.22)}
 .hero__step{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-width:0;min-height:72px;padding:7px 3px;color:#fff;font-size:clamp(19px,2vw,28px);font-weight:880;white-space:nowrap;letter-spacing:-.04em;text-shadow:0 3px 8px #160a1a}
 .hero__step:not(:last-child):after{content:"";position:absolute;right:0;top:22%;height:56%;border-right:1px solid rgba(255,203,235,.25)}
-.hero__facts{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 17px;margin:24px auto 0;font-size:clamp(15px,1.3vw,18px);font-weight:750;color:#eadddf;animation:heroReveal .6s ease-out .52s both}
-.hero__facts span{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:7px 13px;border:1px solid rgba(255,192,233,.21);border-radius:99px;background:rgba(36,22,39,.56)}
-.hero__facts span+span:before{content:none}
-.hero__actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin:26px auto 0;animation:heroReveal .6s ease-out .68s both}
-.hero__action{display:inline-flex;align-items:center;justify-content:center;gap:19px;min-height:54px;min-width:184px;padding:13px 22px;border-radius:7px;font-size:17px;line-height:1.4;font-weight:810;letter-spacing:-.03em;text-decoration:none;transition:background-color .2s ease,border-color .2s ease}
-.hero__action--primary{background:#f171b8;color:#190c17}
-.hero__action--primary:hover{background:#ff98cf}
-.hero__action--secondary{color:#fff;background:rgba(19,12,23,.48);border:1px solid rgba(255,198,233,.56)}
-.hero__action--secondary:hover{background:rgba(92,43,85,.5);border-color:#f8b5d8}
 @keyframes heroReveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes heroRayMove{from{transform:rotate(-1.4deg) scale(1);opacity:.55}to{transform:rotate(1.4deg) scale(1.035);opacity:.82}}
 @keyframes heroFloat{0%,100%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(2px)}50%{transform:perspective(1000px) rotateX(16deg) rotateZ(-3deg) translateY(-6px)}}
@@ -261,10 +252,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .hero__machine-inner:before{left:50%;right:auto;top:10%;bottom:10%;width:1px;height:auto;background:linear-gradient(180deg,transparent,rgba(255,205,234,.4),transparent)}
  .hero__step{min-height:62px;font-size:18px}
  .hero__step:not(:last-child):after{display:none}
- .hero__facts{margin-top:25px;max-width:340px;gap:8px 11px;font-size:14px}
- .hero__facts span{padding:6px 9px;min-height:33px}
- .hero__actions{width:min(350px,100%);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:21px}
- .hero__action{min-width:0;min-height:52px;padding:12px 6px;gap:6px;font-size:14px;white-space:nowrap}
  .hero__halo{top:15%;width:700px;height:400px}
  .hero__rays{inset:-35% -100% -20%}
  .definition{padding:79px 0 72px}
@@ -821,3 +808,21 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
  .preorder-bar__action{min-width:115px;padding:10px 11px;font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){.preorder-bar__action{transition:none}}
+
+
+/* Projects carousel: clean centered presentation + active-slide emphasis */
+.project__head{flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center}
+.project__info{text-align:center}
+.project__open{align-self:center}
+.projects__slider.is-enhanced .project{opacity:.62;scale:.965;transition:opacity .65s ease,scale .65s cubic-bezier(.2,.75,.15,1)}
+.projects__slider.is-enhanced .project.is-active{opacity:1;scale:1}
+.projects__slider.is-enhanced .project.is-active .project__screenshot{border-color:rgba(247,178,224,.7)}
+@media(max-width:680px){
+ .project__head{align-items:center;justify-content:center;gap:10px;text-align:center}
+ .project__info{text-align:center}
+ .project__open{align-self:center}
+ .projects__slider.is-enhanced .project{opacity:.78;scale:.99}
+}
+@media(prefers-reduced-motion:reduce){
+ .projects__slider.is-enhanced .project{opacity:1;scale:1;transition:none}
+}
