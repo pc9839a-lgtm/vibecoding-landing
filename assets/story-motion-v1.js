@@ -23,7 +23,7 @@
       {selector:'#calltag .calltag__phone',motion:'zoom'},
       {selector:'#calltag .calltag__notification',motion:'pop'},
       {selector:'#calltag .calltag__offer .calltag__kicker,#calltag .calltag__offer h3',motion:'pop'},
-      {selector:'#projects .projects__eyebrow,#projects .projects__title,#projects .projects__description,#projects .projects__controls',motion:'rise'},
+      {selector:'#projects .projects__eyebrow,#projects .projects__title,#projects .projects__controls',motion:'rise'},
       {selector:'#projects .projects__slider',motion:'zoom'},
       {selector:'#adsense-proof .adsense-proof__eyebrow,#adsense-proof .adsense-proof__head h2',motion:'rise'},
       {selector:'#adsense-proof .adsense-proof__cost',motion:'alternate'},
