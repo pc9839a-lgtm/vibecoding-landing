@@ -22,10 +22,6 @@
   background:linear-gradient(90deg,#f5a2d2,#d77dc5,#f5a2d2);
   transform-origin:left center;animation:vmApprovalLine 1.2s .2s cubic-bezier(.16,1,.3,1) both;
  }
- @media(hover:hover){
-  #projects .project__screenshot{transition:box-shadow .35s ease}
-  #projects .project__screenshot:hover{box-shadow:0 15px 44px rgba(218,110,177,.21)}
- }
 }
 @media(max-width:700px) and (prefers-reduced-motion:no-preference){
  html.vm-ready .vm-item.vm-left:not(.vm-in){translate:-29px 0}
