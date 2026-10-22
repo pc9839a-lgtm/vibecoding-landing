@@ -130,7 +130,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .projects__eyebrow{margin:0 0 18px;color:#e5a5cd;font-size:13px;font-weight:850;letter-spacing:.16em;line-height:1.4}
 .projects__title{margin:0;color:#fff;font-size:clamp(56px,7.3vw,100px);line-height:1.11;font-weight:950;letter-spacing:-.087em}
 .projects__title em{font-style:normal;color:#ee89c1}
-.projects__description{margin:19px auto 0;color:#b9acbc;font-size:clamp(16px,1.7vw,20px);font-weight:600;line-height:1.58;letter-spacing:-.034em}
 .projects__controls{display:flex;align-items:center;justify-content:center;gap:12px;width:min(1090px,calc(100% - 64px));margin:0 auto 23px}
 .projects__counter{display:inline-flex;align-items:baseline;gap:7px;white-space:nowrap;min-width:73px;font:760 16px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;color:#f8e6f3;font-variant-numeric:tabular-nums}
 .projects__counter strong{font-size:21px;color:#f19ace}
@@ -165,7 +164,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .project__image{display:block;width:100%;background:#100d15}
 .project__image picture{display:block;width:100%}
 .project__image img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;object-position:top}
-.projects__hint{margin:1px auto 0;padding:0 20px;text-align:center;color:#9a879f;font-size:12px;letter-spacing:.025em;font-weight:650}
 /* SECTION 5 — 10 steps, one real project. Dark visual workstations on warm canvas */
 /* SECTION 6 — mentoring and resources: restrained split layout */
 .support{position:relative;isolation:isolate;overflow:hidden;padding:100px 0 108px;background:#141018;color:#fff;text-align:center}
@@ -228,7 +226,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 
 .tuition{background:#f5eef4;color:#180f18;padding:112px 0 131px;text-align:center}
 .tuition h2{font-size:clamp(69px,8.1vw,121px);line-height:1.12;letter-spacing:-.092em;font-weight:960;margin:0}
-.tuition__old{margin:63px auto 0;color:#807080;text-decoration:line-through;font-size:clamp(25px,2.8vw,37px);font-weight:650}
+.tuition__old{margin:39px auto 0;color:#807080;text-decoration:line-through;font-size:clamp(25px,2.8vw,37px);font-weight:650}
 .tuition__price{font-size:clamp(109px,14vw,194px);font-weight:960;line-height:1.13;letter-spacing:-.11em;white-space:nowrap;color:#b6247b;margin:13px auto 0}
 .tuition__price small{font-size:.32em;letter-spacing:-.03em}
 .tuition__contents{font-size:clamp(19px,2.1vw,26px);line-height:1.8;font-weight:670;letter-spacing:-.035em;margin:35px auto 0}
@@ -308,7 +306,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .projects__heading{padding:0 17px;margin-bottom:27px}
  .projects__eyebrow{font-size:11px;margin-bottom:14px}
  .projects__title{font-size:clamp(44px,11.7vw,61px);line-height:1.13}
- .projects__description{font-size:14px;line-height:1.55;margin-top:15px}
  .projects__controls{width:calc(100% - 38px);gap:10px;margin-bottom:13px}
  .projects__counter{font-size:12px;min-width:55px;gap:5px}
  .projects__counter strong{font-size:16px}
@@ -329,10 +326,9 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .project__url{font-size:9px}
  .project__viewlabel{font-size:8px}
  .project__image img{width:100%;height:auto;object-fit:contain}
- .projects__hint{font-size:11px}
  .tuition{padding:92px 0 105px}
  .tuition h2{font-size:clamp(52px,13.6vw,77px)}
- .tuition__old{font-size:22px;margin-top:47px}
+ .tuition__old{font-size:22px;margin-top:31px}
  .tuition__price{font-size:clamp(73px,18.3vw,99px);margin-top:13px}
  .tuition__contents{font-size:16px;margin-top:30px}
  .tuition__link{font-size:16px;min-height:55px;margin-top:33px}
@@ -340,6 +336,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 @media(max-width:375px){
  .hero h1{font-size:clamp(29px,8.1vw,33px)}
+ .hero h1>span{white-space:normal;overflow-wrap:normal}
  .connector__title{font-size:34px}
  .tuition__price{font-size:68px}
 }
@@ -563,7 +560,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .idea-bridge__inner h2{font-size:clamp(44px,10vw,70px);padding:12px 16px}
 }
 @media(max-width:360px){.idea-bridge__bubble{font-size:14px;padding:13px 8px}.idea-bridge__inner h2{font-size:42px}}
-@media(prefers-reduced-motion:reduce){.idea-bridge.is-visible .idea-bridge__inner h2{animation:none}}
 
 
 
@@ -579,7 +575,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  70%{opacity:1;transform:translateY(-4px) scale(1.03)}
  to{opacity:1;transform:translateY(0) scale(1)}
 }
-@keyframes ibResponseRise{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
 @media(prefers-reduced-motion:no-preference){
  html.vm-ready .idea-bridge:not(.is-visible) .idea-bridge__bubble,
  html.vm-ready .idea-bridge:not(.is-visible) .idea-bridge__character{opacity:0}
