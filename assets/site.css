@@ -531,7 +531,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 
 /* IDEA BRIDGE — centered mascot and speech bubbles */
 .idea-bridge{overflow:hidden;text-align:center;background:#f6eef3;color:#2b1d2a}
-.idea-bridge__top{padding:53px 22px 16px}
+.idea-bridge__top{padding:90px 22px 85px}
 .idea-bridge__question{margin:0;font-size:clamp(36px,4.5vw,59px);font-weight:940;line-height:1.2;letter-spacing:-.072em;text-wrap:balance}
 .idea-bridge__scene{display:grid;grid-template-columns:1fr minmax(240px,320px) 1fr;grid-template-rows:1fr auto;align-items:center;gap:10px 24px;max-width:1080px;min-height:300px;margin:17px auto 0}
 .idea-bridge__character{grid-column:2;grid-row:1/3;justify-self:center;width:min(322px,100%);height:auto;display:block;object-fit:contain;max-width:100%;filter:drop-shadow(0 18px 20px rgba(51,27,47,.14));transform-origin:center bottom}
@@ -540,14 +540,14 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .idea-bridge__bubble--a{grid-column:1;grid-row:1}
 .idea-bridge__bubble--b{grid-column:3;grid-row:1}
 .idea-bridge__bubble--c{grid-column:3;grid-row:2;align-self:start}
-.idea-bridge__bottom{padding:46px 20px 58px;background:#e988bc}
+.idea-bridge__bottom{padding:74px 20px 96px;background:#e988bc}
 .idea-bridge__inner{max-width:1190px;margin:0 auto}
 .idea-bridge__inner p{margin:0;font-size:clamp(42px,5.7vw,72px);font-weight:920;letter-spacing:-.08em;line-height:1.2}
 .idea-bridge__inner h2{display:inline-block;margin:13px auto 0;padding:12px 35px 16px;border-radius:7px;background:#291827;color:#fff;box-shadow:10px 12px 0 rgba(76,33,62,.18);font-size:clamp(55px,8.5vw,111px);font-weight:950;letter-spacing:-.092em;line-height:1.18;transform:rotate(-1deg)}
 .idea-bridge__inner h2.vm-in{animation:ideaBridgeShow .95s cubic-bezier(.16,1,.3,1) both}
 @keyframes ideaBridgeShow{from{opacity:.55;transform:translateY(32px) rotate(0) scale(.96)}to{opacity:1;transform:translateY(0) rotate(-1deg) scale(1)}}
 @media(max-width:740px){
- .idea-bridge__top{padding:46px 14px 15px}
+ .idea-bridge__top{padding:92px 14px 105px}
  .idea-bridge__question{font-size:clamp(30px,7.5vw,49px)}
  .idea-bridge__scene{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:10px 9px;min-height:0;margin-top:19px}
  .idea-bridge__bubble{font-size:clamp(15px,3.7vw,19px);padding:16px 10px;border-radius:14px}
@@ -555,7 +555,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .idea-bridge__bubble--b{grid-column:2;grid-row:1}
  .idea-bridge__character{grid-column:1/-1;grid-row:2;width:min(270px,78vw)}
  .idea-bridge__bubble--c{grid-column:1/-1;grid-row:3;max-width:300px;margin-top:-13px}
- .idea-bridge__bottom{padding:39px 14px 53px}
+ .idea-bridge__bottom{padding:69px 14px 100px}
  .idea-bridge__inner p{font-size:clamp(39px,9vw,58px)}
  .idea-bridge__inner h2{font-size:clamp(44px,10vw,70px);padding:12px 16px}
 }
