@@ -597,3 +597,30 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .difference__before,.difference__after{padding:23px 20px}
  .difference__before>strong,.difference__after>strong{font-size:29px}
 }
+
+
+/* IDEA BRIDGE — bold poster interlude */
+.idea-bridge{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(570px,79svh,820px);display:flex;align-items:center;justify-content:center;padding:100px 0 113px;background:#ee86bd;color:#251525}
+.idea-bridge:before{content:"";position:absolute;inset:-16% -15%;z-index:-1;background:radial-gradient(ellipse at 74% 17%,rgba(255,219,238,.55),transparent 55%),radial-gradient(ellipse at 8% 93%,rgba(187,62,131,.23),transparent 45%);pointer-events:none}
+.idea-bridge__inner{position:relative;width:min(1220px,calc(100% - 90px));margin:0 auto}
+.idea-bridge__thought{margin:0 0 39px;font-size:clamp(26px,3.4vw,47px);line-height:1.4;font-weight:790;letter-spacing:-.064em;color:#45263c}
+.idea-bridge h2{margin:0;font-size:clamp(76px,11vw,145px);font-weight:950;line-height:1.11;letter-spacing:-.103em}
+.idea-bridge h2>span{display:inline-block}
+.idea-bridge h2 em{position:relative;display:inline-block;margin-top:18px;margin-left:-9px;padding:7px 43px 20px 27px;background:#251625;box-shadow:15px 17px 0 rgba(102,39,80,.2);color:#fff7fc;font-style:normal;white-space:nowrap;transform:rotate(-2deg);transform-origin:17% 50%}
+.idea-bridge.is-visible h2 em{animation:ideaBridgeStamp .75s cubic-bezier(.2,1.4,.34,1) both}
+@keyframes ideaBridgeStamp{0%{transform:translateY(36px) rotate(1.5deg) scale(.96)}100%{transform:translateY(0) rotate(-2deg) scale(1)}}
+@media(max-width:800px){
+ .idea-bridge{min-height:610px;padding:91px 0 98px}
+ .idea-bridge__inner{width:calc(100% - 52px)}
+ .idea-bridge__thought{margin-bottom:34px;font-size:clamp(25px,4.6vw,35px)}
+ .idea-bridge h2{font-size:clamp(62px,10.8vw,91px)}
+ .idea-bridge h2 em{margin-left:-3px;padding:9px 19px 17px 15px}
+}
+@media(max-width:450px){
+ .idea-bridge{min-height:520px;padding:78px 0 85px}
+ .idea-bridge__inner{width:calc(100% - 36px)}
+ .idea-bridge__thought{font-size:clamp(20px,5.6vw,26px);margin-bottom:30px;line-height:1.48}
+ .idea-bridge h2{font-size:clamp(58px,13vw,78px);line-height:1.16}
+ .idea-bridge h2 em{font-size:clamp(40px,9.75vw,57px);padding:13px 16px 17px 13px;box-shadow:7px 9px 0 rgba(102,39,80,.21);margin-top:15px}
+}
+@media(prefers-reduced-motion:reduce){.idea-bridge.is-visible h2 em{animation:none}}
