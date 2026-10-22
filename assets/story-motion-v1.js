@@ -63,15 +63,20 @@
         observer.unobserve(entry.target);
       }
     },{threshold:.08,rootMargin:'0px 0px -7% 0px'});
+    const onScreen=[];
     targets.forEach(el=>{
       const rect=el.getBoundingClientRect();
       if(rect.top<viewport*.92&&rect.bottom>0){
-        el.classList.add('vm-in');
+        onScreen.push(el);
       }else{
         observer.observe(el);
       }
     });
     document.documentElement.classList.add('vm-ready');
+    // Allow the browser to paint the initial state; direct section links animate too.
+    window.requestAnimationFrame(()=>{
+      window.requestAnimationFrame(()=>onScreen.forEach(el=>el.classList.add('vm-in')));
+    });
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup,{once:true});
   else setup();
