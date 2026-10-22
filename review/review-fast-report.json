@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-22T07:09:29.166Z",
+  "at": "2026-10-22T07:50:39.782Z",
   "result": [
     {
       "width": 390,
@@ -8,8 +8,12 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 13577,
+        "height": 12871,
         "imgs": [
+          {
+            "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
           {
             "src": "assets/cases/peopleent.jpg",
             "ok": true
@@ -24,10 +28,6 @@
           },
           {
             "src": "assets/cases/pagero.jpg",
-            "ok": true
-          },
-          {
-            "src": "assets/idea-bridge-3d-character.avif",
             "ok": true
           }
         ],
@@ -76,8 +76,12 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 14798,
+        "height": 14028,
         "imgs": [
+          {
+            "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
           {
             "src": "assets/cases/peopleent.jpg",
             "ok": true
@@ -92,10 +96,6 @@
           },
           {
             "src": "assets/cases/pagero.jpg",
-            "ok": true
-          },
-          {
-            "src": "assets/idea-bridge-3d-character.avif",
             "ok": true
           }
         ],
