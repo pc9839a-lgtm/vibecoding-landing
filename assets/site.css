@@ -599,28 +599,36 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 
 
-/* IDEA BRIDGE — bold poster interlude */
-.idea-bridge{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(570px,79svh,820px);display:flex;align-items:center;justify-content:center;padding:100px 0 113px;background:#ee86bd;color:#251525}
-.idea-bridge:before{content:"";position:absolute;inset:-16% -15%;z-index:-1;background:radial-gradient(ellipse at 74% 17%,rgba(255,219,238,.55),transparent 55%),radial-gradient(ellipse at 8% 93%,rgba(187,62,131,.23),transparent 45%);pointer-events:none}
-.idea-bridge__inner{position:relative;width:min(1220px,calc(100% - 90px));margin:0 auto}
-.idea-bridge__thought{margin:0 0 39px;font-size:clamp(26px,3.4vw,47px);line-height:1.4;font-weight:790;letter-spacing:-.064em;color:#45263c}
-.idea-bridge h2{margin:0;font-size:clamp(76px,11vw,145px);font-weight:950;line-height:1.11;letter-spacing:-.103em}
-.idea-bridge h2>span{display:inline-block}
-.idea-bridge h2 em{position:relative;display:inline-block;margin-top:18px;margin-left:-9px;padding:7px 43px 20px 27px;background:#251625;box-shadow:15px 17px 0 rgba(102,39,80,.2);color:#fff7fc;font-style:normal;white-space:nowrap;transform:rotate(-2deg);transform-origin:17% 50%}
-.idea-bridge.is-visible h2 em{animation:ideaBridgeStamp .75s cubic-bezier(.2,1.4,.34,1) both}
-@keyframes ideaBridgeStamp{0%{transform:translateY(36px) rotate(1.5deg) scale(.96)}100%{transform:translateY(0) rotate(-2deg) scale(1)}}
-@media(max-width:800px){
- .idea-bridge{min-height:610px;padding:91px 0 98px}
- .idea-bridge__inner{width:calc(100% - 52px)}
- .idea-bridge__thought{margin-bottom:34px;font-size:clamp(25px,4.6vw,35px)}
- .idea-bridge h2{font-size:clamp(62px,10.8vw,91px)}
- .idea-bridge h2 em{margin-left:-3px;padding:9px 19px 17px 15px}
+/* IDEA BRIDGE — centered mascot and speech bubbles */
+.idea-bridge{overflow:hidden;text-align:center;background:#f6eef3;color:#2b1d2a}
+.idea-bridge__top{padding:76px 22px 33px}
+.idea-bridge__question{margin:0;font-size:clamp(36px,4.5vw,59px);font-weight:940;line-height:1.24;letter-spacing:-.072em}
+.idea-bridge__scene{display:grid;grid-template-columns:1fr minmax(240px,350px) 1fr;grid-template-rows:1fr auto;align-items:center;gap:16px 30px;max-width:1090px;min-height:359px;margin:28px auto 0}
+.idea-bridge__character{grid-column:2;grid-row:1/3;justify-self:center;width:min(350px,100%);height:auto;display:block;object-fit:cover;border-radius:45% 45% 18% 18%;-webkit-mask-image:radial-gradient(ellipse at 50% 52%,#000 45%,transparent 78%);mask-image:radial-gradient(ellipse at 50% 52%,#000 45%,transparent 78%)}
+.idea-bridge__bubble{position:relative;justify-self:center;max-width:320px;width:100%;margin:0;padding:21px 19px;background:#fff;color:#342837;border-radius:19px;box-shadow:0 11px 28px rgba(53,31,51,.1);font-size:clamp(18px,1.8vw,23px);font-weight:860;line-height:1.47;letter-spacing:-.05em}
+.idea-bridge__bubble:after{content:"";position:absolute;bottom:-8px;left:49%;height:18px;width:18px;background:#fff;transform:rotate(45deg)}
+.idea-bridge__bubble--a{grid-column:1;grid-row:1}
+.idea-bridge__bubble--b{grid-column:3;grid-row:1}
+.idea-bridge__bubble--c{grid-column:3;grid-row:2;align-self:start}
+.idea-bridge__bottom{padding:70px 20px 82px;background:#e988bc}
+.idea-bridge__inner{max-width:1190px;margin:0 auto}
+.idea-bridge__inner p{margin:0;font-size:clamp(42px,5.7vw,72px);font-weight:920;letter-spacing:-.08em;line-height:1.2}
+.idea-bridge__inner h2{display:inline-block;margin:16px auto 0;padding:13px 35px 19px;border-radius:7px;background:#291827;color:#fff;box-shadow:10px 12px 0 rgba(76,33,62,.18);font-size:clamp(55px,8.5vw,111px);font-weight:950;letter-spacing:-.092em;line-height:1.18;transform:rotate(-1deg)}
+.idea-bridge.is-visible .idea-bridge__inner h2{animation:ideaBridgeShow .7s cubic-bezier(.2,1.2,.3,1) both}
+@keyframes ideaBridgeShow{from{opacity:.55;transform:translateY(32px) rotate(0) scale(.96)}to{opacity:1;transform:translateY(0) rotate(-1deg) scale(1)}}
+@media(max-width:740px){
+ .idea-bridge__top{padding:61px 14px 25px}
+ .idea-bridge__question{font-size:clamp(31px,7.5vw,49px)}
+ .idea-bridge__scene{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:14px 10px;min-height:0;margin-top:33px}
+ .idea-bridge__bubble{font-size:clamp(15px,3.7vw,19px);padding:16px 10px;border-radius:14px}
+ .idea-bridge__bubble--a{grid-column:1;grid-row:1}
+ .idea-bridge__bubble--b{grid-column:2;grid-row:1}
+ .idea-bridge__character{grid-column:1/-1;grid-row:2;width:min(300px,85vw)}
+ .idea-bridge__bubble--c{grid-column:1/-1;grid-row:3;max-width:300px;margin-top:-11px}
+ .idea-bridge__bottom{padding:59px 14px 75px}
+ .idea-bridge__inner p{font-size:clamp(39px,9vw,58px)}
+ .idea-bridge__inner h2{font-size:clamp(44px,10vw,70px);padding:12px 16px}
 }
-@media(max-width:450px){
- .idea-bridge{min-height:520px;padding:78px 0 85px}
- .idea-bridge__inner{width:calc(100% - 36px)}
- .idea-bridge__thought{font-size:clamp(20px,5.6vw,26px);margin-bottom:30px;line-height:1.48}
- .idea-bridge h2{font-size:clamp(58px,13vw,78px);line-height:1.16}
- .idea-bridge h2 em{font-size:clamp(40px,9.75vw,57px);padding:13px 16px 17px 13px;box-shadow:7px 9px 0 rgba(102,39,80,.21);margin-top:15px}
-}
-@media(prefers-reduced-motion:reduce){.idea-bridge.is-visible h2 em{animation:none}}
+@media(max-width:360px){.idea-bridge__bubble{font-size:14px;padding:13px 8px}.idea-bridge__inner h2{font-size:42px}}
+@media(prefers-reduced-motion:reduce){.idea-bridge.is-visible .idea-bridge__inner h2{animation:none}}
+
