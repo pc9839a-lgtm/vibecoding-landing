@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-22T13:06:20.201Z",
+  "at": "2026-10-22T13:16:26.088Z",
   "result": [
     {
       "width": 390,
@@ -33,14 +33,6 @@
         ],
         "anchors": [
           {
-            "hash": "#curriculum",
-            "target": true
-          },
-          {
-            "hash": "#projects",
-            "target": true
-          },
-          {
             "hash": "#pricing",
             "target": true
           },
@@ -55,14 +47,6 @@
         ]
       },
       "clickResults": [
-        {
-          "hash": "#curriculum",
-          "clicked": true
-        },
-        {
-          "hash": "#projects",
-          "clicked": true
-        },
         {
           "hash": "#pricing",
           "clicked": true
@@ -84,7 +68,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 19287,
+        "height": 19347,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -109,14 +93,6 @@
         ],
         "anchors": [
           {
-            "hash": "#curriculum",
-            "target": true
-          },
-          {
-            "hash": "#projects",
-            "target": true
-          },
-          {
             "hash": "#pricing",
             "target": true
           },
@@ -131,14 +107,6 @@
         ]
       },
       "clickResults": [
-        {
-          "hash": "#curriculum",
-          "clicked": true
-        },
-        {
-          "hash": "#projects",
-          "clicked": true
-        },
         {
           "hash": "#pricing",
           "clicked": true
