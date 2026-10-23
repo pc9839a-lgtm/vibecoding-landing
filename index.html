@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 웹사이트부터 업무 자동화까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261022-clean-copy-v38">
+<link rel="stylesheet" href="assets/site.css?v=20261023-carousel-loop-v39">
 <link rel="stylesheet" href="assets/story-motion-v1.css?v=20261022-polish-v3">
 </head>
 <body>
@@ -522,71 +522,128 @@
   'use strict';
   const slider = document.getElementById('projects-slider');
   if (!slider) return;
-  const slides = Array.from(slider.querySelectorAll('.project'));
+  const realSlides = Array.from(slider.querySelectorAll('.project'));
   const prev = document.querySelector('.projects__arrow--prev');
   const next = document.querySelector('.projects__arrow--next');
-  const current = document.getElementById('projects-current');
+  const counter = document.getElementById('projects-current');
   const fill = document.querySelector('.projects__progress-fill');
+  if(realSlides.length < 2 || !prev || !next || !counter || !fill) return;
+
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const hoverCapable = window.matchMedia('(hover: hover)');
-  const PERIOD = 5200;
-  let inView = false, hovered = false, focused = false, manualUntil = 0;
-  if (!slides.length || !prev || !next || !current || !fill) return;
-  function closest(){
-    const center = slider.getBoundingClientRect().left + slider.clientWidth / 2;
-    let chosen = 0, distance = Infinity;
-    slides.forEach((slide, index) => {
-      const rect = slide.getBoundingClientRect();
-      const delta = Math.abs(rect.left + rect.width / 2 - center);
-      if (delta < distance){distance = delta;chosen = index;}
+  const PERIOD = 3400;
+  const count = realSlides.length;
+  let isVisible = true;
+  let settling = false;
+  let resetTimer = 0;
+  let manualPauseUntil = 0;
+
+  function cloneSlide(source){
+    const clone = source.cloneNode(true);
+    clone.classList.add('project--clone');
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('inert', '');
+    clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+    clone.removeAttribute('aria-labelledby');
+    clone.querySelectorAll('[aria-labelledby]').forEach(el => el.removeAttribute('aria-labelledby'));
+    clone.querySelectorAll('a,button,input,[tabindex]').forEach(el => el.setAttribute('tabindex', '-1'));
+    return clone;
+  }
+
+  slider.insertBefore(cloneSlide(realSlides[count - 1]), realSlides[0]);
+  slider.appendChild(cloneSlide(realSlides[0]));
+  const slides = Array.from(slider.querySelectorAll('.project'));
+  const centeredLeft = (slide) => slide.offsetLeft + slide.offsetWidth/2 - slider.clientWidth/2;
+  function closestSlot(){
+    const middle = slider.getBoundingClientRect().left + slider.clientWidth/2;
+    let best = 1;
+    let distance = Infinity;
+    slides.forEach((slide, i)=>{
+      const rect=slide.getBoundingClientRect();
+      const d=Math.abs(rect.left+rect.width/2-middle);
+      if(d < distance){best=i;distance=d;}
     });
-    return chosen;
+    return best;
   }
-  function update(){
-    const index = closest();
-    current.textContent = String(index + 1).padStart(2, '0');
-    fill.style.transform = 'scaleX(' + (index + 1) / slides.length + ')';
-    slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===index));
+  const trueIndex = slot => ((slot-1+count)%count);
+  function render(){
+    const slot=closestSlot(),i=trueIndex(slot);
+    counter.textContent=String(i+1).padStart(2,'0');
+    fill.style.transform='scaleX('+((i+1)/count)+')';
+    slides.forEach((slide,j)=>slide.classList.toggle('is-active',j===slot));
   }
-  function go(index, automatic){
-    const dest = (index + slides.length) % slides.length;
-    const slide = slides[dest];
-    if (!slide) return;
-    const position = slide.offsetLeft + slide.offsetWidth/2 - slider.clientWidth/2;
-    const wraps = (automatic && dest===0 && index>=slides.length);
-    slider.scrollTo({left:position,behavior:reduced.matches || wraps ? 'auto' : 'smooth'});
+
+  function teleport(slot){
+    const snap=slider.style.scrollSnapType;
+    const scrollBehavior=slider.style.scrollBehavior;
+    slider.style.scrollSnapType='none';
+    slider.style.scrollBehavior='auto';
+    slider.scrollLeft=centeredLeft(slides[slot]);
+    // Flush styles so restoration cannot animate the reset.
+    void slider.offsetWidth;
+    slider.style.scrollSnapType=snap;
+    slider.style.scrollBehavior=scrollBehavior;
+    render();
   }
-  const pause = () => { manualUntil=Date.now()+9500; };
+  function normalize(){
+    const slot=closestSlot();
+    if(slot===0) teleport(count);
+    else if(slot===count+1) teleport(1);
+    settling=false;
+    render();
+  }
+  function move(delta){
+    if(settling)return;
+    let target=closestSlot()+delta;
+    if(target < 0)target=count;
+    if(target > count+1)target=1;
+    settling=true;
+    window.clearTimeout(resetTimer);
+    slider.scrollTo({
+      left:centeredLeft(slides[target]),
+      behavior:reduced.matches?'instant':'smooth'
+    });
+    // 'scrollend' isn't available on all in-app browsers.
+    resetTimer=window.setTimeout(normalize,reduced.matches?70:850);
+  }
+
   prev.disabled=false;
   next.disabled=false;
-  prev.addEventListener('click',()=>{pause();go(closest()-1,false);});
-  next.addEventListener('click',()=>{pause();go(closest()+1,false);});
-  slider.addEventListener('scroll',update,{passive:true});
-  slider.addEventListener('wheel',pause,{passive:true});
-  slider.addEventListener('pointerdown',pause,{passive:true});
-  slider.addEventListener('touchstart',pause,{passive:true});
-  slider.addEventListener('focusin',()=>{focused=true;pause();});
-  slider.addEventListener('focusout',()=>{focused=slider.contains(document.activeElement);pause();});
-  if (hoverCapable.matches){
-    slider.addEventListener('mouseenter',()=>{hovered=true;});
-    slider.addEventListener('mouseleave',()=>{hovered=false;});
-  }
+  const manual=()=>{manualPauseUntil=Date.now()+1800;};
+  prev.addEventListener('click',()=>{manual();move(-1);});
+  next.addEventListener('click',()=>{manual();move(1);});
+  slider.addEventListener('wheel',manual,{passive:true});
+  slider.addEventListener('pointerdown',manual,{passive:true});
+  slider.addEventListener('touchstart',manual,{passive:true});
+  slider.addEventListener('scroll',render,{passive:true});
+  slider.addEventListener('scrollend',()=>{
+    if(settling)return;
+    const slot=closestSlot();
+    if(slot===0 || slot===count+1)normalize();
+  });
   slider.addEventListener('keydown',event=>{
     if(event.key!=='ArrowLeft' && event.key!=='ArrowRight')return;
-    event.preventDefault();pause();
-    go(closest()+(event.key==='ArrowRight'?1:-1),false);
+    event.preventDefault();manual();
+    move(event.key==='ArrowRight'?1:-1);
   });
-  window.addEventListener('resize',update,{passive:true});
+  window.addEventListener('resize',()=>{
+    const i=trueIndex(closestSlot());
+    teleport(i+1);
+  },{passive:true});
   if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>{inView=Boolean(entries[0]&&entries[0].isIntersecting);},{threshold:.15});
-    io.observe(slider);
-  }else{inView=true;}
+    isVisible=false;
+    new IntersectionObserver(entries=>{
+      isVisible=Boolean(entries[0] && entries[0].isIntersecting);
+    },{threshold:.12}).observe(slider);
+  }
+
   slider.classList.add('is-enhanced');
-  update();
-  if(!reduced.matches && slides.length>1){
+  teleport(1);
+  render();
+  // Always advance while the section is visible. Hover and focus do NOT halt autoplay.
+  if(!reduced.matches){
     const timer=window.setInterval(()=>{
-      if(!inView || document.hidden || hovered || focused || Date.now()<manualUntil)return;
-      go(closest()+1,true);
+      if(!isVisible || document.hidden || settling || Date.now()<manualPauseUntil)return;
+      move(1);
     },PERIOD);
     window.addEventListener('pagehide',()=>window.clearInterval(timer),{once:true});
   }
