@@ -8,6 +8,8 @@
       {selector:'#idea-bridge .idea-bridge__question',motion:'rise'},
       {selector:'#idea-bridge .idea-bridge__inner p',motion:'rise'},
       {selector:'#idea-bridge .idea-bridge__inner h2',motion:'pop'},
+      {selector:'#who-for .forwho__eyebrow,#who-for .forwho__heading h2',motion:'rise'},
+      {selector:'#who-for .forwho__row',motion:'alternate'},
       {selector:'#vibe-coding .definition__eyebrow,#vibe-coding h2,#vibe-coding .definition__answer',motion:'rise'},
       {selector:'#vibe-coding .definition__visual',motion:'zoom'},
       {selector:'#how-it-works .connector__eyebrow,#how-it-works .connector__title',motion:'soft'},
