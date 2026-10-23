@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-23T07:47:45.078Z",
+  "at": "2026-10-23T07:59:27.757Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 15830,
+        "height": 17087,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -41,6 +41,10 @@
         ],
         "anchors": [
           {
+            "hash": "#projects",
+            "target": true
+          },
+          {
             "hash": "#pricing",
             "target": true
           },
@@ -55,6 +59,10 @@
         ]
       },
       "clickResults": [
+        {
+          "hash": "#projects",
+          "clicked": true
+        },
         {
           "hash": "#pricing",
           "clicked": true
@@ -76,7 +84,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 18872,
+        "height": 20517,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -109,6 +117,10 @@
         ],
         "anchors": [
           {
+            "hash": "#projects",
+            "target": true
+          },
+          {
             "hash": "#pricing",
             "target": true
           },
@@ -123,6 +135,10 @@
         ]
       },
       "clickResults": [
+        {
+          "hash": "#projects",
+          "clicked": true
+        },
         {
           "hash": "#pricing",
           "clicked": true
