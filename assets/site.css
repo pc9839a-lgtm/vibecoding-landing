@@ -374,6 +374,10 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 
 
+.learning__legacy-anchor{position:absolute;left:0;top:0;width:1px;height:1px;pointer-events:none}
+.learning__summary{max-width:810px;margin:24px auto 0;color:#695c69;font-size:clamp(16px,1.8vw,20px);font-weight:560;line-height:1.6;letter-spacing:-.024em;text-align:center;text-wrap:balance}
+@media(max-width:700px){.learning__summary{max-width:370px;margin-top:18px;font-size:15px;line-height:1.6}}
+
 /* SECTION 5 — calm editorial curriculum */
 .learning{position:relative;overflow:hidden;background:#f7f5f5;color:#29242b;padding:104px 0 112px}
 .learning:before{display:none}
@@ -612,44 +616,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 @media(prefers-reduced-motion:reduce){
  .idea-bridge__bubble,.idea-bridge__character,.idea-bridge__inner h2{animation:none!important;opacity:1!important;translate:none!important}
-}
-
-/* COURSE GUIDE — only confirmed learning deliverables and support */
-.course-guide{position:relative;overflow:hidden;background:#f2edf0;color:#271924;padding:100px 0 109px}
-.course-guide__inner{width:min(1130px,calc(100% - 64px));margin:0 auto}
-.course-guide__header{text-align:center}
-.course-guide__eyebrow{display:block;color:#9c3679;font-size:clamp(16px,1.55vw,20px);font-weight:820;line-height:1.5}
-.course-guide__headline{margin:21px auto 0;font-size:clamp(43px,5.55vw,73px);line-height:1.2;font-weight:870;letter-spacing:-.062em;text-wrap:balance}
-.course-guide__headline em{font-style:normal;color:#ac2a7b}
-.course-guide__steps{margin-top:78px;border-top:2px solid #b59aab}
-.course-guide__step{display:grid;grid-template-columns:88px minmax(0,1fr);gap:30px;align-items:center;padding:48px 24px;border-bottom:1px solid #d9c6d4}
-.course-guide__step-no{align-self:center;color:#ad387f;font-size:clamp(31px,4vw,50px);font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.08em}
-.course-guide__step h3{margin:0;font-size:clamp(32px,4vw,53px);line-height:1.25;font-weight:870;letter-spacing:-.058em}
-.course-guide__step p{margin:13px 0 0;color:#716070;font-size:clamp(17px,2vw,25px);font-weight:640;line-height:1.5;letter-spacing:-.04em}
-.course-guide__resources{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin:63px auto 0;padding:21px 23px;background:#efd8e6;border:1px solid #dcb2d0;border-radius:10px;text-align:center}
-.course-guide__resources strong{font-size:clamp(19px,2.3vw,27px);font-weight:900;color:#a82a76;letter-spacing:-.04em}
-.course-guide__resources span{font-size:clamp(15px,1.8vw,20px);line-height:1.55;font-weight:640;color:#493647;letter-spacing:-.03em}
-@media(max-width:700px){
- .course-guide{padding:87px 0 107px}
- .course-guide__inner{width:calc(100% - 38px)}
- .course-guide__eyebrow{font-size:15px}
- .course-guide__headline{font-size:clamp(35px,8.7vw,50px);margin-top:18px;line-height:1.24}
- .course-guide__steps{margin-top:59px}
- .course-guide__step{grid-template-columns:47px minmax(0,1fr);gap:13px;padding:36px 2px}
- .course-guide__step-no{font-size:24px}
- .course-guide__step h3{font-size:clamp(30px,7.2vw,49px);line-height:1.27}
- .course-guide__step p{font-size:clamp(15px,3.8vw,19px);margin-top:10px}
- .course-guide__resources{margin-top:48px;padding:20px 17px;gap:8px;flex-direction:column}
- .course-guide__resources strong{font-size:22px}
- .course-guide__resources span{font-size:15px}
-}
-@media(max-width:370px){
- .course-guide__inner{width:calc(100% - 30px)}
- .course-guide__headline{font-size:clamp(32px,8.5vw,41px)}
- .course-guide__step{grid-template-columns:38px minmax(0,1fr);gap:10px}
- .course-guide__step-no{font-size:21px}
- .course-guide__step h3{font-size:30px}
- .course-guide__step p{font-size:14px}
 }
 
 /* ADSENSE REAL PROOF — oversized typography, 0-won hosting, approved site */
