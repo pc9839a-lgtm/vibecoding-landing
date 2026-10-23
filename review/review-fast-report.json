@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-22T15:36:05.884Z",
+  "at": "2026-10-23T01:42:17.692Z",
   "result": [
     {
       "width": 390,
@@ -12,6 +12,10 @@
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/pagero.jpg",
             "ok": true
           },
           {
@@ -28,6 +32,10 @@
           },
           {
             "src": "assets/cases/pagero.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/peopleent.jpg",
             "ok": true
           }
         ],
@@ -75,6 +83,10 @@
             "ok": true
           },
           {
+            "src": "assets/cases/pagero.jpg",
+            "ok": true
+          },
+          {
             "src": "assets/cases/peopleent.jpg",
             "ok": true
           },
@@ -88,6 +100,10 @@
           },
           {
             "src": "assets/cases/pagero.jpg",
+            "ok": true
+          },
+          {
+            "src": "assets/cases/peopleent.jpg",
             "ok": true
           }
         ],
