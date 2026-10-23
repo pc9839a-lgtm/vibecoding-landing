@@ -1,21 +1,20 @@
-/* Story motion — cinematic section reveals inspired by Cruiseplay, but matched to Vibe Coding's black/pink design.
-   Opt-in after JS initialization. Original animation transforms remain untouched. */
+/* Restrained, one-time scroll entrances. Avoid obscuring page content. */
 .vm-item{--vm-delay:0ms}
 @media(prefers-reduced-motion:no-preference){
  html.vm-ready .vm-item{
   transition-property:opacity,translate,scale,filter;
-  transition-duration:850ms,950ms,950ms,900ms;
+  transition-duration:540ms,600ms,600ms,540ms;
   transition-timing-function:cubic-bezier(.2,.75,.15,1);
   transition-delay:var(--vm-delay);
  }
  html.vm-ready .vm-item:not(.vm-in){opacity:0}
  html.vm-ready .vm-item.vm-in{opacity:1;translate:0 0;scale:1;filter:none}
- html.vm-ready .vm-item.vm-rise:not(.vm-in){translate:0 52px}
- html.vm-ready .vm-item.vm-left:not(.vm-in){translate:-76px 0}
- html.vm-ready .vm-item.vm-right:not(.vm-in){translate:76px 0}
- html.vm-ready .vm-item.vm-pop:not(.vm-in){translate:0 27px;scale:.91;filter:blur(5px)}
- html.vm-ready .vm-item.vm-soft:not(.vm-in){translate:0 18px;filter:blur(7px)}
- html.vm-ready .vm-item.vm-zoom:not(.vm-in){translate:0 35px;scale:.94}
+ html.vm-ready .vm-item.vm-rise:not(.vm-in){translate:0 22px}
+ html.vm-ready .vm-item.vm-left:not(.vm-in){translate:-25px 0}
+ html.vm-ready .vm-item.vm-right:not(.vm-in){translate:25px 0}
+ html.vm-ready .vm-item.vm-pop:not(.vm-in){translate:0 15px;scale:.975;filter:none}
+ html.vm-ready .vm-item.vm-soft:not(.vm-in){translate:0 12px;filter:none}
+ html.vm-ready .vm-item.vm-zoom:not(.vm-in){translate:0 16px;scale:.99}
  @keyframes vmApprovalLine{from{scale:0 1}to{scale:1 1}}
  #adsense-proof .adsense-proof__approved.vm-in:after{
   content:"";position:absolute;left:0;right:0;top:0;height:4px;pointer-events:none;
@@ -24,38 +23,15 @@
  }
 }
 @media(max-width:700px) and (prefers-reduced-motion:no-preference){
- html.vm-ready .vm-item.vm-left:not(.vm-in){translate:-29px 0}
- html.vm-ready .vm-item.vm-right:not(.vm-in){translate:29px 0}
- html.vm-ready .vm-item.vm-rise:not(.vm-in){translate:0 36px}
- html.vm-ready .vm-item.vm-pop:not(.vm-in){scale:.94;translate:0 18px;filter:blur(3px)}
- html.vm-ready .vm-item.vm-soft:not(.vm-in){filter:blur(3px)}
- html.vm-ready .vm-item.vm-zoom:not(.vm-in){scale:.97;translate:0 24px}
- html.vm-ready .vm-item{transition-duration:680ms,760ms,760ms,680ms}
+ html.vm-ready .vm-item.vm-left:not(.vm-in){translate:-16px 0}
+ html.vm-ready .vm-item.vm-right:not(.vm-in){translate:16px 0}
+ html.vm-ready .vm-item.vm-rise:not(.vm-in){translate:0 18px}
+ html.vm-ready .vm-item.vm-pop:not(.vm-in){scale:.985;translate:0 12px;filter:none}
+ html.vm-ready .vm-item.vm-soft:not(.vm-in){filter:none}
+ html.vm-ready .vm-item.vm-zoom:not(.vm-in){scale:.99;translate:0 14px}
+ html.vm-ready .vm-item{transition-duration:480ms,560ms,560ms,480ms}
 }
 @media(prefers-reduced-motion:reduce){
  .vm-item{transition:none!important;translate:none!important;scale:none!important;filter:none!important;opacity:1!important}
  #adsense-proof .adsense-proof__approved:after{animation:none!important}
-}
-
-
-/* High-impact moments on visual examples; trigger once on scroll, never obscure content */
-@media(prefers-reduced-motion:no-preference){
- @keyframes vmNotificationFlash{
-   0%{box-shadow:0 0 0 0 rgba(212,245,39,0)}
-   36%{box-shadow:0 0 0 9px rgba(212,245,39,.16)}
-   100%{box-shadow:0 0 0 0 rgba(212,245,39,0)}
- }
- @keyframes vmProofGlow{
-   0%{filter:drop-shadow(0 0 0 rgba(244,160,207,0))}
-   50%{filter:drop-shadow(0 0 24px rgba(244,160,207,.4))}
-   100%{filter:drop-shadow(0 0 0 rgba(244,160,207,0))}
- }
- @keyframes vmPricePulse{
-   0%{text-shadow:0 0 0 rgba(182,36,123,0)}
-   45%{text-shadow:0 0 27px rgba(182,36,123,.32)}
-   100%{text-shadow:0 0 0 rgba(182,36,123,0)}
- }
- #calltag .calltag__notification.vm-in{animation:vmNotificationFlash 1.1s ease .45s both}
- #adsense-proof .adsense-proof__approved-mark.vm-in{animation:vmProofGlow 1.6s ease .15s both}
- #pricing .tuition__price.vm-in{animation:vmPricePulse 1.2s ease .24s both}
 }
