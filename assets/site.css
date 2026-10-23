@@ -390,6 +390,36 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .learning__summary{max-width:810px;margin:24px auto 0;color:#695c69;font-size:clamp(16px,1.8vw,20px);font-weight:560;line-height:1.6;letter-spacing:-.024em;text-align:center;text-wrap:balance}
 @media(max-width:700px){.learning__summary{max-width:370px;margin-top:18px;font-size:15px;line-height:1.6}}
 
+
+/* COURSE CONTENT INDEX — a compact, functional alternative to decorative step cards */
+.learning__path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:42px auto 48px;border-top:1px solid #d8cbd5;border-bottom:1px solid #d8cbd5}
+.learning__path-link{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;min-height:122px;min-width:0;padding:22px 26px;color:#322a34;text-align:left;text-decoration:none;transition:background-color .2s ease,color .2s ease}
+.learning__path-link + .learning__path-link{border-left:1px solid #d8cbd5}
+.learning__path-meta{font:740 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.025em;color:#936b83;white-space:nowrap}
+.learning__path-link strong{font-size:clamp(18px,2.1vw,25px);line-height:1.36;font-weight:800;letter-spacing:-.052em}
+.learning__path-arrow{position:absolute;right:20px;bottom:20px;color:#b7769a;font-size:20px;line-height:1;transition:transform .2s ease}
+.learning__path-link:hover{background:#f0e8ef;color:#8a2966}
+.learning__path-link:hover .learning__path-arrow{transform:translate(3px,3px)}
+.learning__path-link:focus-visible{outline:3px solid #a12a78;outline-offset:-3px;z-index:1}
+#curriculum .learning__chapter-head h3{scroll-margin-top:32px}
+@media(max-width:700px){
+ .learning__path{grid-template-columns:repeat(2,minmax(0,1fr));margin:30px auto 37px}
+ .learning__path-link{min-height:96px;gap:7px;padding:17px 16px}
+ .learning__path-link:nth-child(3){border-left:0}
+ .learning__path-link:nth-child(n+3){border-top:1px solid #d8cbd5}
+ .learning__path-meta{font-size:11px}
+ .learning__path-link strong{font-size:clamp(17px,4.7vw,21px)}
+ .learning__path-arrow{right:12px;bottom:14px;font-size:17px}
+}
+@media(max-width:370px){
+ .learning__path-link{padding:15px 12px}
+ .learning__path-link strong{font-size:17px}
+ .learning__path-arrow{right:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ .learning__path-link,.learning__path-arrow{transition:none}
+}
+
 /* SECTION 5 — calm editorial curriculum */
 .learning{position:relative;overflow:hidden;background:#f7f5f5;color:#29242b;padding:104px 0 112px}
 .learning:before{display:none}
