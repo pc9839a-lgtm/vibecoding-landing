@@ -228,8 +228,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .support__kicker{display:block;color:#f1a9d3;font-size:clamp(16px,1.5vw,20px);font-weight:800;line-height:1.5;letter-spacing:.045em}
 .support__heading{position:relative;margin:0 auto}
 .support__lead{margin:44px 0 5px;font-size:clamp(34px,5.8vw,79px);line-height:1.2;font-weight:910;letter-spacing:-.077em}
-.support__heading h2{margin:0 auto;font-size:clamp(180px,31vw,390px);font-weight:950;line-height:.95;letter-spacing:-.14em;color:#f5a6d2;white-space:nowrap;font-variant-numeric:tabular-nums}
-.support__headline{margin:4px 0 0;font-size:clamp(53px,8.6vw,116px);line-height:1.13;letter-spacing:-.085em;font-weight:950}
+
+.support__headline{display:block;max-width:100%;margin:14px auto 0;color:#f5a6d2;text-align:center;font-size:clamp(54px,8.6vw,116px);line-height:1.17;letter-spacing:-.078em;font-weight:950;text-wrap:balance}
 
 .support__work{margin:82px auto 0;padding:55px 0 0;border-top:1px solid rgba(250,207,233,.29)}
 .support__work h3{margin:0;font-size:clamp(41px,5.3vw,72px);line-height:1.28;letter-spacing:-.077em;font-weight:920}
@@ -248,7 +248,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .support__link:focus-visible{outline:3px solid #fff;outline-offset:4px}
 .support__link span{font-size:27px}
 @media(max-width:900px){
- .support__heading h2{font-size:clamp(160px,31vw,275px)}
+
  .support__work{margin-top:88px;padding-top:62px}
  .support__resources-grid{gap:11px 22px}
  .support__resources-grid span+span:before{margin-right:22px}
@@ -258,7 +258,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .support__inner{width:calc(100% - 36px)}
  .support__kicker{font-size:15px}
  .support__lead{margin:39px 0 10px;font-size:clamp(33px,7.3vw,49px)}
- .support__heading h2{font-size:clamp(142px,33vw,245px);line-height:1;letter-spacing:-.14em}
+
  .support__headline{font-size:clamp(49px,10.4vw,74px)}
 
  .support__work{margin-top:59px;padding-top:43px}
@@ -274,7 +274,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 @media(max-width:390px){
  .support__inner{width:calc(100% - 28px)}
- .support__heading h2{font-size:clamp(130px,32vw,160px)}
+
  .support__headline{font-size:44px}
  .support__items span{font-size:15px}
 }
