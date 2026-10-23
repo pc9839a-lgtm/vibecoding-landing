@@ -670,7 +670,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .course-guide__headline em{font-style:normal;color:#ac2a7b}
 .course-guide__steps{margin-top:78px;border-top:2px solid #b59aab}
 .course-guide__step{display:grid;grid-template-columns:88px minmax(0,1fr);gap:30px;align-items:center;padding:48px 24px;border-bottom:1px solid #d9c6d4}
-.course-guide__step-no{align-self:center;color:#ad387f;font:900 clamp(31px,4vw,50px)/1.1 inherit;font-variant-numeric:tabular-nums;letter-spacing:-.08em}
+.course-guide__step-no{align-self:center;color:#ad387f;font-size:clamp(31px,4vw,50px);font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.08em}
 .course-guide__step h3{margin:0;font-size:clamp(38px,5.3vw,68px);line-height:1.23;font-weight:930;letter-spacing:-.075em}
 .course-guide__step p{margin:13px 0 0;color:#716070;font-size:clamp(17px,2vw,25px);font-weight:640;line-height:1.5;letter-spacing:-.04em}
 .course-guide__resources{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin:63px auto 0;padding:21px 23px;background:#efd8e6;border:1px solid #dcb2d0;border-radius:10px;text-align:center}
