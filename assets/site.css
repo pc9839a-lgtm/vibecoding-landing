@@ -917,19 +917,74 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 @media(prefers-reduced-motion:reduce){.preorder-bar__action{transition:none}}
 
 
-/* Projects carousel: clean centered presentation + active-slide emphasis */
-.project__head{flex-direction:column;align-items:center;justify-content:center;gap:13px;text-align:center}
+/* Projects — deterministic JS track, centered cards and mobile-first viewport */
+.project__head{flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center}
 .project__info{text-align:center}
 .project__open{align-self:center}
-.projects__slider.is-enhanced .project{opacity:.82;scale:.978;transition:opacity .65s ease,scale .65s cubic-bezier(.2,.75,.15,1)}
+.projects__slider.is-enhanced{
+ --case-width:min(900px,78vw);
+ --case-gap:24px;
+ display:block;
+ overflow:hidden;
+ overflow-x:clip;
+ overflow-y:clip;
+ padding:9px 0 49px;
+ scroll-snap-type:none;
+ scroll-padding:0;
+ -webkit-overflow-scrolling:auto;
+ touch-action:pan-y;
+}
+.projects__slider.is-enhanced .projects__track{
+ display:flex;
+ position:relative;
+ align-items:stretch;
+ gap:var(--case-gap);
+ box-sizing:border-box;
+ width:100%;
+ padding-inline:calc((100% - var(--case-width))/2);
+ transition:transform .72s cubic-bezier(.2,.79,.17,1);
+ will-change:transform;
+}
+.projects__slider.is-enhanced .project{
+ position:relative;
+ flex:0 0 var(--case-width);
+ width:var(--case-width);
+ min-width:0;
+ scroll-snap-align:none;
+ scroll-snap-stop:normal;
+ opacity:.63;
+ scale:.97;
+ transition:opacity .55s ease,scale .72s cubic-bezier(.2,.79,.17,1);
+}
 .projects__slider.is-enhanced .project.is-active{opacity:1;scale:1}
-.projects__slider.is-enhanced .project.is-active .project__screenshot{border-color:#f3a3d1;box-shadow:0 7px 0 #39243b,0 14px 0 #16101c,0 28px 65px rgba(0,0,0,.55),0 0 0 2px rgba(247,160,209,.16)}
-@media(max-width:680px){
- .project__head{align-items:center;justify-content:center;gap:10px;text-align:center}
- .project__info{text-align:center}
- .project__open{align-self:center}
- .projects__slider.is-enhanced .project{opacity:.78;scale:.99}
+.projects__slider.is-enhanced .project__head{min-height:168px;gap:10px}
+.projects__slider.is-enhanced .project__image{aspect-ratio:16/10;overflow:hidden}
+.projects__slider.is-enhanced .project__image picture{display:block;width:100%;height:100%}
+.projects__slider.is-enhanced .project__image img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.projects__slider.is-enhanced .project.is-active .project__screenshot{
+ border-color:#f3a3d1;
+ box-shadow:0 7px 0 #39243b,0 14px 0 #16101c,0 28px 65px rgba(0,0,0,.55),0 0 0 2px rgba(247,160,209,.16);
+}
+.projects__slider.is-enhanced .project__url{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:700px){
+ .projects__slider.is-enhanced{--case-width:calc(100vw - 38px);--case-gap:12px;padding:9px 0 30px}
+ .projects__slider.is-enhanced .project{opacity:.45;scale:.975}
+ .projects__slider.is-enhanced .project.is-active{opacity:1;scale:1}
+ .projects__slider.is-enhanced .project__head{min-height:150px;gap:8px;margin-bottom:15px}
+ .projects__slider.is-enhanced .project__name{font-size:clamp(28px,7.7vw,40px);line-height:1.14;overflow-wrap:anywhere;word-break:normal}
+ .projects__slider.is-enhanced .project__category{font-size:13px;line-height:1.4}
+ .projects__slider.is-enhanced .project__open{min-height:36px;padding:8px 17px;font-size:12px}
+ .projects__slider.is-enhanced .project__scene{padding:3px 2px 11px}
+ .projects__slider.is-enhanced .project__image{aspect-ratio:4/5}
+ .projects__slider.is-enhanced .project__toolbar{gap:8px}
+ .projects__slider.is-enhanced .project__viewlabel{font-size:8px;white-space:nowrap}
+}
+@media(max-width:380px){
+ .projects__slider.is-enhanced{--case-width:calc(100vw - 26px);--case-gap:10px}
+ .projects__slider.is-enhanced .project__head{min-height:143px}
+ .projects__slider.is-enhanced .project__name{font-size:28px}
 }
 @media(prefers-reduced-motion:reduce){
+ .projects__slider.is-enhanced .projects__track{transition:none}
  .projects__slider.is-enhanced .project{opacity:1;scale:1;transition:none}
 }
