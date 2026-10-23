@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-23T08:59:11.231Z",
+  "at": "2026-10-23T09:21:59.839Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 15951,
+        "height": 15338,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -41,6 +41,22 @@
         ],
         "anchors": [
           {
+            "hash": "#learning-part-01",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-02",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-03",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-04",
+            "target": true
+          },
+          {
             "hash": "#pricing",
             "target": true
           },
@@ -51,10 +67,38 @@
           {
             "hash": "#pricing",
             "target": true
+          },
+          {
+            "hash": "#who-for",
+            "target": true
+          },
+          {
+            "hash": "#curriculum",
+            "target": true
+          },
+          {
+            "hash": "#coaching",
+            "target": true
           }
         ]
       },
       "clickResults": [
+        {
+          "hash": "#learning-part-01",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-02",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-03",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-04",
+          "clicked": true
+        },
         {
           "hash": "#pricing",
           "clicked": true
@@ -65,6 +109,18 @@
         },
         {
           "hash": "#pricing",
+          "clicked": true
+        },
+        {
+          "hash": "#who-for",
+          "clicked": true
+        },
+        {
+          "hash": "#curriculum",
+          "clicked": true
+        },
+        {
+          "hash": "#coaching",
           "clicked": true
         }
       ],
@@ -76,7 +132,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 18479,
+        "height": 17343,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -109,6 +165,22 @@
         ],
         "anchors": [
           {
+            "hash": "#learning-part-01",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-02",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-03",
+            "target": true
+          },
+          {
+            "hash": "#learning-part-04",
+            "target": true
+          },
+          {
             "hash": "#pricing",
             "target": true
           },
@@ -119,10 +191,38 @@
           {
             "hash": "#pricing",
             "target": true
+          },
+          {
+            "hash": "#who-for",
+            "target": true
+          },
+          {
+            "hash": "#curriculum",
+            "target": true
+          },
+          {
+            "hash": "#coaching",
+            "target": true
           }
         ]
       },
       "clickResults": [
+        {
+          "hash": "#learning-part-01",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-02",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-03",
+          "clicked": true
+        },
+        {
+          "hash": "#learning-part-04",
+          "clicked": true
+        },
         {
           "hash": "#pricing",
           "clicked": true
@@ -133,6 +233,18 @@
         },
         {
           "hash": "#pricing",
+          "clicked": true
+        },
+        {
+          "hash": "#who-for",
+          "clicked": true
+        },
+        {
+          "hash": "#curriculum",
+          "clicked": true
+        },
+        {
+          "hash": "#coaching",
           "clicked": true
         }
       ],
