@@ -36,7 +36,6 @@
       {selector:'#curriculum .learning__output',motion:'soft'},
       {selector:'#coaching .support__kicker,#coaching .support__lead',motion:'rise'},
       {selector:'#coaching .support__heading h2',motion:'pop'},
-      {selector:'#coaching .support__headline,#coaching .support__caption',motion:'rise'},
       {selector:'#coaching .support__work h3,#coaching .support__items,#coaching .support__resources',motion:'rise'},
       {selector:'#coaching .support__items span',motion:'pop'},
       {selector:'#pricing .tuition__preorder,#pricing #price-title,#pricing .tuition__old',motion:'rise'},
