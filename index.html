@@ -719,7 +719,7 @@
       if (bounds.top > window.innerHeight * .43 || bounds.bottom < 0) {
         resultPane.scrollIntoView({
           behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-          block: 'center'
+          block: 'start'
         });
       }
     }
