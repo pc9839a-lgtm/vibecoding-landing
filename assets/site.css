@@ -869,7 +869,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .tuition__old s{text-decoration:line-through}
 .tuition__price{margin-top:13px}
 .tuition__payment{display:inline-block;margin:21px auto 0;padding:10px 20px;border-radius:7px;border:1px solid rgba(130,48,99,.3);color:#672450;font-size:clamp(16px,1.8vw,22px);font-weight:780;line-height:1.5}
-body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 .preorder-bar{position:fixed;z-index:1000;isolation:isolate;left:0;right:0;bottom:0;background:#100b15;color:#fff;border-top:2px solid #f68bc9;box-shadow:0 -14px 40px rgba(16,5,15,.39);padding-bottom:env(safe-area-inset-bottom,0px)}
 .preorder-bar__inner{position:relative;display:flex;align-items:center;justify-content:center;gap:28px;width:min(800px,calc(100% - 48px));min-height:88px;margin:0 auto}
 .preorder-bar__offer{display:flex;align-items:center;gap:20px;min-width:0}
@@ -883,7 +883,7 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 /* Repeating preorder highlight — all effects are optical, no layout jumping */
 .preorder-bar::before{content:"";position:absolute;left:0;right:0;top:-2px;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#f598d0,#fff0fa,#f598d0,transparent);background-size:220% 100%}
 .preorder-bar__flag::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#ffacd8;box-shadow:0 0 0 3px rgba(255,172,216,.15)}
-.preorder-bar__action::after{content:"";position:absolute;z-index:-1;inset:0 auto 0 -70%;width:36%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.48),transparent);transform:skewX(-23deg);pointer-events:none}
+.preorder-bar__action::after{content:"";position:absolute;z-index:0;inset:0 auto 0 -70%;width:36%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-23deg);pointer-events:none}
 @keyframes vcStickyLine{0%,14%{background-position:180% 50%}72%,100%{background-position:-70% 50%}}
 @keyframes vcStickyPrice{0%,68%,100%{text-shadow:0 0 0 rgba(255,161,215,0)}75%,88%{text-shadow:0 0 23px rgba(255,161,215,.62)}}
 @keyframes vcStickyButton{0%,66%,100%{box-shadow:0 4px 20px rgba(242,126,192,.22);background-position:0% 50%}75%,89%{box-shadow:0 0 0 4px rgba(246,149,205,.27),0 0 32px rgba(244,119,189,.54);background-position:100% 50%}}
@@ -971,18 +971,19 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
  .projects__slider.is-enhanced .project{opacity:.45;scale:.975}
  .projects__slider.is-enhanced .project.is-active{opacity:1;scale:1}
  .projects__slider.is-enhanced .project__head{min-height:150px;gap:8px;margin-bottom:15px}
- .projects__slider.is-enhanced .project__name{font-size:clamp(28px,7.7vw,40px);line-height:1.14;overflow-wrap:anywhere;word-break:normal}
+ .projects__slider.is-enhanced .project__name{font-size:clamp(27px,7.4vw,40px);line-height:1.2;overflow-wrap:anywhere;word-break:normal}
  .projects__slider.is-enhanced .project__category{font-size:13px;line-height:1.4}
  .projects__slider.is-enhanced .project__open{min-height:36px;padding:8px 17px;font-size:12px}
  .projects__slider.is-enhanced .project__scene{padding:3px 2px 11px}
  .projects__slider.is-enhanced .project__image{aspect-ratio:4/5}
  .projects__slider.is-enhanced .project__toolbar{gap:8px}
- .projects__slider.is-enhanced .project__viewlabel{font-size:8px;white-space:nowrap}
+ .projects__slider.is-enhanced .project__viewlabel{font-size:10px;white-space:nowrap}
 }
 @media(max-width:380px){
  .projects__slider.is-enhanced{--case-width:calc(100vw - 26px);--case-gap:10px}
  .projects__slider.is-enhanced .project__head{min-height:143px}
- .projects__slider.is-enhanced .project__name{font-size:28px}
+ .projects__slider.is-enhanced .project__name{font-size:27px}
+ .projects__slider.is-enhanced .project__viewlabel{display:none}
 }
 @media(prefers-reduced-motion:reduce){
  .projects__slider.is-enhanced .projects__track{transition:none}
