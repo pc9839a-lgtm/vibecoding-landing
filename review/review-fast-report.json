@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-23T14:17:29.683Z",
+  "at": "2026-10-23T14:33:49.772Z",
   "result": [
     {
       "width": 390,
@@ -8,8 +8,12 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 14104,
+        "height": 14837,
         "imgs": [
+          {
+            "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
           {
             "src": "assets/cases/pagero.jpg",
             "ok": true
@@ -128,8 +132,12 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 15092,
+        "height": 15912,
         "imgs": [
+          {
+            "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
           {
             "src": "assets/cases/pagero.jpg",
             "ok": true
