@@ -622,6 +622,83 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .idea-bridge__bubble,.idea-bridge__character,.idea-bridge__inner h2{animation:none!important;opacity:1!important;translate:none!important}
 }
 
+/* INSTRUCTOR — source-grounded creator credibility, without invented credentials */
+.mentor-intro{position:relative;isolation:isolate;overflow:hidden;padding:126px 0 139px;background:#170f1a;color:#fff}
+.mentor-intro::before{content:"";position:absolute;top:-200px;left:50%;z-index:-1;width:min(1300px,125vw);height:800px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(184,73,148,.16),transparent 69%);pointer-events:none}
+.mentor-intro__inner{width:min(1140px,calc(100% - 64px));margin:0 auto}
+.mentor-intro__header{text-align:center}
+.mentor-intro__kicker{display:block;color:#f3a4d1;font-size:clamp(16px,1.55vw,20px);line-height:1.4;font-weight:820}
+.mentor-intro__headline{margin:26px auto 0;font-size:clamp(45px,5.6vw,76px);line-height:1.25;font-weight:950;letter-spacing:-.074em;text-wrap:balance}
+.mentor-intro__headline em{font-style:normal;color:#f3a3d0}
+.mentor-intro__proof{display:grid;grid-template-columns:minmax(0,.48fr) minmax(0,.52fr);align-items:center;gap:40px;margin:88px auto 0;padding:43px 0 0;border-top:1px solid rgba(248,185,224,.28)}
+.mentor-intro__year{display:flex;align-items:baseline;justify-content:center;gap:10px;color:#f3a3d0;white-space:nowrap}
+.mentor-intro__year strong{font-size:clamp(160px,22vw,300px);line-height:.9;font-weight:960;letter-spacing:-.11em;font-variant-numeric:tabular-nums}
+.mentor-intro__year span{font-size:clamp(44px,6vw,79px);font-weight:900;letter-spacing:-.07em}
+.mentor-intro__work{display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.mentor-intro__work>strong{font-size:clamp(32px,4.2vw,57px);line-height:1.28;font-weight:910;letter-spacing:-.06em}
+.mentor-intro__work p{margin:21px 0 0;color:#ddcada;font-size:clamp(17px,1.9vw,24px);line-height:1.55;font-weight:610;letter-spacing:-.035em}
+.mentor-intro__work a{display:inline-flex;align-items:center;justify-content:center;gap:19px;margin:36px 0 0;padding:17px 24px;border:1px solid rgba(245,167,214,.58);border-radius:8px;color:#f8c6e3;background:rgba(240,152,210,.1);text-decoration:none;font-size:clamp(17px,1.7vw,21px);font-weight:800;line-height:1.4;transition:background .2s ease,border-color .2s ease}
+.mentor-intro__work a:hover{background:rgba(240,152,210,.2);border-color:#f3a3d0}
+.mentor-intro__work a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:700px){
+ .mentor-intro{padding:89px 0 112px}
+ .mentor-intro__inner{width:calc(100% - 38px)}
+ .mentor-intro__kicker{font-size:15px}
+ .mentor-intro__headline{margin-top:21px;font-size:clamp(34px,8.3vw,56px);line-height:1.3}
+ .mentor-intro__proof{grid-template-columns:1fr;gap:24px;margin-top:60px;padding-top:32px}
+ .mentor-intro__year strong{font-size:clamp(140px,33vw,240px)}
+ .mentor-intro__year span{font-size:clamp(43px,10vw,60px)}
+ .mentor-intro__work{align-items:center;text-align:center}
+ .mentor-intro__work>strong{font-size:clamp(30px,7.8vw,46px)}
+ .mentor-intro__work p{margin-top:14px;font-size:clamp(15px,4vw,18px)}
+ .mentor-intro__work a{margin-top:28px;padding:15px 19px;font-size:16px}
+}
+@media(max-width:370px){
+ .mentor-intro__inner{width:calc(100% - 28px)}
+ .mentor-intro__headline{font-size:clamp(32px,8.7vw,39px)}
+ .mentor-intro__year strong{font-size:137px}
+ .mentor-intro__work p{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.mentor-intro__work a{transition:none}}
+
+/* COURSE GUIDE — only confirmed learning deliverables and support */
+.course-guide{position:relative;overflow:hidden;background:#f8eef5;color:#271924;padding:111px 0 127px}
+.course-guide__inner{width:min(1130px,calc(100% - 64px));margin:0 auto}
+.course-guide__header{text-align:center}
+.course-guide__eyebrow{display:block;color:#9c3679;font-size:clamp(16px,1.55vw,20px);font-weight:820;line-height:1.5}
+.course-guide__headline{margin:24px auto 0;font-size:clamp(48px,6.6vw,89px);line-height:1.2;font-weight:950;letter-spacing:-.08em;text-wrap:balance}
+.course-guide__headline em{font-style:normal;color:#ac2a7b}
+.course-guide__steps{margin-top:78px;border-top:2px solid #b59aab}
+.course-guide__step{display:grid;grid-template-columns:88px minmax(0,1fr);gap:30px;align-items:center;padding:48px 24px;border-bottom:1px solid #d9c6d4}
+.course-guide__step-no{align-self:center;color:#ad387f;font:900 clamp(31px,4vw,50px)/1.1 inherit;font-variant-numeric:tabular-nums;letter-spacing:-.08em}
+.course-guide__step h3{margin:0;font-size:clamp(38px,5.3vw,68px);line-height:1.23;font-weight:930;letter-spacing:-.075em}
+.course-guide__step p{margin:13px 0 0;color:#716070;font-size:clamp(17px,2vw,25px);font-weight:640;line-height:1.5;letter-spacing:-.04em}
+.course-guide__resources{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin:63px auto 0;padding:21px 23px;background:#efd8e6;border:1px solid #dcb2d0;border-radius:10px;text-align:center}
+.course-guide__resources strong{font-size:clamp(19px,2.3vw,27px);font-weight:900;color:#a82a76;letter-spacing:-.04em}
+.course-guide__resources span{font-size:clamp(15px,1.8vw,20px);line-height:1.55;font-weight:640;color:#493647;letter-spacing:-.03em}
+@media(max-width:700px){
+ .course-guide{padding:87px 0 107px}
+ .course-guide__inner{width:calc(100% - 38px)}
+ .course-guide__eyebrow{font-size:15px}
+ .course-guide__headline{font-size:clamp(38px,9.4vw,64px);margin-top:18px;line-height:1.22}
+ .course-guide__steps{margin-top:59px}
+ .course-guide__step{grid-template-columns:47px minmax(0,1fr);gap:13px;padding:36px 2px}
+ .course-guide__step-no{font-size:24px}
+ .course-guide__step h3{font-size:clamp(30px,7.2vw,49px);line-height:1.27}
+ .course-guide__step p{font-size:clamp(15px,3.8vw,19px);margin-top:10px}
+ .course-guide__resources{margin-top:48px;padding:20px 17px;gap:8px;flex-direction:column}
+ .course-guide__resources strong{font-size:22px}
+ .course-guide__resources span{font-size:15px}
+}
+@media(max-width:370px){
+ .course-guide__inner{width:calc(100% - 30px)}
+ .course-guide__headline{font-size:clamp(36px,9vw,43px)}
+ .course-guide__step{grid-template-columns:38px minmax(0,1fr);gap:10px}
+ .course-guide__step-no{font-size:21px}
+ .course-guide__step h3{font-size:30px}
+ .course-guide__step p{font-size:14px}
+}
+
 /* ADSENSE REAL PROOF — oversized typography, 0-won hosting, approved site */
 .adsense-proof{position:relative;overflow:hidden;background:#f2b6d9;color:#23151f;padding:100px 0 109px}
 .adsense-proof__inner{width:min(1240px,calc(100% - 64px));margin:0 auto}
