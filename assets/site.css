@@ -815,72 +815,75 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  #trydemo-count.is-bumped,.trydemo__resultside.is-received{animation:none!important}
 }
 
-/* CALLTAG COURSE BONUS — unified dark background, pink accents */
-.calltag{background:#111016;color:#fff;text-align:center;overflow:hidden}
-.calltag__container{width:min(1130px,calc(100% - 56px));margin:0 auto}
-.calltag__kicker{margin:0 0 24px;font-size:clamp(15px,1.45vw,19px);font-weight:830;line-height:1.4;letter-spacing:-.018em}
-.calltag__intro{padding:88px 0 23px}
-.calltag__intro .calltag__kicker{color:#bfb2bd}
-.calltag__intro h2{margin:0;font-size:clamp(44px,5.7vw,78px);font-weight:870;line-height:1.21;letter-spacing:-.064em}
-.calltag__intro h2 em{font-style:normal;color:#f7f5f7}
-
-.calltag__down{display:inline-flex;align-items:center;justify-content:center;margin-top:35px;width:58px;height:58px;border:2px solid #b26899;border-radius:50%;font-size:32px;font-weight:600;color:#f0acd3}
-.calltag__alert{padding:29px 0 46px}
-.calltag__alert .calltag__kicker{color:#bfb2bd}
-.calltag__alert h3{margin:0;font-size:clamp(39px,5.15vw,70px);font-weight:870;line-height:1.22;letter-spacing:-.061em}
-.calltag__alert h3 em{font-style:normal;color:#f7f5f7}
-.calltag__phone-wrap{display:flex;justify-content:center;margin:58px auto 0}
-.calltag__phone{width:min(100%,480px);padding:32px;border:10px solid #59435b;border-radius:49px;background:#090909;color:#fff;text-align:left;box-shadow:16px 20px 0 rgba(239,130,194,.15),0 38px 90px rgba(248,137,200,.12)}
-.calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 4px 29px;border-bottom:1px solid #353535;color:#fff;font-size:30px;font-weight:900;line-height:1.2}
-.calltag__phone-dot{width:11px;height:11px;flex:none;border-radius:50%;background:#bdbdbd}
-.calltag__phone-label{margin:31px 0 17px;color:#c5c5c5;font-size:18px;font-weight:750;line-height:1.45}
-.calltag__notification{padding:30px 25px 27px;border:1px solid #4b4b4b;border-radius:17px;background:#202020}
-.calltag__notification-type{display:flex;align-items:center;gap:12px;color:#d4f527;font-size:17px;font-weight:800;line-height:1.4}
-.calltag__notification-type i{width:11px;height:11px;flex:none;border-radius:50%;background:#d4f527}
-.calltag__notification strong{display:block;margin:22px 0 0;color:#fff;font-size:34px;font-weight:900;line-height:1.3;letter-spacing:-.04em;overflow-wrap:anywhere}
-.calltag__notification p{margin:13px 0 0;color:#e5e5e5;font-size:17px;font-weight:610;line-height:1.6;overflow-wrap:anywhere}
-.calltag__notification-check{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:25px;padding-top:19px;border-top:1px solid #414141;color:#e8e8e8;font-size:17px;font-weight:790}
-.calltag__phone-footer{display:block;margin:28px 0 0;text-align:center;color:#929292;font-size:13px;font-weight:600;line-height:1.4}
-.calltag__offer{padding:47px 0 87px}
-.calltag__offer .calltag__kicker{color:#edb5d7;font-size:clamp(19px,2vw,26px)}
-.calltag__offer h3{margin:0;font-size:clamp(83px,11vw,156px);font-weight:950;line-height:1.13;letter-spacing:-.095em}
-.calltag__offer h3 em{font-style:normal;color:#f4a0ce}
-.calltag__link{display:inline-flex;align-items:center;justify-content:center;gap:55px;min-height:76px;margin-top:57px;padding:20px 37px;border-radius:8px;background:#f0a0cf;color:#241523;text-decoration:none;font-size:clamp(20px,2vw,24px);font-weight:850;line-height:1.35;transition:background-color .18s ease,transform .18s ease}
-.calltag__link span{font-size:29px;line-height:1}
-.calltag__link:hover{background:#ffd2eb;transform:translateY(-2px)}
-.calltag__link:focus-visible{outline:3px solid #f4a0ce;outline-offset:4px}
-@media(max-width:720px){
-.calltag__container{width:calc(100% - 36px)}
-.calltag__intro{padding:72px 0 24px}
-.calltag__kicker{font-size:14px;margin-bottom:19px}
-.calltag__intro h2{font-size:clamp(34px,8.05vw,49px);letter-spacing:-.061em}
-
-.calltag__down{width:50px;height:50px;margin-top:37px;font-size:28px}
-.calltag__alert{padding:32px 0 52px}
-.calltag__alert h3{font-size:clamp(32px,7.65vw,47px);line-height:1.25}
-.calltag__phone-wrap{margin-top:56px}
-.calltag__phone{width:min(100%,420px);padding:23px;border-width:8px;border-radius:39px}
-.calltag__phone-top{font-size:25px;padding-bottom:22px}
-.calltag__phone-label{font-size:16px;margin-top:23px}
-.calltag__notification{padding:22px 19px}
-.calltag__notification-type{font-size:15px}
-.calltag__notification strong{font-size:28px}
-.calltag__notification p{font-size:15px}
-.calltag__notification-check{font-size:15px}
-.calltag__offer{padding:49px 0 88px}
-.calltag__offer h3{font-size:clamp(67px,13.4vw,102px)}
-.calltag__offer .calltag__kicker{font-size:17px}
-.calltag__link{width:min(100%,370px);gap:20px;min-height:65px;margin-top:40px;padding:16px 20px;font-size:19px}
+/* CALLTAG — one app-alert story and one learner benefit, no competing hero sections */
+.calltag{position:relative;overflow:hidden;padding:104px 0 108px;background:#111115;color:#f8f8f9;border-top:1px solid #29282e}
+.calltag__container{width:min(1120px,calc(100% - 64px));margin:0 auto}
+.calltag__layout{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);grid-template-areas:"intro phone" "offer phone";column-gap:clamp(42px,6vw,100px);row-gap:34px;align-items:center}
+.calltag__intro{grid-area:intro;align-self:end;min-width:0;text-align:left}
+.calltag__kicker{margin:0 0 26px;color:#a9a8b2;font-size:14px;font-weight:800;letter-spacing:.075em;line-height:1.5}
+.calltag__intro h2{margin:0;color:#fff;font-size:clamp(44px,4.9vw,69px);font-weight:880;line-height:1.21;letter-spacing:-.073em;word-break:keep-all}
+.calltag__intro h2 em{font-style:normal;color:#fff}
+.calltag__lead{margin:24px 0 0;color:#bdbcc4;font-size:clamp(17px,1.5vw,20px);font-weight:550;letter-spacing:-.035em;line-height:1.7;word-break:keep-all}
+.calltag__phone-wrap{grid-area:phone;display:flex;justify-content:center;align-items:center;min-width:0;align-self:center}
+.calltag__phone{box-sizing:border-box;width:min(100%,405px);padding:26px 26px 23px;border:7px solid #45444b;border-radius:38px;background:#090a0b;color:#fff;text-align:left;box-shadow:0 22px 55px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
+.calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 3px 21px;border-bottom:1px solid #34353a;color:#f5f5f5;font-size:clamp(23px,2.4vw,29px);font-weight:920;line-height:1.2;letter-spacing:-.04em}
+.calltag__phone-dot{width:9px;height:9px;flex:none;border-radius:50%;background:#777b82}
+.calltag__phone-label{margin:23px 0 13px;color:#b2b3b8;font-size:15px;font-weight:690;line-height:1.5}
+.calltag__notification{padding:24px 19px 22px;border:1px solid #383b42;border-radius:13px;background:#1d2025}
+.calltag__notification-type{display:flex;align-items:center;gap:10px;color:#d4f527;font-size:14px;font-weight:820;line-height:1.4}
+.calltag__notification-type i{width:9px;height:9px;flex:none;border-radius:50%;background:#d4f527}
+.calltag__notification strong{display:block;margin:19px 0 0;color:#fff;font-size:clamp(25px,2.65vw,32px);font-weight:850;letter-spacing:-.045em;line-height:1.35;overflow-wrap:anywhere}
+.calltag__notification p{margin:10px 0 0;color:#dedee0;font-size:15px;font-weight:550;line-height:1.6;overflow-wrap:anywhere}
+.calltag__notification-check{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:17px;border-top:1px solid #3c3d42;color:#cbcbd0;font-size:14px;font-weight:700}
+.calltag__phone-footer{display:block;margin:21px 0 0;text-align:center;color:#8e9098;font-size:12px;font-weight:550;line-height:1.5}
+.calltag__offer{grid-area:offer;align-self:start;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px;margin:0;padding:25px 26px;border:1px solid #38363c;border-radius:13px;background:#202025}
+.calltag__offer-copy{min-width:0;display:flex;flex-direction:column;gap:9px}
+.calltag__offer-label{color:#a9a8b0;font-size:13px;font-weight:720;line-height:1.45}
+.calltag__offer-copy strong{color:#f9f9fa;font-size:clamp(23px,2.1vw,31px);font-weight:880;line-height:1.33;letter-spacing:-.05em;word-break:keep-all}
+.calltag__offer-copy em{color:#fff;font-style:normal;white-space:nowrap}
+.calltag__link{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:45px;padding:11px 15px;border:1px solid #77737b;border-radius:7px;color:#f5f3f6;text-decoration:none;font-size:14px;font-weight:730;line-height:1.4;white-space:nowrap;transition:border-color .2s ease,background-color .2s ease}
+.calltag__link span{font-size:17px;line-height:1}
+.calltag__link:hover{border-color:#d0cbd3;background:#313037}
+.calltag__link:focus-visible{outline:3px solid #d4f527;outline-offset:3px}
+@media(max-width:900px){
+ .calltag{padding:87px 0 94px}
+ .calltag__container{width:calc(100% - 50px)}
+ .calltag__layout{column-gap:28px;grid-template-columns:minmax(0,1fr) minmax(0,.92fr)}
+ .calltag__intro h2{font-size:clamp(36px,5vw,49px)}
+ .calltag__offer{padding:21px;gap:15px}
+ .calltag__phone{padding:22px 19px 20px;border-width:6px;border-radius:33px}
+ .calltag__notification{padding:21px 16px}
+}
+@media(max-width:700px){
+ .calltag{padding:82px 0 91px}
+ .calltag__container{width:calc(100% - 36px)}
+ .calltag__layout{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "phone" "offer";row-gap:31px}
+ .calltag__intro{text-align:center}
+ .calltag__kicker{margin-bottom:18px;font-size:13px}
+ .calltag__intro h2{font-size:clamp(34px,8.7vw,49px);line-height:1.23}
+ .calltag__lead{margin-top:17px;font-size:clamp(15px,3.9vw,18px);line-height:1.62}
+ .calltag__phone{width:min(100%,365px);padding:21px 21px 18px}
+ .calltag__phone-top{font-size:24px}
+ .calltag__phone-label{font-size:14px}
+ .calltag__notification{padding:20px 18px}
+ .calltag__notification strong{font-size:28px}
+ .calltag__notification p{font-size:14px}
+ .calltag__offer{flex-direction:column;align-items:center;text-align:center;gap:17px;padding:22px 20px}
+ .calltag__offer-copy{align-items:center}
+ .calltag__offer-copy strong{font-size:clamp(23px,6.2vw,30px)}
+ .calltag__link{width:min(100%,290px);min-height:46px}
 }
 @media(max-width:370px){
-.calltag__container{width:calc(100% - 28px)}
-.calltag__intro h2{font-size:31px}
-.calltag__alert h3{font-size:29px}
-.calltag__phone{padding:17px;border-width:7px}
-.calltag__offer h3{font-size:60px}
+ .calltag__container{width:calc(100% - 28px)}
+ .calltag__intro h2{font-size:32px}
+ .calltag__lead{font-size:14px}
+ .calltag__phone{padding:17px 15px;border-width:6px;border-radius:29px}
+ .calltag__notification{padding:18px 14px}
+ .calltag__notification strong{font-size:25px}
+ .calltag__offer{padding:19px 15px}
+ .calltag__offer-copy strong{font-size:23px}
 }
-@media(prefers-reduced-motion:reduce){.calltag__link{transition:none}.calltag__link:hover{transform:none}}
-
+@media(prefers-reduced-motion:reduce){.calltag__link{transition:none}}
 
 /* PREORDER — clear early-bird price and fixed mobile-safe CTA */
 .tuition__preorder{display:inline-block;margin:0 auto 26px;padding:10px 22px;border-radius:99px;background:#271325;color:#ffc3e4;font-size:clamp(18px,1.8vw,25px);font-weight:880;letter-spacing:-.02em}
