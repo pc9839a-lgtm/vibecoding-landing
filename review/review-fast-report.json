@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-23T09:21:59.839Z",
+  "at": "2026-10-23T09:57:19.942Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 15338,
+        "height": 14772,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -41,22 +41,6 @@
         ],
         "anchors": [
           {
-            "hash": "#learning-part-01",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-02",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-03",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-04",
-            "target": true
-          },
-          {
             "hash": "#pricing",
             "target": true
           },
@@ -83,22 +67,6 @@
         ]
       },
       "clickResults": [
-        {
-          "hash": "#learning-part-01",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-02",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-03",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-04",
-          "clicked": true
-        },
         {
           "hash": "#pricing",
           "clicked": true
@@ -132,7 +100,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 17343,
+        "height": 16364,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -165,22 +133,6 @@
         ],
         "anchors": [
           {
-            "hash": "#learning-part-01",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-02",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-03",
-            "target": true
-          },
-          {
-            "hash": "#learning-part-04",
-            "target": true
-          },
-          {
             "hash": "#pricing",
             "target": true
           },
@@ -207,22 +159,6 @@
         ]
       },
       "clickResults": [
-        {
-          "hash": "#learning-part-01",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-02",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-03",
-          "clicked": true
-        },
-        {
-          "hash": "#learning-part-04",
-          "clicked": true
-        },
         {
           "hash": "#pricing",
           "clicked": true
