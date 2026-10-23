@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 강의 — 웹사이트부터 업무 자동화까지</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261023-hero-rebuilt-v42">
+<link rel="stylesheet" href="assets/site.css?v=20261023-demo-feedback-v43">
 <link rel="stylesheet" href="assets/story-motion-v1.css?v=20261022-polish-v3">
 </head>
 <body>
@@ -707,6 +707,22 @@
     list.prepend(row);
     total += 1;
     count.textContent = String(total).padStart(2, '0');
+    // Make the actual changed result visible, rather than leaving it below the form.
+    const resultPane = document.querySelector('.trydemo__resultside');
+    count.classList.remove('is-bumped');
+    if (resultPane) resultPane.classList.remove('is-received');
+    void count.offsetWidth;
+    count.classList.add('is-bumped');
+    if (resultPane) resultPane.classList.add('is-received');
+    if (resultPane && window.matchMedia('(max-width: 700px)').matches) {
+      const bounds = resultPane.getBoundingClientRect();
+      if (bounds.top > window.innerHeight * .43 || bounds.bottom < 0) {
+        resultPane.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'center'
+        });
+      }
+    }
     const previewName = document.getElementById('calltag-preview-name');
     const previewDetail = document.getElementById('calltag-preview-detail');
     if (previewName && previewDetail) {
