@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-23T14:33:49.772Z",
+  "at": "2026-10-25T02:03:19.975Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 14837,
+        "height": 15062,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -132,7 +132,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 15912,
+        "height": 15959,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
