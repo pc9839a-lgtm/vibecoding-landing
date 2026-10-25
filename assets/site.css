@@ -19,13 +19,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .hero h1>span:last-child{animation-delay:.25s}
 .hero__emphasis{color:#e773c4;background:linear-gradient(110deg,#fa70c0,#bd87ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero__description{margin:24px auto 0;font-size:clamp(17px,1.6vw,21px);font-weight:550;line-height:1.6;letter-spacing:-.025em;color:#e4d9e2;animation:heroReveal .6s ease-out .38s both}
-
-/* The course's practical selling points, not decorative cards. */
-.hero__proof{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px 19px;max-width:920px;margin:25px auto 0;color:#f8e3ed;font-size:clamp(13px,1.1vw,15px);font-weight:700;line-height:1.5;letter-spacing:-.015em}
-.hero__proof span{position:relative;display:inline-block}
-.hero__proof span+span:before{content:"·";display:inline-block;margin-right:17px;color:#b78eaa}
-@media(max-width:700px){.hero__proof{display:grid;justify-items:center;gap:5px;margin-top:19px;font-size:13px}.hero__proof span+span:before{display:none}}
-
 @keyframes heroReveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes heroRayMove{from{transform:rotate(-1.4deg) scale(1);opacity:.55}to{transform:rotate(1.4deg) scale(1.035);opacity:.82}}
 
