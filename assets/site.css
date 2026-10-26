@@ -133,7 +133,12 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .connector__eyebrow{margin:0 0 22px;font-size:clamp(17px,1.55vw,21px);line-height:1.45;font-weight:850;letter-spacing:-.03em;color:#7f747c}
 .connector__title{margin:0;font-size:clamp(42px,5vw,69px);line-height:1.2;font-weight:870;letter-spacing:-.064em;text-wrap:balance}
 .connector__title em{font-style:normal;color:#363138}
-.connector__stage{position:relative;margin:43px auto 0;width:min(810px,100%);perspective:none}
+.connector__visual{position:relative;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:16px;align-items:center;width:min(1150px,calc(100vw - 60px));margin:39px 0 0}
+.connector__character{margin:0;min-width:0}
+.connector__character img{display:block;width:100%;height:auto;object-fit:contain}
+.connector__stage{position:relative;margin:0;width:100%;perspective:none}
+@media(max-width:760px){.connector__visual{left:auto;transform:none;display:flex;flex-direction:column;gap:9px;width:100%;margin-top:22px}.connector__character{width:min(230px,65vw)}.connector__stage{width:100%}}
+
 .connector__stage:before{content:"";position:absolute;inset:14% -2% -7%;z-index:-1;background:radial-gradient(ellipse at 50% 67%,rgba(183,77,149,.28),transparent 68%);filter:blur(33px);pointer-events:none}
 .connector__shell{position:relative;overflow:hidden;width:100%;border-radius:15px;border:1px solid rgba(249,211,242,.24);background:#19151e;box-shadow:0 22px 58px rgba(0,0,0,.32);transform:none;transform-origin:50% 0}
 .connector__chrome{height:52px;display:flex;align-items:center;gap:12px;padding:0 22px;border-bottom:1px solid rgba(242,208,238,.13);background:linear-gradient(90deg,#29202b,#201a25)}
@@ -309,7 +314,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
  .connector__inner{width:calc(100% - 30px)}
  .connector__eyebrow{font-size:15px;margin-bottom:17px}
  .connector__title{font-size:clamp(34px,8.75vw,46px);line-height:1.24}
- .connector__stage{margin-top:33px}
+ .connector__stage{margin-top:0}
  .connector__shell{border-radius:11px;transform:none;box-shadow:0 16px 39px rgba(0,0,0,.27)}
  .connector__chrome{height:37px;padding:0 12px;gap:8px}
  .connector__chrome-dots{gap:4px}
@@ -496,7 +501,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .usecases{position:relative;isolation:isolate;overflow:hidden;padding:103px 0 108px;background:#17141c;color:#fff}
 .usecases:before{content:"";position:absolute;inset:-20% -22% auto;height:650px;z-index:-1;background:radial-gradient(ellipse at 50% 40%,rgba(163,64,132,.16),transparent 67%);pointer-events:none}
 .usecases__inner{width:min(1170px,calc(100% - 64px));margin:0 auto}
-.usecases__head{text-align:center;margin:0 auto 51px}
+.usecases__head{text-align:center;margin:0 auto 38px}
+.usecases__illustration{display:block;width:min(310px,61vw);height:auto;margin:15px auto 0;border-radius:20px;object-fit:contain}
 .usecases__eyebrow{margin:0 0 18px;color:#bdb4bf;font-size:15px;font-weight:830;line-height:1.45;letter-spacing:.06em}
 .usecases__head h2{margin:0;font-size:clamp(43px,5.15vw,70px);line-height:1.18;letter-spacing:-.063em;font-weight:870}
 .usecases__head h2 em{font-style:normal;color:#f8f6f8}
@@ -730,7 +736,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 /* TRY DEMO — interactive form and client-side lead list */
 .trydemo{padding:107px 0 113px;position:relative;isolation:isolate;background:#f7f5f5;color:#281f2b}
 .trydemo__inner{width:min(1150px,calc(100% - 64px));margin:0 auto}
-.trydemo__heading{text-align:center;margin-bottom:42px}
+.trydemo__heading{text-align:center;margin-bottom:24px}
+.trydemo__illustration{display:block;width:min(215px,57vw);height:auto;margin:18px auto 0;border-radius:18px;object-fit:contain}
 .trydemo__eyebrow{margin:0 0 17px;color:#746976;font-size:16px;line-height:1.4;font-weight:830;letter-spacing:.02em}
 .trydemo__heading h2{margin:0;font-size:clamp(43px,5.1vw,70px);line-height:1.2;letter-spacing:-.064em;font-weight:870}
 .trydemo__heading h2 em{font-style:normal;color:#322a32}
@@ -824,6 +831,8 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__intro h2{margin:0;color:#fff;font-size:clamp(44px,4.9vw,69px);font-weight:880;line-height:1.21;letter-spacing:-.073em;word-break:keep-all}
 .calltag__intro h2 em{font-style:normal;color:#fff}
 .calltag__lead{margin:24px 0 0;color:#bdbcc4;font-size:clamp(17px,1.5vw,20px);font-weight:550;letter-spacing:-.035em;line-height:1.7;word-break:keep-all}
+.calltag__character{display:block;width:min(245px,66%);height:auto;margin:25px 0 0;border-radius:18px;object-fit:contain}
+@media(max-width:700px){.calltag__character{width:min(205px,55vw);margin:21px auto 0}}
 .calltag__phone-wrap{grid-area:phone;display:flex;justify-content:center;align-items:center;min-width:0;align-self:center}
 .calltag__phone{box-sizing:border-box;width:min(100%,405px);padding:26px 26px 23px;border:7px solid #45444b;border-radius:38px;background:#090a0b;color:#fff;text-align:left;box-shadow:0 22px 55px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
 .calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 3px 21px;border-bottom:1px solid #34353a;color:#f5f5f5;font-size:clamp(23px,2.4vw,29px);font-weight:920;line-height:1.2;letter-spacing:-.04em}
