@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-26T04:11:19.197Z",
+  "at": "2026-10-26T04:21:34.157Z",
   "result": [
     {
       "width": 390,
@@ -8,7 +8,7 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 15711,
+        "height": 15526,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -20,10 +20,6 @@
           },
           {
             "src": "assets/objects-web-tools.webp",
-            "ok": true
-          },
-          {
-            "src": "assets/objects-form-submit.webp",
             "ok": true
           },
           {
@@ -148,7 +144,7 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 16614,
+        "height": 16438,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
@@ -160,10 +156,6 @@
           },
           {
             "src": "assets/objects-web-tools.webp",
-            "ok": true
-          },
-          {
-            "src": "assets/objects-form-submit.webp",
             "ok": true
           },
           {
