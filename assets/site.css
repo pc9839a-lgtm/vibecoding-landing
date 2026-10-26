@@ -498,24 +498,24 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 }
 
 /* USE CASES — broad application showcase, focused oversized examples */
-.usecases{position:relative;isolation:isolate;overflow:hidden;padding:103px 0 108px;background:#17141c;color:#fff}
-.usecases:before{content:"";position:absolute;inset:-20% -22% auto;height:650px;z-index:-1;background:radial-gradient(ellipse at 50% 40%,rgba(163,64,132,.16),transparent 67%);pointer-events:none}
+.usecases{position:relative;isolation:isolate;overflow:hidden;padding:103px 0 108px;background:#f7f5f5;color:#29232d}
+.usecases:before{display:none}
 .usecases__inner{width:min(1170px,calc(100% - 64px));margin:0 auto}
 .usecases__head{text-align:center;margin:0 auto 38px}
-.usecases__illustration{display:block;width:min(310px,61vw);height:auto;margin:15px auto 0;border-radius:20px;object-fit:contain}
-.usecases__eyebrow{margin:0 0 18px;color:#bdb4bf;font-size:15px;font-weight:830;line-height:1.45;letter-spacing:.06em}
+.usecases__illustration{display:block;width:min(370px,74vw);height:auto;margin:12px auto 0;border-radius:0;object-fit:contain;mix-blend-mode:multiply;mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 55%,transparent 100%)}
+.usecases__eyebrow{margin:0 0 18px;color:#766673;font-size:15px;font-weight:830;line-height:1.45;letter-spacing:.06em}
 .usecases__head h2{margin:0;font-size:clamp(43px,5.15vw,70px);line-height:1.18;letter-spacing:-.063em;font-weight:870}
-.usecases__head h2 em{font-style:normal;color:#f8f6f8}
-.usecases__stories{border-top:1px solid rgba(249,208,238,.18)}
-.usecase{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:54px;align-items:center;min-width:0;padding:70px 0;border-bottom:1px solid rgba(249,208,238,.22)}
+.usecases__head h2 em{font-style:normal;color:#29232d}
+.usecases__stories{border-top:1px solid rgba(45,29,42,.18)}
+.usecase{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:54px;align-items:center;min-width:0;padding:70px 0;border-bottom:1px solid rgba(45,29,42,.18)}
 .usecase--flip .usecase__copy{order:2}
 .usecase--flip .usecase__example{order:1}
 .usecase__copy{min-width:0}
-.usecase__number{display:block;color:#bdb4c0;font:820 14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
-.usecase__copy h3{margin:17px 0 0;font-size:clamp(34px,3.7vw,52px);line-height:1.22;font-weight:850;letter-spacing:-.061em;color:#fff}
-.usecase__copy h3 em{font-style:normal;color:#f4f1f4}
-.usecase__copy p{max-width:420px;margin:23px 0 0;font-size:19px;line-height:1.58;font-weight:630;color:#d0c0d2;letter-spacing:-.024em}
-.usecase__example{min-width:0;overflow:hidden;border:1px solid rgba(253,218,240,.33);border-radius:19px;background:#f7f4f8;box-shadow:0 21px 48px rgba(2,0,9,.28)}
+.usecase__number{display:block;color:#7b6b78;font:820 14px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
+.usecase__copy h3{margin:17px 0 0;font-size:clamp(34px,3.7vw,52px);line-height:1.22;font-weight:850;letter-spacing:-.061em;color:#29232d}
+.usecase__copy h3 em{font-style:normal;color:#29232d}
+.usecase__copy p{max-width:420px;margin:23px 0 0;font-size:19px;line-height:1.58;font-weight:630;color:#625565;letter-spacing:-.024em}
+.usecase__example{min-width:0;overflow:hidden;border:1px solid #ded7df;border-radius:19px;background:#f7f4f8;box-shadow:0 15px 35px rgba(35,18,33,.09)}
 .usecase__topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;height:42px;padding:0 17px;background:#332638;color:#e9d5e6;font-size:12px;font-weight:730}
 .usecase__dots{display:flex;gap:6px}
 .usecase__dots i{display:block;width:8px;height:8px;border-radius:50%;background:#77677e}
@@ -737,7 +737,7 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .trydemo{padding:107px 0 113px;position:relative;isolation:isolate;background:#f7f5f5;color:#281f2b}
 .trydemo__inner{width:min(1150px,calc(100% - 64px));margin:0 auto}
 .trydemo__heading{text-align:center;margin-bottom:24px}
-.trydemo__illustration{display:block;width:min(215px,57vw);height:auto;margin:18px auto 0;border-radius:18px;object-fit:contain}
+
 .trydemo__eyebrow{margin:0 0 17px;color:#746976;font-size:16px;line-height:1.4;font-weight:830;letter-spacing:.02em}
 .trydemo__heading h2{margin:0;font-size:clamp(43px,5.1vw,70px);line-height:1.2;letter-spacing:-.064em;font-weight:870}
 .trydemo__heading h2 em{font-style:normal;color:#322a32}
