@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "at": "2026-10-26T01:47:30.586Z",
+  "at": "2026-10-26T03:11:47.586Z",
   "result": [
     {
       "width": 390,
@@ -8,10 +8,26 @@
       "meta": {
         "viewport": 390,
         "pageWidth": 390,
-        "height": 14837,
+        "height": 15777,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
+          {
+            "src": "assets/character-laptop.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/objects-web-tools.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/objects-form-submit.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/character-notification.webp",
             "ok": true
           },
           {
@@ -132,10 +148,26 @@
       "meta": {
         "viewport": 1440,
         "pageWidth": 1440,
-        "height": 15912,
+        "height": 16705,
         "imgs": [
           {
             "src": "assets/idea-bridge-3d-character.avif",
+            "ok": true
+          },
+          {
+            "src": "assets/character-laptop.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/objects-web-tools.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/objects-form-submit.webp",
+            "ok": true
+          },
+          {
+            "src": "assets/character-notification.webp",
             "ok": true
           },
           {
