@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 전자책 — 코딩 몰라도 직접 만듭니다</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261027-preorder-form-v65">
+<link rel="stylesheet" href="assets/site.css?v=20261027-page-cleanup-v66">
 <link rel="stylesheet" href="assets/story-motion-v1.css?v=20261023-motion-refine-v4">
 </head>
 <body>
@@ -133,9 +133,9 @@
 <section class="connector" id="how-it-works" aria-labelledby="connector-title">
   <span id="vibe-coding" class="connector__anchor" aria-hidden="true"></span>
   <div class="connector__inner">
-    <p class="connector__eyebrow">바이브코딩이란?</p>
-    <h2 class="connector__title" id="connector-title">AI에게 말하면,<br><em>웹사이트가 됩니다.</em></h2>
-    <p class="connector__answer">코드 대신, 원하는 화면과 기능을 말로 요청합니다.</p>
+    <p class="connector__eyebrow">결과물 미리보기</p>
+    <h2 class="connector__title" id="connector-title">말로 요청하고,<br><em>화면으로 확인.</em></h2>
+    <p class="connector__answer">AI가 만든 웹페이지를 바로 확인하고 수정합니다.</p>
     <div class="connector__visual">
       <figure class="connector__character">
         <img src="assets/character-laptop.webp" alt="노트북으로 웹사이트를 만드는 3D 캐릭터" width="1254" height="1254" loading="lazy" decoding="async">
@@ -184,7 +184,6 @@
     <header class="usecases__head">
       <p class="usecases__eyebrow">VIBE CODING · 활용 예시</p>
       <h2 id="usecases-title">웹사이트부터,<br><em>업무에 필요한 도구까지.</em></h2>
-      <img class="usecases__illustration" src="assets/objects-web-tools.webp" alt="웹사이트, 계산기, 데이터 저장과 알림 기능을 표현한 3D 오브젝트" width="1254" height="1254" loading="lazy" decoding="async">
     </header>
 
     <div class="usecases__stories">
@@ -289,7 +288,6 @@
         <p class="calltag__kicker">CALLTAG · 신규 고객 DB 알림</p>
         <h2 id="calltag-title">문의가 오면,<br><em>앱 알림으로 확인.</em></h2>
         <p class="calltag__lead">광고로 받은 문의를 놓치지 않도록.<br>접수 내용을 앱에서 바로 확인하세요.</p>
-        <img class="calltag__character" src="assets/character-notification.webp" alt="새 문의 알림을 스마트폰에서 확인하는 3D 캐릭터" width="1254" height="1254" loading="lazy" decoding="async">
       </div>
       <div class="calltag__phone-wrap">
         <div class="calltag__phone" role="group" aria-label="콜태그 신규 문의 알림 화면 예시">
@@ -462,34 +460,12 @@
       <h2 id="curriculum-title">커리큘럼</h2>
       <p class="learning__summary">랜딩페이지를 만들고, 신청폼·고객 DB·알림까지 연결하는 10단계 실습.</p>
     </header>
-    <nav class="learning__path" aria-label="커리큘럼 단계별 바로가기">
-      <a class="learning__path-link" href="#learning-part-01">
-        <span class="learning__path-meta">STEP 01—03</span>
-        <strong>페이지 제작</strong>
-        <span class="learning__path-arrow" aria-hidden="true">↘</span>
-      </a>
-      <a class="learning__path-link" href="#learning-part-02">
-        <span class="learning__path-meta">STEP 04—05</span>
-        <strong>신청폼·DB</strong>
-        <span class="learning__path-arrow" aria-hidden="true">↘</span>
-      </a>
-      <a class="learning__path-link" href="#learning-part-03">
-        <span class="learning__path-meta">STEP 06—08</span>
-        <strong>업무 자동화</strong>
-        <span class="learning__path-arrow" aria-hidden="true">↘</span>
-      </a>
-      <a class="learning__path-link" href="#learning-part-04">
-        <span class="learning__path-meta">STEP 09—10</span>
-        <strong>수정·확장</strong>
-        <span class="learning__path-arrow" aria-hidden="true">↘</span>
-      </a>
-    </nav>
     <div class="learning__chapters">
-      <article class="learning__chapter" aria-labelledby="learning-part-01">
-        <div class="learning__chapter-head">
+      <details class="learning__chapter" aria-labelledby="learning-part-01" open>
+        <summary class="learning__chapter-head">
           <div class="learning__chapter-meta"><span>PART 01</span><span>STEP 01—03</span></div>
           <h3 id="learning-part-01">AI로 원하는 것을<br><em>구현하는 법</em></h3>
-        </div>
+        </summary>
         <div class="learning__chapter-body">
           <ol class="learning__lessons" start="1">
             <li><span class="learning__step-no">01</span><div><strong>빈 화면에서 첫 페이지 띄우기</strong><p>AI와 작업을 시작하고 결과 화면 확인</p></div></li>
@@ -498,12 +474,12 @@
           </ol>
           <div class="learning__output"><span class="learning__output-label">이 단계의 완성물</span><strong>광고용 랜딩페이지</strong><span class="learning__output-check" aria-hidden="true">✓</span></div>
         </div>
-      </article>
-      <article class="learning__chapter" aria-labelledby="learning-part-02">
-        <div class="learning__chapter-head">
+      </details>
+      <details class="learning__chapter" aria-labelledby="learning-part-02">
+        <summary class="learning__chapter-head">
           <div class="learning__chapter-meta"><span>PART 02</span><span>STEP 04—05</span></div>
           <h3 id="learning-part-02">디자인을 넘어<br><em>기능까지</em></h3>
-        </div>
+        </summary>
         <div class="learning__chapter-body">
           <ol class="learning__lessons" start="4">
             <li><span class="learning__step-no">04</span><div><strong>고객이 작성하는 신청폼 만들기</strong><p>이름·연락처·문의 내용을 받는 입력 화면</p></div></li>
@@ -511,12 +487,12 @@
           </ol>
           <div class="learning__output"><span class="learning__output-label">이 단계의 완성물</span><strong>신청폼 + 고객 DB</strong><span class="learning__output-check" aria-hidden="true">✓</span></div>
         </div>
-      </article>
-      <article class="learning__chapter" aria-labelledby="learning-part-03">
-        <div class="learning__chapter-head">
+      </details>
+      <details class="learning__chapter" aria-labelledby="learning-part-03">
+        <summary class="learning__chapter-head">
           <div class="learning__chapter-meta"><span>PART 03</span><span>STEP 06—08</span></div>
           <h3 id="learning-part-03">업무에 필요한<br><em>자동화 구축</em></h3>
-        </div>
+        </summary>
         <div class="learning__chapter-body">
           <ol class="learning__lessons" start="6">
             <li><span class="learning__step-no">06</span><div><strong>새 문의 알림 연결하기</strong><p>신청이 들어오면 확인할 수 있도록 설정</p></div></li>
@@ -525,12 +501,12 @@
           </ol>
           <div class="learning__output"><span class="learning__output-label">이 단계의 완성물</span><strong>문의 알림 + 자동응답 + 관리 화면</strong><span class="learning__output-check" aria-hidden="true">✓</span></div>
         </div>
-      </article>
-      <article class="learning__chapter" aria-labelledby="learning-part-04">
-        <div class="learning__chapter-head">
+      </details>
+      <details class="learning__chapter" aria-labelledby="learning-part-04">
+        <summary class="learning__chapter-head">
           <div class="learning__chapter-meta"><span>PART 04</span><span>STEP 09—10</span></div>
           <h3 id="learning-part-04">만들고, 고치고,<br><em>확장하는 법</em></h3>
-        </div>
+        </summary>
         <div class="learning__chapter-body">
           <ol class="learning__lessons" start="9">
             <li><span class="learning__step-no">09</span><div><strong>디자인·문구·버튼 직접 수정하기</strong><p>광고 내용 변경과 모바일 화면 점검</p></div></li>
@@ -538,7 +514,7 @@
           </ol>
           <div class="learning__output"><span class="learning__output-label">이 단계의 완성물</span><strong>수정하고 재사용할 수 있는 페이지</strong><span class="learning__output-check" aria-hidden="true">✓</span></div>
         </div>
-      </article>
+      </details>
     </div>
       </div>
 </section>
@@ -548,10 +524,10 @@
     <header class="support__heading">
       <span class="support__kicker">전자책 구매자 혜택</span>
       <p class="support__lead">만들다가 막히면,</p>
-      <h2 id="support-title" class="support__headline">카톡으로 물어보세요.</h2>
+      <h2 id="support-title" class="support__headline">카톡으로 해결하세요.</h2>
           </header>
     <div class="support__work">
-      <h3>구매 후 1개월,<br><em>카카오톡 1:1 코칭.</em></h3>
+      <h3>1개월 카카오톡 1:1 코칭</h3>
       <div class="support__items" aria-label="1대1 코칭에서 점검할 수 있는 내용">
         <span>오류 확인</span>
         <span>수정 방향</span>
@@ -579,16 +555,14 @@
   <p class="tuition__price">99,000<small>원</small></p>
   <p class="tuition__payment">홈페이지 · 신청폼 · 고객관리 기능 실습</p>
   <p class="tuition__contents">전자책으로 직접 따라 하는 10단계 실습<br>프롬프트 · 템플릿 · 체크리스트 · 1개월 카카오톡 1:1 코칭</p>
-  <a class="tuition__link" href="#preorder-form">사전예약 신청하기 <span aria-hidden="true">↗</span></a>
  </div>
 </section>
 
 <section class="preorder" id="preorder-form" aria-labelledby="preorder-title">
   <div class="preorder__inner">
     <header class="preorder__head">
-      <p class="preorder__eyebrow">VIBE CODING · PRE-ORDER</p>
-      <h2 id="preorder-title">사전예약 신청.</h2>
-      <p>카페 닉네임과 연락처를 남겨주세요.</p>
+      <h2 id="preorder-title">사전예약 신청</h2>
+      <p>아래 정보를 입력해 주세요.</p>
     </header>
     <form id="preorder-submit-form" class="preorder__form" method="post" target="_blank" accept-charset="UTF-8">
       <div class="preorder__fields">
