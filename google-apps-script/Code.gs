@@ -4,12 +4,12 @@
  * 2. 이 파일을 Code.gs에 붙여 넣고 저장
  * 3. 배포 → 새 배포 → 웹 앱 → 실행 사용자 "나", 액세스 "모든 사용자"
  * 4. 발급된 /exec 주소를 assets/preorder-config.js에 입력
- * 결제여부/수단은 신청자 선택이며 실제 결제 승인을 검증하지 않습니다.
+ * 카드/현금은 신청자 선택이며 실제 결제 승인을 검증하지 않습니다.
  */
 const SHEET_NAME = '사전예약접수';
 const HEADERS = [
   '접수일시', '접수번호', '카페닉네임', '연락처', '이메일',
-  '문의사항', '결제여부', '결제수단', '접수상태', '유입페이지'
+  '문의사항', '결제수단', '접수상태', '유입페이지'
 ];
 function doGet() {
   return result_('사전예약 안내', '공식 홈페이지에서 사전예약을 신청해 주세요.', false);
@@ -21,14 +21,12 @@ function doPost(e) {
   const phone = field('phone').replace(/[\s-]/g, '').slice(0, 20);
   const email = field('email').slice(0, 140);
   const inquiry = field('inquiry').slice(0, 1500);
-  const paymentStatus = field('payment_status');
   const paymentMethod = field('payment_method');
   const consent = field('privacy_agree');
   const origin = field('origin').slice(0, 250);
   if (field('website')) return result_('접수 실패', '다시 신청해 주세요.', false);
   if (!nickname || !/^0\d{8,10}$/.test(phone) ||
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-      !['결제 전','결제 완료'].includes(paymentStatus) ||
       !['카드','현금'].includes(paymentMethod) || consent !== 'on') {
     return result_('입력 내용을 확인해 주세요.', '필수 항목을 확인하고 다시 신청해 주세요.', false);
   }
@@ -48,7 +46,7 @@ function doPost(e) {
     const receipt = Utilities.getUuid().split('-')[0].toUpperCase();
     const timestamp = Utilities.formatDate(new Date(), 'Asia/Seoul', 'yyyy-MM-dd HH:mm:ss');
     sheet.appendRow([timestamp, receipt, safe(nickname), "'" + phone, safe(email), safe(inquiry),
-      paymentStatus, paymentMethod, '신규', safe(origin)]);
+      paymentMethod, '신규', safe(origin)]);
     SpreadsheetApp.flush();
     return result_('사전예약이 접수됐습니다.', '접수번호: ' + receipt, true);
   } catch (error) {
