@@ -26,7 +26,7 @@ function doPost(e) {
   const consent = field('privacy_agree');
   const origin = field('origin').slice(0, 250);
   if (field('website')) return result_('접수 실패', '다시 신청해 주세요.', false);
-  if (nickname.length < 2 || !/^0\d{8,10}$/.test(phone) ||
+  if (!nickname || !/^0\d{8,10}$/.test(phone) ||
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       !['결제 전','결제 완료'].includes(paymentStatus) ||
       !['카드','현금'].includes(paymentMethod) || consent !== 'on') {
