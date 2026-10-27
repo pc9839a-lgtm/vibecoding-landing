@@ -18,7 +18,7 @@ function doPost(e) {
   const p = (e && e.parameter) || {};
   const field = key => String(p[key] || '').trim();
   const nickname = field('nickname').slice(0, 60);
-  const phone = field('phone').replace(/[\\s-]/g, '').slice(0, 20);
+  const phone = field('phone').replace(/[\s-]/g, '').slice(0, 20);
   const email = field('email').slice(0, 140);
   const inquiry = field('inquiry').slice(0, 1500);
   const paymentStatus = field('payment_status');
@@ -26,8 +26,8 @@ function doPost(e) {
   const consent = field('privacy_agree');
   const origin = field('origin').slice(0, 250);
   if (field('website')) return result_('접수 실패', '다시 신청해 주세요.', false);
-  if (nickname.length < 2 || !/^0\\d{8,10}$/.test(phone) ||
-      !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) ||
+  if (nickname.length < 2 || !/^0\d{8,10}$/.test(phone) ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       !['결제 전','결제 완료'].includes(paymentStatus) ||
       !['카드','현금'].includes(paymentMethod) || consent !== 'on') {
     return result_('입력 내용을 확인해 주세요.', '필수 항목을 확인하고 다시 신청해 주세요.', false);
@@ -44,7 +44,7 @@ function doPost(e) {
       sheet.setFrozenRows(1);
       sheet.getRange(1,1,1,HEADERS.length).setFontWeight('bold').setBackground('#F1F3F5');
     }
-    const safe = value => /^[=+@\\-\\t\\r]/.test(value) ? "'" + value : value;
+    const safe = value => /^[=+@\-\t\r]/.test(value) ? "'" + value : value;
     const receipt = Utilities.getUuid().split('-')[0].toUpperCase();
     const timestamp = Utilities.formatDate(new Date(), 'Asia/Seoul', 'yyyy-MM-dd HH:mm:ss');
     sheet.appendRow([timestamp, receipt, safe(nickname), "'" + phone, safe(email), safe(inquiry),
