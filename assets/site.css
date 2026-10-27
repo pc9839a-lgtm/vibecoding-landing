@@ -1089,3 +1089,66 @@ body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
  .projects__slider.is-enhanced .projects__track{transition:none}
  .projects__slider.is-enhanced .project{opacity:1;scale:1;transition:none}
 }
+
+
+/* PRE-ORDER · integrated reservation form. Scoped; preserves all existing sections. */
+.preorder{position:relative;overflow:hidden;padding:100px 0 112px;background:#f7f5f7;color:#262029}
+.preorder__inner{width:min(760px,calc(100% - 52px));margin-inline:auto}
+.preorder__head{text-align:center;margin:0 auto 36px}
+.preorder__eyebrow{margin:0 0 14px;color:#a03e7c;font-size:13px;font-weight:820;letter-spacing:.11em}
+.preorder__head h2{margin:0;color:#262029;font-size:clamp(46px,6vw,72px);line-height:1.2;letter-spacing:-.065em;font-weight:900}
+.preorder__head>p:last-child{margin:16px 0 0;color:#645766;font-size:clamp(16px,1.7vw,19px);font-weight:580}
+.preorder__form{padding:36px 38px 35px;border:1px solid #e4dde5;border-radius:20px;background:#fff;box-shadow:0 16px 40px rgba(37,25,39,.055)}
+.preorder__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px 17px}
+.preorder__field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.preorder__field--full{grid-column:1/-1}
+.preorder__field>label,.preorder__choice legend{font-size:15px;line-height:1.4;color:#362c38;font-weight:790;letter-spacing:-.025em}
+.preorder__field>label span,.preorder__choice legend span{color:#a52c78}
+.preorder__field>label small{font-size:12px;font-weight:600;color:#9a8d99}
+.preorder__field input,.preorder__field textarea{display:block;width:100%;min-width:0;min-height:54px;box-sizing:border-box;border:1px solid #dbd5de;border-radius:9px;padding:15px 16px;background:#fff;color:#28222a;font:560 16px/1.45 inherit;font-family:inherit;font-size:16px;outline:0;transition:border-color .18s ease,box-shadow .18s ease}
+.preorder__field input::placeholder,.preorder__field textarea::placeholder{color:#9f97a2}
+.preorder__field textarea{resize:vertical;min-height:116px;line-height:1.55}
+.preorder__field input:focus-visible,.preorder__field textarea:focus-visible{border-color:#ad3c87;box-shadow:0 0 0 3px rgba(173,60,135,.13)}
+.preorder__choice{min-width:0;border:0;padding:0;margin:27px 0 0}
+.preorder__choice legend{margin:0 0 11px;padding:0}
+.preorder__choice-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.preorder__choice-items label{position:relative;display:block;cursor:pointer}
+.preorder__choice-items input{position:absolute;opacity:0;width:1px;height:1px}
+.preorder__choice-items span{min-height:52px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:12px 14px;border:1px solid #ded6e0;border-radius:9px;background:#faf9fb;color:#4e4350;font-size:16px;font-weight:740;transition:border-color .15s ease,background-color .15s ease}
+.preorder__choice-items input:checked+span{border-color:#ad4188;background:#f8eaf3;color:#8c2c68}
+.preorder__choice-items input:focus-visible+span{outline:3px solid #d794bf;outline-offset:3px}
+.preorder__hint{margin:15px 0 0;color:#716771;font-size:12px;line-height:1.6}
+.preorder__consent{display:flex;align-items:flex-start;gap:12px;margin:30px 0 0;cursor:pointer}
+.preorder__consent input{flex:none;margin:3px 0 0;width:20px;height:20px;accent-color:#aa357e;cursor:pointer}
+.preorder__consent span{display:block;color:#3b313c}
+.preorder__consent strong{display:block;font-size:15px;line-height:1.4;font-weight:770}
+.preorder__consent small{display:block;margin-top:7px;color:#746974;font-size:12px;line-height:1.7;font-weight:510;word-break:keep-all}
+.preorder__trap{position:absolute;width:1px;height:1px;overflow:hidden;left:-9999px}
+.preorder__submit{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;min-height:62px;margin:27px auto 0;border:0;border-radius:9px;background:#251c29;color:#fff;font:850 18px/1.4 inherit;font-family:inherit;font-size:18px;cursor:pointer;transition:background-color .16s ease,transform .16s ease}
+.preorder__submit span{font-size:21px}
+.preorder__submit:not(:disabled):hover{background:#a3357c;transform:translateY(-1px)}
+.preorder__submit:focus-visible{outline:3px solid #bb70a5;outline-offset:3px}
+.preorder__submit:disabled{opacity:.57;cursor:not-allowed}
+.preorder__notice{min-height:18px;margin:13px 0 0;color:#645764;font-size:13px;line-height:1.5;text-align:center}
+.preorder__notice--pending{color:#756978}
+@media(max-width:700px){
+ .preorder{padding:75px 0 90px}
+ .preorder__inner{width:calc(100% - 30px)}
+ .preorder__head{margin-bottom:26px}
+ .preorder__eyebrow{font-size:11px}
+ .preorder__head h2{font-size:clamp(36px,9vw,48px)}
+ .preorder__head>p:last-child{margin-top:12px;font-size:15px}
+ .preorder__form{padding:25px 19px 27px;border-radius:15px}
+ .preorder__fields{grid-template-columns:1fr;gap:19px}
+ .preorder__field--full{grid-column:auto}
+ .preorder__field input{min-height:50px}
+ .preorder__field textarea{min-height:106px}
+ .preorder__choice{margin-top:25px}
+ .preorder__choice-items{gap:9px}
+ .preorder__choice-items span{min-height:49px;font-size:15px}
+ .preorder__consent{margin-top:27px}
+ .preorder__submit{min-height:56px;font-size:16px;margin-top:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ .preorder__submit,.preorder__field input,.preorder__field textarea,.preorder__choice-items span{transition:none}
+}
