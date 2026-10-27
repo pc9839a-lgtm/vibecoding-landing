@@ -1,11 +1,13 @@
 /**
  * 바이브코딩 사전예약 — 구글시트에 바인딩되는 Apps Script
- * 1. 새 구글시트 생성 → 확장 프로그램 → Apps Script
- * 2. 이 파일을 Code.gs에 붙여 넣고 저장
+ * 1. https://script.google.com/home/projects/create 에서 Apps Script 프로젝트 생성
+ * 2. 이 파일 전체를 Code.gs에 붙여 넣고 저장
  * 3. 배포 → 새 배포 → 웹 앱 → 실행 사용자 "나", 액세스 "모든 사용자"
  * 4. 발급된 /exec 주소를 assets/preorder-config.js에 입력
+ * 5. 아래 SPREADSHEET_ID의 전용 구글시트 사전예약접수 탭에 저장됨
  * 카드/현금은 신청자 선택이며 실제 결제 승인을 검증하지 않습니다.
  */
+const SPREADSHEET_ID = '1NkWsnCd1zSkKZQkh8xlic9Hv5X_y7cYe4daCKBVnytg';
 const SHEET_NAME = '사전예약접수';
 const HEADERS = [
   '접수일시', '접수번호', '카페닉네임', '연락처', '이메일',
@@ -33,8 +35,8 @@ function doPost(e) {
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(12000)) return result_('접수 실패', '잠시 후 다시 신청해 주세요.', false);
   try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-    if (!ss) throw new Error('구글시트에 연결된 스크립트로 배포해야 합니다.');
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    if (!ss) throw new Error('사전예약 전용 구글시트에 접근할 수 없습니다.');
     let sheet = ss.getSheetByName(SHEET_NAME);
     if (!sheet) sheet = ss.insertSheet(SHEET_NAME);
     if (sheet.getLastRow() === 0) {
