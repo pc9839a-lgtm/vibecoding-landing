@@ -905,7 +905,6 @@ a:focus-visible{outline:3px solid #f264bb;outline-offset:4px}
 .calltag__intro h2{margin:0;color:#fff;font-size:clamp(44px,4.9vw,69px);font-weight:880;line-height:1.21;letter-spacing:-.073em;word-break:keep-all}
 .calltag__intro h2 em{font-style:normal;color:#fff}
 .calltag__lead{margin:24px 0 0;color:#bdbcc4;font-size:clamp(17px,1.5vw,20px);font-weight:550;letter-spacing:-.035em;line-height:1.7;word-break:keep-all}
-@media(max-width:700px){.calltag__character{width:min(205px,55vw);margin:21px auto 0}}
 .calltag__phone-wrap{grid-area:phone;display:flex;justify-content:center;align-items:center;min-width:0;align-self:center}
 .calltag__phone{box-sizing:border-box;width:min(100%,405px);padding:26px 26px 23px;border:7px solid #45444b;border-radius:38px;background:#090a0b;color:#fff;text-align:left;box-shadow:0 22px 55px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
 .calltag__phone-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 3px 21px;border-bottom:1px solid #34353a;color:#f5f5f5;font-size:clamp(23px,2.4vw,29px);font-weight:920;line-height:1.2;letter-spacing:-.04em}
