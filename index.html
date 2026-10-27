@@ -13,7 +13,7 @@
 <title>바이브코딩 실전 전자책 — 코딩 몰라도 직접 만듭니다</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="stylesheet" href="assets/site.css?v=20261027-ebook-kakao-v64">
+<link rel="stylesheet" href="assets/site.css?v=20261027-preorder-form-v65">
 <link rel="stylesheet" href="assets/story-motion-v1.css?v=20261023-motion-refine-v4">
 </head>
 <body>
@@ -579,8 +579,61 @@
   <p class="tuition__price">99,000<small>원</small></p>
   <p class="tuition__payment">홈페이지 · 신청폼 · 고객관리 기능 실습</p>
   <p class="tuition__contents">전자책으로 직접 따라 하는 10단계 실습<br>프롬프트 · 템플릿 · 체크리스트 · 1개월 카카오톡 1:1 코칭</p>
-  <a class="tuition__link" href="#curriculum">커리큘럼 다시 보기 <span aria-hidden="true">↗</span></a>
+  <a class="tuition__link" href="#preorder-form">사전예약 신청하기 <span aria-hidden="true">↗</span></a>
  </div>
+</section>
+
+<section class="preorder" id="preorder-form" aria-labelledby="preorder-title">
+  <div class="preorder__inner">
+    <header class="preorder__head">
+      <p class="preorder__eyebrow">VIBE CODING · PRE-ORDER</p>
+      <h2 id="preorder-title">사전예약 신청.</h2>
+      <p>카페 닉네임과 연락처를 남겨주세요.</p>
+    </header>
+    <form id="preorder-submit-form" class="preorder__form" method="post" target="_blank" accept-charset="UTF-8">
+      <div class="preorder__fields">
+        <div class="preorder__field">
+          <label for="preorder-nickname">카페 닉네임 <span aria-hidden="true">*</span></label>
+          <input id="preorder-nickname" name="nickname" type="text" maxlength="60" minlength="2" autocomplete="nickname" placeholder="카페에서 사용하는 닉네임" required>
+        </div>
+        <div class="preorder__field">
+          <label for="preorder-phone">연락처 <span aria-hidden="true">*</span></label>
+          <input id="preorder-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="010-0000-0000" required>
+        </div>
+        <div class="preorder__field preorder__field--full">
+          <label for="preorder-email">이메일 <span aria-hidden="true">*</span></label>
+          <input id="preorder-email" name="email" type="email" maxlength="140" autocomplete="email" placeholder="example@email.com" required>
+        </div>
+        <div class="preorder__field preorder__field--full">
+          <label for="preorder-inquiry">문의사항 <small>선택</small></label>
+          <textarea id="preorder-inquiry" name="inquiry" maxlength="1500" rows="3" placeholder="궁금한 내용이 있다면 적어주세요."></textarea>
+        </div>
+      </div>
+      <fieldset class="preorder__choice">
+        <legend>결제 여부 <span aria-hidden="true">*</span></legend>
+        <div class="preorder__choice-items">
+          <label><input type="radio" name="payment_status" value="결제 전" checked required><span>결제 전</span></label>
+          <label><input type="radio" name="payment_status" value="결제 완료" required><span>결제 완료</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="preorder__choice">
+        <legend>결제 수단 <span aria-hidden="true">*</span></legend>
+        <div class="preorder__choice-items">
+          <label><input type="radio" name="payment_method" value="카드" checked required><span>카드</span></label>
+          <label><input type="radio" name="payment_method" value="현금" required><span>현금</span></label>
+        </div>
+      </fieldset>
+      <p class="preorder__hint">결제 여부는 신청자가 직접 선택하는 항목이며, 실제 결제 확인과는 별개입니다.</p>
+      <label class="preorder__consent">
+        <input type="checkbox" name="privacy_agree" required>
+        <span><strong>개인정보 수집·이용 동의 (필수)</strong><small>수집항목: 카페 닉네임, 연락처, 이메일, 문의 내용, 결제 관련 선택 정보. 이용목적: 사전예약 접수·문의 안내·결제 확인. 목적 달성 후 삭제하며, 동의를 거부하면 접수할 수 없습니다.</small></span>
+      </label>
+      <div class="preorder__trap" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <input type="hidden" name="origin" value="">
+      <button type="submit" class="preorder__submit">사전예약 접수하기 <span aria-hidden="true">↗</span></button>
+      <p id="preorder-status" class="preorder__notice" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
 </main>
 <aside class="preorder-bar" aria-label="바이브코딩 선착순 사전예약">
@@ -589,7 +642,7 @@
       <span class="preorder-bar__flag">선착순 사전예약</span>
       <strong class="preorder-bar__price">99,000<small>원</small></strong>
     </div>
-    <a class="preorder-bar__action" href="#pricing">혜택 확인 <span aria-hidden="true">↗</span></a>
+    <a class="preorder-bar__action" href="#preorder-form">사전예약 신청 <span aria-hidden="true">↗</span></a>
   </div>
 </aside>
 <footer class="footer">
@@ -797,6 +850,8 @@
   });
 })();
 </script>
+<script src="assets/preorder-config.js?v=1" defer></script>
+<script src="assets/preorder.js?v=1" defer></script>
 <script src="assets/story-motion-v1.js?v=20261023-calltag-v12" defer></script>
 </body>
 </html>
