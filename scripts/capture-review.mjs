@@ -47,10 +47,14 @@ try{
   });
   console.log('SECTION_TWO_SCREENSHOT_SAVED '+width);
 
-  const links=await page.locator('a[href^="#"]:visible').count();
+  // Snapshot stable anchor locators rather than indexing a dynamic ':visible'
+  // selector; the sticky CTA deliberately hides when the pricing/form is visible.
+  const links=await page.locator('a[href^="#"]').all();
   const clickResults=[];
-  for(let n=0;n<links;n++){
-    const l=page.locator('a[href^="#"]:visible').nth(n);
+  for(const l of links){
+    await page.evaluate(()=>window.scrollTo(0,0));
+    await page.waitForTimeout(130);
+    if(!(await l.isVisible()))continue;
     const hash=await l.getAttribute('href');
     await l.click({timeout:10000});
     clickResults.push({hash,clicked:new URL(page.url()).hash===hash});
