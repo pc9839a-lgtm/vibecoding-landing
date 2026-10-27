@@ -19,23 +19,6 @@
     notice.textContent = '사전예약 접수 연결 준비 중입니다.';
     notice.classList.add('preorder__notice--pending');
   }
-  // Hide the persistent price banner when the price or the actual booking form is in view.
-  // This prevents it from obscuring inputs, buttons and privacy consent on small screens.
-  const stickyBar = document.querySelector('.preorder-bar');
-  if (stickyBar && 'IntersectionObserver' in window) {
-    const visible = new Set();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) visible.add(entry.target);
-        else visible.delete(entry.target);
-      });
-      stickyBar.classList.toggle('is-near-form', visible.size > 0);
-    }, { threshold: 0.01 });
-    ['pricing', 'preorder-form'].forEach(id => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
-    });
-  }
   form.addEventListener('submit', event => {
     if (!connected) {
       event.preventDefault();
