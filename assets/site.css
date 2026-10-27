@@ -1105,7 +1105,7 @@ body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 .preorder__field>label,.preorder__choice legend{font-size:15px;line-height:1.4;color:#362c38;font-weight:790;letter-spacing:-.025em}
 .preorder__field>label span,.preorder__choice legend span{color:#a52c78}
 .preorder__field>label small{font-size:12px;font-weight:600;color:#9a8d99}
-.preorder__field input,.preorder__field textarea{display:block;width:100%;min-width:0;min-height:54px;box-sizing:border-box;border:1px solid #dbd5de;border-radius:9px;padding:15px 16px;background:#fff;color:#28222a;font:560 16px/1.45 inherit;font-family:inherit;font-size:16px;outline:0;transition:border-color .18s ease,box-shadow .18s ease}
+.preorder__field input,.preorder__field textarea{display:block;width:100%;min-width:0;min-height:54px;box-sizing:border-box;border:1px solid #dbd5de;border-radius:9px;padding:15px 16px;background:#fff;color:#28222a;font-family:inherit;font-size:16px;font-weight:560;line-height:1.45;outline:0;transition:border-color .18s ease,box-shadow .18s ease}
 .preorder__field input::placeholder,.preorder__field textarea::placeholder{color:#9f97a2}
 .preorder__field textarea{resize:vertical;min-height:116px;line-height:1.55}
 .preorder__field input:focus-visible,.preorder__field textarea:focus-visible{border-color:#ad3c87;box-shadow:0 0 0 3px rgba(173,60,135,.13)}
@@ -1124,7 +1124,7 @@ body{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 .preorder__consent strong{display:block;font-size:15px;line-height:1.4;font-weight:770}
 .preorder__consent small{display:block;margin-top:7px;color:#746974;font-size:12px;line-height:1.7;font-weight:510;word-break:keep-all}
 .preorder__trap{position:absolute;width:1px;height:1px;overflow:hidden;left:-9999px}
-.preorder__submit{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;min-height:62px;margin:27px auto 0;border:0;border-radius:9px;background:#251c29;color:#fff;font:850 18px/1.4 inherit;font-family:inherit;font-size:18px;cursor:pointer;transition:background-color .16s ease,transform .16s ease}
+.preorder__submit{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;min-height:62px;margin:27px auto 0;border:0;border-radius:9px;background:#251c29;color:#fff;font-family:inherit;font-size:18px;font-weight:850;line-height:1.4;cursor:pointer;transition:background-color .16s ease,transform .16s ease}
 .preorder__submit span{font-size:21px}
 .preorder__submit:not(:disabled):hover{background:#a3357c;transform:translateY(-1px)}
 .preorder__submit:focus-visible{outline:3px solid #bb70a5;outline-offset:3px}
