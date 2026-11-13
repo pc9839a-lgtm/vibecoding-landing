@@ -110,6 +110,16 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
 .journey-step-copy p{max-width:560px;margin:7px auto 0;color:#61738c;font-size:14px;line-height:1.7;letter-spacing:-.12px;word-break:keep-all}
 @media(max-width:359px){.purchase-journey{padding-left:14px;padding-right:14px}.journey-step{padding:24px 13px}.journey-step-copy h3{font-size:18px}.journey-step-copy p{font-size:13px}}
 
+/* Phone number: compact 3-part field, one line even on 320px screens */
+.phone-parts{display:grid;grid-template-columns:minmax(72px,.92fr) 10px minmax(0,1fr) 10px minmax(0,1fr);align-items:center;gap:7px;width:100%;min-width:0}
+.phone-parts>select,.phone-parts>input:not([type="hidden"]){display:block;min-width:0;width:100%;height:57px;margin:0;border:1px solid #d8e2ee;border-radius:12px;background-color:#f9fbff;color:#192a43;font-family:inherit;font-size:16px;font-weight:600;line-height:1.3;box-shadow:none;outline:none;transition:border-color .15s,box-shadow .15s}
+.phone-parts>select{appearance:none;-webkit-appearance:none;padding:0 27px 0 14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%235b6a7f' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:13px 13px;background-position:right 10px center;cursor:pointer}
+.phone-parts>input:not([type="hidden"]){text-align:center;padding:0 5px;letter-spacing:.03em}
+.phone-parts>input::placeholder{color:#96a2b3;font-size:13px;letter-spacing:0;font-weight:500}
+.phone-parts>.phone-separator{font-size:18px;color:#8a96a7;text-align:center;line-height:1;user-select:none}
+.phone-parts>select:focus,.phone-parts>input:not([type="hidden"]):focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,245,.12);background-color:#fff}
+@media(max-width:359px){.phone-parts{grid-template-columns:minmax(66px,.9fr) 8px minmax(0,1fr) 8px minmax(0,1fr);gap:5px}.phone-parts>select{padding-left:10px;padding-right:22px;background-position:right 7px center}.phone-parts>input:not([type="hidden"]){padding:0 2px;font-size:15px}}
+
 /* Four-field lead form: larger tap targets and labels */
 .form-section{background:#fff;padding:62px 22px 88px}.form-header{margin:0 0 32px;text-align:center}.form-panel{display:grid;gap:23px;margin:0;padding:0;border:0;background:transparent}.field{min-width:0;display:block}.field-label{display:flex;gap:7px;align-items:center;margin:0 0 11px;color:#26354a;font-size:17px;line-height:1.4;letter-spacing:-.25px;font-weight:820}.field-icon{display:inline-flex;align-items:center;justify-content:center;color:#2979ee}.field-icon .ui-icon{width:17px;height:17px}.required{color:#e34850}
 .field>input{appearance:none;display:block;width:100%;min-height:57px;border:1px solid #d8e2ee;border-radius:12px;outline:none;background:#f9fbff;color:#192a43;padding:0 17px;font-size:16px;box-shadow:none;transition:border-color .18s,box-shadow .18s}.field>input::placeholder{font-size:15px;color:#939fb0}.field>input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,245,.12);background:#fff}.options,.options.model-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.option{position:relative;display:block;min-width:0;cursor:pointer}.option input{position:absolute;opacity:0;width:1px;height:1px;inset:0;margin:0}.option span{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;padding:9px 4px;border:1px solid #d9e3ef;border-radius:11px;background:#f9fbff;color:#3f5067;font-size:15px;font-weight:790;letter-spacing:-.35px;text-align:center;transition:background-color .15s,color .15s,border-color .15s}.option input:checked+span{border-color:var(--blue);background:#1769f5;color:#fff;box-shadow:0 3px 10px rgba(23,105,245,.17)}.option input:focus-visible+span{outline:3px solid #9ac3ff;outline-offset:2px}
@@ -267,7 +277,16 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
 </ol></section><div class="divider"></div>
 <section class="section form-section" id="consult"><div class="form-header"><p class="sec-eyebrow">FREE CONSULTATION</p><h2 class="sec-title">원하는 갤럭시,<br>구매 조건 상담받기.</h2><p class="sec-desc">아래 4개 항목만 입력하면 됩니다.</p></div><form class="form-panel" id="leadForm" novalidate>
 <div class="field"><label class="field-label" for="name"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>고객 성함 <span class="required">*</span></label><input id="name" name="name" autocomplete="name" placeholder="성함을 입력해 주세요" maxlength="30" required></div>
-<div class="field"><label class="field-label" for="phone"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.6-3 19 19 0 0 1-5.8-5.8 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 4.4 2h3a2 2 0 0 1 2 1.7l.4 2.6a2 2 0 0 1-.6 1.7L7.5 9.7a16 16 0 0 0 6.8 6.8l1.7-1.7a2 2 0 0 1 1.7-.6l2.6.4A2 2 0 0 1 22 16.9Z"/></svg></span>전화번호 <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="010-0000-0000" maxlength="13" required></div>
+<div class="field"><label class="field-label" for="phonePrefix"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.6-3 19 19 0 0 1-5.8-5.8 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 4.4 2h3a2 2 0 0 1 2 1.7l.4 2.6a2 2 0 0 1-.6 1.7L7.5 9.7a16 16 0 0 0 6.8 6.8l1.7-1.7a2 2 0 0 1 1.7-.6l2.6.4A2 2 0 0 1 22 16.9Z"/></svg></span>전화번호 <span class="required">*</span></label><div class="phone-parts" role="group" aria-label="전화번호 입력">
+  <select id="phonePrefix" aria-label="전화번호 앞자리" autocomplete="tel-area-code">
+    <option value="010" selected>010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option>
+  </select>
+  <span class="phone-separator" aria-hidden="true">-</span>
+  <input id="phoneMiddle" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="4자리" aria-label="전화번호 가운데 네 자리" required>
+  <span class="phone-separator" aria-hidden="true">-</span>
+  <input id="phoneLast" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="4자리" aria-label="전화번호 마지막 네 자리" required>
+  <input id="phone" name="phone" type="hidden" value="010--">
+</div></div>
 <div class="field"><span class="field-label"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg></span>기존 통신사 <span class="required">*</span></span><div class="options" role="radiogroup" aria-label="기존 통신사"><label class="option"><input type="radio" name="carrier" value="SK" required><span>SK</span></label><label class="option"><input type="radio" name="carrier" value="KT"><span>KT</span></label><label class="option"><input type="radio" name="carrier" value="LG"><span>LG</span></label></div></div>
 <div class="field"><span class="field-label"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>희망 기종 <span class="required">*</span></span><div class="options model-options" role="radiogroup" aria-label="희망 기종"><label class="option"><input type="radio" name="model" value="s26" checked><span>S26</span></label><label class="option"><input type="radio" name="model" value="plus"><span>S26+</span></label><label class="option"><input type="radio" name="model" value="ultra"><span>26울트라</span></label><label class="option"><input type="radio" name="model" value="flip"><span>플립8</span></label><label class="option"><input type="radio" name="model" value="fold"><span>폴드8</span></label></div></div>
 <label class="privacy"><input type="checkbox" id="privacy" required><span>개인정보 수집 및 이용 동의 (필수)</span></label><p class="privacy-info">수집 항목: 성함·전화번호·통신사·희망기종 · 목적: 구매 조건 상담. 실제 수집 주체·보유 기간 등은 서비스 연결 전에 별도 확정해야 합니다.</p>
@@ -299,8 +318,37 @@ const qs=(s)=>document.querySelector(s),qsa=(s)=>[...document.querySelectorAll(s
 function pick(key){const item=models[key];if(!item)return;qsa('.quick-btn').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.model===key)));qsa('.product').forEach(c=>{const selected=c.dataset.model===key;c.classList.toggle('active',selected);c.setAttribute('aria-pressed',String(selected));const choice=c.querySelector('.price-choice');if(choice)choice.textContent=selected?'●':'○';});const r=qs('input[name="model"][value="'+key+'"]');if(r)r.checked=true; }
 qsa('.product').forEach(el=>{el.addEventListener('click',()=>pick(el.dataset.model));el.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();pick(el.dataset.model);}});});
 qsa('input[name="model"]').forEach(el=>el.addEventListener('change',()=>pick(el.value)));
-const phone=qs('#phone');phone.addEventListener('input',()=>{const n=phone.value.replace(/\D/g,'').slice(0,11);if(n.length<=3)phone.value=n;else if(n.length<=7)phone.value=n.slice(0,3)+'-'+n.slice(3);else phone.value=n.slice(0,3)+'-'+n.slice(3,7)+'-'+n.slice(7)});
-qs('#leadForm').addEventListener('submit',e=>{e.preventDefault();const m=qs('#formMessage');m.classList.remove('error');const name=qs('#name').value.trim(),number=phone.value.replace(/\D/g,''),carrier=qs('input[name="carrier"]:checked'),model=qs('input[name="model"]:checked');if(!name){m.textContent='성함을 입력해 주세요.';m.classList.add('error');qs('#name').focus();return}if(!/^01\d{8,9}$/.test(number)){m.textContent='전화번호를 정확히 입력해 주세요.';m.classList.add('error');phone.focus();return}if(!carrier){m.textContent='기존 통신사를 선택해 주세요.';m.classList.add('error');return}if(!model){m.textContent='희망 기종을 선택해 주세요.';m.classList.add('error');return}if(!qs('#privacy').checked){m.textContent='개인정보 동의를 확인해 주세요.';m.classList.add('error');qs('#privacy').focus();return}m.textContent='현재는 디자인 검수용입니다. 입력하신 정보는 저장하거나 전송하지 않았습니다.';});
+const phone=qs('#phone'),phonePrefix=qs('#phonePrefix'),phoneMiddle=qs('#phoneMiddle'),phoneLast=qs('#phoneLast');
+const onlyDigits=value=>value.replace(/\D/g,'');
+function syncPhone(){phone.value=phonePrefix.value+'-'+phoneMiddle.value+'-'+phoneLast.value;}
+phonePrefix.addEventListener('change',syncPhone);
+[phoneMiddle,phoneLast].forEach((field,index)=>{
+  field.addEventListener('input',()=>{
+    field.value=onlyDigits(field.value).slice(0,4);
+    syncPhone();
+    if(index===0 && field.value.length===4)phoneLast.focus();
+  });
+  field.addEventListener('paste',event=>{
+    const pasted=onlyDigits(event.clipboardData?.getData('text')||'');
+    if(pasted.length<8)return;
+    event.preventDefault();
+    if(pasted.length>=11 && /^01[016789]/.test(pasted)) {
+      phonePrefix.value=pasted.slice(0,3);
+      phoneMiddle.value=pasted.slice(3,7);
+      phoneLast.value=pasted.slice(7,11);
+    }else{
+      phoneMiddle.value=pasted.slice(0,4);
+      phoneLast.value=pasted.slice(4,8);
+    }
+    syncPhone();
+    phoneLast.focus();
+  });
+  if(index===1)field.addEventListener('keydown',event=>{
+    if(event.key==='Backspace' && !field.value)phoneMiddle.focus();
+  });
+});
+syncPhone();
+qs('#leadForm').addEventListener('submit',e=>{e.preventDefault();const m=qs('#formMessage');m.classList.remove('error');const name=qs('#name').value.trim(),number=phone.value.replace(/\D/g,''),carrier=qs('input[name="carrier"]:checked'),model=qs('input[name="model"]:checked');if(!name){m.textContent='성함을 입력해 주세요.';m.classList.add('error');qs('#name').focus();return}if(!/^01[016789]\d{8}$/.test(number) || phoneMiddle.value.length!==4 || phoneLast.value.length!==4){m.textContent='전화번호를 정확히 입력해 주세요.';m.classList.add('error');(phoneMiddle.value.length!==4?phoneMiddle:phoneLast).focus();return}if(!carrier){m.textContent='기존 통신사를 선택해 주세요.';m.classList.add('error');return}if(!model){m.textContent='희망 기종을 선택해 주세요.';m.classList.add('error');return}if(!qs('#privacy').checked){m.textContent='개인정보 동의를 확인해 주세요.';m.classList.add('error');qs('#privacy').focus();return}m.textContent='현재는 디자인 검수용입니다. 입력하신 정보는 저장하거나 전송하지 않았습니다.';});
 
 
 /* Preview-only sample: never connect this list to unmasked lead submissions. */
