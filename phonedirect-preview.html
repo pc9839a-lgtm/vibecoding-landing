@@ -18,36 +18,41 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
 .shell{width:100%;max-width:var(--width);margin:0 auto;background:#fff;min-height:100vh;overflow:clip}
 .ui-icon{width:20px;height:20px;display:block;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.section-icon{width:25px;height:25px;display:inline-flex;align-items:center;justify-content:center;margin-right:9px;vertical-align:-4px;color:var(--blue)}.section-icon .ui-icon{width:25px;height:25px}
 .header{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 23px;background:#fff;color:var(--navy);border-bottom:1px solid #ebeff5}.brand{font-size:20px;letter-spacing:-1px;font-weight:900}.header::after{content:'';width:32px;height:4px;border-radius:99px;background:var(--blue)}
-/* Existing user-supplied headline and phone composite: never image-bake text or change copy */
-
-/* Hero v12 — transparent PNG (model names + gifts), existing offer copy stays HTML */
-.sale-hero{position:relative;isolation:isolate;overflow:hidden;padding:38px 0 0;background:#f0eff9;color:#17233b}
-.sale-hero::before{content:none}
-.sale-head{position:relative;z-index:2;text-align:center;padding:0 16px}
-.sale-title{margin:0;font-weight:900;line-height:1.05;letter-spacing:-.055em}
-.sale-title .line{display:block;font-size:clamp(25px,6.8vw,35px);line-height:1.25;letter-spacing:-1.4px;font-weight:870;white-space:nowrap}
-.sale-title .headline{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:6px;white-space:nowrap}
-.sale-title .prefix{font-size:clamp(27px,7.8vw,38px);font-weight:900;letter-spacing:-1.3px}
-.sale-title .value{display:block;color:#1458e5;font-size:clamp(83px,24vw,114px);line-height:1.08;letter-spacing:-.078em;font-weight:950;font-variant-numeric:tabular-nums}
-.sale-art{width:100%;margin:0;line-height:0;overflow:hidden}
-.sale-art::before{content:none}
-.sale-device-composite{position:static;display:block;transform:none;width:100%;height:auto;max-width:100%;margin:0;object-fit:contain;filter:none}
-.sale-hero-note{margin:0;padding:4px 22px 30px;text-align:center;font-size:clamp(14px,3.9vw,17px);line-height:1.55;color:#34425b;font-weight:680;letter-spacing:-.3px}
+/* PhoneDirect hero — single responsive owner, product artwork preserved */
+.sale-hero{position:relative;isolation:isolate;overflow:hidden;padding:39px 0 0;background:#f4f6fd;color:#17243d;border-bottom:1px solid #e8edf7}
+.sale-head{position:relative;z-index:2;text-align:center;padding:0 20px}
+.sale-eyebrow{display:inline-flex;align-items:center;justify-content:center;min-height:27px;margin:0 0 18px;padding:5px 13px;border:1px solid #d2dff8;border-radius:999px;background:#eaf1ff;color:#1557d6;font-size:11px;line-height:1.3;font-weight:850;letter-spacing:.10em}
+.sale-title{margin:0;font-weight:900;line-height:1.12;letter-spacing:-.055em}
+.sale-title .line{display:block;font-size:clamp(29px,6.8vw,43px);line-height:1.23;letter-spacing:-1.5px;font-weight:880}
+.sale-title .headline{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-top:4px;white-space:nowrap}
+.sale-title .prefix{font-size:clamp(30px,7.7vw,46px);font-weight:880;letter-spacing:-1.7px}
+.sale-title .value{display:inline-block;color:#155de8;font-size:clamp(78px,20vw,102px);line-height:1.02;letter-spacing:-.075em;font-weight:900;font-variant-numeric:tabular-nums}
+.sale-art{position:relative;z-index:1;width:100%;max-width:850px;margin:10px auto 0;line-height:0;overflow:hidden}
+.sale-device-composite{position:static;display:block;width:100%;height:auto;max-width:100%;margin:0;object-fit:contain;transform:none;filter:none}
+.sale-hero-note{position:relative;z-index:2;margin:0;padding:7px 18px 34px;text-align:center;color:#53627b;font-size:clamp(13px,3.5vw,16px);line-height:1.55;font-weight:670;letter-spacing:-.28px}
 @media(min-width:768px){
  .shell{max-width:1000px}
- .sale-hero{padding-top:52px}
- .sale-head{padding:0 24px}
- .sale-title{display:flex;align-items:baseline;justify-content:center;gap:18px;white-space:nowrap}
- .sale-title .line{font-size:clamp(28px,3.2vw,42px);line-height:1.1}
- .sale-title .headline{display:inline-flex;gap:11px;margin:0}
- .sale-title .prefix{font-size:clamp(28px,3.2vw,42px)}
- .sale-title .value{font-size:clamp(62px,6vw,79px)}
- .sale-art{width:min(100%,940px);margin:auto}
- .sale-hero-note{padding:0 24px 39px;font-size:19px}
- .price-sheet .price-sheet .offer-list{grid-template-columns:minmax(0,1fr);max-width:760px;margin-left:auto;margin-right:auto}
- 
- .form-section .form-header,.form-section .form-panel{max-width:620px;margin-left:auto;margin-right:auto}
+ .sale-hero{padding-top:53px}
+ .sale-eyebrow{margin-bottom:19px}
+ .sale-title .line{font-size:43px}
+ .sale-title .headline{margin-top:0;gap:16px}
+ .sale-title .prefix{font-size:44px}
+ .sale-title .value{font-size:98px}
+ .sale-art{width:92%;margin-top:2px}
+ .sale-hero-note{padding:0 22px 40px;font-size:16px}
 }
+@media(max-width:359px){
+ .sale-hero{padding-top:30px}
+ .sale-head{padding:0 10px}
+ .sale-eyebrow{margin-bottom:14px}
+ .sale-title .line{font-size:27px}
+ .sale-title .headline{gap:9px}
+ .sale-title .prefix{font-size:29px}
+ .sale-title .value{font-size:76px}
+ .sale-art{margin-top:5px}
+ .sale-hero-note{padding:4px 12px 27px}
+}
+
 /* Price cards: original hand-drawn composition — phones left, four amounts right */
 .divider{height:0;background:none}
 .price-sheet{padding:54px 0 58px;background:var(--surface);scroll-margin-top:16px}
@@ -193,6 +198,7 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
 <main id="top">
 <section class="sale-hero" aria-labelledby="hero-title">
   <div class="sale-head">
+    <p class="sale-eyebrow">GALAXY SPECIAL</p>
     <h1 class="sale-title" id="hero-title">
       <span class="line">즉시 할인 혜택</span>
       <span class="headline"><span class="prefix">최대</span><strong class="value">90%</strong></span>
