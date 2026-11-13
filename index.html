@@ -115,10 +115,10 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
 .phone-parts>select,.phone-parts>input:not([type="hidden"]){display:block;min-width:0;width:100%;height:57px;margin:0;border:1px solid #d8e2ee;border-radius:12px;background-color:#f9fbff;color:#192a43;font-family:inherit;font-size:16px;font-weight:600;line-height:1.3;box-shadow:none;outline:none;transition:border-color .15s,box-shadow .15s}
 .phone-parts>select{appearance:none;-webkit-appearance:none;padding:0 27px 0 14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%235b6a7f' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:13px 13px;background-position:right 10px center;cursor:pointer}
 .phone-parts>input:not([type="hidden"]){text-align:center;padding:0 5px;letter-spacing:.03em}
-.phone-parts>input::placeholder{color:#96a2b3;font-size:13px;letter-spacing:0;font-weight:500}
+.phone-parts>input::placeholder{color:#96a2b3;font-size:12px;letter-spacing:-.4px;font-weight:500}
 .phone-parts>.phone-separator{font-size:18px;color:#8a96a7;text-align:center;line-height:1;user-select:none}
 .phone-parts>select:focus,.phone-parts>input:not([type="hidden"]):focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,245,.12);background-color:#fff}
-@media(max-width:359px){.phone-parts{grid-template-columns:minmax(66px,.9fr) 8px minmax(0,1fr) 8px minmax(0,1fr);gap:5px}.phone-parts>select{padding-left:10px;padding-right:22px;background-position:right 7px center}.phone-parts>input:not([type="hidden"]){padding:0 2px;font-size:15px}}
+@media(max-width:359px){.phone-parts{grid-template-columns:minmax(66px,.9fr) 8px minmax(0,1fr) 8px minmax(0,1fr);gap:5px}.phone-parts>select{padding-left:10px;padding-right:22px;background-position:right 7px center}.phone-parts>input:not([type="hidden"]){padding:0 2px;font-size:15px}.phone-parts>input::placeholder{font-size:11px}}
 
 /* Four-field lead form: larger tap targets and labels */
 .form-section{background:#fff;padding:62px 22px 88px}.form-header{margin:0 0 32px;text-align:center}.form-panel{display:grid;gap:23px;margin:0;padding:0;border:0;background:transparent}.field{min-width:0;display:block}.field-label{display:flex;gap:7px;align-items:center;margin:0 0 11px;color:#26354a;font-size:17px;line-height:1.4;letter-spacing:-.25px;font-weight:820}.field-icon{display:inline-flex;align-items:center;justify-content:center;color:#2979ee}.field-icon .ui-icon{width:17px;height:17px}.required{color:#e34850}
@@ -282,9 +282,9 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}button,[role='but
     <option value="010" selected>010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option>
   </select>
   <span class="phone-separator" aria-hidden="true">-</span>
-  <input id="phoneMiddle" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="4자리" aria-label="전화번호 가운데 네 자리" required>
+  <input id="phoneMiddle" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="연락처 입력" aria-label="전화번호 가운데 네 자리" required>
   <span class="phone-separator" aria-hidden="true">-</span>
-  <input id="phoneLast" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="4자리" aria-label="전화번호 마지막 네 자리" required>
+  <input id="phoneLast" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" placeholder="연락처 입력" aria-label="전화번호 마지막 네 자리" required>
   <input id="phone" name="phone" type="hidden" value="010--">
 </div></div>
 <div class="field"><span class="field-label"><span class="field-icon"><svg aria-hidden="true" focusable="false" class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 20v-3M9 20v-7M14 20V9M19 20V4"/></svg></span>기존 통신사 <span class="required">*</span></span><div class="options" role="radiogroup" aria-label="기존 통신사"><label class="option"><input type="radio" name="carrier" value="SK" required><span>SK</span></label><label class="option"><input type="radio" name="carrier" value="KT"><span>KT</span></label><label class="option"><input type="radio" name="carrier" value="LG"><span>LG</span></label></div></div>
